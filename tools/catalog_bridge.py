@@ -88,7 +88,9 @@ def update(fetch=read_json):
      repo=r.get('full_name','')
      if REPO.fullmatch(repo) and not r.get('archived'):candidates[repo]={'repo':repo,'name':r.get('name'), 'summary':r.get('description') or '', 'url':r.get('html_url'),'status':'discovered; not installable'}
    except Exception as e:errors.append({'stage':'search','query':query,'error':str(e)[:200]})
- known={p['repo'] for p in plugins};repositories.update(sorted(candidates)[:cfg['max_discovered_repositories']]);repositories-=known
+ known={p['repo'] for p in plugins}
+ for repo in known:candidates.pop(repo,None)
+ repositories.update(sorted(candidates)[:cfg['max_discovered_repositories']]);repositories-=known
  for repo in sorted(repositories)[:60]:
   if not REPO.fullmatch(repo):continue
   try:

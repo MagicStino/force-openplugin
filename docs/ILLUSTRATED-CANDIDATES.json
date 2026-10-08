@@ -1,0 +1,47 @@
+{
+  "hardware_tested": false,
+  "ssh_enabled": false,
+  "candidates": [
+    {
+      "device": "force",
+      "project_version": "3.9.1.4-openplugin",
+      "output_sha256": "44aeba2a6267825c6be031c988b8c73db05d5eac65e3875f88d30a09e6eba947",
+      "output_size": 194594408,
+      "source_commit": "c23333b6176ae19e7f28725ea617993e787ff429",
+      "compatible_boards": [
+        "inmusic,ada2"
+      ],
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "vendor_verifier": "pass under QEMU with matching original rootfs"
+      }
+    },
+    {
+      "device": "mpc-gen1",
+      "project_version": "3.9.1.4-openplugin",
+      "output_sha256": "d871195eb112847bc2688619dc1e342e1230c3d6a2d24959a4d40083f28f58ba",
+      "output_size": 174998176,
+      "source_commit": "c23333b6176ae19e7f28725ea617993e787ff429",
+      "compatible_boards": [
+        "inmusic,acv5",
+        "inmusic,acv8",
+        "inmusic,acva",
+        "inmusic,acva2",
+        "inmusic,acvb",
+        "inmusic,acvm",
+        "inmusic,acvr",
+        "inmusic,acv5s"
+      ],
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "vendor_verifier": "pass under QEMU with matching original rootfs"
+      }
+    }
+  ]
+}

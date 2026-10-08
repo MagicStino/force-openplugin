@@ -36,17 +36,7 @@ jobs:
             git commit -m 'Refresh validated community catalog and documentation cards'
             git push origin HEAD:main
           fi
-          git fetch origin gh-pages
-          git worktree add /tmp/openplugin-pages origin/gh-pages
-          cp -a website/. /tmp/openplugin-pages/
-          cd /tmp/openplugin-pages
-          git add .
-          if ! git diff --cached --quiet; then
-            git commit -m 'Publish current documentation and community cards'
-            git push origin HEAD:gh-pages
-          fi
-      # GITHUB_TOKEN pushes do not trigger a separate Pages branch build.
-      # Deploy the website artifact explicitly in this same workflow.
+      # Publish one artifact, avoiding competing branch and Actions deployments.
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

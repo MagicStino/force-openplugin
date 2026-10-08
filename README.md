@@ -1,136 +1,69 @@
-# OpenPlugin for Force and MPC Gen1
+# OpenPlugin Research
 
-Experimental native touchscreen community plugin browser, built into user-supplied
-Akai firmware. Project/container version: **3.9.1.4-openplugin**. Both supplied
-images contain application **3.9.1.2**, despite their 3.9.1 filenames. Application
-binaries and numeric version fields remain unchanged.
+An experimental community instrument and plugin browser for **Akai Force and
+MPC Gen1**, developed with AI. Independent, non-commercial and unaffiliated
+with Akai or inMusic.
 
-**Development candidates only: flashing, boot, touchscreen operation, audio and
-plugin installation/removal on hardware are NOT TESTED. Checksums and successful
-builds do not establish that flashing is safe.**
+[Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) ·
+[Find or publish a plugin](docs/DISCOVERY.md) ·
+[Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
 
-## Start here
+**Hardware status:** flashing, boot, touch, audio, installation and removal
+remain untested. These are research candidates, not a verified beginner installer.
 
-[Visual guide and searchable community index](https://MagicStino.github.io/force-openplugin/) · [Research mission](docs/RESEARCH.md) · [Catalog and discovery](docs/INDEXING.md) · [Source format](docs/SOURCES.md) · [Build and validation](docs/TESTING.md).
+![Generated native catalog preview — not a hardware capture](website/assets/catalog-native.png)
 
-The website is ready in `website/`; local preview and GitHub Pages deployment instructions are in [website/README.md](website/README.md). The repository is public; the documentation site is published from the gh-pages branch.
+## What it does
 
-## Features
+- Browse community instruments, effects, samplers, trackers and tools.
+- Show plugin previews, descriptions, authors, licenses and package versions.
+- Filter the catalog or add a compatible GitHub release through FIND.
+- Queue installation, updates and removal in the native manager.
+- Refresh the online catalog and website cards on a six-hour schedule.
 
-- Browse all 71 indexed entries without entering a query, including source-only entries. Filters: instruments, effects, trackers, samplers and tools. Samplers overlap instruments; an empty tracker category does not imply a working tracker exists.
-- Native discovery/installed/update cards, filters, storage/progress indicators,
-  queued installation/update/removal and restart confirmation, derived from
-  poloq's MIT-licensed Plugin Manager.
-- New FIND page: touchscreen keyboard and search by name, maker or tag. Most
-  users never need to know GitHub. Add source is a separate optional mode.
-- GitHub latest-release scanner for compatible portable ARM packages with
-  SHA-256 verification and manifest validation. Imported entries persist on
-  internal storage. Scanning never executes package scripts.
-- Expanded 512-entry catalog; HTTPS-only, bounded downloads and fail-fast apply.
-- Optional owner-key-only SSH with unique per-device host keys. No Telnet,
-  shared password or embedded private key.
-- Unmounted deterministic AZ01/rootfs build adapter for both exact stock inputs.
+The current index has 71 entries and 57 bundled native previews. Unknown images
+use placeholders. New source packages require review; inclusion is not a
+hardware compatibility guarantee. See [image sources and limits](docs/ILLUSTRATED-CARDS.md).
 
-Installing a package runs its own scripts with device privileges. A checksum
-verifies downloaded bytes, not publisher trust. CPU/audio/ABI compatibility
-requires per-plugin hardware testing. Installation is not transactional.
+## Build both images
 
-## Build both candidates
-
-Requires Linux, Python 3.12+, git, gcc, e2fsprogs (debugfs/e2fsck), binutils,
-OpenSSH client tools and Chromium runtime libraries. Allow several GB RAM and
-roughly 5 GB working space. No root, mounts or device connection required.
+Linux prerequisites: Python 3.12+, git, gcc, e2fsprogs, binutils, OpenSSH tools,
+Chromium runtime libraries, several GB of RAM and approximately 5 GB of space.
+Use the exact original files recorded in `inputs.json`.
 
 ```sh
 git clone https://github.com/MagicStino/force-openplugin.git
 cd force-openplugin
-ssh-keygen -t ed25519 -f "$HOME/.ssh/openplugin_ed25519"
-bash build.sh /path/Force-3.9.1-update.img /path/MPC-3.9.1-Gen1-update.img \
-  /path/output "$HOME/.ssh/openplugin_ed25519.pub"
+bash build.sh /path/Force-3.9.1-update.img \
+  /path/MPC-3.9.1-Gen1-update.img /path/output
 ```
 
-The fourth argument is optional: omit it to disable OpenPlugin SSH. Supply only
-a PUBLIC key and keep the private key on your computer. The script fetches
-pinned dependencies, builds ARM code and artwork, runs tests and builds both
-images. Dependency checkouts are read from committed Git trees, ignoring edits.
-Input SHA-256 values in inputs.json are enforced. Different firmware needs
-new inspection and adapter validation.
+Outputs: `*-UNTESTED.img`, checksums and validation manifests. Existing files
+are not overwritten. The script fetches pinned dependencies and builds the
+native code, artwork and both images without mounting them. It does not flash.
+For key-only remote access, see [SSH setup](docs/SSH.md).
 
-Outputs: `*-UNTESTED.img`, `.sha256` and `.json` validation manifests. Existing
-outputs are never overwritten. Repeat into different empty directories and
-compare SHA-256 values; public keys and all other inputs must be identical.
+Development container version: **3.9.1.4-openplugin**. The supplied 3.9.1 files
+contain application **3.9.1.2**; its binaries and numeric version fields stay
+unchanged. The [published 3.9.1.3 prerelease](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.3-openplugin-research)
+predates illustrated native cards. IMG files are release assets, not Git files.
 
-```sh
-python3 -m unittest discover -s tests -v
-gcc -O1 -fsanitize=address,undefined -fno-omit-frame-pointer \
-  tests/test_native.c -lpthread -ldl -lm -o /tmp/openplugin-test
-ASAN_OPTIONS=detect_leaks=0 /tmp/openplugin-test
-```
+## Documentation
 
-## SSH
+| Need | Read |
+|---|---|
+| Find plugins or list your project | [Discovery](docs/DISCOVERY.md) |
+| Package a native plugin | [Package contract](docs/SOURCES.md) |
+| Understand catalog/network behavior | [Indexing](docs/INDEXING.md) |
+| Inspect image and firmware changes | [Integration](docs/INTEGRATION.md) |
+| Check what was actually tested | [Validation](docs/TESTING.md) |
+| Understand purpose and rights | [Research](docs/RESEARCH.md) |
 
-After updater/recovery validation and eventual installation, connect locally:
+Package installers run with device privileges and are not transactional.
+Desktop VSTs, arbitrary websites and sample editors are not native packages.
+Hakai compatibility must be assessed per package. MPC Sample is a separate
+kit editor; kit import is not implemented here.
 
-```sh
-ssh -i "$HOME/.ssh/openplugin_ed25519" root@DEVICE_IP
-```
-
-A separate service uses /data/openplugin/ssh for unique host keys; stock vendor
-keys/config remain intact. Password/interactive authentication and forwarding
-are disabled. Root's password field changes from an account lock to `*`, an
-unusable password, to allow public-key login. No password is enabled. Actual
-network login still requires a device test. Never publish an owner's private
-key or distribute personalized SSH firmware as a generic image.
-
-Registration requires an existing Settings/*/MPC.settings profile. Factory-reset
-first boot, boot ordering and upgrades have not been validated on hardware.
-See [integration](docs/INTEGRATION.md) and [source format](docs/SOURCES.md).
-
-## Community content
-
-Built-in collection: https://sd88me.github.io/mpc-vst-plugins/ . Hakai-associated
-native plugins are eligible when supplied in compatible MPC packages; there is
-no claim that all Hakai plugins load. Firmware scripts and desktop VSTs are not
-automatically compatible. Exact packages still require hardware testing.
-
-https://github.com/WorldLinkStudio/mpcsample is a browser/desktop kit editor,
-not a native plugin. Its .xpj export is a possible future kit-import workflow;
-it is not ported/bundled here. Sample preview/download/import is not implemented.
-Imported-source updates/removal and a publisher trust UI remain future work.
-
-## Distribution
-
-IMG files exceed GitHub's 100 MiB per-file limit and are excluded from Git.
-This source build uses owner-supplied stock firmware, without redistributing it.
-No firmware release has been published. If redistribution rights and hardware
-validation are established, publish generic builds WITHOUT an owner's SSH key
-as prerelease assets, together with hashes/manifests and exact source commit:
-
-```sh
-gh release create 3.9.1.4-openplugin --prerelease \
-  --title 'OpenPlugin development' --notes-file release-notes.md \
-  /path/output/*.img /path/output/*.sha256 /path/output/*.json
-```
-
-## Credits
-
-Engine/base skin: https://github.com/poloq-instruments/mpc-vst-manager (MIT).
-Wrapper/tooling/catalog: https://github.com/sd88me/mpc-vst-plugins (MIT, with
-component licenses). Pins: dependencies.json; credits: native/NOTICE.md and
-native/LICENSE. Not affiliated with Akai or inMusic.
-
-## Illustrated native cards
-
-The development build includes plugin previews, titles, short descriptions,
-authors and license metadata on the device CATALOG page. See
-[image sources, build details and limits](docs/ILLUSTRATED-CARDS.md).
-The public 3.9.1.3 release predates this change; hardware operation remains unvalidated.
-
-## Scheduled discovery and visible cards
-
-[How to find plugins or make yours discoverable](docs/DISCOVERY.md) explains
-the community manifest, source registry, scheduled bridge and review statuses.
-The same scheduled job produces the app catalog and website card metadata.
-Cards include source/release actions, descriptions, credits and upstream images.
-
-![Generated native catalog preview; not a hardware capture](website/assets/catalog-native.png)
+Credits: [poloq Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager)
+and [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins).
+Existing component licenses apply; see [NOTICE](native/NOTICE.md).
