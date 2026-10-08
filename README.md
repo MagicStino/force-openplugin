@@ -43,7 +43,7 @@ are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and both images without mounting them. It does not flash.
 For key-only remote access, see [SSH setup](docs/SSH.md).
 
-Development container version: **3.9.1.4-openplugin**. The supplied 3.9.1 files
+Development container version: **3.9.1.5-openplugin**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
 unchanged. The [published 3.9.1.3 prerelease](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.3-openplugin-research)
 predates illustrated native cards. IMG files are release assets, not Git files.

@@ -1,6 +1,6 @@
 # JV-880 content setup
 
-The JV SETUP touchscreen tab is implemented in source, but is **not included in the published 3.9.1.4 firmware**. Hardware testing is pending. Missing ROMs and the generic red-bar parameter interface are separate issues; this setup does not claim to fix the skin.
+The JV SETUP touchscreen tab is included in the **3.9.1.5 prerelease firmware**. Hardware testing is pending. Missing ROMs and the generic red-bar parameter interface are separate issues; this setup does not claim to fix the skin.
 
 The [plugin author](https://github.com/sd88me/mpc-vst-jv880/blob/master/docs/ROMS.md) requires your own JV-880 v1.0.0 dump and warns that v1.0.1 causes emulator CPU traps. ROMs are not in the plugin package or our firmware.
 
