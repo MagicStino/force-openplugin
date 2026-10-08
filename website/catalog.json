@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-08T20:47:40+00:00",
+  "generated": "2026-10-08T22:01:56+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3046,6 +3046,23 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.0",
+          "size": 23488815,
+          "sha256": "1ef153e5e929c790d49b1b61c2729f4648ca51369de66cbbe7eadd1e292d5556",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-hz/releases/download/v1.1.0/Liminal-Hz-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 23088899,
           "sha256": "8ea20f69de914d7e037c332af9b1eb9e2351d96d16f650a2801746299d50e79f",
@@ -3069,7 +3086,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-hz",
@@ -3907,6 +3924,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Mutable Instruments Rings + Plaits in one synth: 6 resonator models and 14 melodic macro-oscillator engines, with filter, FX, 4 envelopes, 4 LFOs, a mod matrix and tempo sync, plus a touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-mutable-vibe/main/preview_0.png",
       "style": "synth",
       "tags": [
         "mutable-instruments",
@@ -4694,7 +4712,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-08"
+            }
+          ]
         },
         {
           "version": "1.1.1",
@@ -5031,7 +5055,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Drive, chorus, FDN reverb and tape delay in one native MPC OS insert effect, with a touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-vibe-fx/main/preview_0.png",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-vibe-fx/main/preview_1.png",
       "style": "multi-fx",
       "tags": [
         "drive",
