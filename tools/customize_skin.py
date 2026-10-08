@@ -36,6 +36,10 @@ def customize(vst):
     keys = ['source_scan', 'source_back', 'source_clear', 'source_search'] + [f'source_key_{i}' for i in range(len(CHARS))]
     for key in keys:
         data['params'].append(dict(key=key, name=key, type='trigger', momentary=True))
+    for key in ['rom_status']+[f'rom_file_{i}' for i in range(5)]:
+        data['params'].append(dict(key=key,name=key,type='readout',display='string'))
+    for key in ['rom_check','rom_usb','rom_download']:
+        data['params'].append(dict(key=key,name=key,type='trigger',momentary=True))
     (vst / 'params.json').write_text(json.dumps(data, indent=2) + '\n')
     def art(name, width, height, body):
         (vst / 'images' / name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">{body}</svg>\n')
@@ -75,3 +79,13 @@ def customize(vst):
             lines.append(f'button cx={x} cy=662 label="" key={key} img=images/{key}_url.svg w={width} h=52 when=source_mode:url')
     with (vst / 'layout.conf').open('a') as f:
         f.write('\n'.join(lines) + '\n')
+
+    art('rom_setup.svg',1280,628,'<rect width="1280" height="628" fill="#0c0c0d"/>'+text(40,65,'JV-880 SETUP',36)+text(40,110,'Unload JV-880 before importing. Your existing files are kept.',24)+text(40,150,'External source: archive.org/details/jv880_rompack_v1',23)+text(40,190,'Author requires your own v1.0.0 dump. Archive version is not independently verified.',21))
+    romlines=['\n[tab JV SETUP]','art file=images/rom_setup.svg']
+    for i in range(5):
+        romlines.append(f'readout box=0 w=1180 h=40 cx=640 cy={310+i*47} label="" key=rom_file_{i} tsize=25 tcolor=e9edff tpad=0 talign=left')
+    romlines.append('readout box=0 w=1180 h=58 cx=640 cy=570 label="" key=rom_status tsize=20 tcolor=72e6cc tpad=0')
+    for key,label,x in [('rom_check','Check files',220),('rom_usb','Import USB',640),('rom_download','Download',1060)]:
+        button(key+'.svg',label,350,56,key=='rom_download')
+        romlines.append(f'button cx={x} cy=662 label="" key={key} img=images/{key}.svg w=350 h=56')
+    with (vst/'layout.conf').open('a') as f:f.write('\n'.join(romlines)+'\n')

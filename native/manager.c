@@ -73,7 +73,7 @@ typedef struct {
     char dir[256];        /* unpacked package (install.sh / uninstall.sh), set while preparing */
 } pkg_t;
 enum { Q_INSTALL = 1, Q_REMOVE = 2 };
-enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN };
+enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD };
 
 typedef struct device device_t;
 typedef struct {
@@ -94,6 +94,8 @@ typedef struct {
     char source_url[160], source_status[160];
     char query[96], query_draft[96];
     int searching;
+    char rom_status[160], rom_files[5][96];
+    int rom_confirm;
     device_t *dev;   /* probed by the worker on each refresh */
 } mgr_t;
 
@@ -791,6 +793,7 @@ static void scan_installed(const device_t *d, pkg_t *pkg, int n) {
 /* ---- jobs ---- */
 
 #include "source_scanner.inc"
+#include "rom_setup.inc"
 
 static void do_refresh(mgr_t *m) {
     say(m, OK, "Loading the plugin catalog\xe2\x80\xa6");
@@ -964,6 +967,7 @@ static void *worker(void *ud) {
         else if (job == J_PREPARE) do_prepare(m);
         else if (job == J_LAUNCH) do_launch(m);
         else if (job == J_SCAN) do_scan(m);
+        else if (job >= J_ROM_CHECK && job <= J_ROM_DOWNLOAD) do_rom_setup(m, job);
         pthread_mutex_lock(&m->mu);
         m->busy = 0;
         m->rev++;
@@ -1145,6 +1149,18 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     mgr_t *m = inst;
     double v = atof(val);
     pthread_mutex_lock(&m->mu);
+    if (!strncmp(key,"rom_",4)) {
+        if (!m->busy && !m->job && v>0.5) {
+            if (!strcmp(key,"rom_check")) {m->rom_confirm=0;post(m,J_ROM_CHECK);}
+            else if (!strcmp(key,"rom_usb")) {m->rom_confirm=0;post(m,J_ROM_USB);}
+            else if (!strcmp(key,"rom_download")) {
+                if(m->rom_confirm) {m->rom_confirm=0;post(m,J_ROM_DOWNLOAD);}
+                else {m->rom_confirm=1;snprintf(m->rom_status,sizeof m->rom_status,"Third-party archive, 155 MiB. Use files you are entitled to use. Tap Download again to confirm.");}
+            }
+            m->rev++;
+        }
+        pthread_mutex_unlock(&m->mu);return;
+    }
     if (!strncmp(key, "source_", 7)) {
         if (!m->busy && !m->job && atof(val) > 0.5) {
             char *input=m->searching?m->query_draft:m->source_url;
@@ -1235,6 +1251,13 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
 static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     mgr_t *m = inst;
     pthread_mutex_lock(&m->mu);
+    if (!strncmp(key,"rom_",4)) {
+        if(!strcmp(key,"rom_status")) snprintf(b,n,"%s",m->rom_status[0]?m->rom_status:"Unload JV-880 first. Check files, import USB, or download the external archive.");
+        else if(!strncmp(key,"rom_file_",9) && atoi(key+9)>=0 && atoi(key+9)<5) {
+            int i=atoi(key+9);snprintf(b,n,"%s",m->rom_files[i][0]?m->rom_files[i]:rom_names[i]);
+        } else snprintf(b,n,"0");
+        pthread_mutex_unlock(&m->mu);return 1;
+    }
     if (!strcmp(key, "source_url") || !strcmp(key, "source_status")) {
         snprintf(b, n, "%s", !strcmp(key, "source_url") ? (m->searching?m->query_draft:m->source_url) : m->source_status);
         pthread_mutex_unlock(&m->mu); return 1;
