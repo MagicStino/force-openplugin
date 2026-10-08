@@ -1,7 +1,21 @@
 {
-  "generated": "2026-10-08T19:30:39+00:00",
+  "generated": "2026-10-08T19:33:08+00:00",
   "indexed": 71,
   "candidates": [
+    {
+      "repo": "sunskiefer/RMXXXL",
+      "name": "RMXXXL",
+      "summary": "RMX-1000-style remix effect for MPC OS on the Akai Force: isolator, DJ filter, scene FX, echo, Clouds, reverbs, sample pads, limiter.",
+      "url": "https://github.com/sunskiefer/RMXXXL",
+      "status": "discovered; not installable"
+    },
+    {
+      "repo": "Devko/SubForce",
+      "name": "SubForce",
+      "summary": "Analog-style monosynth VST for MPC OS on the Akai Force: morphing oscillators, a nonlinear transistor ladder, feedback, Multidrive, Duo, 57 presets, touchscreen pages",
+      "url": "https://github.com/Devko/SubForce",
+      "status": "discovered; not installable"
+    },
     {
       "repo": "WorldLinkStudio/mpcsample",
       "url": "https://github.com/WorldLinkStudio/mpcsample",
