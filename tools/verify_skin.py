@@ -15,7 +15,7 @@ data=json.loads((skin/'TUI.json').read_text())['pageData']
 defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params']
 names={f'Parameter {i}':x['key'] for i,x in enumerate(params)}
-assert [t['tabName'] for t in data['tabs']]==['PLUGINS','FIND']
+assert [t['tabName'] for t in data['tabs']]==['CATALOG','FIND']
 a.output.mkdir(parents=True,exist_ok=True)
 for mode in [0,1]:
     image=Image.new('RGBA',(1280,628),'#0c0c0d')
@@ -44,7 +44,7 @@ for mode in [0,1]:
             image.alpha_composite(Image.open(skin/name).convert('RGBA'),(x,y))
         elif typ.startswith('shReadout_'):
             key=names[mapping['Data']]
-            text=('dream synth' if mode==0 else 'https://github.com/owner/repository') if key=='source_url' else ('Type a sound, maker or tag. Matching sounds appear in Plugins.' if mode==0 else 'Enter a community source link, then choose Check source.')
+            text=('reverb' if mode==0 else 'https://github.com/owner/repository') if key=='source_url' else ('Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.' if mode==0 else 'Enter a community source link, then choose Check source.')
             style=defs[typ]['componentsData'][0]['componentData']['data']['textStyle']
             fontpath=a.native/'dependencies/mpc-vst-plugins/tools/html_art/fonts/TitilliumWeb-Regular.ttf'
             font=ImageFont.truetype(str(fontpath),round(style['font']['height']/1.52))

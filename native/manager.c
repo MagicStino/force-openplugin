@@ -61,7 +61,7 @@ typedef struct {
 
 typedef struct {
     char id[48], name[48], author[32], kind[16], dist[16], latest[24], url[512], sha[72];
-    char style[32], tags[96], channel[16], cpu[8], tested[48];   /* the card's badges and meta line */
+    char style[32], tags[512], channel[16], cpu[8], tested[48];   /* complete tag index, bounded */
     long long size;
     char installed[24];   /* "" not installed, "?" installed (version unknown), else the version */
     char synths[200];     /* the Synths folder it is installed in; an addin: its own folder under ADDINS_DIR */
@@ -410,12 +410,12 @@ static const char *pkg_member(const char *k, const char *v, void *ud) {
         if (!strcmp(k, "latest")) return jstr(v, x->latest, sizeof x->latest);
         if (!strcmp(k, "style")) return jstr(v, x->style, sizeof x->style);
     }
-    if (!strcmp(k, "tags") && *v == '[') {   /* the first two, for the meta line */
+    if (!strcmp(k, "tags") && *v == '[') {   /* index all tags, not only the first two */
         const char *q = ws(v + 1);
         for (int c = 0; q && *q == '"'; c++) {
-            char t[32];
+            char t[96];
             q = jstr(q, t, sizeof t);
-            if (q && c < 2) snprintf(x->tags + strlen(x->tags), sizeof x->tags - strlen(x->tags), "%s%s", c ? "  \xc2\xb7  " : "", t);
+            if (q) snprintf(x->tags + strlen(x->tags), sizeof x->tags - strlen(x->tags), "%s%s", c ? "  \xc2\xb7  " : "", t);
             q = q ? ws(q) : NULL;
             if (q && *q == ',') q = ws(q + 1);
         }
@@ -874,7 +874,7 @@ static void prepare(mgr_t *m, pkg_t *q) {
         fprintf(f, "#!/bin/sh\n# written by the Plugin Manager; runs as a transient systemd unit, outside MPC\n"
                    "exec >>" WORK "/apply.log 2>&1\necho \"== apply $(date)\"\nSTATE='%s'\n"
                    "set -e\ntrap 'systemctl start acvs' EXIT\nsystemctl stop acvs\ni=0; while pidof MPC >/dev/null && [ $i -lt 30 ]; do sleep 1; i=$((i + 1)); done\nif pidof MPC >/dev/null; then echo 'MPC failed to stop'; exit 1; fi\n"
-                   "setstate() { grep -v \"^$1 \" \"$STATE\" 2>/dev/null > \"$STATE.new\"; [ -n \"$2\" ] && echo \"$1 $2\" >> \"$STATE.new\"; mv \"$STATE.new\" \"$STATE\"; }\n"
+                   "setstate() { if [ -f \"$STATE\" ]; then grep -v \"^$1 \" \"$STATE\" > \"$STATE.new\" || [ $? -eq 1 ]; else : > \"$STATE.new\"; fi; [ -n \"$2\" ] && echo \"$1 $2\" >> \"$STATE.new\"; mv \"$STATE.new\" \"$STATE\"; }\n"
                    "batch() { grep -q -- '-n)' \"$1\" && printf '%%s' -n; }   # older installers lack -n and restart MPC themselves\n",
                 m->dev->state);
         for (i = 0; i < nq && !err; i++) {
@@ -972,17 +972,18 @@ static int has_update(const pkg_t *p) {   /* a known older version, or an old-la
     return p->url[0] && installed(p) && (p->legacy || (strcmp(p->installed, "?") && strcmp(p->installed, p->latest)));
 }
 
-/* the cards of the current tab and filter; build-yourself plugins (no download) are left out: not plug and play */
+/* Every indexed catalog entry is browseable, including source-only packages. */
 static int visible(const mgr_t *m, int *idx) {
     int n = 0;
     for (int i = 0; i < m->npkg; i++) {
         const pkg_t *p = &m->pkg[i];
         if (m->query[0] && !strcasestr(p->name,m->query) && !strcasestr(p->author,m->query) &&
-            !strcasestr(p->tags,m->query) && !strcasestr(p->id,m->query)) continue;
-        if (!p->url[0]) continue;
+            !strcasestr(p->tags,m->query) && !strcasestr(p->id,m->query) && !strcasestr(p->kind,m->query)) continue;
         if (m->kindf == 1 && strcmp(p->kind, "instrument")) continue;
         if (m->kindf == 2 && strcmp(p->kind, "effect")) continue;
-        if (m->kindf == 3 && !is_addin(p)) continue;
+        if (m->kindf == 3 && !strcasestr(p->tags,"tracker") && strcmp(p->kind,"tracker") && strcmp(p->style,"tracker")) continue;
+        if (m->kindf == 4 && !strcasestr(p->tags,"sampler") && strcmp(p->kind,"sampler") && strcmp(p->style,"sampler")) continue;
+        if (m->kindf == 5 && !is_addin(p) && strcmp(p->kind,"tool")) continue;
         if (m->tab == 1 && !installed(p)) continue;
         if (m->tab == 2 && !has_update(p)) continue;
         idx[n++] = i;
@@ -997,7 +998,7 @@ static int card_state(const mgr_t *m, int i) {
     if (m->menu == i) return S_MENU;
     if (p->queued == Q_REMOVE) return S_Q_REMOVE;
     if (p->queued == Q_INSTALL) return installed(p) ? S_Q_UPDATE : S_Q_INSTALL;
-    if (m->dev->problem[0] && !installed(p)) return S_DISABLED;
+    if ((!p->url[0] || m->dev->problem[0]) && !installed(p)) return S_DISABLED;
     if (!installed(p)) return S_INSTALL;
     return has_update(p) ? S_UPDATE : S_INSTALLED;
 }
@@ -1052,6 +1053,7 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     else if (!strcmp(f, "init")) initials(p->name, b);
     else if (!strcmp(f, "kindtxt")) snprintf(b, n, "%s", is_addin(p) ? "ADDIN" : !strcmp(p->kind, "effect") ? "FX" : "INST");
     else if (!strcmp(f, "meta")) {
+        if (!p->url[0]) {snprintf(b,n,"by %s | Source code only - no compatible download",p->author);return;}
         char st[32], tg[96];
         spaced(p->style, st, sizeof st);
         spaced(p->tags, tg, sizeof tg);
@@ -1083,7 +1085,7 @@ static void *mgr_create(const char *data_dir) {
     m->sel = m->menu = -1;
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
-    snprintf(m->source_status, sizeof m->source_status, "Type a sound, maker or tag. Matching sounds appear in Plugins.");
+    snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;
@@ -1127,10 +1129,10 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
             size_t limit=m->searching?sizeof m->query:sizeof m->source_url;
             if (!strcmp(key,"source_search")) {
                 m->searching=!m->searching;
-                snprintf(m->source_status,sizeof m->source_status,"%s",m->searching?"SEARCH: type a name or author, then open Plugins. Clear removes the filter.":"SOURCE: enter github.com owner/repository, then choose Go.");
+                snprintf(m->source_status,sizeof m->source_status,"%s",m->searching?"Filter the catalog by name, maker or tag. Clear shows all plugins.":"Add a maker's GitHub repository link, then choose Check source.");
             }
             else if (!strcmp(key, "source_scan")) {
-                if (m->searching) {m->page=0;snprintf(m->source_status,sizeof m->source_status,"Search applied. Open Plugins to see matching sounds.");}
+                if (m->searching) {m->page=0;snprintf(m->source_status,sizeof m->source_status,"Filter applied. Open CATALOG for results. Clear restores the full catalog.");}
                 else post(m, J_SCAN);
             }
             else if (!strcmp(key, "source_clear")) snprintf(input,limit,"%s",m->searching?"":"https://github.com/");
@@ -1178,7 +1180,10 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
             if (!strcmp(f, "act")) {
                 if (st == S_INSTALL || st == S_UPDATE) requeue(m, p, Q_INSTALL);
                 else if (st == S_Q_INSTALL || st == S_Q_UPDATE || st == S_Q_REMOVE) requeue(m, p, 0);
-                else if (st == S_DISABLED) say_locked(m, ERR, "Installing is turned off on this MPC (%s)", m->dev->problem);
+                else if (st == S_DISABLED) {
+                    if (!p->url[0]) say_locked(m,WARN,"%s: source code only; no compatible package download",p->name);
+                    else say_locked(m,ERR,"Installing is turned off on this device (%s)",m->dev->problem);
+                }
             } else if (!installed(p)) {
                 /* the menu (Reinstall, Remove) is only on installed plugins */
             } else if (!strcmp(f, "more")) m->menu = m->menu == i ? -1 : i;
@@ -1221,13 +1226,14 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     else if (!strcmp(key, "empty")) snprintf(b, n, "%d", !m->loaded ? (m->online || m->busy == J_REFRESH ? 0 : 1) : nv == 0 ? 2 : 0);
     else if (!strcmp(key, "empty_txt"))
         snprintf(b, n, "%s", m->tab == 2 ? "Everything is up to date" : m->tab == 1 ? "No catalog plugins installed yet"
-                                                                       : m->kindf == 3 ? "No addins in the catalog yet" : "No plugins match this filter");
+                                                                       : m->kindf == 3 ? "No tracker packages indexed yet" : m->kindf == 4 ? "No sampler packages indexed yet" : m->kindf == 5 ? "No tools or addins indexed yet" : "No plugins match this filter");
     else if (!strcmp(key, "nav_prev")) snprintf(b, n, "%d", m->page > 0);
     else if (!strcmp(key, "nav_next")) snprintf(b, n, "%d", m->page + 1 < pages);
     else if (!strcmp(key, "page_txt")) snprintf(b, n, "%d / %d", m->page + 1, pages);
-    else if (!strcmp(key, "summary"))
-        snprintf(b, n, "%d %s%s %s  \xc2\xb7  %d update%s available", nv, m->kindf == 3 ? "addin" : "plugin", nv == 1 ? "" : "s",
-                 m->tab == 1 ? "installed" : m->tab == 2 ? "to update" : "available", upd, upd == 1 ? "" : "s");
+    else if (!strcmp(key, "summary")) {
+        int dl=0;for(int i=0;i<nv;i++) dl += m->pkg[idx[i]].url[0]!=0;
+        snprintf(b,n,"%d indexed | %d with downloads | %d source only",nv,dl,nv-dl);
+    }
     else if (!strcmp(key, "status")) { if (m->sticky) snprintf(b, n, "%s", m->status); else queue_text(m, b, n); }
     else if (!strcmp(key, "status_kind")) snprintf(b, n, "%d", m->sticky ? m->status_kind : OK);
     else if (!strcmp(key, "busy")) snprintf(b, n, "%d", m->downloading);

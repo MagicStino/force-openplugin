@@ -1,0 +1,1284 @@
+{
+  "date": "2026-10-08",
+  "source": "https://sd88me.github.io/mpc-vst-plugins/",
+  "plugins": [
+    {
+      "id": "open303",
+      "name": "303",
+      "author": "saustin2010",
+      "kind": "instrument",
+      "tags": [
+        "tb-303",
+        "acid",
+        "bass",
+        "monophonic"
+      ],
+      "download": true,
+      "repo": "saustin2010/mpc-vst-303",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-303/v1.0.0/screenshots/page_0.png",
+      "summary": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets.",
+      "license": "GPL-3.0-only",
+      "style": "synth"
+    },
+    {
+      "id": "tr-6w6",
+      "name": "6W6",
+      "author": "athousanddetails",
+      "kind": "instrument",
+      "tags": [
+        "tr-606"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/6w6.png",
+      "summary": "MPC/Force port of athousanddetails' schwung-6W6 TR-606 drum machine: voices fitted against real hardware recordings, with measured-partial hats and cymbal. Touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "tr-8w8",
+      "name": "8W8",
+      "author": "athousanddetails",
+      "kind": "instrument",
+      "tags": [
+        "tr-808"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/8w8.png",
+      "summary": "MPC/Force port of athousanddetails' schwung-8W8 TR-808 drum machine: 15 of 16 voices circuit-modelled from the service notes. Touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "tr-9w9",
+      "name": "9W9",
+      "author": "athousanddetails",
+      "kind": "instrument",
+      "tags": [
+        "tr-909"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/9w9.png",
+      "summary": "MPC/Force port of athousanddetails' schwung-9W9 TR-909 drum machine: circuit-modelled kick, snare, toms, rim and clap, with sampled hats, ride and crash (ER-99 derived), as on the original. Touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "acid",
+      "name": "Acid",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "303",
+        "acid",
+        "midi",
+        "bassline"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-acid",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-acid/master/docs/img/acid.png",
+      "summary": "TB-303-style acid bassline sequencer: two blendable lines with generate/mutate, driving a synth track over MIDI, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "sequencer"
+    },
+    {
+      "id": "airwindows-air3",
+      "name": "Airwindows Air3",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "eq",
+        "air",
+        "treble"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Air3.jpg",
+      "summary": "Air-band EQ that lifts or tames the very top and the low ground of a mix.",
+      "license": "MIT",
+      "style": "eq"
+    },
+    {
+      "id": "airwindows-buttercomp2",
+      "name": "Airwindows ButterComp2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "compressor",
+        "dynamics"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ButterComp2.jpg",
+      "summary": "Smooth, buttery bipolar compressor that stays transparent even when pushed.",
+      "license": "MIT",
+      "style": "compressor"
+    },
+    {
+      "id": "airwindows-chamber2",
+      "name": "Airwindows Chamber2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "chamber"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Chamber2.jpg",
+      "summary": "Chamber reverb with delay, regeneration and thickness controls.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-chorusensemble",
+      "name": "Airwindows ChorusEnsemble",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "chorus",
+        "ensemble",
+        "modulation"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ChorusEnsemble.jpg",
+      "summary": "Lush multi-tap ensemble chorus.",
+      "license": "MIT",
+      "style": "chorus"
+    },
+    {
+      "id": "airwindows-console7channel",
+      "name": "Airwindows Console7Channel",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "console",
+        "saturation",
+        "summing"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Console7Channel.jpg",
+      "summary": "Console7 channel stage: analog-style console saturation behind a fader.",
+      "license": "MIT",
+      "style": "saturation"
+    },
+    {
+      "id": "airwindows-density2",
+      "name": "Airwindows Density2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "saturation",
+        "distortion",
+        "density"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Density2.jpg",
+      "summary": "Density saturation with a highpass, for thickening and fattening sounds.",
+      "license": "MIT",
+      "style": "saturation"
+    },
+    {
+      "id": "airwindows-galactic",
+      "name": "Airwindows Galactic",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "ambient",
+        "shimmer"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic.jpg",
+      "summary": "Huge, dark, shimmering ambient space reverb.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-galactic2",
+      "name": "Airwindows Galactic2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "ambient"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic2.jpg",
+      "summary": "Galactic reverb with drive, sustain and darkening for vast ambient tails.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-galactic3",
+      "name": "Airwindows Galactic3",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "ambient"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic3.jpg",
+      "summary": "Galactic reverb with brightness, detune, derez and size controls.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-galacticvibe",
+      "name": "Airwindows GalacticVibe",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "vibrato",
+        "modulation",
+        "chorus"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/GalacticVibe.jpg",
+      "summary": "The pitch-wobble vibrato stage of the Galactic reverbs on its own.",
+      "license": "MIT",
+      "style": "chorus"
+    },
+    {
+      "id": "airwindows-infinity2",
+      "name": "Airwindows Infinity2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "ambient",
+        "freeze"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Infinity2.jpg",
+      "summary": "Infinite-sustain reverb with filtering, damping and allpass diffusion.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-kalienspaceship",
+      "name": "Airwindows kAlienSpaceship",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "sci-fi",
+        "ambient"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kAlienSpaceship.jpg",
+      "summary": "Enormous sci-fi space reverb from the kCathedral family.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-kcathedral5",
+      "name": "Airwindows kCathedral5",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "cathedral"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kCathedral5.jpg",
+      "summary": "Cathedral-sized reverb with early reflections and position control.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-kcosmos",
+      "name": "Airwindows kCosmos",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "ambient",
+        "cosmic"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kCosmos.jpg",
+      "summary": "Vast cosmic reverb with predelay and early reflections.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-mackity",
+      "name": "Airwindows Mackity",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "saturation",
+        "distortion",
+        "console"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Mackity.jpg",
+      "summary": "Mackie-style console distortion: drive it with the input trim, tame it with the output pad.",
+      "license": "MIT",
+      "style": "saturation"
+    },
+    {
+      "id": "airwindows-matrixverb",
+      "name": "Airwindows MatrixVerb",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "algorithmic"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/MatrixVerb.jpg",
+      "summary": "Classic algorithmic reverb with filter, damping, modulation and room size.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-pitchdelay",
+      "name": "Airwindows PitchDelay",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "delay",
+        "pitch",
+        "filter"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/PitchDelay.jpg",
+      "summary": "Delay with pitch shifting in the feedback path and a resonant filter.",
+      "license": "MIT",
+      "style": "delay"
+    },
+    {
+      "id": "airwindows-tapedelay2",
+      "name": "Airwindows TapeDelay2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "delay",
+        "tape",
+        "flutter"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/TapeDelay2.jpg",
+      "summary": "Tape-style delay with flutter and a resonant filter in the repeats.",
+      "license": "MIT",
+      "style": "delay"
+    },
+    {
+      "id": "airwindows-tovinyl4",
+      "name": "Airwindows ToVinyl4",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "vinyl",
+        "mastering",
+        "lo-fi"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ToVinyl4.jpg",
+      "summary": "Vinyl mastering stage: mid and side highpass, high limiter and groove wear.",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "airwindows-verbity2",
+      "name": "Airwindows Verbity2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "reverb",
+        "dense"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Verbity2.jpg",
+      "summary": "Dense, smooth reverb with size, sustain and mulch controls.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "airwindows-zacidlowpass",
+      "name": "Airwindows ZAcidLowpass",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "filter",
+        "lowpass",
+        "acid"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ZAcidLowpass.jpg",
+      "summary": "Acid-style overdriven resonant lowpass filter.",
+      "license": "MIT",
+      "style": "filter"
+    },
+    {
+      "id": "airwindows-zlowpass2",
+      "name": "Airwindows ZLowpass2",
+      "author": "mmiroshnikov",
+      "kind": "effect",
+      "tags": [
+        "airwindows",
+        "filter",
+        "lowpass"
+      ],
+      "download": true,
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ZLowpass2.jpg",
+      "summary": "Smooth lowpass filter with a choice of slopes.",
+      "license": "MIT",
+      "style": "filter"
+    },
+    {
+      "id": "boris-granular",
+      "name": "Boris Granular",
+      "author": "sd88me",
+      "kind": "effect",
+      "tags": [
+        "granular",
+        "freeze",
+        "tempo-sync",
+        "texture",
+        "pads",
+        "shimmer",
+        "stutter"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-boris",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-boris/2d7b1360c68ccc91b22b0c5030152e08dd3682b8/docs/screenshot-force.png",
+      "summary": "Real-time granular insert effect: incoming audio is written to a 10 s buffer and up to 24 overlapping grains replay it with per-grain random size, delay, pitch, direction, volume and pan. Tempo sync to MPC (1/16 to 4/1, dotted and triplet), freeze, feedback, dry/wet, three grain envelopes, 22 presets and a one-page touchscreen skin with two Q-Link sets. DSP from boris-move, a port of Boris Granular Station by Alessandro Gaiba.",
+      "license": "GPL-3.0-only",
+      "style": "granular"
+    },
+    {
+      "id": "chordsmith",
+      "name": "Chordsmith",
+      "author": "jacob-sabella",
+      "kind": "instrument",
+      "tags": [
+        "chords",
+        "midi",
+        "arpeggiator",
+        "strum",
+        "chord-builder"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-vst-chordsmith",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-chordsmith/188d34ca0d9482d2d1ba840edb12ccd8c3773f76/docs/screenshots/chordsmith.png",
+      "summary": "Chord tool: pads, keys or chord buttons play scale, set or custom chords with voicing, strum, arp and harp modes, MIDI out to other tracks and a built-in preview synth.",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "clementine-xt",
+      "name": "Clementine-XT",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "wavetable",
+        "polyphonic",
+        "arpeggiator"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-clementineXT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-clementineXT/main/docs/img/clementine-xt.png",
+      "summary": "Ten-voice wavetable synthesizer modelled exactly on the Microwave II/XT with a ten-page touchscreen skin and Q-Links. Needs your own ROM files in its ROMS folder.",
+      "license": "GPL-3.0-only",
+      "style": "synth"
+    },
+    {
+      "id": "crate-digger",
+      "name": "Crate Digger",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "discogs",
+        "streaming"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-cratedigger",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-cratedigger/main/docs/img/crate-digger.png",
+      "summary": "Dig for records by genre, style, decade, region and country on Discogs, then stream and play them into an MPC track, with its own screen skin and Q-Links.",
+      "license": "MIT",
+      "style": "sample-browser"
+    },
+    {
+      "id": "tr-cw78",
+      "name": "CW-78",
+      "author": "athousanddetails",
+      "kind": "instrument",
+      "tags": [
+        "cr-78"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/cw78.png",
+      "summary": "MPC/Force port of athousanddetails' schwung-CW-78 CR-78 drum machine: voices modelled from the 1979 service notes, with the preset rhythms. Touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "dexed-dx7",
+      "name": "Dexed (DX7)",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "yamaha",
+        "dx7",
+        "emulation"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-dx7",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-dx7/main/docs/img/dexed-dx7.png",
+      "summary": "Yamaha DX7-style 6-operator FM synth (Dexed/MSFA engine) as a native instrument, with .syx bank browsing, all 32 algorithm diagrams and a touchscreen skin with Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "fm-synth"
+    },
+    {
+      "id": "dragonfly-early-reflections",
+      "name": "Dragonfly Early Reflections",
+      "author": "gmorb",
+      "kind": "effect",
+      "tags": [
+        "reverb",
+        "early-reflections",
+        "dragonfly"
+      ],
+      "download": true,
+      "repo": "gmorb/mpc-vst-dragonfly-early-reflections",
+      "screenshot": "",
+      "summary": "Dragonfly Early Reflections as a native insert effect, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "reverb"
+    },
+    {
+      "id": "dragonfly-hall",
+      "name": "Dragonfly Hall",
+      "author": "gmorb",
+      "kind": "effect",
+      "tags": [
+        "reverb",
+        "hall",
+        "dragonfly"
+      ],
+      "download": true,
+      "repo": "gmorb/mpc-vst-dragonfly-hall",
+      "screenshot": "",
+      "summary": "Dragonfly Hall reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "reverb"
+    },
+    {
+      "id": "dragonfly-plate",
+      "name": "Dragonfly Plate",
+      "author": "gmorb",
+      "kind": "effect",
+      "tags": [
+        "reverb",
+        "plate",
+        "dragonfly"
+      ],
+      "download": true,
+      "repo": "gmorb/mpc-vst-dragonfly-plate",
+      "screenshot": "",
+      "summary": "Dragonfly Plate reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "reverb"
+    },
+    {
+      "id": "dragonfly-room",
+      "name": "Dragonfly Room",
+      "author": "gmorb",
+      "kind": "effect",
+      "tags": [
+        "reverb",
+        "room",
+        "dragonfly"
+      ],
+      "download": true,
+      "repo": "gmorb/mpc-vst-dragonfly-room",
+      "screenshot": "",
+      "summary": "Dragonfly Room reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "reverb"
+    },
+    {
+      "id": "dub-force-siren",
+      "name": "Dub Force Siren",
+      "author": "no3z",
+      "kind": "instrument",
+      "tags": [
+        "dub",
+        "siren",
+        "echo",
+        "sfx"
+      ],
+      "download": true,
+      "repo": "no3z/mpc-dubsiren",
+      "screenshot": "https://raw.githubusercontent.com/no3z/mpc-dubsiren/v2.0.0/resources/preview.png",
+      "summary": "Dub siren with tape echo: siren and zap modes, LFO, filter and ping-pong delay on one page mirroring two banks of eight Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "effectforce",
+      "name": "EffectForce",
+      "author": "Devko",
+      "kind": "effect",
+      "tags": [
+        "looper",
+        "performance-mixer",
+        "octatrack-style",
+        "crossfader",
+        "scenes",
+        "effect-rack",
+        "granular",
+        "shimmer-reverb"
+      ],
+      "download": true,
+      "repo": "Devko/EffectForce",
+      "screenshot": "https://raw.githubusercontent.com/Devko/EffectForce/v0.0.1/docs/img/looper.png",
+      "summary": "A live looper and an Octatrack-style performance mixer in one insert slot: the looper records the next bars on MPC's grid (or keeps the bar just played) and plays, layers, rolls (1/2 to 1/32), slows, stops or reverses them; a crossfader (learn the Force's own to it) blends two scenes from a library of 64 one-tap effects (filter sweeps, echo throws, washes, rolls, tape stops, gates), whose sweeps and risers move by themselves from the next bar line. Underneath, a ten-module effect rack in any order (drive, filter, EQ, compressor / OTT, chorus, phaser / flanger, tremolo / gate, granular, delay, shimmer reverb) with macros, LFOs and an 8-slot mod matrix; 62 presets and a 14-page touchscreen skin with Q-Links.",
+      "license": "MIT",
+      "style": "multi-fx"
+    },
+    {
+      "id": "euclidier",
+      "name": "Euclidier",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "euclidean",
+        "midi",
+        "drum",
+        "polyrhythm"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-euclidier",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-euclidier/master/docs/img/euclidier.png",
+      "summary": "8-lane Euclidean MIDI sequencer: live pattern circle and lane rows with a play-head, per-lane and global randomise, a drum-mode switch, and a touchscreen skin with Q-Links.",
+      "license": "MIT",
+      "style": "sequencer"
+    },
+    {
+      "id": "glass-spheres",
+      "name": "Glass Spheres",
+      "author": "Padbangers",
+      "kind": "instrument",
+      "tags": [
+        "mutable-instruments",
+        "marbles",
+        "random",
+        "generative",
+        "sequencer",
+        "midi",
+        "cv",
+        "eurorack"
+      ],
+      "download": true,
+      "repo": "FullPace/glass-spheres",
+      "screenshot": "",
+      "summary": "A random sampler after Mutable Instruments Marbles: random gates, melodies and deja vu loops that play other tracks over MIDI or analog gear over the MPC X's CV jacks, with envelopes, LFOs and a modulation matrix.",
+      "license": "MIT",
+      "style": "sequencer"
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "author": "Lewinator56",
+      "kind": "instrument",
+      "tags": [
+        "polyphonic",
+        "subtractive",
+        "arpeggiator",
+        "step-sequencer",
+        "mod-matrix"
+      ],
+      "download": true,
+      "repo": "Lewinator56/mpc-vst-helm",
+      "screenshot": "https://github.com/user-attachments/assets/b537127a-22e6-4e21-b9f1-48e473c892b8",
+      "summary": "32-voice polyphonic synthesizer (Helm engine by Matt Tytel) with 2 cross-mod oscillators, sub, noise, multi-mode filter, 3 LFOs, 3 envelopes, 32-step sequencer & arpeggiator, built-in effects and touchscreen skin with Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "synth"
+    },
+    {
+      "id": "hera",
+      "name": "Hera",
+      "author": "saustin2010",
+      "kind": "instrument",
+      "tags": [
+        "juno-60",
+        "polyphonic",
+        "chorus",
+        "analog-modelling"
+      ],
+      "download": true,
+      "repo": "saustin2010/mpc-vst-hera",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hera/v1.0.0/screenshots/page_0.png",
+      "summary": "Roland Juno-60: jpcima's Hera engine with its 56 presets, the BBD chorus and a touchscreen skin with Q-Links.",
+      "license": "GPL-3.0-only",
+      "style": "synth"
+    },
+    {
+      "id": "jv-880",
+      "name": "JV-880",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "roland",
+        "emulation"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-jv880",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-jv880/1af7e13fa7076bb7e04be7aec22e9e617f4405cc/docs/screenshots/jv880.png",
+      "summary": "Roland JV-880 sample-based sound engine as a native instrument, with the original reverb and chorus, a Play page with eight macros and a touchscreen skin.",
+      "license": "MAME license",
+      "style": "rompler"
+    },
+    {
+      "id": "keyscope",
+      "name": "Keyscope",
+      "author": "jacob-sabella",
+      "kind": "effect",
+      "tags": [
+        "key-detection",
+        "chord-detection",
+        "tuner",
+        "analyzer"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-vst-keyscope",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-keyscope/88cb99ac5e0d682e1e6d9c81836bf4096a9cde3c/docs/screenshots/keyscope.png",
+      "summary": "Listens to any track and names its key, chord, bass note and tuning, from the spectrum of the whole mix; the audio passes through untouched.",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "liminal-hz",
+      "name": "Liminal Hz",
+      "author": "gmorb",
+      "kind": "effect",
+      "tags": [
+        "reverb",
+        "delay",
+        "echo",
+        "convolution",
+        "ir",
+        "tone3000"
+      ],
+      "download": true,
+      "repo": "gmorb/mpc-vst-liminal-hz",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-liminal-hz/main/docs/images/banner.png",
+      "summary": "Real rooms, halls and echoes from impulse responses (up to 5 s, mono or stereo), the space for your NAM amp; ~3.5% of an audio block on a Force; browses reverbs/ folders and TONE3000.",
+      "license": "MIT",
+      "style": "reverb"
+    },
+    {
+      "id": "lucky-dip",
+      "name": "Lucky Dip",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "sampler",
+        "utility",
+        "kit-builder",
+        "random",
+        "drum-kit"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-luckydip",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-luckydip/main/docs/img/lucky-dip.png",
+      "summary": "A random 16-pad drum-kit builder and inspiration machine: dips into your sample library, fills the pads at random, plays the kit and exports it as an MPC drum program.",
+      "license": "MIT",
+      "style": "sampler"
+    },
+    {
+      "id": "machinemodule",
+      "name": "Machinemodule",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "elektron",
+        "machinedrum",
+        "firmware-derived"
+      ],
+      "download": false,
+      "repo": "sd88me/mpc-vst-machinedrum",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-machinedrum/main/docs/img/machinemodule.png",
+      "summary": "The Elektron Machinedrum SPS-1 UW sound engine as a native instrument: all 16 tracks from one plugin instance, with its own touchscreen skin and Q-Links.",
+      "license": "AGPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "maze-sequencer",
+      "name": "Maze Sequencer",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "generative",
+        "midi",
+        "moog",
+        "labyrinth"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-maze",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-maze/main/docs/img/maze-sequencer.png",
+      "summary": "Dual 8-step generative sequencer (Moog Labyrinth style) with corrupt, scale quantising, two LFOs and per-line MIDI channels, driving other tracks over MIDI.",
+      "license": "MIT",
+      "style": "sequencer"
+    },
+    {
+      "id": "maze-voice",
+      "name": "Maze Voice",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "monophonic",
+        "wavefolder",
+        "moog",
+        "analog-modelling"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-maze",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-maze/main/docs/img/maze-voice.png",
+      "summary": "Monophonic Moog Labyrinth-style thru-zero oscillator, wavefolder and state-variable filter voice with two LFOs, a page randomiser and a three-page touchscreen skin with Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "meowsynth",
+      "name": "MeowSynth",
+      "author": "mcardonaserrano",
+      "kind": "instrument",
+      "tags": [
+        "cat",
+        "meow",
+        "novelty",
+        "synthedit"
+      ],
+      "download": true,
+      "repo": "mcardonaserrano/meowsynth-mpc",
+      "screenshot": "https://raw.githubusercontent.com/mcardonaserrano/meowsynth-mpc/main/previews/meow_page_meowing.png",
+      "summary": "knobster's MeowSynth rebuilt natively from the original's SynthEdit patch: a ramp oscillator through an envelope-following resonant filter that meows, five cats, vibrato and chorus, with the original's look and a meowing cat on the touchscreen and Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "monomodule",
+      "name": "Monomodule One + FX",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "elektron",
+        "monomachine",
+        "firmware-derived"
+      ],
+      "download": false,
+      "repo": "sd88me/mpc-vst-monomodule",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-monomodule/main/docs/img/monomodule.png",
+      "summary": "The Elektron Monomachine's synth engine (15 machines) as an instrument, plus its 7 effect machines as an audio effect, each with a touchscreen skin and Q-Links.",
+      "license": "AGPL-3.0-only",
+      "style": "synth"
+    },
+    {
+      "id": "morpho-pe",
+      "name": "Morpho-PE",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "analog-modelling",
+        "polyphonic",
+        "sequencer",
+        "evolver"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-morpho-PE",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-morpho-PE/main/docs/img/morpho-pe.png",
+      "summary": "Four-voice synthesizer modelled on the Poly Evolver's voice: analog-style and digital waveshape oscillators, 2/4-pole lowpass, delay, feedback, distortion, 4 x 16 step sequencer, a bank browser and a touchscreen skin with Q-Links. Loads Poly Evolver program dumps and, from your own Prophet VS ROM chip images, the 95 factory waves.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "commander",
+      "name": "MPC Commander",
+      "author": "jacob-sabella",
+      "kind": "addin",
+      "tags": [
+        "desktop",
+        "plugins",
+        "skins",
+        "transport",
+        "midi"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-addin-commander",
+      "screenshot": "",
+      "summary": "The plugins MPC loads, with their own skins, and MPC's transport, on a desktop app. Listens on the device only: reach it through an SSH tunnel (no login; bind=0.0.0.0 opens it to your network).",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "mpc-plaits",
+      "name": "MPC Plaits",
+      "author": "poloq",
+      "kind": "instrument",
+      "tags": [
+        "mutable-instruments",
+        "plaits",
+        "macro-oscillator",
+        "eurorack"
+      ],
+      "download": true,
+      "repo": "poloq-instruments/mpc-vst-plaits",
+      "screenshot": "",
+      "summary": "Mutable Instruments Plaits, all 24 models, with LFOs, envelopes, two mod matrices, tempo sync and a touchscreen skin.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "remote",
+      "name": "MPC Remote",
+      "author": "jacob-sabella",
+      "kind": "addin",
+      "tags": [
+        "remote",
+        "screen",
+        "touch",
+        "mcp",
+        "midi"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-addin-remote",
+      "screenshot": "",
+      "summary": "The MPC screen in a browser, and an MCP server so an AI model can see and touch it, play MIDI and read files. Listens on the device only: reach it through an SSH tunnel (no login; bind=0.0.0.0 opens it to your network).",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "usb-audio",
+      "name": "MPC USB audio",
+      "author": "jacob-sabella",
+      "kind": "addin",
+      "tags": [
+        "usb",
+        "audio-interface",
+        "recording",
+        "inputs"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-addin-usb-audio",
+      "screenshot": "",
+      "summary": "The MPC as a USB audio interface: its outputs and inputs as channels on the computer, next to its MIDI ports.",
+      "license": "MIT",
+      "style": "audio-interface"
+    },
+    {
+      "id": "mutable-vibe",
+      "name": "Mutable Vibe MPC",
+      "author": "nachtaktiv303",
+      "kind": "instrument",
+      "tags": [
+        "mutable-instruments",
+        "rings",
+        "plaits",
+        "resonator",
+        "macro-oscillator",
+        "eurorack"
+      ],
+      "download": true,
+      "repo": "nachtaktiv303/mpc-vst-mutable-vibe",
+      "screenshot": "",
+      "summary": "Mutable Instruments Rings + Plaits in one synth: 6 resonator models and 14 melodic macro-oscillator engines, with filter, FX, 4 envelopes, 4 LFOs, a mod matrix and tempo sync, plus a touchscreen skin and Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "nam",
+      "name": "NAM",
+      "author": "jacob-sabella",
+      "kind": "effect",
+      "tags": [
+        "nam",
+        "guitar",
+        "amp",
+        "cab-ir",
+        "tone3000"
+      ],
+      "download": true,
+      "repo": "jacob-sabella/mpc-vst-nam",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-nam/f2fa28c8f4086606e929732a4824e72579bdcf80/docs/screenshots/nam.png",
+      "summary": "Neural Amp Modeler captures as an insert effect, with cab IR, tone, gate, pitch, delay, reverb and an on-device TONE3000 downloader.",
+      "license": "MIT",
+      "style": "amp-sim"
+    },
+    {
+      "id": "omni-sampler",
+      "name": "Omni Sampler",
+      "author": "MrHighMan",
+      "kind": "instrument",
+      "tags": [
+        "akai",
+        "emu",
+        "roland",
+        "kontakt",
+        "sf2",
+        "sfz",
+        "disk-images"
+      ],
+      "download": true,
+      "repo": "B0ss-M/MrHighMan",
+      "screenshot": "https://raw.githubusercontent.com/B0ss-M/MrHighMan/main/docs/screenshot.png",
+      "summary": "Multi-format sampler: plays Akai, E-mu, Roland, Kontakt/Maschine, SF2 and SFZ instruments straight from their files or sampler disk images, with layers, keyswitching, a mod matrix and its own screen skin.",
+      "license": "LGPL-3.0-or-later",
+      "style": "sampler"
+    },
+    {
+      "id": "ottmpc",
+      "name": "OTTmpc",
+      "author": "sd88me",
+      "kind": "effect",
+      "tags": [
+        "ott",
+        "multiband",
+        "compressor",
+        "dynamics"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-OTT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-OTT/claude/friendly-wozniak-m9ak1l/docs/screenshot.png",
+      "summary": "Vital's OTT multiband up/down compressor as an insert effect: live band meters with dB numbers, 12 Q-Link controls and 10 presets.",
+      "license": "GPL-3.0-only",
+      "style": "compressor"
+    },
+    {
+      "id": "overcast",
+      "name": "Overcast",
+      "author": "Padbangers",
+      "kind": "effect",
+      "tags": [
+        "mutable-instruments",
+        "clouds",
+        "parasites",
+        "granular",
+        "texture",
+        "reverb",
+        "delay",
+        "eurorack"
+      ],
+      "download": true,
+      "repo": "FullPace/overcast",
+      "screenshot": "",
+      "summary": "Mutable Instruments Clouds (Parasites firmware, six modes) with a modulation page: two envelopes, two LFOs and an 8-slot matrix onto Clouds' CV inputs.",
+      "license": "MIT",
+      "style": "granular"
+    },
+    {
+      "id": "plugin-manager",
+      "name": "Plugin Manager",
+      "author": "poloq",
+      "kind": "instrument",
+      "tags": [
+        "manager",
+        "installer",
+        "catalog"
+      ],
+      "download": true,
+      "repo": "poloq-instruments/mpc-vst-manager",
+      "screenshot": "",
+      "summary": "Install, update and remove catalog plugins from the MPC screen, with one MPC restart per batch.",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "polyforce",
+      "name": "PolyForce",
+      "author": "Devko",
+      "kind": "instrument",
+      "tags": [
+        "wavetable",
+        "polyphonic",
+        "arpeggiator",
+        "sequencer",
+        "mod-matrix"
+      ],
+      "download": true,
+      "repo": "Devko/PolyForce",
+      "screenshot": "https://raw.githubusercontent.com/Devko/PolyForce/main/docs/img/waves.png",
+      "summary": "Eight-voice wavetable synth: two wavetable oscillators with 8x unison and subs, 30 built-in tables plus your own Serum-format WAVs, two filters with comb and vowel, two LFOs, a 12-slot mod matrix, arpeggiator and sequencers, 205 presets and a seven-tab touchscreen skin with Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "profit-08",
+      "name": "Profit-08",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "analog",
+        "poly",
+        "layers",
+        "sequencer"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-profit8",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-profit8/main/docs/img/screenshot-program.png",
+      "summary": "Eight-voice, two-layer analog-style synthesizer: stack and split layers, a gated sequencer and arpeggiator, a resonant 2/4-pole filter and a banks browser for your own program and bank SysEx dumps.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "rmxxxl",
+      "name": "RMXXXL",
+      "author": "L'Cronx",
+      "kind": "effect",
+      "tags": [
+        "remix",
+        "dj",
+        "rmx",
+        "isolator",
+        "filter",
+        "clouds",
+        "reverb",
+        "pads"
+      ],
+      "download": true,
+      "repo": "sunskiefer/RMXXXL",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/RMXXXL/v1.1.1/docs/img/remix.png",
+      "summary": "RMX-1000-style remix effect: isolator, DJ filter, Build Up / Break Down scenes, synced echo, release FX, Clouds, Dragonfly reverbs, sample pads with ADSR and a brickwall limiter, with a touchscreen skin and Q-Links.",
+      "license": "GPL-3.0-or-later",
+      "style": "multi-fx"
+    },
+    {
+      "id": "stream",
+      "name": "Stream",
+      "author": "johnny",
+      "kind": "effect",
+      "tags": [
+        "utility"
+      ],
+      "download": true,
+      "repo": "stampman3000-jpg/mpc-stream",
+      "screenshot": "",
+      "summary": "Multichannel USB audio effect send from an MPC to a Mac. Needs BlackHole 64ch and a Mac helper app.",
+      "license": "MIT",
+      "style": "utility"
+    },
+    {
+      "id": "subforce",
+      "name": "SubForce",
+      "author": "Devko",
+      "kind": "instrument",
+      "tags": [
+        "monosynth",
+        "analog",
+        "bass",
+        "ladder-filter",
+        "paraphonic"
+      ],
+      "download": true,
+      "repo": "Devko/SubForce",
+      "screenshot": "https://raw.githubusercontent.com/Devko/SubForce/main/docs/img/filter.png",
+      "summary": "Analog-style monosynth in the spirit of a 37-key American paraphonic classic: two morphing oscillators with hard sync, a sub and white-to-pink noise, a mixer with its own feedback loop, a 4-pole transistor ladder (6 to 24 dB) with Multidrive, two looping DAHDSR envelopes, two mod busses, glide and Duo, 57 presets (many for melodic techno) and a six-tab touchscreen skin with Q-Links.",
+      "license": "MIT",
+      "style": "synth"
+    },
+    {
+      "id": "tr-mpc",
+      "name": "TR-MPC",
+      "author": "sd88me",
+      "kind": "instrument",
+      "tags": [
+        "tr-606",
+        "tr-808",
+        "cr-78",
+        "tr-909",
+        "modular"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/7e704c6f3be14b661c887631e203494d8cc3f74f/docs/img/tr-mpc-slots.png",
+      "summary": "A modular 16-slot drum kit: each slot plays any of the 49 voices of athousanddetails' 6W6, 8W8, CW-78 and 9W9 (a 606 kick beside an 808 snare and 909 hats), with per-slot level, tune, decay, drive, pan and sends, one shared reverb, delay and master chain, a randomise module, and a touchscreen skin that reskins each slot to its voice's kit.",
+      "license": "GPL-3.0-only",
+      "style": "drum-machine"
+    },
+    {
+      "id": "tr-mpc-tap-fx",
+      "name": "TR-MPC Tap FX",
+      "author": "sd88me",
+      "kind": "effect",
+      "tags": [
+        "routing",
+        "multi-out",
+        "drum"
+      ],
+      "download": true,
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/7e704c6f3be14b661c887631e203494d8cc3f74f/docs/img/tr-mpc-tap-fx.png",
+      "summary": "Companion to TR-MPC: sends any slot, or the kit's reverb or delay send, out on its own MPC track, sample-aligned with the kit, so MPC's mixer, submixes and insert effects can process it. Needs TR-MPC in the same project.",
+      "license": "GPL-3.0-only",
+      "style": "utility"
+    },
+    {
+      "id": "vibe-fx",
+      "name": "Vibe FX",
+      "author": "nachtaktiv303",
+      "kind": "effect",
+      "tags": [
+        "drive",
+        "chorus",
+        "reverb",
+        "delay",
+        "multi-fx",
+        "insert"
+      ],
+      "download": true,
+      "repo": "nachtaktiv303/mpc-vst-vibe-fx",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-vibe-fx/main/preview_0.png",
+      "summary": "Drive, chorus, FDN reverb and tape delay in one native MPC OS insert effect, with a touchscreen skin and Q-Links.",
+      "license": "MIT",
+      "style": "multi-fx"
+    }
+  ]
+}

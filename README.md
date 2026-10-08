@@ -9,8 +9,15 @@ binaries and numeric version fields remain unchanged.
 plugin installation/removal on hardware are NOT TESTED. Checksums and successful
 builds do not establish that flashing is safe.**
 
+## Start here
+
+[Visual guide and searchable community index](website/index.html) · [Research mission](docs/RESEARCH.md) · [Catalog and discovery](docs/INDEXING.md) · [Source format](docs/SOURCES.md) · [Build and validation](docs/TESTING.md).
+
+The website is ready in `website/`; local preview and GitHub Pages deployment instructions are in [website/README.md](website/README.md). The repository is currently private: free public Pages requires an explicit visibility decision.
+
 ## Features
 
+- Browse all 71 indexed entries without entering a query, including source-only entries. Filters: instruments, effects, trackers, samplers and tools. Samplers overlap instruments; an empty tracker category does not imply a working tracker exists.
 - Native discovery/installed/update cards, filters, storage/progress indicators,
   queued installation/update/removal and restart confirmation, derived from
   poloq's MIT-licensed Plugin Manager.

@@ -1,3 +1,7 @@
+# Validation scope
+
+The historical image hashes and repeat-build/ARM-runtime results below refer to the earlier personalized baseline recorded in VALIDATION.json. The later catalog/category/site revision has separate candidates and must not be confused with those hashes. For the latest revision: six Python tests, native host logic tests, the real 71-entry index test and generated FIND layout checks passed; website sampler/reverb filters were checked in the browser. Hardware remains untested.
+
 # Test results — 2026-10-08
 
 Passed on the development host:

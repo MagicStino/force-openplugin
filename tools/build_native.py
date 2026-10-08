@@ -55,11 +55,12 @@ def main():
     config = json.loads(spec.read_text())
     config['defines']['PARAM_TEXT_MAX'] = 192
     spec.write_text(json.dumps(config, indent=2) + '\n')
-    layout.write_text(layout.read_text().replace(
+    layout.write_text(layout.read_text().replace('[tab PLUGINS]','[tab CATALOG]').replace('qlinks "PLUGINS"','qlinks "CATALOG"').replace('sw=146 sh=44 key=kind','sw=100 sh=44 key=kind').replace(
         'button cx=578 cy=178 label="" key=noop img=images/upd_badge.svg w=24 h=24 when=upd_badge:on',
         'art file=images/upd_badge.svg x=566 y=166 w=24 h=24 when=upd_badge:on'))
     images = local / 'vst/make_images.py'
     images.write_text(images.read_text().replace('"PLUGIN MANAGER", 24', '"OPENPLUGIN", 24')
+        .replace('spacing=3)', 'spacing=3) + text(300, 39, "COMMUNITY INSTRUMENTS & PLUGINS", 16, MUTED, 600)')
         .replace('"APPLY",','"CONTINUE",').replace('"RESTART & APPLY",','"INSTALL & RESTART",'))
     run(sys.executable, images)
     from customize_skin import customize
