@@ -1,0 +1,20 @@
+# Dedicated key-only server; stock SSH configuration and vendor host keys remain intact.
+Port 22
+HostKey /data/openplugin/ssh/ssh_host_ed25519_key
+AuthorizedKeysFile /usr/share/openplugin/authorized_keys
+PermitRootLogin prohibit-password
+PubkeyAuthentication yes
+AuthenticationMethods publickey
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+AllowUsers root
+StrictModes yes
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTunnel no
+PermitUserEnvironment no
+LoginGraceTime 30
+MaxAuthTries 3
+Subsystem sftp /usr/libexec/sftp-server

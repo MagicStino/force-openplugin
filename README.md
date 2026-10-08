@@ -1,61 +1,113 @@
-# Force OpenPlugin
+# OpenPlugin for Force and MPC Gen1
 
-Development target: **3.9.1.1-openplugin**, based on the user's Force 3.9.1 update.
-This is a project version only. The firmware's version encoding has not been
-inspected and no firmware version fields have been changed.
+Experimental native touchscreen community plugin browser, built into user-supplied
+Akai firmware. Project/container version: **3.9.1.3-openplugin**. Both supplied
+images contain application **3.9.1.2**, despite their 3.9.1 filenames. Application
+binaries and numeric version fields remain unchanged.
 
-## Current status
+**Development candidates only: flashing, boot, touchscreen operation, audio and
+plugin installation/removal on hardware are NOT TESTED. Checksums and successful
+builds do not establish that flashing is safe.**
 
-The repository was empty at inspection on 2026-10-08. The previously uploaded
-`Force-3.9.1-update.img` is not available in this workspace or the referenced
-conversation's accessible attachments. No Force module API, loader integration,
-browser implementation, signing chain or target hardware has been validated.
-There is currently **no custom firmware image and no flashable release**.
+## Features
 
-## Reproducible inspection
+- Native discovery/installed/update cards, filters, storage/progress indicators,
+  queued installation/update/removal and restart confirmation, derived from
+  poloq's MIT-licensed Plugin Manager.
+- New FIND page: touchscreen keyboard and search by name, maker or tag. Most
+  users never need to know GitHub. Add source is a separate optional mode.
+- GitHub latest-release scanner for compatible portable ARM packages with
+  SHA-256 verification and manifest validation. Imported entries persist on
+  internal storage. Scanning never executes package scripts.
+- Expanded 512-entry catalog; HTTPS-only, bounded downloads and fail-fast apply.
+- Optional owner-key-only SSH with unique per-device host keys. No Telnet,
+  shared password or embedded private key.
+- Unmounted deterministic AZ01/rootfs build adapter for both exact stock inputs.
 
-Requires Python 3.10 or newer; no third-party packages, root or mounting needed.
+Installing a package runs its own scripts with device privileges. A checksum
+verifies downloaded bytes, not publisher trust. CPU/audio/ABI compatibility
+requires per-plugin hardware testing. Installation is not transactional.
+
+## Build both candidates
+
+Requires Linux, Python 3.12+, git, gcc, e2fsprogs (debugfs/e2fsck), binutils,
+OpenSSH client tools and Chromium runtime libraries. Allow several GB RAM and
+roughly 5 GB working space. No root, mounts or device connection required.
 
 ```sh
-python3 tools/build.py inspect /path/to/Force-3.9.1-update.img --output build/inspection.json
-python3 tools/build.py build /path/to/Force-3.9.1-update.img
-python3 -m unittest discover -s tests -v
+git clone https://github.com/MagicStino/force-openplugin.git
+cd force-openplugin
+ssh-keygen -t ed25519 -f "$HOME/.ssh/openplugin_ed25519"
+bash build.sh /path/Force-3.9.1-update.img /path/MPC-3.9.1-Gen1-update.img \
+  /path/output "$HOME/.ssh/openplugin_ed25519.pub"
 ```
 
-Inspection reads the input without changing it, computes its SHA-256 and records
-its size and first 64 bytes. Output is deterministic for identical input bytes.
-Recognized magic bytes are hints only, not validated container identification.
+The fourth argument is optional: omit it to disable OpenPlugin SSH. Supply only
+a PUBLIC key and keep the private key on your computer. The script fetches
+pinned dependencies, builds ARM code and artwork, runs tests and builds both
+images. Dependency checkouts are read from committed Git trees, ignoring edits.
+Input SHA-256 values in inputs.json are enforced. Different firmware needs
+new inspection and adapter validation.
 
-The build command deliberately fails without emitting an IMG: no verified
-firmware adapter exists yet. Renaming or copying stock firmware is not a custom
-build. The source repository does not need or contain a prebuilt IMG.
+Outputs: `*-UNTESTED.img`, `.sha256` and `.json` validation manifests. Existing
+outputs are never overwritten. Repeat into different empty directories and
+compare SHA-256 values; public keys and all other inputs must be identical.
 
-## Work needed before an image can be produced
+```sh
+python3 -m unittest discover -s tests -v
+gcc -O1 -fsanitize=address,undefined -fno-omit-frame-pointer \
+  tests/test_native.c -lpthread -ldl -lm -o /tmp/openplugin-test
+ASAN_OPTIONS=detect_leaks=0 /tmp/openplugin-test
+```
 
-1. Supply the exact stock image and record its hash and provenance.
-2. Inspect the container, payloads, CPU/ABI, version fields, integrity checks,
-   signatures and update/boot verification path using static analysis first.
-3. Recover the intended module-browser requirements and determine whether a
-   supported loader/API exists. Define module format, discovery paths, UI,
-   audio/MIDI lifecycle and compatibility from evidence.
-4. Implement and test an adapter and module/browser integration against those
-   findings. Preserve cryptographic/security controls. If vendor signing is
-   required and unavailable, report that limitation and stop image production.
-5. Pin toolchain/dependency versions and build parameters, then compare hashes
-   from two clean builds. Validate container and payload integrity separately
-   from signature validity, installation, boot and runtime behavior.
-6. Validate on suitable hardware with a recovery procedure before describing
-   any artifact as flashable.
+## SSH
 
-Neither signing requirements nor their absence can be inferred from a filename
-or magic bytes. This project does not bypass signature checks.
+After updater/recovery validation and eventual installation, connect locally:
 
-## Artifact publication
+```sh
+ssh -i "$HOME/.ssh/openplugin_ed25519" root@DEVICE_IP
+```
 
-No IMG is committed or published at this stage. Before publishing a future
-validated build, check the current GitHub file and release-asset limits and
-firmware redistribution rights. Prefer a versioned release asset when it is
-inappropriate to put the binary in Git; publish SHA-256, source commit,
-input hash, exact build command, pinned tool versions and validation results
-with it. If redistribution is unavailable, distribute source and instructions
-that accept a user-provided stock image instead.
+A separate service uses /data/openplugin/ssh for unique host keys; stock vendor
+keys/config remain intact. Password/interactive authentication and forwarding
+are disabled. Root's password field changes from an account lock to `*`, an
+unusable password, to allow public-key login. No password is enabled. Actual
+network login still requires a device test. Never publish an owner's private
+key or distribute personalized SSH firmware as a generic image.
+
+Registration requires an existing Settings/*/MPC.settings profile. Factory-reset
+first boot, boot ordering and upgrades have not been validated on hardware.
+See [integration](docs/INTEGRATION.md) and [source format](docs/SOURCES.md).
+
+## Community content
+
+Built-in collection: https://sd88me.github.io/mpc-vst-plugins/ . Hakai-associated
+native plugins are eligible when supplied in compatible MPC packages; there is
+no claim that all Hakai plugins load. Firmware scripts and desktop VSTs are not
+automatically compatible. Exact packages still require hardware testing.
+
+https://github.com/WorldLinkStudio/mpcsample is a browser/desktop kit editor,
+not a native plugin. Its .xpj export is a possible future kit-import workflow;
+it is not ported/bundled here. Sample preview/download/import is not implemented.
+Imported-source updates/removal and a publisher trust UI remain future work.
+
+## Distribution
+
+IMG files exceed GitHub's 100 MiB per-file limit and are excluded from Git.
+This source build uses owner-supplied stock firmware, without redistributing it.
+No firmware release has been published. If redistribution rights and hardware
+validation are established, publish generic builds WITHOUT an owner's SSH key
+as prerelease assets, together with hashes/manifests and exact source commit:
+
+```sh
+gh release create 3.9.1.3-openplugin --prerelease \
+  --title 'OpenPlugin development' --notes-file release-notes.md \
+  /path/output/*.img /path/output/*.sha256 /path/output/*.json
+```
+
+## Credits
+
+Engine/base skin: https://github.com/poloq-instruments/mpc-vst-manager (MIT).
+Wrapper/tooling/catalog: https://github.com/sd88me/mpc-vst-plugins (MIT, with
+component licenses). Pins: dependencies.json; credits: native/NOTICE.md and
+native/LICENSE. Not affiliated with Akai or inMusic.

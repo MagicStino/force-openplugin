@@ -1,0 +1,4 @@
+{
+  "force": {"filename": "Force-3.9.1-update.img", "sha256": "f0cf2da8602e305c4c45b2ee1607ee995ab8d1e615016dea283460e6f6e8cf41", "app_version": "3.9.1.2"},
+  "mpc-gen1": {"filename": "MPC-3.9.1-Gen1-update.img", "sha256": "4c0f7797a006313fad206f9513eca8b3823e834c9e0941a6b5f088386cb835d6", "app_version": "3.9.1.2"}
+}
