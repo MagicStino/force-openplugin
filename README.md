@@ -5,7 +5,7 @@ MPC Gen1**, developed with AI. Independent, non-commercial and unaffiliated
 with Akai or inMusic.
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) ·
-[Find or publish a plugin](docs/DISCOVERY.md) ·
+[Download IMG candidates](docs/DOWNLOADS.md) · [Find or publish a plugin](docs/DISCOVERY.md) ·
 [Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
 
 **Hardware status:** flashing, boot, touch, audio, installation and removal

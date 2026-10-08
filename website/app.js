@@ -45,10 +45,12 @@ function renderCatalog(){
   const version=(p.versions||[]).find(v=>!v.yanked&&v.url);
   const action=document.createElement('a');action.className='button';
   action.href=version&&repo?repo+'/releases':repo||'#sources';action.textContent=version?'View release ↗':'View source ↗';actions.append(action);
-  const guide=document.createElement('a');guide.href='https://github.com/MagicStino/force-openplugin/blob/main/docs/DISCOVERY.md';guide.textContent='How to use / list a plugin';actions.append(guide);
+  
   const provenance=document.createElement('p');provenance.className='tags';provenance.textContent='Source: '+(p.provenance?.source||'Saved upstream catalog')+' · hardware unverified';
   const license=document.createElement('p');license.className='tags';license.textContent='License: '+(p.license||'See upstream');
-  article.append(media,badge,title,author,summary,tags,state,license,links,actions,provenance);$('#catalog-cards').append(article);
+  const details=document.createElement('details'),label=document.createElement('summary');label.textContent='Details & source';details.append(label,tags,license,provenance);
+  state.textContent=p.download?'Package listed':'Source only';
+  article.append(media,badge,title,author,summary,state,actions,details);$('#catalog-cards').append(article);
  }
  $('#catalog-count').textContent=matches.length?`${matches.length} of ${catalog.length} indexed entries · ${Math.min(limit,matches.length)} shown`:'No matching entries. Try All or clear the filter.';
  $('#catalog-more').hidden=matches.length<=limit;
