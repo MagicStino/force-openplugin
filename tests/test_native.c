@@ -30,9 +30,33 @@ int main(void) {
     strcpy(model->query,"community");assert(visible(model,matches)==1);
     strcpy(model->query,"no-such-sound");assert(visible(model,matches)==0);
     mgr_set_param(model,"source_clear","1");assert(!model->query[0]);
-    mgr_set_param(model,"source_key_0","1");assert(!strcmp(model->query,"a"));
-    mgr_set_param(model,"source_key_0","0");assert(!strcmp(model->query,"a"));
-    mgr_set_param(model,"source_back","1");assert(!model->query[0]);
+    mgr_set_param(model,"source_key_0","1");assert(!strcmp(model->query_draft,"a"));
+    mgr_set_param(model,"source_key_0","0");assert(!strcmp(model->query_draft,"a"));
+    mgr_set_param(model,"source_back","1");assert(!model->query_draft[0]);
+    /* Draft edits must not hide cards; applying resets unrelated view filters. */
+    strcpy(model->query_draft,"zzzz");assert(visible(model,matches)==2);
+    mgr_set_param(model,"source_scan","1");assert(visible(model,matches)==0);
+    mgr_set_param(model,"source_clear","1");assert(visible(model,matches)==2);
+    model->kindf=2;model->tab=1;model->page=5;model->menu=1;
+    strcpy(model->query_draft,"  synth  ");
+    mgr_set_param(model,"source_scan","1");
+    assert(!strcmp(model->query,"synth") && model->kindf==0 && model->tab==0 && model->page==0 && model->menu==-1);
+    assert(visible(model,matches)==1 && matches[0]==0);
+    strcpy(model->query_draft,"reverb");assert(visible(model,matches)==1 && matches[0]==0);
+    mgr_set_param(model,"source_scan","1");assert(visible(model,matches)==1 && matches[0]==1);
+    mgr_set_param(model,"source_clear","1");assert(visible(model,matches)==2 && !model->query_draft[0]);
+    strcpy(model->pkg[0].name,"JV-800 Synth");
+    strcpy(model->query_draft,"800");
+    assert(visible(model,matches)==2); /* typing leaves the catalog intact */
+    model->tab=1;model->kindf=2;
+    mgr_set_param(model,"source_scan","1");
+    assert(visible(model,matches)==1 && matches[0]==0);
+    strcpy(model->query_draft,"jv-");mgr_set_param(model,"source_scan","1");
+    assert(visible(model,matches)==1 && matches[0]==0);
+    strcpy(model->pkg[1].summary,"A granular instrument");
+    strcpy(model->query_draft,"granul");mgr_set_param(model,"source_scan","1");
+    assert(visible(model,matches)==1 && matches[0]==1);
+    mgr_set_param(model,"source_clear","1");assert(visible(model,matches)==2);
     mgr_set_param(model,"source_search","1");assert(!model->searching);
     mgr_set_param(model,"source_clear","1");assert(!strcmp(model->source_url,"https://github.com/"));
     model->busy=J_SCAN;mgr_set_param(model,"source_key_0","1");assert(!strcmp(model->source_url,"https://github.com/"));

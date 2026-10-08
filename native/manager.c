@@ -92,7 +92,7 @@ typedef struct {
     unsigned rev;   /* bumped whenever the worker changes text, polled by the wrapper as "display_rev" */
     char status[160];
     char source_url[160], source_status[160];
-    char query[96];
+    char query[96], query_draft[96];
     int searching;
     device_t *dev;   /* probed by the worker on each refresh */
 } mgr_t;
@@ -985,7 +985,7 @@ static int visible(const mgr_t *m, int *idx) {
     for (int i = 0; i < m->npkg; i++) {
         const pkg_t *p = &m->pkg[i];
         if (m->query[0] && !strcasestr(p->name,m->query) && !strcasestr(p->author,m->query) &&
-            !strcasestr(p->tags,m->query) && !strcasestr(p->id,m->query) && !strcasestr(p->kind,m->query)) continue;
+            !strcasestr(p->tags,m->query) && !strcasestr(p->id,m->query) && !strcasestr(p->kind,m->query) && !strcasestr(p->summary,m->query)) continue;
         if (m->kindf == 1 && strcmp(p->kind, "instrument")) continue;
         if (m->kindf == 2 && strcmp(p->kind, "effect")) continue;
         if (m->kindf == 3 && !strcasestr(p->tags,"tracker") && strcmp(p->kind,"tracker") && strcmp(p->style,"tracker")) continue;
@@ -1147,17 +1147,28 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     pthread_mutex_lock(&m->mu);
     if (!strncmp(key, "source_", 7)) {
         if (!m->busy && !m->job && atof(val) > 0.5) {
-            char *input=m->searching?m->query:m->source_url;
-            size_t limit=m->searching?sizeof m->query:sizeof m->source_url;
+            char *input=m->searching?m->query_draft:m->source_url;
+            size_t limit=m->searching?sizeof m->query_draft:sizeof m->source_url;
             if (!strcmp(key,"source_search")) {
                 m->searching=!m->searching;
                 snprintf(m->source_status,sizeof m->source_status,"%s",m->searching?"Filter the catalog by name, maker or tag. Clear shows all plugins.":"Add a maker's GitHub repository link, then choose Check source.");
             }
             else if (!strcmp(key, "source_scan")) {
-                if (m->searching) {m->page=0;snprintf(m->source_status,sizeof m->source_status,"Filter applied. Open CATALOG for results. Clear restores the full catalog.");}
+                if (m->searching) {
+                    const char *start=m->query_draft;while(*start && (unsigned char)*start<=32)start++;
+                    snprintf(m->query,sizeof m->query,"%s",start);
+                    size_t len=strlen(m->query);while(len && (unsigned char)m->query[len-1]<=32)m->query[--len]=0;
+                    m->tab=0;m->kindf=0;m->page=0;m->menu=-1;
+                    int matches[MAXPKG],count=visible(m,matches);
+                    snprintf(m->source_status,sizeof m->source_status,"%d matches. Open CATALOG. Show all clears the filter.",count);
+                }
                 else post(m, J_SCAN);
             }
-            else if (!strcmp(key, "source_clear")) snprintf(input,limit,"%s",m->searching?"":"https://github.com/");
+            else if (!strcmp(key, "source_clear")) {
+                snprintf(input,limit,"%s",m->searching?"":"https://github.com/");
+                if(m->searching){m->query[0]=0;m->tab=0;m->kindf=0;m->menu=-1;
+                    snprintf(m->source_status,sizeof m->source_status,"All indexed plugins restored. Open CATALOG.");}
+            }
             else if (!strcmp(key, "source_back")) { size_t l = strlen(input); if (l) input[l - 1] = 0; }
             else if (!strncmp(key, "source_key_", 11)) {
                 const char *chars = "abcdefghijklmnopqrstuvwxyz0123456789-._/: ";
@@ -1225,7 +1236,7 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     mgr_t *m = inst;
     pthread_mutex_lock(&m->mu);
     if (!strcmp(key, "source_url") || !strcmp(key, "source_status")) {
-        snprintf(b, n, "%s", !strcmp(key, "source_url") ? (m->searching?m->query:m->source_url) : m->source_status);
+        snprintf(b, n, "%s", !strcmp(key, "source_url") ? (m->searching?m->query_draft:m->source_url) : m->source_status);
         pthread_mutex_unlock(&m->mu); return 1;
     }
     if (!strcmp(key,"source_mode")) {snprintf(b,n,"%d",!m->searching);pthread_mutex_unlock(&m->mu);return 1;}
@@ -1247,7 +1258,7 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
         snprintf(b, n, "Can't install on this MPC: %s  \xc2\xb7  details in " WORK "/device.txt", m->dev->problem);
     else if (!strcmp(key, "empty")) snprintf(b, n, "%d", !m->loaded ? (m->online || m->busy == J_REFRESH ? 0 : 1) : nv == 0 ? 2 : 0);
     else if (!strcmp(key, "empty_txt"))
-        snprintf(b, n, "%s", m->tab == 2 ? "Everything is up to date" : m->tab == 1 ? "No catalog plugins installed yet"
+        snprintf(b, n, "%s", m->query[0] ? "No search matches. FIND > Show all restores the catalog." : m->tab == 2 ? "Everything is up to date" : m->tab == 1 ? "No catalog plugins installed yet"
                                                                        : m->kindf == 3 ? "No tracker packages indexed yet" : m->kindf == 4 ? "No sampler packages indexed yet" : m->kindf == 5 ? "No tools or addins indexed yet" : "No plugins match this filter");
     else if (!strcmp(key, "nav_prev")) snprintf(b, n, "%d", m->page > 0);
     else if (!strcmp(key, "nav_next")) snprintf(b, n, "%d", m->page + 1 < pages);
