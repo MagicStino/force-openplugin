@@ -1,0 +1,59 @@
+name: Update community catalog and documentation cards
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['catalog/**', 'schema/**', 'tools/catalog_bridge.py', 'tests/test_catalog_bridge.py', 'website/**', '.github/workflows/catalog.yml']
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: community-catalog
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 0
+      - name: Test the bridge
+        run: python3 -m unittest discover -s tests -p test_catalog_bridge.py
+      - name: Refresh validated catalog and visible card metadata
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 tools/catalog_bridge.py
+      - name: Save data and publish documentation site
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add website/catalog.json website/assets/catalog.json website/discovery.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Refresh validated community catalog and documentation cards'
+            git push origin HEAD:main
+          fi
+          git fetch origin gh-pages
+          git worktree add /tmp/openplugin-pages origin/gh-pages
+          cp -a website/. /tmp/openplugin-pages/
+          cd /tmp/openplugin-pages
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish current documentation and community cards'
+            git push origin HEAD:gh-pages
+          fi
+      # GITHUB_TOKEN pushes do not trigger a separate Pages branch build.
+      # Deploy the website artifact explicitly in this same workflow.
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+      - name: Deploy current cards and documentation
+        id: deployment
+        uses: actions/deploy-pages@v4

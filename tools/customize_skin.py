@@ -8,6 +8,27 @@ CHARS = 'abcdefghijklmnopqrstuvwxyz0123456789-._/: '
 def customize(vst):
     vst = Path(vst)
     data = json.loads((vst / 'params.json').read_text())
+    previews=json.loads((Path(__file__).resolve().parents[1]/'assets/previews.lock.json').read_text())['entries']
+    for row in range(1,4):
+        data['params'].append(dict(key=f'r{row}_preview',name='Preview snapshot',options=[str(i) for i in range(len(previews)+2)]))
+        for suffix in ['desc1','desc2']:
+            data['params'].append(dict(key=f'r{row}_{suffix}',name='Description',type='readout',display='string'))
+    layout=(vst/'layout.conf').read_text().splitlines()
+    import re
+    redesigned=[]
+    for line in layout:
+        if re.search(r'key=r[123]_(init|kindtxt|meta|chan|cpu|old|tested|tested_txt)\b',line): continue
+        if re.search(r'key=card[123]\b',line):
+            line=line.replace('tx=125','tx=208').replace('ttw=640','ttw=580').replace('tth=50','tth=39').replace('tsize=46','tsize=34')
+        redesigned.append(line)
+        match=re.search(r'key=card([123])\b',line)
+        if match:
+            row=int(match.group(1));y=210+(row-1)*128
+            files=','.join(f'images/previews/preview_{i}.png' for i in range(len(previews)+2))
+            redesigned.append(f'picture x=40 y={y+14} w=176 h=86 key=r{row}_preview files="{files}"')
+            for suffix,cy,size in [('desc1',y+56,20),('desc2',y+77,20),('meta',y+101,18)]:
+                redesigned.append(f'readout box=0 w=580 h=22 cx=522 cy={cy} label="" key=r{row}_{suffix} tsize={size} tcolor=b4b7bc tpad=0 talign=left when=r{row}_vis:on')
+    (vst/'layout.conf').write_text('\n'.join(redesigned)+'\n')
     next(p for p in data['params'] if p['key']=='kind')['options']=['All','Instruments','Effects','Trackers','Samplers','Tools']
     data['params'].append(dict(key='source_mode', name='Find mode', options=['search','url']))
     for key in ['source_url', 'source_status']:

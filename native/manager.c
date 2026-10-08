@@ -47,7 +47,7 @@ typedef struct {
 } mpc_engine_t;
 
 #ifndef CATALOG_URL
-#define CATALOG_URL "https://sd88me.github.io/mpc-vst-plugins/catalog.json"   /* tests: a file:// fixture */
+#define CATALOG_URL "https://magicstino.github.io/force-openplugin/catalog.json"   /* tests: a file:// fixture */
 #endif
 #define WORK "/tmp/pluginmgr"
 #define MAXPKG 512
@@ -60,8 +60,9 @@ typedef struct {
 #endif
 
 typedef struct {
-    char id[48], name[48], author[32], kind[16], dist[16], latest[24], url[512], sha[72];
+    char id[48], name[96], author[64], kind[16], dist[16], latest[24], url[512], sha[72];
     char style[32], tags[512], channel[16], cpu[8], tested[48];   /* complete tag index, bounded */
+    char summary[1024], license[96], repo[160], screenshot[1024];
     long long size;
     char installed[24];   /* "" not installed, "?" installed (version unknown), else the version */
     char synths[200];     /* the Synths folder it is installed in; an addin: its own folder under ADDINS_DIR */
@@ -399,6 +400,8 @@ static void uid_hex(const char *u, char *out) {
     else if (strlen(u) == 8) snprintf(out, 16, "%s", u);
 }
 
+#include "preview_index.h"
+
 static const char *pkg_member(const char *k, const char *v, void *ud) {
     pkg_t *x = ud;
     if (*v == '"') {
@@ -408,6 +411,10 @@ static const char *pkg_member(const char *k, const char *v, void *ud) {
         if (!strcmp(k, "kind")) return jstr(v, x->kind, sizeof x->kind);
         if (!strcmp(k, "distribution")) return jstr(v, x->dist, sizeof x->dist);
         if (!strcmp(k, "latest")) return jstr(v, x->latest, sizeof x->latest);
+        if (!strcmp(k, "summary")) return jstr(v, x->summary, sizeof x->summary);
+        if (!strcmp(k, "license")) return jstr(v, x->license, sizeof x->license);
+        if (!strcmp(k, "repo")) return jstr(v, x->repo, sizeof x->repo);
+        if (!strcmp(k, "screenshot")) return jstr(v, x->screenshot, sizeof x->screenshot);
         if (!strcmp(k, "style")) return jstr(v, x->style, sizeof x->style);
     }
     if (!strcmp(k, "tags") && *v == '[') {   /* index all tags, not only the first two */
@@ -1041,23 +1048,38 @@ static void spaced(const char *in, char *out, int n) {   /* catalog slugs ("fm-s
     out[k] = 0;
 }
 
+/* Bound descriptions to two readable lines. Metadata remains plain text. */
+static void description_line(const char *text, int line, char *out, int n) {
+    const char *p=*text?text:"No description supplied by the author.";
+    for (int row=0;row<=line;row++) {
+        while (*p && (unsigned char)*p<=32) p++;
+        size_t len=strlen(p), take=len<78?len:78;
+        while (take && ((unsigned char)p[take]&0xc0)==0x80) take--;
+        if (len>take) {size_t word=take;while(word && (unsigned char)p[word]>32)word--;if(word>30)take=word;}
+        if(row==line){size_t count=take<(size_t)n-1?take:(size_t)n-1;memcpy(out,p,count);out[count]=0;
+            for(size_t j=0;j<count;j++)if((unsigned char)out[j]<32)out[j]=' ';
+            if(line==1 && len>take && count>=3)memcpy(out+count-3,"...",3);
+            return;}
+        p+=take;
+    }
+}
+
 /* a card's field (key after "rN_"), for the plugin at pkg index i (or -1: an empty card) */
 static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     const pkg_t *p = i >= 0 ? &m->pkg[i] : NULL;
     b[0] = 0;
     if (!strcmp(f, "vis")) snprintf(b, n, "%d", p != NULL && m->loaded);
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
-                                 !strcmp(f, "old") || !strcmp(f, "tested") ? "0" : " ");
+                                 !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
+    else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
+    else if (!strcmp(f, "desc1")) description_line(p->summary,0,b,n);
+    else if (!strcmp(f, "desc2")) description_line(p->summary,1,b,n);
     else if (!strcmp(f, "state")) snprintf(b, n, "%d", card_state(m, i));
     else if (!strcmp(f, "inst")) snprintf(b, n, "%d", installed(p));
     else if (!strcmp(f, "init")) initials(p->name, b);
     else if (!strcmp(f, "kindtxt")) snprintf(b, n, "%s", is_addin(p) ? "ADDIN" : !strcmp(p->kind, "effect") ? "FX" : "INST");
     else if (!strcmp(f, "meta")) {
-        if (!p->url[0]) {snprintf(b,n,"by %s | Source code only - no compatible download",p->author);return;}
-        char st[32], tg[96];
-        spaced(p->style, st, sizeof st);
-        spaced(p->tags, tg, sizeof tg);
-        snprintf(b, n, "by %s%s%s%s%s", p->author, st[0] ? "  \xc2\xb7  " : "", st, tg[0] ? "  \xc2\xb7  " : "", tg);
+        snprintf(b,n,"by %.32s | %.28s%s",p->author,p->license[0]?p->license:"License: see source",!strcmp(p->cpu,"FAIL")?" | CPU: FAIL":!strcmp(p->cpu,"WARN")?" | CPU warning":p->legacy?" | Legacy":p->url[0]?"":" | Source only");
     }
     else if (!strcmp(f, "chan")) snprintf(b, n, "%d", !strcmp(p->channel, "beta") ? 2 : 1);   /* 0: no card */
     else if (!strcmp(f, "cpu")) snprintf(b, n, "%d", !strcmp(p->cpu, "WARN") || !strcmp(p->cpu, "FAIL"));

@@ -1,7 +1,7 @@
 # OpenPlugin for Force and MPC Gen1
 
 Experimental native touchscreen community plugin browser, built into user-supplied
-Akai firmware. Project/container version: **3.9.1.3-openplugin**. Both supplied
+Akai firmware. Project/container version: **3.9.1.4-openplugin**. Both supplied
 images contain application **3.9.1.2**, despite their 3.9.1 filenames. Application
 binaries and numeric version fields remain unchanged.
 
@@ -107,7 +107,7 @@ validation are established, publish generic builds WITHOUT an owner's SSH key
 as prerelease assets, together with hashes/manifests and exact source commit:
 
 ```sh
-gh release create 3.9.1.3-openplugin --prerelease \
+gh release create 3.9.1.4-openplugin --prerelease \
   --title 'OpenPlugin development' --notes-file release-notes.md \
   /path/output/*.img /path/output/*.sha256 /path/output/*.json
 ```
@@ -118,3 +118,19 @@ Engine/base skin: https://github.com/poloq-instruments/mpc-vst-manager (MIT).
 Wrapper/tooling/catalog: https://github.com/sd88me/mpc-vst-plugins (MIT, with
 component licenses). Pins: dependencies.json; credits: native/NOTICE.md and
 native/LICENSE. Not affiliated with Akai or inMusic.
+
+## Illustrated native cards
+
+The development build includes plugin previews, titles, short descriptions,
+authors and license metadata on the device CATALOG page. See
+[image sources, build details and limits](docs/ILLUSTRATED-CARDS.md).
+The public 3.9.1.3 release predates this change; hardware operation remains unvalidated.
+
+## Scheduled discovery and visible cards
+
+[How to find plugins or make yours discoverable](docs/DISCOVERY.md) explains
+the community manifest, source registry, scheduled bridge and review statuses.
+The same scheduled job produces the app catalog and website card metadata.
+Cards include source/release actions, descriptions, credits and upstream images.
+
+![Generated native catalog preview; not a hardware capture](website/assets/catalog-native.png)

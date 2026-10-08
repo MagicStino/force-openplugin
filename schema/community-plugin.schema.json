@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://magicstino.github.io/force-openplugin/schema/community-plugin.schema.json",
+  "title": "OpenPlugin community discovery manifest v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "id",
+    "name",
+    "author",
+    "repo",
+    "summary",
+    "kind",
+    "category",
+    "license"
+  ],
+  "properties": {
+    "schema": {
+      "const": "openplugin.community/1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{0,62}$"
+    },
+    "repo": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
+    },
+    "kind": {
+      "enum": [
+        "instrument",
+        "effect",
+        "addin"
+      ]
+    },
+    "category": {
+      "enum": [
+        "synth",
+        "effect",
+        "sampler",
+        "tracker",
+        "tool"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 80
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https://(github\\.com|raw\\.githubusercontent\\.com|user-images\\.githubusercontent\\.com)/"
+      }
+    },
+    "packages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "arch",
+          "layout",
+          "devices",
+          "url",
+          "size",
+          "sha256"
+        ],
+        "properties": {
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "arch": {
+            "const": "armv7"
+          },
+          "layout": {
+            "const": "portable"
+          },
+          "devices": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "force",
+                "mpc-gen1"
+              ]
+            }
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://github\\.com/"
+          },
+          "size": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{64}$"
+          }
+        }
+      }
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    }
+  }
+}

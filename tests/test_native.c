@@ -41,10 +41,14 @@ int main(void) {
     model->npkg=1;model->pkg[0]=imported;
     strcpy(model->pkg[0].url,"https://github.com/owner/repo/releases/download/v1/synth-mpc-armv7.zip");
     strcpy(model->pkg[0].style,"community source");strcpy(model->pkg[0].name,"Dream \"Synth\"");
+    strcpy(model->pkg[0].summary,"A synth with \"quoted\" metadata.");
+    strcpy(model->pkg[0].license,"MIT");strcpy(model->pkg[0].repo,"owner/repo");
     assert(source_save(model));
     pkg_t *roundtrip=calloc(MAXPKG,sizeof *roundtrip);assert(roundtrip);int count=0;
     source_merge(roundtrip,&count);assert(count==1);
     assert(!strcmp(roundtrip[0].name,"Dream \"Synth\"") && !strcmp(roundtrip[0].sha,model->pkg[0].sha));
+    assert(!strcmp(roundtrip[0].summary,model->pkg[0].summary));
+    assert(!strcmp(roundtrip[0].license,"MIT") && !strcmp(roundtrip[0].repo,"owner/repo"));
     source_merge(roundtrip,&count);assert(count==1); /* no duplicate imports */
     free(roundtrip);assert(!unlink(SOURCE_CACHE));assert(!chdir(oldcwd));assert(!rmdir(temp));
     pthread_mutex_destroy(&model->mu);free(model);
@@ -72,6 +76,11 @@ int main(void) {
     assert(has_update(&p));
     strcpy(p.latest, "1.0.0"); assert(!has_update(&p));
     free(pkgs); free(catalog);
+    char description[192];description_line("A short description",0,description,sizeof description);assert(!strcmp(description,"A short description"));
+    description_line("A short description",1,description,sizeof description);assert(!description[0]);
+    description_line("",0,description,sizeof description);assert(strstr(description,"No description"));
+    assert(preview_frame("unrecognized-new-package")==1);
+    for(unsigned i=0;i<sizeof preview_ids/sizeof *preview_ids;i++)assert(preview_frame(preview_ids[i])==(int)i+2);
     puts("native offline tests: PASS");
     return 0;
 }

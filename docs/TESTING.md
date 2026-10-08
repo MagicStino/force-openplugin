@@ -57,3 +57,10 @@ For optional ARM checks, compile tests/test_native.c and tests/test_load.c with
 Zig target arm-linux-gnueabihf.2.31, then use qemu-arm -L EXTRACTED_STOCK_ROOT.
 Pass the built plugin_manager.so path to test_load. Never execute package
 install scripts on the development host as a substitute for device validation.
+
+## Scheduled catalog and illustrated cards
+
+See [DISCOVERY.md](DISCOVERY.md) and [ILLUSTRATED-CARDS.md](ILLUSTRATED-CARDS.md).
+Twelve Python tests passed (six firmware/container tests and six bridge tests).
+The generated CATALOG preview checks actual image mappings, frame counts,
+geometry and sample text; it is a simulated rendering, not a device capture.

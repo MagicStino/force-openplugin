@@ -35,6 +35,6 @@ SSH_ARGS=()
 if [ "$#" -eq 4 ]; then SSH_ARGS=(--ssh-key "$(realpath "$4")"); fi
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build_native.py" "${SSH_ARGS[@]}"
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/verify_skin.py" "$ROOT/build/native" "$OUTPUT/preview"
-"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$FORCE_INPUT" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1.3-openplugin-UNTESTED.img"
-"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$MPC_INPUT" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-Gen1-3.9.1.3-openplugin-UNTESTED.img"
+"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$FORCE_INPUT" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1.4-openplugin-UNTESTED.img"
+"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$MPC_INPUT" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-Gen1-3.9.1.4-openplugin-UNTESTED.img"
 echo 'Candidates built and structurally checked. Hardware flashing/boot/runtime still NOT TESTED.'

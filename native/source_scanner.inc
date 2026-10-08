@@ -36,6 +36,9 @@ static int source_save(const mgr_t *m) { /* worker owns catalog writes during th
         if (n++) fputc(',',f);
         fputs("{\"id\":",f);source_json_string(f,p->id);
         fputs(",\"name\":",f);source_json_string(f,p->name);
+        fputs(",\"summary\":",f);source_json_string(f,p->summary);
+        fputs(",\"license\":",f);source_json_string(f,p->license);
+        fputs(",\"repo\":",f);source_json_string(f,p->repo);
         fputs(",\"kind\":",f);source_json_string(f,p->kind);
         fputs(",\"author\":",f);source_json_string(f,p->author);
         fputs(",\"style\":\"community source\",\"latest\":",f);source_json_string(f,p->latest);
@@ -83,6 +86,8 @@ static const char *source_release_field(const char *key,const char *value,void *
 typedef struct { pkg_t pkg; char arch[16], layout[24], repo[160]; int schema; } source_manifest;
 static const char *source_manifest_field(const char *key,const char *value,void *opaque) {
     source_manifest *m=opaque;
+    if (!strcmp(key,"about")) return jstr(value,m->pkg.summary,sizeof m->pkg.summary);
+    if (!strcmp(key,"license")) return jstr(value,m->pkg.license,sizeof m->pkg.license);
     if (!strcmp(key,"id")) return jstr(value,m->pkg.id,sizeof m->pkg.id);
     if (!strcmp(key,"name")) return jstr(value,m->pkg.name,sizeof m->pkg.name);
     if (!strcmp(key,"version")) return jstr(value,m->pkg.latest,sizeof m->pkg.latest);
@@ -144,6 +149,7 @@ static void do_scan(mgr_t *m) {
         free(text);
         if (valid) {
             snprintf(mf.pkg.url,sizeof mf.pkg.url,"%s",candidate.url);snprintf(mf.pkg.sha,sizeof mf.pkg.sha,"%s",candidate.sha);
+            snprintf(mf.pkg.repo,sizeof mf.pkg.repo,"%s",repo);
             snprintf(mf.pkg.author,sizeof mf.pkg.author,"%.*s",(int)(strchr(repo,'/')-repo),repo);
             snprintf(mf.pkg.channel,sizeof mf.pkg.channel,"stable");snprintf(mf.pkg.style,sizeof mf.pkg.style,"community source");
             mf.pkg.size=st.st_size;

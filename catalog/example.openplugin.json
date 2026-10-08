@@ -1,0 +1,14 @@
+{
+  "schema": "openplugin.community/1",
+  "id": "example-sampler",
+  "name": "Example Sampler",
+  "author": "Example Author",
+  "repo": "example/example-sampler",
+  "summary": "A short, factual description of what this plugin does.",
+  "kind": "instrument",
+  "category": "sampler",
+  "license": "MIT",
+  "tags": ["sampler", "granular"],
+  "images": ["https://raw.githubusercontent.com/example/example-sampler/main/screenshots/catalog.png"],
+  "packages": []
+}

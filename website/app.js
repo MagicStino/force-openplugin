@@ -2,10 +2,10 @@
 const $ = s => document.querySelector(s);
 const preview = $('#screen-preview');
 for (const button of document.querySelectorAll('[data-preview]')) button.addEventListener('click', () => {
- const search=button.dataset.preview==='search';
- preview.src=search?'assets/find-search.png':'assets/find-source.png';
- preview.alt=search?'Generated plugin filter page with QWERTY keyboard':'Generated repository source entry page';
- $('#preview-mode').textContent=search?'FIND · FILTER':'FIND · SOURCE';
+ const search=button.dataset.preview==='search',cards=button.dataset.preview==='catalog';
+ preview.src=cards?'assets/catalog-native.png':search?'assets/find-search.png':'assets/find-source.png';
+ preview.alt=cards?'Generated native catalog with plugin images and descriptions':search?'Generated plugin filter page with QWERTY keyboard':'Generated repository source entry page';
+ $('#preview-mode').textContent=cards?'CATALOG · ILLUSTRATED':search?'FIND · FILTER':'FIND · SOURCE';
  for(const b of document.querySelectorAll('[data-preview]')) {b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));}
 });
 $('#zoom-preview').addEventListener('click',()=>{$('#dialog-image').src=preview.src;$('#dialog-image').alt=preview.alt;$('#preview-dialog').showModal();});
@@ -22,7 +22,7 @@ $('#faq-query').addEventListener('input',event=>{const query=event.target.value.
 let catalog=[],kind='all',limit=12;
 function renderCatalog(){
  const query=$('#catalog-query').value.trim().toLocaleLowerCase();
- const matches=catalog.filter(p=>(kind==='all'||p.kind===kind||(kind==='sampler'&&(p.tags.includes('sampler')||p.style==='sampler'))||(kind==='tracker'&&(p.tags.includes('tracker')||p.style==='tracker')))&&[p.name,p.author,p.id,p.kind,...p.tags].join(' ').toLocaleLowerCase().includes(query));
+ const matches=catalog.filter(p=>(kind==='all'||p.kind===kind||(kind==='sampler'&&(p.tags.includes('sampler')||p.style==='sampler'))||(kind==='tracker'&&(p.tags.includes('tracker')||p.style==='tracker')))&&[p.name,p.summary,p.author,p.id,p.kind,...p.tags].join(' ').toLocaleLowerCase().includes(query));
  $('#catalog-cards').replaceChildren();
  const labels={instrument:'Instrument',effect:'Effect',addin:'Tool / addin',tracker:'Tracker',sampler:'Sampler'};
  for(const p of matches.slice(0,limit)){
@@ -41,8 +41,14 @@ function renderCatalog(){
   }else{media.textContent='No upstream image';}
   const summary=document.createElement('p');summary.textContent=p.summary||'';
   const links=document.createElement('p');if(repo){const link=document.createElement('a');link.href=repo;link.textContent='Project & documentation ↗';links.append(link);}
+  const actions=document.createElement('p');actions.className='card-actions';
+  const version=(p.versions||[]).find(v=>!v.yanked&&v.url);
+  const action=document.createElement('a');action.className='button';
+  action.href=version&&repo?repo+'/releases':repo||'#sources';action.textContent=version?'View release ↗':'View source ↗';actions.append(action);
+  const guide=document.createElement('a');guide.href='https://github.com/MagicStino/force-openplugin/blob/main/docs/DISCOVERY.md';guide.textContent='How to use / list a plugin';actions.append(guide);
+  const provenance=document.createElement('p');provenance.className='tags';provenance.textContent='Source: '+(p.provenance?.source||'Saved upstream catalog')+' · hardware unverified';
   const license=document.createElement('p');license.className='tags';license.textContent='License: '+(p.license||'See upstream');
-  article.append(media,badge,title,author,summary,tags,state,license,links);$('#catalog-cards').append(article);
+  article.append(media,badge,title,author,summary,tags,state,license,links,actions,provenance);$('#catalog-cards').append(article);
  }
  $('#catalog-count').textContent=matches.length?`${matches.length} of ${catalog.length} indexed entries · ${Math.min(limit,matches.length)} shown`:'No matching entries. Try All or clear the filter.';
  $('#catalog-more').hidden=matches.length<=limit;

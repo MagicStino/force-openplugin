@@ -1,0 +1,19 @@
+{
+  "generated": "2026-10-08T19:30:39+00:00",
+  "indexed": 71,
+  "candidates": [
+    {
+      "repo": "WorldLinkStudio/mpcsample",
+      "url": "https://github.com/WorldLinkStudio/mpcsample",
+      "status": "needs compatible manifest; not installable"
+    }
+  ],
+  "errors": [
+    {
+      "stage": "manifest",
+      "repo": "WorldLinkStudio/mpcsample",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "hardware_verified": false
+}

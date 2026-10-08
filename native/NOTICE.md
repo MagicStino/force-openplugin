@@ -11,3 +11,10 @@ of these modified images. See docs/INTEGRATION.md for the local changes.
 Local interface additions include the FIND page, QWERTY keyboard, search and
 optional GitHub source scanning/persistence. The build normalizes preset times
 and uses content-based artwork IDs. See docs/TESTING.md for actual test limits.
+
+Illustrated catalog cards use upstream plugin screenshots. The shipped
+previews.lock.json records each plugin ID, author repository, declared package
+license, screenshot URL and SHA256 (or a documented fallback). Screenshot
+rights remain with their respective authors; package license metadata is not
+a separate grant of rights for artwork. Report attribution/rights concerns
+through https://github.com/MagicStino/force-openplugin/issues.

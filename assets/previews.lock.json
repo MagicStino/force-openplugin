@@ -1,0 +1,575 @@
+{
+  "schema": 1,
+  "snapshot_date": "2026-10-08",
+  "entries": [
+    {
+      "id": "acid",
+      "name": "Acid",
+      "repo": "sd88me/mpc-vst-acid",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-acid/master/docs/img/acid.png",
+      "sha256": "2433e4d56a692401e2f8cb72769c213fd4a7c30ee5c259234786b43b2cc51aa3"
+    },
+    {
+      "id": "airwindows-air3",
+      "name": "Airwindows Air3",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Air3.jpg",
+      "sha256": "483e59149377bac74aeeb8d2872d77427a6a8950401f27e9722ae15bb5582340"
+    },
+    {
+      "id": "airwindows-buttercomp2",
+      "name": "Airwindows ButterComp2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ButterComp2.jpg",
+      "sha256": "26efc14fb88e0d604dd6be6dcb9c9fd517cee6732a12f70c0a48006033d8344e"
+    },
+    {
+      "id": "airwindows-chamber2",
+      "name": "Airwindows Chamber2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Chamber2.jpg",
+      "sha256": "12ad5a80787d8695df26e794ed7afed98b2aab98fb31aad35a790d1f45c08605"
+    },
+    {
+      "id": "airwindows-chorusensemble",
+      "name": "Airwindows ChorusEnsemble",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ChorusEnsemble.jpg",
+      "sha256": "a298abeddd47aa352da1122cdce2e62f840f15fd2283b1f7751fe1c16b419c10"
+    },
+    {
+      "id": "airwindows-console7channel",
+      "name": "Airwindows Console7Channel",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Console7Channel.jpg",
+      "sha256": "7d31ceea5777c07baf9f006d8a8110289dbee593760b5f16e435d6e9245e76d4"
+    },
+    {
+      "id": "airwindows-density2",
+      "name": "Airwindows Density2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Density2.jpg",
+      "sha256": "675d13cf3ddb8a23185a31f56584586b17f8ce97dee3737fe40327670b455673"
+    },
+    {
+      "id": "airwindows-galactic",
+      "name": "Airwindows Galactic",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic.jpg",
+      "sha256": "78c56f829f50f1a53f984bcc91d93edb129747cb54b5d53544d38625d3301f9a"
+    },
+    {
+      "id": "airwindows-galactic2",
+      "name": "Airwindows Galactic2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic2.jpg",
+      "sha256": "28558c2d4e190f07613a52d315bec97691a6b43e6cfcd2a76c26abd3938f6b1c"
+    },
+    {
+      "id": "airwindows-galactic3",
+      "name": "Airwindows Galactic3",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Galactic3.jpg",
+      "sha256": "e07fdecf71dcf54aff100d2738b5adc19d8b7009244ad5d2fa355bf4c0a8e146"
+    },
+    {
+      "id": "airwindows-galacticvibe",
+      "name": "Airwindows GalacticVibe",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/GalacticVibe.jpg",
+      "sha256": "06fa1f2da9364ad260f16b8e4149c6ef30441cb8eb3831364ff4762dd31208b4"
+    },
+    {
+      "id": "airwindows-infinity2",
+      "name": "Airwindows Infinity2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Infinity2.jpg",
+      "sha256": "7dd4efb23d1523ef8581d002f320c7aaa38264a9a27ecfb815ee9cf35ab977ae"
+    },
+    {
+      "id": "airwindows-kalienspaceship",
+      "name": "Airwindows kAlienSpaceship",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kAlienSpaceship.jpg",
+      "sha256": "8d13f6bdb3517fc1b2a4599b6eb9afc7c3ae1f6c6dcd290e41642b72975a2f93"
+    },
+    {
+      "id": "airwindows-kcathedral5",
+      "name": "Airwindows kCathedral5",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kCathedral5.jpg",
+      "sha256": "75a2a455880c15e4e25fdc789e3d37640f03ca09e5ba9f9310e1bd394e060f10"
+    },
+    {
+      "id": "airwindows-kcosmos",
+      "name": "Airwindows kCosmos",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/kCosmos.jpg",
+      "sha256": "84dcae9b41bb03d87e97edf842f8ecd3b84036296639a2dcfea0df542c620dae"
+    },
+    {
+      "id": "airwindows-mackity",
+      "name": "Airwindows Mackity",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Mackity.jpg",
+      "sha256": "e37efedfc0cee6497e45d60f44a11fa8fe96055fe2cc97a90959f5fe3928beb2"
+    },
+    {
+      "id": "airwindows-matrixverb",
+      "name": "Airwindows MatrixVerb",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/MatrixVerb.jpg",
+      "sha256": "1056a9be6d93f8711befcf37349ae71899448d2af7699ba1d4c7535d0f95c295"
+    },
+    {
+      "id": "airwindows-pitchdelay",
+      "name": "Airwindows PitchDelay",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/PitchDelay.jpg",
+      "sha256": "e7458f856d7c29737e4b00bad80e76974459ffe76dc412f2a88ebed876fe6a0f"
+    },
+    {
+      "id": "airwindows-tapedelay2",
+      "name": "Airwindows TapeDelay2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/TapeDelay2.jpg",
+      "sha256": "7117d3c7d3fd08f1a56d6ead79d0915e01886bbfa4ef67751c487fe44a6bb800"
+    },
+    {
+      "id": "airwindows-tovinyl4",
+      "name": "Airwindows ToVinyl4",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ToVinyl4.jpg",
+      "sha256": "e4e65acdf459cce7448519108c624a64723de8914ce5c6da1f9d6d0adfd51d1c"
+    },
+    {
+      "id": "airwindows-verbity2",
+      "name": "Airwindows Verbity2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/Verbity2.jpg",
+      "sha256": "453d406d9743e9a9844a4e2dc60775b5ff8d6f25b8945d013064026e79870d9e"
+    },
+    {
+      "id": "airwindows-zacidlowpass",
+      "name": "Airwindows ZAcidLowpass",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ZAcidLowpass.jpg",
+      "sha256": "97c800d5e8def5e171ade32041552a43f7236befc3784ba1884b50f31e93b88f"
+    },
+    {
+      "id": "airwindows-zlowpass2",
+      "name": "Airwindows ZLowpass2",
+      "repo": "mmiroshnikov/mpc-airwindows",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-airwindows/main/docs/screenshots/ZLowpass2.jpg",
+      "sha256": "f031c744e01795cc7ab174a79864d2e11dfcbd78cc210ce6c937e5e9d99f5362"
+    },
+    {
+      "id": "boris-granular",
+      "name": "Boris Granular",
+      "repo": "sd88me/mpc-vst-boris",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-boris/2d7b1360c68ccc91b22b0c5030152e08dd3682b8/docs/screenshot-force.png",
+      "sha256": "16e77939b3661aa6096953ac22cae868364d1f4c130ce3b7cf8dabd8b00fb57c"
+    },
+    {
+      "id": "chordsmith",
+      "name": "Chordsmith",
+      "repo": "jacob-sabella/mpc-vst-chordsmith",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-chordsmith/188d34ca0d9482d2d1ba840edb12ccd8c3773f76/docs/screenshots/chordsmith.png",
+      "sha256": "12acdda1641ccf6544ea2f1cef2037beb18505afd1ef4c3750e15e19fa339a2a"
+    },
+    {
+      "id": "clementine-xt",
+      "name": "Clementine-XT",
+      "repo": "sd88me/mpc-vst-clementineXT",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-clementineXT/main/docs/img/clementine-xt.png",
+      "sha256": "1183132524e209ea9b4fd35b9087ca74b8cf198429bc05b6dec7656f9210350b"
+    },
+    {
+      "id": "commander",
+      "name": "MPC Commander",
+      "repo": "jacob-sabella/mpc-addin-commander",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "crate-digger",
+      "name": "Crate Digger",
+      "repo": "sd88me/mpc-vst-cratedigger",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-cratedigger/main/docs/img/crate-digger.png",
+      "sha256": "edbd82c8ae9e722769ff17ea5e3c0f226efeef16fb070eb3082f985b1b400ea5"
+    },
+    {
+      "id": "dexed-dx7",
+      "name": "Dexed (DX7)",
+      "repo": "sd88me/mpc-vst-dx7",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-dx7/main/docs/img/dexed-dx7.png",
+      "sha256": "8f7d8452459feeeb64e96a32acd82df8d2693846d915ff2e8db12604523cd18f"
+    },
+    {
+      "id": "dragonfly-early-reflections",
+      "name": "Dragonfly Early Reflections",
+      "repo": "gmorb/mpc-vst-dragonfly-early-reflections",
+      "license": "GPL-3.0-only",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "dragonfly-hall",
+      "name": "Dragonfly Hall",
+      "repo": "gmorb/mpc-vst-dragonfly-hall",
+      "license": "GPL-3.0-only",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "dragonfly-plate",
+      "name": "Dragonfly Plate",
+      "repo": "gmorb/mpc-vst-dragonfly-plate",
+      "license": "GPL-3.0-only",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "dragonfly-room",
+      "name": "Dragonfly Room",
+      "repo": "gmorb/mpc-vst-dragonfly-room",
+      "license": "GPL-3.0-only",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "dub-force-siren",
+      "name": "Dub Force Siren",
+      "repo": "no3z/mpc-dubsiren",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/no3z/mpc-dubsiren/v2.0.0/resources/preview.png",
+      "sha256": "8a8b4e6464461e753c68b729d9ce5b614cda707c0015c67aa6fdf435b208e408"
+    },
+    {
+      "id": "effectforce",
+      "name": "EffectForce",
+      "repo": "Devko/EffectForce",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/Devko/EffectForce/v0.0.1/docs/img/looper.png",
+      "sha256": "e5510764ca2692b61fcd4fd6aa1d2dad075d5e7ac9328e564cf24b12c9a5c4f4"
+    },
+    {
+      "id": "euclidier",
+      "name": "Euclidier",
+      "repo": "sd88me/mpc-vst-euclidier",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-euclidier/master/docs/img/euclidier.png",
+      "sha256": "ade822b9f83793a2d4c5554e56b54490c468f3a54187cb923225d337d2efb615"
+    },
+    {
+      "id": "glass-spheres",
+      "name": "Glass Spheres",
+      "repo": "FullPace/glass-spheres",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "repo": "Lewinator56/mpc-vst-helm",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://github.com/user-attachments/assets/b537127a-22e6-4e21-b9f1-48e473c892b8",
+      "sha256": null,
+      "unavailable_reason": "ValueError"
+    },
+    {
+      "id": "hera",
+      "name": "Hera",
+      "repo": "saustin2010/mpc-vst-hera",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hera/v1.0.0/screenshots/page_0.png",
+      "sha256": "bc2a782d11bfd768729959da155cace95ccaca4d29cb85e4993f246e1b13740a"
+    },
+    {
+      "id": "jv-880",
+      "name": "JV-880",
+      "repo": "sd88me/mpc-vst-jv880",
+      "license": "MAME license",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-jv880/1af7e13fa7076bb7e04be7aec22e9e617f4405cc/docs/screenshots/jv880.png",
+      "sha256": "9d09382965a52dd834104d88ff4272f7a46619b681e723e6c1997bfadb71cac4"
+    },
+    {
+      "id": "keyscope",
+      "name": "Keyscope",
+      "repo": "jacob-sabella/mpc-vst-keyscope",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-keyscope/88cb99ac5e0d682e1e6d9c81836bf4096a9cde3c/docs/screenshots/keyscope.png",
+      "sha256": "cef4375c7b33766f245c81de273c14bcccf91f161173c797412ec16e47496a8b"
+    },
+    {
+      "id": "liminal-hz",
+      "name": "Liminal Hz",
+      "repo": "gmorb/mpc-vst-liminal-hz",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-liminal-hz/main/docs/images/banner.png",
+      "sha256": "b4f317de96fd2d19e4ff9fe5d3b3c67f97c9e605c4c0ebc5d499d288ece26659"
+    },
+    {
+      "id": "lucky-dip",
+      "name": "Lucky Dip",
+      "repo": "sd88me/mpc-vst-luckydip",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-luckydip/main/docs/img/lucky-dip.png",
+      "sha256": "3e57490c026a54dd3098b99960e22f0cca8637272cf43c77b96d9c0aa5af2e2f"
+    },
+    {
+      "id": "machinemodule",
+      "name": "Machinemodule",
+      "repo": "sd88me/mpc-vst-machinedrum",
+      "license": "AGPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-machinedrum/main/docs/img/machinemodule.png",
+      "sha256": "18df1f18af33a8616a814b4653d12c69d4c55cd2ba60d8cb6f01fc3c7f2e0411"
+    },
+    {
+      "id": "maze-sequencer",
+      "name": "Maze Sequencer",
+      "repo": "sd88me/mpc-vst-maze",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-maze/main/docs/img/maze-sequencer.png",
+      "sha256": "b0b0f7606c6411aa02e3860e997f755b26b8599223bf1a9e8f8bff176fd6db5b"
+    },
+    {
+      "id": "maze-voice",
+      "name": "Maze Voice",
+      "repo": "sd88me/mpc-vst-maze",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-maze/main/docs/img/maze-voice.png",
+      "sha256": "b8f01c4fe349de2d9bb1c5190e8d8c34f1f9450e040ffc7946c610980a6d90b5"
+    },
+    {
+      "id": "meowsynth",
+      "name": "MeowSynth",
+      "repo": "mcardonaserrano/meowsynth-mpc",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/mcardonaserrano/meowsynth-mpc/main/previews/meow_page_meowing.png",
+      "sha256": "888597a4e1683a55ba4f852909b90e14b4c0938fd62d23e3daddf7f714ad8c6f"
+    },
+    {
+      "id": "monomodule",
+      "name": "Monomodule One + FX",
+      "repo": "sd88me/mpc-vst-monomodule",
+      "license": "AGPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-monomodule/main/docs/img/monomodule.png",
+      "sha256": "7eac836f3da273a2b8d26c3347087f44e19e1ccec18482d81b49758897e542a3"
+    },
+    {
+      "id": "morpho-pe",
+      "name": "Morpho-PE",
+      "repo": "sd88me/mpc-vst-morpho-PE",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-morpho-PE/main/docs/img/morpho-pe.png",
+      "sha256": "50e4df60dd366baf972fe36b7b01302064194b658a6f6f7e12cc29e23811f4e2"
+    },
+    {
+      "id": "mpc-plaits",
+      "name": "MPC Plaits",
+      "repo": "poloq-instruments/mpc-vst-plaits",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "mutable-vibe",
+      "name": "Mutable Vibe MPC",
+      "repo": "nachtaktiv303/mpc-vst-mutable-vibe",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "nam",
+      "name": "NAM",
+      "repo": "jacob-sabella/mpc-vst-nam",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-nam/f2fa28c8f4086606e929732a4824e72579bdcf80/docs/screenshots/nam.png",
+      "sha256": "99469403f5b57d27b7374d780baa45750bb47e9a4f16dc6ea0c265d0b32957f7"
+    },
+    {
+      "id": "omni-sampler",
+      "name": "Omni Sampler",
+      "repo": "B0ss-M/MrHighMan",
+      "license": "LGPL-3.0-or-later",
+      "screenshot": "https://raw.githubusercontent.com/B0ss-M/MrHighMan/main/docs/screenshot.png",
+      "sha256": "fdbee0d121c1cf16c25e6719a33d5089ca347fde19ebd659cd78e64f10c5abea"
+    },
+    {
+      "id": "open303",
+      "name": "303",
+      "repo": "saustin2010/mpc-vst-303",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-303/v1.0.0/screenshots/page_0.png",
+      "sha256": "4a2ae4e6c04853efd7691fe3e37aa41655a1fff7da4dbb482e34e7585ee2bf92"
+    },
+    {
+      "id": "ottmpc",
+      "name": "OTTmpc",
+      "repo": "sd88me/mpc-vst-OTT",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-OTT/claude/friendly-wozniak-m9ak1l/docs/screenshot.png",
+      "sha256": "4ceda0aa351d7ec2b61eab35846116aee218992f91082a2c026259fd75363f3f"
+    },
+    {
+      "id": "overcast",
+      "name": "Overcast",
+      "repo": "FullPace/overcast",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "plugin-manager",
+      "name": "Plugin Manager",
+      "repo": "poloq-instruments/mpc-vst-manager",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "polyforce",
+      "name": "PolyForce",
+      "repo": "Devko/PolyForce",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/Devko/PolyForce/main/docs/img/waves.png",
+      "sha256": "4646c0b4b47dfe611967d0bd6b40987307032e7f61aa6d3b1099e2555de3d166"
+    },
+    {
+      "id": "profit-08",
+      "name": "Profit-08",
+      "repo": "sd88me/mpc-vst-profit8",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-profit8/main/docs/img/screenshot-program.png",
+      "sha256": "885130fcba9c3cedae57ebfee40933f65983f5d84dc62872f5d61b4a62e0a942"
+    },
+    {
+      "id": "remote",
+      "name": "MPC Remote",
+      "repo": "jacob-sabella/mpc-addin-remote",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "rmxxxl",
+      "name": "RMXXXL",
+      "repo": "sunskiefer/RMXXXL",
+      "license": "GPL-3.0-or-later",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/RMXXXL/v1.1.1/docs/img/remix.png",
+      "sha256": "946566712b0b97b10aedb9652b5f603d41e553242dc4fdb90674168d18bf87b6"
+    },
+    {
+      "id": "stream",
+      "name": "Stream",
+      "repo": "stampman3000-jpg/mpc-stream",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "subforce",
+      "name": "SubForce",
+      "repo": "Devko/SubForce",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/Devko/SubForce/main/docs/img/filter.png",
+      "sha256": "2d70785c7ac2dd8f4ec472d9bd3b70702feb546ab59efbe8b094d2070bf3743e"
+    },
+    {
+      "id": "tr-6w6",
+      "name": "6W6",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/6w6.png",
+      "sha256": "e2e9be6a072bf94487b1048b9a0d04e90f2a06aa92c8b67557d52c68a17cd76d"
+    },
+    {
+      "id": "tr-8w8",
+      "name": "8W8",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/8w8.png",
+      "sha256": "5ae2b7a74338237926d2f38422f538c9155a09ef7f03b513b1078aa6bda23c52"
+    },
+    {
+      "id": "tr-9w9",
+      "name": "9W9",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/9w9.png",
+      "sha256": "fb2b2ba394eb41fe035372b165e17ea6dd06c6dc40aba3102f30508129edadb3"
+    },
+    {
+      "id": "tr-cw78",
+      "name": "CW-78",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/ba525167c18bb0961dfd60d5989a033f737fe517/docs/screenshots/cw78.png",
+      "sha256": "c91e6f0bf12d34bf11e39f7e55107c90ba40711f7e653d5f27c58c249e270cc4"
+    },
+    {
+      "id": "tr-mpc",
+      "name": "TR-MPC",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/7e704c6f3be14b661c887631e203494d8cc3f74f/docs/img/tr-mpc-slots.png",
+      "sha256": "cfb96108d8f29e5fac6ac2d65ee0174366ffa5e6e0746512905845c05d0dde8b"
+    },
+    {
+      "id": "tr-mpc-tap-fx",
+      "name": "TR-MPC Tap FX",
+      "repo": "sd88me/mpc-vst-TR-MPC",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-TR-MPC/7e704c6f3be14b661c887631e203494d8cc3f74f/docs/img/tr-mpc-tap-fx.png",
+      "sha256": "7d24a213c65352c9d07f7cf25cc8b1497df6d41121b6aa3e3034675c78657940"
+    },
+    {
+      "id": "usb-audio",
+      "name": "MPC USB audio",
+      "repo": "jacob-sabella/mpc-addin-usb-audio",
+      "license": "MIT",
+      "screenshot": "",
+      "sha256": null
+    },
+    {
+      "id": "vibe-fx",
+      "name": "Vibe FX",
+      "repo": "nachtaktiv303/mpc-vst-vibe-fx",
+      "license": "MIT",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-vibe-fx/main/preview_0.png",
+      "sha256": "7f1c1a0ef3257d360e642eb80f2595383d70ed82a87cc93c03d674dfb5d76fe8"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 {
-  "date": "2026-10-08T19:30:39+00:00",
+  "schema": 1,
+  "bridge_schema": "openplugin.catalog/1",
+  "generated": "2026-10-08T19:30:39+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -51,8 +53,7 @@
         "repository": "saustin2010/mpc-vst-303",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-6w6",
@@ -139,8 +140,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-8w8",
@@ -227,8 +227,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-9w9",
@@ -315,8 +314,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "acid",
@@ -449,8 +447,7 @@
         "repository": "sd88me/mpc-vst-acid",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-air3",
@@ -506,8 +503,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-buttercomp2",
@@ -562,8 +558,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-chamber2",
@@ -618,8 +613,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-chorusensemble",
@@ -675,8 +669,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-console7channel",
@@ -732,8 +725,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-density2",
@@ -789,8 +781,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-galactic",
@@ -846,8 +837,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-galactic2",
@@ -902,8 +892,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-galactic3",
@@ -958,8 +947,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-galacticvibe",
@@ -1015,8 +1003,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-infinity2",
@@ -1072,8 +1059,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-kalienspaceship",
@@ -1129,8 +1115,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-kcathedral5",
@@ -1185,8 +1170,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-kcosmos",
@@ -1242,8 +1226,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-mackity",
@@ -1299,8 +1282,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-matrixverb",
@@ -1355,8 +1337,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-pitchdelay",
@@ -1412,8 +1393,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-tapedelay2",
@@ -1469,8 +1449,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-tovinyl4",
@@ -1526,8 +1505,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-verbity2",
@@ -1582,8 +1560,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-zacidlowpass",
@@ -1639,8 +1616,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "airwindows-zlowpass2",
@@ -1695,8 +1671,7 @@
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "boris-granular",
@@ -1742,8 +1717,7 @@
         "repository": "sd88me/mpc-vst-boris",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "chordsmith",
@@ -1843,8 +1817,7 @@
         "repository": "jacob-sabella/mpc-vst-chordsmith",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "clementine-xt",
@@ -1974,8 +1947,7 @@
         "repository": "sd88me/mpc-vst-clementineXT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "crate-digger",
@@ -2113,8 +2085,7 @@
         "repository": "sd88me/mpc-vst-cratedigger",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-cw78",
@@ -2201,8 +2172,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dexed-dx7",
@@ -2323,8 +2293,7 @@
         "repository": "sd88me/mpc-vst-dx7",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dragonfly-early-reflections",
@@ -2373,8 +2342,7 @@
         "repository": "gmorb/mpc-vst-dragonfly-early-reflections",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dragonfly-hall",
@@ -2423,8 +2391,7 @@
         "repository": "gmorb/mpc-vst-dragonfly-hall",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dragonfly-plate",
@@ -2473,8 +2440,7 @@
         "repository": "gmorb/mpc-vst-dragonfly-plate",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dragonfly-room",
@@ -2523,8 +2489,7 @@
         "repository": "gmorb/mpc-vst-dragonfly-room",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "dub-force-siren",
@@ -2573,8 +2538,7 @@
         "repository": "no3z/mpc-dubsiren",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "effectforce",
@@ -2640,8 +2604,7 @@
         "repository": "Devko/EffectForce",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "euclidier",
@@ -2751,8 +2714,7 @@
         "repository": "sd88me/mpc-vst-euclidier",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "glass-spheres",
@@ -2811,8 +2773,7 @@
         "repository": "FullPace/glass-spheres",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "helm",
@@ -2856,8 +2817,7 @@
         "repository": "Lewinator56/mpc-vst-helm",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "hera",
@@ -2908,8 +2868,7 @@
         "repository": "saustin2010/mpc-vst-hera",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "jv-880",
@@ -2985,8 +2944,7 @@
         "repository": "sd88me/mpc-vst-jv880",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "keyscope",
@@ -3064,8 +3022,7 @@
         "repository": "jacob-sabella/mpc-vst-keyscope",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "liminal-hz",
@@ -3118,8 +3075,7 @@
         "repository": "gmorb/mpc-vst-liminal-hz",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "lucky-dip",
@@ -3187,8 +3143,7 @@
         "repository": "sd88me/mpc-vst-luckydip",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "machinemodule",
@@ -3222,8 +3177,7 @@
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
-      },
-      "download": false
+      }
     },
     {
       "id": "maze-sequencer",
@@ -3356,8 +3310,7 @@
         "repository": "sd88me/mpc-vst-maze",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "maze-voice",
@@ -3469,8 +3422,7 @@
         "repository": "sd88me/mpc-vst-maze",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "meowsynth",
@@ -3515,8 +3467,7 @@
         "repository": "mcardonaserrano/meowsynth-mpc",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "monomodule",
@@ -3556,8 +3507,7 @@
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
-      },
-      "download": false
+      }
     },
     {
       "id": "morpho-pe",
@@ -3604,8 +3554,7 @@
         "repository": "sd88me/mpc-vst-morpho-PE",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "commander",
@@ -3697,8 +3646,7 @@
         "repository": "jacob-sabella/mpc-addin-commander",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "mpc-plaits",
@@ -3780,8 +3728,7 @@
         "repository": "poloq-instruments/mpc-vst-plaits",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "remote",
@@ -3871,8 +3818,7 @@
         "repository": "jacob-sabella/mpc-addin-remote",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "usb-audio",
@@ -3951,8 +3897,7 @@
         "repository": "jacob-sabella/mpc-addin-usb-audio",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "mutable-vibe",
@@ -4042,8 +3987,7 @@
         "repository": "nachtaktiv303/mpc-vst-mutable-vibe",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "nam",
@@ -4149,8 +4093,7 @@
         "repository": "jacob-sabella/mpc-vst-nam",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "omni-sampler",
@@ -4247,8 +4190,7 @@
         "repository": "B0ss-M/MrHighMan",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "ottmpc",
@@ -4295,8 +4237,7 @@
         "repository": "sd88me/mpc-vst-OTT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "overcast",
@@ -4519,8 +4460,7 @@
         "repository": "FullPace/overcast",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "plugin-manager",
@@ -4606,8 +4546,7 @@
         "repository": "poloq-instruments/mpc-vst-manager",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "polyforce",
@@ -4670,8 +4609,7 @@
         "repository": "Devko/PolyForce",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "profit-08",
@@ -4718,8 +4656,7 @@
         "repository": "sd88me/mpc-vst-profit8",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "rmxxxl",
@@ -4787,8 +4724,7 @@
         "repository": "sunskiefer/RMXXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "stream",
@@ -4829,8 +4765,7 @@
         "repository": "stampman3000-jpg/mpc-stream",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "subforce",
@@ -4996,8 +4931,7 @@
         "repository": "Devko/SubForce",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-mpc",
@@ -5045,8 +4979,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "tr-mpc-tap-fx",
@@ -5088,8 +5021,7 @@
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     },
     {
       "id": "vibe-fx",
@@ -5143,8 +5075,7 @@
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
+      }
     }
   ]
 }
