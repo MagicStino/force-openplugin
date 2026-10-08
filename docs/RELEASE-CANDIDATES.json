@@ -1,0 +1,33 @@
+{
+  "project_version": "3.9.1.3-openplugin",
+  "ssh_enabled": false,
+  "hardware_validated": false,
+  "candidates": [
+    {
+      "device": "mpc-gen1",
+      "source_commit": "5d0abe530cb0d5255517a374f326c300e8768510",
+      "output_sha256": "57c197f5074992605be3e3994608cb7fc53cdd6529cc4a597009c8367de6844d",
+      "output_size": 172132728,
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "vendor_verifier": "pass under QEMU with original matching stock az01-image; not hardware acceptance"
+      }
+    },
+    {
+      "device": "force",
+      "source_commit": "5d0abe530cb0d5255517a374f326c300e8768510",
+      "output_sha256": "0881d35cc8d01da9a61b90c2f62cccef7be13fa8546435d344934854c967e75c",
+      "output_size": 191728992,
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "vendor_verifier": "pass under QEMU with original matching stock az01-image; not hardware acceptance"
+      }
+    }
+  ]
+}

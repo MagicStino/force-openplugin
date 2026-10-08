@@ -11,9 +11,9 @@ builds do not establish that flashing is safe.**
 
 ## Start here
 
-[Visual guide and searchable community index](website/index.html) · [Research mission](docs/RESEARCH.md) · [Catalog and discovery](docs/INDEXING.md) · [Source format](docs/SOURCES.md) · [Build and validation](docs/TESTING.md).
+[Visual guide and searchable community index](https://MagicStino.github.io/force-openplugin/) · [Research mission](docs/RESEARCH.md) · [Catalog and discovery](docs/INDEXING.md) · [Source format](docs/SOURCES.md) · [Build and validation](docs/TESTING.md).
 
-The website is ready in `website/`; local preview and GitHub Pages deployment instructions are in [website/README.md](website/README.md). The repository is currently private: free public Pages requires an explicit visibility decision.
+The website is ready in `website/`; local preview and GitHub Pages deployment instructions are in [website/README.md](website/README.md). The repository is public; the documentation site is published from the gh-pages branch.
 
 ## Features
 

@@ -12,8 +12,6 @@ Open http://127.0.0.1:8765. JavaScript uses a local catalog.json; serve over HTT
 
 ## Free GitHub Pages
 
-The current private repository cannot use free public Pages. Making it public exposes repository contents/history and releases and requires the owner's explicit approval. Alternative: publish only this website directory in a separate public repository. Do not copy firmware, keys, personalized images or local outputs into that repository.
-
-Once that decision is approved, copy the contents of website/ to the publishing branch root and select that branch / (root) in Settings > Pages. Keep .nojekyll. The site uses relative asset links and works at a project Pages URL. No paid hosting account is required. This source preparation does not itself enable Pages.
+The owner approved making the repository public. The documentation site is published from the gh-pages branch root at https://MagicStino.github.io/force-openplugin/. Source lives in website/ on main. To update the deployment, copy the contents of website/ to the gh-pages root, preserving .nojekyll and relative asset paths. Never copy firmware, keys or local output directories into the website branch.
 
 Update the catalog snapshot and validation claims deliberately when upstream or binaries change. Illustrations are concepts; native previews are generated assets and not real-device screenshots.
