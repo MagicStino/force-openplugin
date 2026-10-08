@@ -15,7 +15,7 @@ data=json.loads((skin/'TUI.json').read_text())['pageData']
 defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params']
 names={f'Parameter {i}':x['key'] for i,x in enumerate(params)}
-assert [t['tabName'] for t in data['tabs']]==['CATALOG','FIND']
+assert [t['tabName'] for t in data['tabs']]==['CATALOG','FIND','JV SETUP']
 a.output.mkdir(parents=True,exist_ok=True)
 for mode in [0,1]:
     image=Image.new('RGBA',(1280,628),'#0c0c0d')
@@ -51,6 +51,6 @@ for mode in [0,1]:
             draw=ImageDraw.Draw(image)
             assert draw.textlength(text,font=font)<w,'Text overflows readout'
             draw.text((x+w/2,y+h/2),text,font=font,fill='#e9edff',anchor='mm')
-    assert len(touches)==46,len(touches)
+    assert len(touches)==47,len(touches)
     image.convert('RGB').save(a.output/('find-search.png' if mode==0 else 'find-source.png'))
-print('FIND: both modes, 46 non-overlapping touch targets, bounds/text/assets PASS')
+print('FIND: both modes, 47 non-overlapping touch targets, bounds/text/assets PASS')

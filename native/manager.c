@@ -1185,6 +1185,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
                 if(m->searching){m->query[0]=0;m->tab=0;m->kindf=0;m->menu=-1;
                     snprintf(m->source_status,sizeof m->source_status,"All indexed plugins restored. Open CATALOG.");}
             }
+            else if (!strcmp(key,"source_cleartext")) {input[0]=0;snprintf(m->source_status,sizeof m->source_status,"Text cleared. Show all restores the full catalog.");}
             else if (!strcmp(key, "source_back")) { size_t l = strlen(input); if (l) input[l - 1] = 0; }
             else if (!strncmp(key, "source_key_", 11)) {
                 const char *chars = "abcdefghijklmnopqrstuvwxyz0123456789-._/: ";

@@ -37,6 +37,9 @@ int main(void) {
     strcpy(model->query_draft,"zzzz");assert(visible(model,matches)==2);
     mgr_set_param(model,"source_scan","1");assert(visible(model,matches)==0);
     mgr_set_param(model,"source_clear","1");assert(visible(model,matches)==2);
+    strcpy(model->query,"synth");strcpy(model->query_draft,"draft");
+    mgr_set_param(model,"source_cleartext","1");assert(!model->query_draft[0] && !strcmp(model->query,"synth"));
+    mgr_set_param(model,"source_clear","1");
     model->kindf=2;model->tab=1;model->page=5;model->menu=1;
     strcpy(model->query_draft,"  synth  ");
     mgr_set_param(model,"source_scan","1");

@@ -33,7 +33,7 @@ def customize(vst):
     data['params'].append(dict(key='source_mode', name='Find mode', options=['search','url']))
     for key in ['source_url', 'source_status']:
         data['params'].append(dict(key=key, name=key, type='readout', display='string'))
-    keys = ['source_scan', 'source_back', 'source_clear', 'source_search'] + [f'source_key_{i}' for i in range(len(CHARS))]
+    keys = ['source_scan', 'source_back', 'source_clear', 'source_cleartext', 'source_search'] + [f'source_key_{i}' for i in range(len(CHARS))]
     for key in keys:
         data['params'].append(dict(key=key, name=key, type='trigger', momentary=True))
     for key in ['rom_status']+[f'rom_file_{i}' for i in range(5)]:
@@ -57,8 +57,10 @@ def customize(vst):
         ink = '#0c1715' if primary else '#e9edff'
         art(name, w, h, f'<rect width="{w}" height="{h}" rx="12" fill="{color}"/>' + text(18, h//2+9, label, 25, ink))
     lines = ['\n[tab FIND]', 'art file=images/sources.svg',
-        'readout box=0 w=1180 h=48 cx=640 cy=264 label="" key=source_url tsize=32 tcolor=e9edff tpad=0',
+        'readout box=0 w=960 h=48 cx=520 cy=264 label="" key=source_url tsize=32 tcolor=e9edff tpad=0',
         'readout box=0 w=1180 h=44 cx=640 cy=349 label="" key=source_status tsize=23 tcolor=72e6cc tpad=0']
+    button('source_cleartext.svg','Clear text',190,52)
+    lines.append('button cx=1140 cy=264 label="" key=source_cleartext img=images/source_cleartext.svg w=190 h=52')
     # Skin coordinates include the host header's 86 px offset.
     keyboard=['1234567890-_','qwertyuiop/:','asdfghjkl.','zxcvbnm ']
     assert sorted(''.join(keyboard)) == sorted(CHARS)
