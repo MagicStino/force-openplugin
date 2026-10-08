@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-PROJECT_VERSION = "3.9.1.5-openplugin"
+PROJECT_VERSION = "3.9.1.6-openplugin"
 
 def inspect_image(path):
     digest = hashlib.sha256()

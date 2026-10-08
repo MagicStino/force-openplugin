@@ -48,8 +48,8 @@ int main(void) {
     strcpy(model->query_draft,"reverb");assert(visible(model,matches)==1 && matches[0]==0);
     mgr_set_param(model,"source_scan","1");assert(visible(model,matches)==1 && matches[0]==1);
     mgr_set_param(model,"source_clear","1");assert(visible(model,matches)==2 && !model->query_draft[0]);
-    strcpy(model->pkg[0].name,"JV-800 Synth");
-    strcpy(model->query_draft,"800");
+    strcpy(model->pkg[0].name,"JV-880");strcpy(model->pkg[0].id,"jv-880");
+    strcpy(model->query_draft,"880");
     assert(visible(model,matches)==2); /* typing leaves the catalog intact */
     model->tab=1;model->kindf=2;
     mgr_set_param(model,"source_scan","1");

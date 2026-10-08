@@ -13,5 +13,13 @@ int main(void){
  unlink(dst);unlink(src);rmdir(dir);
  device_t *d=calloc(1,sizeof *d);char folder[768];assert(!rom_folder(d,folder,sizeof folder));
  d->nent=1;strcpy(d->ent[0].uid,"4a563838");strcpy(d->ent[0].file,"/tmp/unrelated/jv880.so");assert(!rom_folder(d,folder,sizeof folder));free(d);
+ mgr_t *m=calloc(1,sizeof *m);assert(m);pthread_mutex_init(&m->mu,0);m->dev=calloc(1,sizeof *m->dev);m->npkg=1;m->sel=m->menu=-1;
+ strcpy(m->pkg[0].id,"jv-880");strcpy(m->pkg[0].name,"JV-880");strcpy(m->pkg[0].installed,"1.0.6");
+ strcpy(m->query,"880");int idx[MAXPKG];assert(visible(m,idx)==1);
+ char b[160];mgr_get_param(m,"r1_rom",b,sizeof b);assert(!strcmp(b,"1"));
+ mgr_set_param(m,"r1_rom_install","1");assert(m->job==J_ROM_DOWNLOAD);assert(strstr(m->status,"starting ROM download"));
+ m->job=J_NONE;m->busy=J_REFRESH;mgr_set_param(m,"r1_rom_install","1");assert(m->job==J_NONE && strstr(m->status,"Please wait"));
+ m->busy=J_NONE;strcpy(m->pkg[0].id,"other");m->query[0]=0;mgr_get_param(m,"r1_rom",b,sizeof b);assert(!strcmp(b,"0"));
+ pthread_mutex_destroy(&m->mu);free(m->dev);free(m);
  puts("ROM setup tests passed");return 0;
 }

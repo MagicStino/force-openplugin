@@ -10,6 +10,8 @@ def customize(vst):
     data = json.loads((vst / 'params.json').read_text())
     previews=json.loads((Path(__file__).resolve().parents[1]/'assets/previews.lock.json').read_text())['entries']
     for row in range(1,4):
+        data['params'].append(dict(key=f'r{row}_rom',name='ROM setup available',options=['no','yes']))
+        data['params'].append(dict(key=f'r{row}_rom_install',name='Install ROM files',type='trigger',momentary=True))
         data['params'].append(dict(key=f'r{row}_preview',name='Preview snapshot',options=[str(i) for i in range(len(previews)+2)]))
         for suffix in ['desc1','desc2']:
             data['params'].append(dict(key=f'r{row}_{suffix}',name='Description',type='readout',display='string'))
@@ -17,7 +19,7 @@ def customize(vst):
     import re
     redesigned=[]
     for line in layout:
-        if re.search(r'key=r[123]_(init|kindtxt|meta|chan|cpu|old|tested|tested_txt)\b',line): continue
+        if re.search(r'key=r[123]_(init|kindtxt|meta|chan|cpu|old|tested|tested_txt|size|sha)\b',line): continue
         if re.search(r'key=card[123]\b',line):
             line=line.replace('tx=125','tx=208').replace('ttw=640','ttw=580').replace('tth=50','tth=39').replace('tsize=46','tsize=34')
         redesigned.append(line)
@@ -82,12 +84,9 @@ def customize(vst):
     with (vst / 'layout.conf').open('a') as f:
         f.write('\n'.join(lines) + '\n')
 
-    art('rom_setup.svg',1280,628,'<rect width="1280" height="628" fill="#0c0c0d"/>'+text(40,65,'JV-880 SETUP',36)+text(40,110,'Unload JV-880 before importing. Your existing files are kept.',24)+text(40,150,'External source: archive.org/details/jv880_rompack_v1',23)+text(40,190,'Author requires your own v1.0.0 dump. Archive version is not independently verified.',21))
-    romlines=['\n[tab JV SETUP]','art file=images/rom_setup.svg']
-    for i in range(5):
-        romlines.append(f'readout box=0 w=1180 h=40 cx=640 cy={310+i*47} label="" key=rom_file_{i} tsize=25 tcolor=e9edff tpad=0 talign=left')
-    romlines.append('readout box=0 w=1180 h=58 cx=640 cy=570 label="" key=rom_status tsize=20 tcolor=72e6cc tpad=0')
-    for key,label,x in [('rom_check','Check files',220),('rom_usb','Import USB',640),('rom_download','Download',1060)]:
-        button(key+'.svg',label,350,56,key=='rom_download')
-        romlines.append(f'button cx={x} cy=662 label="" key={key} img=images/{key}.svg w=350 h=56')
-    with (vst/'layout.conf').open('a') as f:f.write('\n'.join(romlines)+'\n')
+
+    button('rom_install.svg','Install ROM files',196,48,True)
+    textlayout=(vst/'layout.conf').read_text()
+    controls='\n'.join(f'button cx=910 cy={293+(row-1)*128} label="" key=r{row}_rom_install img=images/rom_install.svg w=196 h=48 when=r{row}_rom:yes' for row in range(1,4))
+    textlayout=textlayout.replace('[tab FIND]',controls+'\n\n[tab FIND]')
+    (vst/'layout.conf').write_text(textlayout)

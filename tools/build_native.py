@@ -113,7 +113,7 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('3.9.1.5-openplugin\n')
+    (helpers / 'VERSION').write_text('3.9.1.6-openplugin\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')
     for src, dest in [(ROOT / 'native/LICENSE', 'MANAGER-LICENSE'), (mv / 'LICENSE', 'WRAPPER-LICENSE'),

@@ -3,9 +3,9 @@ static const char *rom_names[5]={"jv880_rom1.bin","jv880_rom2.bin","jv880_wavero
 static const long rom_sizes[5]={32768,262144,2097152,2097152,32768};
 #define ROM_ARCHIVE_SHA "f29a3d59bce0e46696d6b618fe8c2d40d2db92459a8e7c2ca114f196cfde7cf4"
 static int rom_regular(const char *p,long size) {struct stat st;return !lstat(p,&st)&&S_ISREG(st.st_mode)&&st.st_size==size;}
-static void rom_message(mgr_t *m,const char *s) {pthread_mutex_lock(&m->mu);snprintf(m->rom_status,sizeof m->rom_status,"%s",s);m->rev++;pthread_mutex_unlock(&m->mu);}
+static void rom_message(mgr_t *m,const char *s) {pthread_mutex_lock(&m->mu);snprintf(m->rom_status,sizeof m->rom_status,"%s",s);say_locked(m,OK,"JV-880: %s",s);pthread_mutex_unlock(&m->mu);}
 static int rom_folder(const device_t *d,char *out,size_t n) {
-    for(int i=0;i<d->nent;i++) if(!strcasecmp(d->ent[i].uid,"4a563838")) {
+    for(int i=0;i<d->nent;i++) if(!strcasecmp(d->ent[i].uid,"4a563838") || !strcasecmp(d->ent[i].name,"JV-880")) {
         char folder[512];snprintf(folder,sizeof folder,"%s",d->ent[i].file);
         char *slash=strrchr(folder,'/');if(!slash)return 0;*slash=0;
         /* Require the portable package; never write to an arbitrary registration. */

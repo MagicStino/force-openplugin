@@ -21,6 +21,13 @@ int main(int argc,char **argv) {
     assert(categories[0]+categories[1]+categories[4]==list.n);
     printf("Browse index: all %d entries; %d instruments, %d effects, %d trackers, %d samplers, %d tools PASS\n",list.n,categories[0],categories[1],categories[2],categories[3],categories[4]);
     m->kindf=0;strcpy(m->query,"ambient");int n=visible(m,indices);assert(n>0); /* includes tags beyond the first two */
+    const char *queries[]={"880","dex","DEX","verb","800"};
+    for(int q=0;q<5;q++){
+        strcpy(m->query,queries[q]);int count=visible(m,indices);
+        for(int j=0;j<count;j++){pkg_t *p=&m->pkg[indices[j]];assert(strcasestr(p->name,m->query)||strcasestr(p->author,m->query)||strcasestr(p->id,m->query)||strcasestr(p->kind,m->query)||strcasestr(p->tags,m->query)||strcasestr(p->summary,m->query));}
+        if(q<4)assert(count>0);
+        printf("Substring %s: %d actual catalog matches PASS\n",queries[q],count);
+    }
     free(m);
     free(packages);free(text);return 0;
 }

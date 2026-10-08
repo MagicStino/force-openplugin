@@ -1075,9 +1075,10 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     if (!strcmp(f, "vis")) snprintf(b, n, "%d", p != NULL && m->loaded);
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
                                  !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
+    else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880") && installed(p));
     else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
-    else if (!strcmp(f, "desc1")) description_line(p->summary,0,b,n);
-    else if (!strcmp(f, "desc2")) description_line(p->summary,1,b,n);
+    else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(p->summary,0,b,n);}
+    else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(p->summary,1,b,n);}
     else if (!strcmp(f, "state")) snprintf(b, n, "%d", card_state(m, i));
     else if (!strcmp(f, "inst")) snprintf(b, n, "%d", installed(p));
     else if (!strcmp(f, "init")) initials(p->name, b);
@@ -1154,8 +1155,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
             if (!strcmp(key,"rom_check")) {m->rom_confirm=0;post(m,J_ROM_CHECK);}
             else if (!strcmp(key,"rom_usb")) {m->rom_confirm=0;post(m,J_ROM_USB);}
             else if (!strcmp(key,"rom_download")) {
-                if(m->rom_confirm) {m->rom_confirm=0;post(m,J_ROM_DOWNLOAD);}
-                else {m->rom_confirm=1;snprintf(m->rom_status,sizeof m->rom_status,"Third-party archive, 155 MiB. Use files you are entitled to use. Tap Download again to confirm.");}
+                m->rom_confirm=0;post(m,J_ROM_DOWNLOAD);
             }
             m->rev++;
         }
@@ -1227,7 +1227,10 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
         if (p && !busy) {
             int i = idx[k], st = card_state(m, i);
             m->sel = i;
-            if (!strcmp(f, "act")) {
+            if (!strcmp(f,"rom_install") && !strcmp(p->id,"jv-880") && installed(p)) {
+                if(m->busy || m->job) say_locked(m,WARN,"Please wait for the current task, then tap Install ROM files.");
+                else {snprintf(m->rom_status,sizeof m->rom_status,"Starting ROM download. Save your project and unload JV-880 first.");say_locked(m,OK,"JV-880: starting ROM download...");post(m,J_ROM_DOWNLOAD);}
+            } else if (!strcmp(f, "act")) {
                 if (st == S_INSTALL || st == S_UPDATE) requeue(m, p, Q_INSTALL);
                 else if (st == S_Q_INSTALL || st == S_Q_UPDATE || st == S_Q_REMOVE) requeue(m, p, 0);
                 else if (st == S_DISABLED) {

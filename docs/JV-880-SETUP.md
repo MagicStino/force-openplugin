@@ -1,20 +1,10 @@
-# JV-880 content setup
+# JV-880 ROM setup (3.9.1.6)
 
-The JV SETUP touchscreen tab is included in the **3.9.1.5 prerelease firmware**. Hardware testing is pending. Missing ROMs and the generic red-bar parameter interface are separate issues; this setup does not claim to fix the skin.
+Open the installed **JV-880 card** and tap **Install ROM files** once. There is no separate setup tab or second confirmation tap. The card description and catalog footer report startup, failure and completion; the footer shows download progress. If another task is running, a visible message asks you to wait.
 
-The [plugin author](https://github.com/sd88me/mpc-vst-jv880/blob/master/docs/ROMS.md) requires your own JV-880 v1.0.0 dump and warns that v1.0.1 causes emulator CPU traps. ROMs are not in the plugin package or our firmware.
+Save your project and unload JV-880 instances before importing. The action downloads the external [community archive](https://archive.org/details/jv880_rompack_v1), checks its pinned SHA-256 and imports only the five base files into the registered portable plugin folder. Existing files, especially user NVRAM, are never overwritten. After completion, close and reload JV-880. Optional expansions remain manual.
 
-## Touchscreen flow
-
-Install JV-880, save your project and unload all its instances before importing. Open **JV SETUP**:
-
-- **Check files** lists each required filename and checks its size at the registered plugin location. This does not identify the firmware revision or prove that audio works.
-- **Download** shows the third-party archive notice; tap it again to confirm. The app fetches the external [community archive](https://archive.org/details/jv880_rompack_v1), verifies its pinned SHA-256, and extracts only the five required files. The download needs internet and 200 MiB temporary free space. The source is not endorsed by the plugin author. Use files you are entitled to use.
-- **Import USB** finds `jv880_rompack_v1.zip` at a mounted USB/SD drive root under `/media` or `/mnt`. It accepts the same pinned archive. Arbitrary personal dumps are currently copied manually following the author's instructions; there is no general file picker yet.
-
-Existing files are never overwritten, including user NVRAM. A wrong-size existing file is reported and must be moved aside manually before retrying. Successful setup asks you to close and reload JV-880; it does not restart the device automatically.
-
-## Exact inventory
+The [author](https://github.com/sd88me/mpc-vst-jv880/blob/master/docs/ROMS.md) requires your own v1.0.0 dump and warns that v1.0.1 causes emulator CPU traps. The author does not endorse this archive. Its fingerprint identifies the inspected download; it does not independently prove firmware revision, permission to redistribute or hardware compatibility. Use files you are entitled to use. ROMs are not bundled in our images.
 
 | Required file | Bytes |
 |---|---:|
@@ -24,12 +14,12 @@ Existing files are never overwritten, including user NVRAM. A wrong-size existin
 | `jv880_waverom2.bin` | 2097152 |
 | `jv880_nvram.bin` | 32768 |
 
-Destination: `<installed JV-880 folder>/jv880-roms/roms/`.
+Destination: `<installed JV-880 folder>/jv880-roms/roms/`. The archive also contains optional SR-JV80-01 through 19, placed manually in `roms/expansions/`. RD-500 files are unrelated and excluded.
 
-The archive additionally contains 19 optional SR-JV80 expansions (01–19), which belong in `roms/expansions/`. This first setup flow imports only the base five files; expansions remain manual. `rd500_expansion.bin` and `rd500_patches.bin` are unrelated and excluded.
+Download needs internet and 200 MiB free temporary space. Failures appear on the card and footer; tap the same button to retry. Wrong-size existing files are reported and must be moved aside manually. Arbitrary personal dumps follow the author's manual copy instructions; no general file picker exists.
 
-Inspected archive SHA-256: `f29a3d59bce0e46696d6b618fe8c2d40d2db92459a8e7c2ca114f196cfde7cf4`. All 26 members passed ZIP CRC checks and the five base files match the required sizes. This fingerprint establishes identity with the inspected archive, **not independent verification of v1.0.0 or permission to redistribute**.
+Pinned archive SHA-256: `f29a3d59bce0e46696d6b618fe8c2d40d2db92459a8e7c2ca114f196cfde7cf4`.
 
-## Validation
+Search uses case-insensitive substrings of titles, authors, IDs, descriptions and tags. For example, `880` finds JV-880; no plugin-specific aliases are added.
 
-Offline C tests cover size/type checks, copying missing files, preserving existing user state and refusing unrelated plugin registrations. Native manager regression tests pass with ASan/UBSan (leak detection disabled because the execution environment uses tracing). Touchscreen and download/import on real Force/MPC hardware remain untested.
+Offline tests cover real JV-880 catalog identity, single-press job dispatch, busy feedback, non-JV card hiding, copying and preserving files. The archive's five-file import passed locally. Hardware testing remains pending. The generic red-bar plugin skin issue is separate and unresolved.

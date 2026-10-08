@@ -15,7 +15,7 @@ data=json.loads((skin/'TUI.json').read_text())['pageData']
 defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params']
 names={f'Parameter {i}':x['key'] for i,x in enumerate(params)}
-assert [t['tabName'] for t in data['tabs']]==['CATALOG','FIND','JV SETUP']
+assert [t['tabName'] for t in data['tabs']]==['CATALOG','FIND']
 a.output.mkdir(parents=True,exist_ok=True)
 for mode in [0,1]:
     image=Image.new('RGBA',(1280,628),'#0c0c0d')
