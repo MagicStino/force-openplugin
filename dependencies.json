@@ -1,4 +1,0 @@
-{
-  "mpc-vst-plugins": {"url": "https://github.com/sd88me/mpc-vst-plugins.git", "commit": "95cc428cd7d4042230cc854a780fb0b7dfa1921f"},
-  "mpc-vst-manager": {"url": "https://github.com/poloq-instruments/mpc-vst-manager.git", "commit": "20850977d9d6b4916bc6574291790415f45254c7"}
-}

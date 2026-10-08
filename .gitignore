@@ -1,9 +1,0 @@
-build/
-*.img
-__pycache__/
-*.pyc
-.deps/
-dist/
-*.key
-*_ed25519
-outputs/
