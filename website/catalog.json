@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-09T06:17:57+00:00",
+  "generated": "2026-10-09T15:24:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -336,6 +336,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.6",
+          "size": 2883155,
+          "sha256": "e3bccd6902d6f3e0d3750a4e9cc738232c57d7c1c5894ab2458c3ecdf2f18f21",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.6/Acid-1.0.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.5",
           "size": 1905635,
           "sha256": "038c2aec9cb5f2e73b29617bcb84334f1e0808dfe099722fab6ddca06ba7b6d8",
@@ -441,7 +457,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
@@ -1674,6 +1690,51 @@
       }
     },
     {
+      "id": "aphex",
+      "name": "Aphex",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-aphex",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Korg MS-10/MS-20 style mono synth with a patch bay, an ESP section and both MS filters.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-aphex/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "ms-20",
+        "monophonic",
+        "patch-bay",
+        "analog-modelling"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 8013719,
+          "sha256": "d51cf54b7c16c66af11e55c2d7b5475c530b260eb138ccf94e3263d864a62116",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-aphex/releases/download/v1.0.0/SYN-Aphex-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-aphex",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "boris-granular",
       "name": "Boris Granular",
       "author": "sd88me",
@@ -1715,6 +1776,95 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-boris",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "braids",
+      "name": "Braids",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-braids",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Mutable Instruments Braids: a macro oscillator with 47 synthesis models.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-braids/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "mutable-instruments",
+        "macro-oscillator",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 8394262,
+          "sha256": "3baa64b6beda9605f0592cc7f7f63e0832aa22d584c9745119c955283e3c0b42",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-braids/releases/download/v1.0.0/SYN-Braids-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-braids",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "chordism",
+      "name": "Chordism",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-chordism",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "One key in, a four-voice chord out: morphing oscillators, FM, filter, lo-fi, delay, reverb and an arpeggiator.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-chordism/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "chords",
+        "arpeggiator",
+        "fm",
+        "lo-fi"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 2463332,
+          "sha256": "1c30daf7cc426e1f97427e1126c2a77bba3ebeb377eedc0b4fc7723e1a5d4327",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-chordism/releases/download/v1.0.0/SYN-Chordism-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-chordism",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -1838,6 +1988,26 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.9.5",
+          "size": 2572509,
+          "sha256": "63a26fc491fcfaea5b4130893a44668c023ba1ae22a31c8835ffb0c70e17f062",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 25.5,
+            "max_pct": 29.4,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.5/Clementine-XT-0.9.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.9.4",
           "size": 9687376,
           "sha256": "dcd4abc98d6a25e3cb927503186c6e76a4bc8f1a4c4011e54b35d68d4ddd1ce6",
@@ -1941,7 +2111,7 @@
           "tested": []
         }
       ],
-      "latest": "0.9.4",
+      "latest": "0.9.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-clementineXT",
@@ -2192,6 +2362,51 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "denis",
+      "name": "Denis",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-denis",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "West Coast / Serge-inspired mono synth: complex oscillators, a wavefolder and a modulation matrix.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-denis/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "west-coast",
+        "serge",
+        "wavefolder",
+        "monophonic"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 5577705,
+          "sha256": "348009baa79c577d378c6a9a1e25177458e7e4702217b34cefaddaa47ec3ec55",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-denis/releases/download/v1.0.0/SYN-Denis-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-denis",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -2629,6 +2844,51 @@
       }
     },
     {
+      "id": "elements",
+      "name": "Elements",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-elements",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Mutable Instruments Elements: a modal synthesis voice you bow, blow and strike, with 12 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-elements/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "mutable-instruments",
+        "modal",
+        "physical-modelling",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1241032,
+          "sha256": "78b39088e72b07634b91d6b5289dd5d241b7cf33c2cbdcc3d7a2c9170e363923",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-elements/releases/download/v1.0.0/SYN-Elements-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-elements",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "euclidier",
       "name": "Euclidier",
       "author": "sd88me",
@@ -2739,6 +2999,50 @@
       }
     },
     {
+      "id": "fizzik",
+      "name": "Fizzik",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-fizzik",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Physical modelling: an exciter and two coupled resonators (string, beam, plate, membrane).",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-fizzik/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "physical-modelling",
+        "resonator",
+        "percussion"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1928823,
+          "sha256": "b566e9a9d9467af5059dfec0402d3b03c979153f95d4095e5fb31fe024f29bca",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-fizzik/releases/download/v1.0.0/SYN-Fizzik-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-fizzik",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "glass-spheres",
       "name": "Glass Spheres",
       "author": "Padbangers",
@@ -2793,6 +3097,97 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "FullPace/glass-spheres",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "grids",
+      "name": "Grids",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-grids",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Mutable Instruments Grids: a topographic drum sequencer that plays kick, snare and hats from MPC's clock through its own MIDI port.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-grids/v1.0.0/screenshots/page_0.png",
+      "style": "sequencer",
+      "tags": [
+        "mutable-instruments",
+        "drum",
+        "midi",
+        "euclidean",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 383080,
+          "sha256": "fadc32b7c351b4d6cebf39cb19d9a1f27cb369278e69877ff272abac2a2c14fd",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-grids/releases/download/v1.0.0/SEQ-Grids-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-grids",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "groove-bank",
+      "name": "Groove Bank",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-groovebank",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Replays the chord you hold in genre grooves from its library, with swing, strum and latch, through its own MIDI port.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-groovebank/v1.0.0/screenshots/page_0.png",
+      "style": "sequencer",
+      "tags": [
+        "midi",
+        "chords",
+        "rhythm",
+        "grooves"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 832577,
+          "sha256": "12910846de110e48fbea225ab64e714646aa5a62f989572f2e256e31c4e978ca",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-groovebank/releases/download/v1.0.0/SEQ-Groove-Bank-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-groovebank",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -2888,6 +3283,70 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-hera",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "interzonexxl",
+      "name": "InterzoneXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/InterzoneXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Valley Audio's Interzone synth voice from VCV Rack, played from MIDI in mono or up to 16-voice poly, on the module's own panel with its sliders, knobs and switches, every input jack patched to a built-in source (four Bogaudio LFOs, Tidal Modulator 2, Random Sampler, step and gate sequencers, an extra oscillator) on the MPC tempo, a brickwall limiter, Panic and 16 presets.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/InterzoneXXL/v0.1.0/docs/img/vco.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "monosynth",
+        "polysynth",
+        "analog",
+        "valley",
+        "vcv",
+        "subtractive",
+        "lfo",
+        "modulation",
+        "sequencer"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 14275210,
+          "sha256": "ba53790987815f5d216a992a69b5de9a483f92167ef358a784034ae95b2e785f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.1/InterzoneXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 14271886,
+          "sha256": "59dfa6dddaade42f9b7f6de53b191fba1e47f93b4a06ccbb19f7afe1b2a24559",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.0/InterzoneXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/InterzoneXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -3515,6 +3974,95 @@
       }
     },
     {
+      "id": "monksynth",
+      "name": "MonkSynth",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-monksynth",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "A formant (FOF) singing voice with 12 characters and a choir.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monksynth/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "formant",
+        "voice",
+        "choir"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1720130,
+          "sha256": "b545c785f7e68ae78a898b09a3ef737ce999ebbb40540caadb67957919f9e37b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-monksynth/releases/download/v1.0.0/SYN-MonkSynth-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-monksynth",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "mono-voice",
+      "name": "Mono Voice",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-monovoice",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Elektron Monomachine-style digital voice: SuperWave, SID, DigiPRO, FM and more machines; 12 factory patches.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monovoice/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "monomachine",
+        "sid",
+        "fm",
+        "digital"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 254738,
+          "sha256": "817a79f8ccc9f06aa480e101afd71e8994fd16de4bdf9284cfb5a77748b8275c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-monovoice/releases/download/v1.0.0/SYN-Mono-Voice-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-monovoice",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "monomodule",
       "name": "Monomodule One + FX",
       "author": "sd88me",
@@ -3555,6 +4103,51 @@
       }
     },
     {
+      "id": "raffosynth",
+      "name": "Moog",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-moog",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-moog/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "minimoog",
+        "monophonic",
+        "ladder-filter",
+        "analog-modelling"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 6697233,
+          "sha256": "4ef30df4772c0fc1eff578f528a4e19a60393fb3aeeb7dcfae6f5581d195252f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.0.0/SYN-Moog-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-moog",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "morpho-pe",
       "name": "Morpho-PE",
       "author": "sd88me",
@@ -3573,6 +4166,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.1",
+          "size": 6890493,
+          "sha256": "99bdf63ab2179bf4b109f10884114d04b414ac6bb119d288433bf528654e8ef0",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 45.7,
+            "max_pct": 52.6,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-morpho-PE/releases/download/morpho-pe-v1.0.1/Morpho-PE-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.0",
           "size": 2266129,
@@ -3593,7 +4205,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-morpho-PE",
@@ -3799,6 +4411,7 @@
       "kind": "addin",
       "license": "MIT",
       "summary": "The MPC screen in a browser, and an MCP server so an AI model can see and touch it, play MIDI and read files. Listens on the device only: reach it through an SSH tunnel (no login; bind=0.0.0.0 opens it to your network).",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-addin-remote/c9cc05422873025693cf5527b485ef44da51c5a0/docs/tile.png",
       "style": "utility",
       "tags": [
         "remote",
@@ -3810,6 +4423,18 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 66755,
+          "sha256": "394b6b78538f7a54f452013750a627c822c1da2ee82fdb8262690034cb2c9039",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.2/MPC-Remote-addin-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.1",
           "size": 59518,
@@ -3893,7 +4518,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-remote",
@@ -3984,6 +4609,95 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-usb-audio",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "mr-drums",
+      "name": "Mr Drums",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-mrdrums",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "A 16-pad drum sampler: kits of samples on pads 36-51.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrdrums/v1.0.0/screenshots/page_0.png",
+      "style": "sampler",
+      "tags": [
+        "drums",
+        "kits",
+        "pads"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 474282,
+          "sha256": "7a9318a380b254f2141a9f32e4d45efbcfe226385129cc23a2e43665df863734",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-mrdrums/releases/download/v1.0.0/DRUM-Mr-Drums-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-mrdrums",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "mr-hyde",
+      "name": "Mr Hyde",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-mrhyde",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "MicroFreak-style voice on Plaits' 17 models, with a low-pass gate, filter, cycling envelope and a 6x6 mod matrix; 19 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrhyde/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "microfreak",
+        "macro-oscillator",
+        "mod-matrix",
+        "low-pass-gate"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1973776,
+          "sha256": "f1cac268ccb4921e1f5223627e554310326692e388f48c8031c0f12d47abb7b9",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-mrhyde/releases/download/v1.0.0/SYN-Mr-Hyde-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-mrhyde",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4196,6 +4910,96 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-nam",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "nusaw",
+      "name": "NuSaw",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-nusaw",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Detuned supersaw polysynth with a sub, resonant filter, chorus and delay; 27 presets for pads, stabs and leads.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-nusaw/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "supersaw",
+        "trance",
+        "polyphonic",
+        "pads"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 2336310,
+          "sha256": "fc400fb8e1b6adf7b8bd56a260717db3468c51f8f830ac964dbdc4b872f71a98",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-nusaw/releases/download/v1.0.0/SYN-NuSaw-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-nusaw",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "obxd",
+      "name": "OB-Xd",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-obxd",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "OB-Xd, the Oberheim OB-X emulation: two oscillators with sync and cross-mod, a 12/24 dB filter, voice variation; 128 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-obxd/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "ob-x",
+        "analog-modelling",
+        "polyphonic",
+        "subtractive"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1606082,
+          "sha256": "d5f83fc8c06f4830a3c2ff493dabaf95bc2a7f34cd97c13f34ea2ecef5cb6867",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-obxd/releases/download/v1.0.0/SYN-OB-Xd-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-obxd",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4568,6 +5372,54 @@
       }
     },
     {
+      "id": "plateauxxl",
+      "name": "PlateauXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/PlateauXXL",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "Valley Audio's Plateau reverb from VCV Rack, patched: every CV input on a built-in source (four Bogaudio LFOs, Tidal Modulator 2, Random Sampler, step and gate sequencers) synced to the MPC tempo, a brickwall limiter, Panic and 16 presets, each page drawn like its module.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/PlateauXXL/v0.4.1/docs/img/plateau.png",
+      "style": "reverb",
+      "tags": [
+        "reverb",
+        "plate",
+        "dattorro",
+        "valley",
+        "vcv",
+        "freeze",
+        "lfo",
+        "modulation",
+        "sequencer"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 13484938,
+          "sha256": "8dc7d83f002e1206cb4180e7f096b00b66bda441d1eed6eee44b6c7b03368752",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PlateauXXL/releases/download/v0.4.1/PlateauXXL-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/PlateauXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "plugin-manager",
       "name": "Plugin Manager",
       "author": "poloq",
@@ -4736,6 +5588,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.1",
+          "size": 7714118,
+          "sha256": "2522b6a7d40c7620c942439ffd5ae7b823757b73a2b8dbdd4b5a3080bffafc59",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 34.2,
+            "max_pct": 36.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1/Profit-08-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.1.0",
           "size": 7222203,
           "sha256": "2e8f6be3c0b9e46df2e20e84b3fcfc058afd1209bf61301092182fd997698a3f",
@@ -4755,10 +5626,100 @@
           "tested": []
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit8",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "rings",
+      "name": "Rings",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-rings",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Mutable Instruments Rings: seven resonator models (strings, modal, FM, chords) strummed by the notes you play; 14 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-rings/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "mutable-instruments",
+        "resonator",
+        "physical-modelling",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 4327472,
+          "sha256": "051bfa7643fba02626849a5dc4adcd8d140fbb3585356dc5a91820f5500b76fc",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-rings/releases/download/v1.0.0/SYN-Rings-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-rings",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "rings-fx",
+      "name": "Rings FX",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-ringsfx",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Rings as an insert effect: the track's audio strums the resonator, turning drums and loops into tuned strings; 12 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-ringsfx/v1.0.0/screenshots/page_0.png",
+      "style": "resonator",
+      "tags": [
+        "mutable-instruments",
+        "rings",
+        "resonator",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1242678,
+          "sha256": "210e19fe18b943f77f346ad8ab7d999541f16ca96ea225cf3e37b444648d77cf",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-ringsfx/releases/download/v1.0.0/FX-Rings-FX-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-ringsfx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4895,6 +5856,75 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-stream",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "sturm-tp",
+      "name": "Sturm-TP",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-sturm",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Six-voice analog-style drum and synth voice modelled on a classic drum machine: two analog and two sample oscillators, 2/4-pole lowpass, highpass, five envelopes, two LFOs, eight mod paths, kit mode, distortion, compressor and a delay that plays repeated notes, with a bank browser and a touchscreen skin with Q-Links. Loads its sound and project SysEx dumps.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-sturm/sturm-tp-v0.1.1/docs/img/sturm.png",
+      "style": "drum-machine",
+      "tags": [
+        "analog-modelling",
+        "drums",
+        "sampler",
+        "kit"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 4684030,
+          "sha256": "7920decfa129256d54bc2137d84007ea7f807d44f5e187aa298db35c83d23920",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 37.3,
+            "max_pct": 40.5,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-sturm/releases/download/sturm-tp-v0.1.1/Sturm-TP-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 7407971,
+          "sha256": "0fd989e3786227d34492ffba9e3cedcb16bd99d9ebcb17e16e735e4272ae644d",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 37.3,
+            "max_pct": 40.5,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-sturm/releases/download/sturm-tp-v0.1.0/Sturm-TP-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-sturm",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -5156,6 +6186,47 @@
       }
     },
     {
+      "id": "tributary",
+      "name": "Tributary",
+      "author": "johnny",
+      "repo": "stampman3000-jpg/mpc-tributary",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Multitrack audio from an Elektron Digitone II over USB, one stereo output per track. Based on Overwitch.",
+      "style": "utility",
+      "tags": [
+        "utility"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1934572,
+          "sha256": "f5cc2feef265796c2aac5834dfb79ba56e4433be6634ff98c1213f0d230049b0",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/stampman3000-jpg/mpc-tributary/releases/download/v1.0.0/Tributary-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "stampman3000-jpg/mpc-tributary",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "vibe-fx",
       "name": "Vibe FX",
       "author": "nachtaktiv303",
@@ -5205,6 +6276,97 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "warps",
+      "name": "Warps",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-warps",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Mutable Instruments Warps as an insert effect: ring mod, folding, XOR, vocoder and frequency shifting; 12 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-warps/v1.0.0/screenshots/page_0.png",
+      "style": "modulation",
+      "tags": [
+        "mutable-instruments",
+        "ring-mod",
+        "vocoder",
+        "frequency-shifter",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 1067486,
+          "sha256": "f712c967ef19bfb5f1ea9475f6e5f9027871c6c5be6ac6e21e8388bdd0500423",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-warps/releases/download/v1.0.0/FX-Warps-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-warps",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "wurl",
+      "name": "Wurl",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-wurl",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "A physically modelled Wurlitzer 200A electric piano (OpenWurli) that barks with velocity, with tremolo and 10 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-wurl/v1.0.0/screenshots/page_0.png",
+      "style": "electric-piano",
+      "tags": [
+        "wurlitzer",
+        "physical-modelling",
+        "keys",
+        "tremolo"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 795351,
+          "sha256": "7141bbb00ccc353dea030f1ca5a070b9e984a27da1e3662f665d88853e285c00",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-wurl/releases/download/v1.0.0/SYN-Wurl-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-wurl",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
