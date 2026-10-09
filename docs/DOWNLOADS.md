@@ -1,11 +1,11 @@
 # Download images
 
-Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research), version **OpenPlugin 0.7 on firmware 3.9.1**:
+Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research-rc2), version **OpenPlugin 0.7 on firmware 3.9.1**:
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research/Force-3.9.1-openplugin-v0.7-update.img) | `29e28c911be86e5574f677c6ed405a1d6b9f25375f79ca0ec129694b067340eb` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `88bf7ec43fb0c179e39e4987d6e6c4a185fb6544b840dd8bc801b9080ba88974` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc2/Force-3.9.1-openplugin-v0.7-update.img) | `6b16b0d9834631d61d9449d46173a2051c8c639b1df03dc9176f537a12cb4b08` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc2/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `6b1763bf0b5bdec6ebcb22c677a86409d2d64085c11a3aef05ea4e09a7bac2f2` |
 
 **Research status:** the owner reports successful Force use, including plugins and ROM download.
 This is not comprehensive hardware validation. The MPC Gen1 candidate is the relevant family
