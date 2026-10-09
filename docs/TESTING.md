@@ -1,6 +1,14 @@
 # Validation scope
 
-The historical image hashes and repeat-build/ARM-runtime results below refer to the earlier personalized baseline recorded in VALIDATION.json. The later catalog/category/site revision has separate candidates and must not be confused with those hashes. For the latest revision: six Python tests, native host logic tests, the real 71-entry index test and generated FIND layout checks passed; website sampler/reverb filters were checked in the browser. Hardware remains untested.
+## Force SSH and SFTP hardware test — 10 October 2026
+
+OpenPlugin 0.7 RC3: password login as root/mpc succeeded on the owner's Force. SFTP uploaded a 64-byte temporary file into `/tmp`, downloaded it with identical bytes and SHA256, and removed it; absence was confirmed. Mounted storage directories were listed without changing sample libraries. See [Remote Access test details](SSH.md).
+
+This validates login and a small transfer on this Force. It does not validate writes to every sample drive, disabling/re-enabling, persistence across reboots, larger transfers or physical MPC Gen1 operation.
+
+## Historical baseline checks
+
+The historical image hashes and repeat-build/ARM-runtime results below refer to the earlier personalized baseline recorded in VALIDATION.json. The later catalog/category/site revision has separate candidates and must not be confused with those hashes. For that historical revision: six Python tests, native host logic tests, the real 71-entry index test and generated FIND layout checks passed; website sampler/reverb filters were checked in the browser. Hardware was untested at that stage; current Force SSH/SFTP results are above.
 
 # Test results — 2026-10-08
 

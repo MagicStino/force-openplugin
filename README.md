@@ -14,9 +14,15 @@ After the initial USB update, open **PLUGINS → VST → Plugin Manager** and in
 [Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
 
 **Hardware status:** the owner reports successful Force use and ROM download.
-MPC Gen1 and the new combined setup remain unverified on hardware. Research candidates.
+SSH password login and SFTP upload/download were verified on the owner's Force on 10 October 2026. MPC Gen1 remains unverified on hardware. Research candidates.
 
 ![Generated native catalog preview — not a hardware capture](website/assets/catalog-native.png)
+
+## Transfer samples over Wi-Fi or Ethernet
+
+**Tested on the owner's Force:** SSH login and SFTP upload/download with matching contents. Open **Plugin Manager → REMOTE ACCESS**, then enter the displayed device IP in your SSH/SFTP app: **port 22 · username root · password mpc**. Browse `/media` for internal, SD and USB storage. No separate firmware build or SSH key setup is needed.
+
+The password is public and gives full root access. Use a trusted network; **Disable SSH** stops remote access. [Connection guide and test scope](docs/SSH.md). MPC Gen1 has not been tested physically.
 
 ## What it does
 
@@ -52,7 +58,7 @@ bash build.sh /path/Force-3.9.1-update.img \
 Outputs: `*-openplugin-v0.7-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and both images without mounting them. It does not flash.
-OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. See [Remote Access](docs/SSH.md); physical login and SFTP still need testing.
+OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. See [Remote Access](docs/SSH.md); SSH login and a verified SFTP round trip passed on the owner's Force; MPC Gen1 remains untested.
 
 Development container version: **3.9.1-openplugin-v0.7**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
