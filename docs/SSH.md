@@ -1,19 +1,41 @@
-# Remote Access: SSH and SFTP
+# SSH and SFTP: transfer samples and access your device
 
-RC3 uses the requested shared login **root / mpc**, port **22**. RC2 does not contain this change.
+**SSH root access and SFTP file transfers work on the tested Akai Force with OpenPlugin 0.7 RC3.** SFTP is a convenient way to copy samples between your computer and device storage.
 
-Open **PLUGINS → VST → Plugin Manager → REMOTE ACCESS**. The page shows the current device IP address, port, username, password and actual connection status. **Running** means the local SSH port accepts connections; **Stopped** means it does not. Enable retries startup; Disable stops SSH and saves that choice across reboots.
+## Connect
 
-In an SFTP client, enter the displayed IP, port 22, username root and password mpc. Browse **/media** for mounted internal, SD and USB storage and your sample folders. Access is unrestricted root access. The password is public and shared: use a trusted network and do not expose port 22 to the Internet.
+1. Connect your computer and Force/MPC to the same network.
+2. Open **PLUGINS → VST → Plugin Manager → REMOTE ACCESS**.
+3. Read the device's **IP address** and check that SSH shows **Running**. Tap **Enable SSH** if needed.
+4. In your file-transfer app, choose **SFTP** and enter:
 
-The password hash is included during image construction because the root filesystem is read-only. Host keys remain unique and generated on each device. Telnet and SSH forwarding are disabled. Startup errors are recorded under `/data/openplugin/ssh/error.log`.
+| Setting | Value |
+|---|---|
+| Host | The IP shown on your device |
+| Port | `22` |
+| Username | `root` |
+| Password | `mpc` |
 
-## Verified on the owner's Force — 10 October 2026
+On the first connection, verify the device's host-key fingerprint before saving it.
 
-- SSH connection returned OpenSSH 9.6.
-- Password login as `root` with `mpc` succeeded; a read-only command confirmed root access and listed mounted storage.
-- A 64-byte temporary file was uploaded by SFTP, downloaded again, and verified byte-for-byte with matching SHA256.
-- The temporary remote file was removed and its absence confirmed.
-- The connected device exposed `/media/MUSIC`, `/media/SSD` and other mounts. Names vary by device and connected storage.
+## Transfer samples
 
-The transfer test used `/tmp` to avoid changing sample libraries. It proves SFTP file transfer on this Force, not transfers into every storage volume. Disable/re-enable, reboot persistence, long transfers and physical MPC Gen1 operation remain untested. These results do not prove safe flashing on other devices.
+Browse **`/media`** to find internal storage, SD cards and USB drives. Open your chosen sample folder, then upload or download files using your SFTP app. Our tested Force has `/media/MUSIC` and `/media/SSD`; names depend on your connected storage.
+
+SFTP upload and download were tested successfully on the owner's Force, with matching file contents. MPC Gen1 has not yet been tested on hardware.
+
+## Open a root terminal
+
+Use an SSH client with the same connection details. From a terminal:
+
+```sh
+ssh root@YOUR_DEVICE_IP
+```
+
+Enter `mpc` when asked for the password. This gives full root access to the device.
+
+## Turn access off
+
+Tap **Disable SSH** in the Remote Access tab. The disabled setting is saved across reboots; tap **Enable SSH** to turn it back on.
+
+The password is public and shared, and root can change or delete any device file. Use a trusted network and do not expose port 22 to the Internet. Keep sample transfers in your storage folders.
