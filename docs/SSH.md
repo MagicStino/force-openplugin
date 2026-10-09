@@ -1,6 +1,6 @@
 # Remote Access: SSH and SFTP
 
-The next corrected build uses the requested shared login **root / mpc**, port **22**. This change is not in RC2.
+RC3 uses the requested shared login **root / mpc**, port **22**. RC2 does not contain this change.
 
 Open **PLUGINS → VST → Plugin Manager → REMOTE ACCESS**. The page shows the current device IP address, port, username, password and actual connection status. **Running** means the local SSH port accepts connections; **Stopped** means it does not. Enable retries startup; Disable stops SSH and saves that choice across reboots.
 

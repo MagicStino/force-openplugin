@@ -1,11 +1,11 @@
 # Download images
 
-Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research-rc2), version **OpenPlugin 0.7 on firmware 3.9.1**:
+Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research-rc3), version **OpenPlugin 0.7 on firmware 3.9.1**:
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc2/Force-3.9.1-openplugin-v0.7-update.img) | `6b16b0d9834631d61d9449d46173a2051c8c639b1df03dc9176f537a12cb4b08` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc2/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `6b1763bf0b5bdec6ebcb22c677a86409d2d64085c11a3aef05ea4e09a7bac2f2` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc3/Force-3.9.1-openplugin-v0.7-update.img) | `062b5ed4a2e52fb033e8ce6ecaa896e07600c0a4139e18bafa1094d69e44b3f9` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc3/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `2ead532f82d2c0f343ab19bf60bb4aa2af22b62ce1c8de402a62f295a4dc43a3` |
 
 **Research status:** the owner reports successful Force use, including plugins and ROM download.
 This is not comprehensive hardware validation. The MPC Gen1 candidate is the relevant family
@@ -37,4 +37,4 @@ For an existing 3.9.1 installation:
 
 USB menu/media steps follow Akai’s [Force guide](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough) and [MPC guide](https://support.akaipro.com/en/support/solutions/articles/69000816160-akai-pro-mpc-firmware-update-walkthrough). These guides describe stock updates, not approval of this custom image. Stop if the updater rejects it. Owner-reported Force success does not validate every model; MPC Gen1 remains hardware unverified.
 
-OpenPlugin 0.7 starts SSH/SFTP automatically with a device-generated password. Open **Plugin Manager → REMOTE ACCESS** to see the IP, reveal the password, or disable access persistently. Username: `root`; port: 22. SFTP provides full device access, including sample folders under `/media`. See [Remote Access](SSH.md). Live SSH/SFTP and the new tab remain hardware unverified. Stock application version remains 3.9.1.2.
+OpenPlugin 0.7 starts SSH/SFTP automatically with the shared password mpc. Open **Plugin Manager → REMOTE ACCESS** to see the IP, read the credentials, or disable access persistently. Username: `root`; password: `mpc`; port: 22. SFTP provides full device access, including sample folders under `/media`. See [Remote Access](SSH.md). Live SSH/SFTP and the new tab remain hardware unverified. Stock application version remains 3.9.1.2.
