@@ -1,6 +1,6 @@
 # SSH and SFTP: transfer samples and access your device
 
-**SSH root access and SFTP file transfers work on the tested Akai Force with OpenPlugin 0.7 RC3.** SFTP is a convenient way to copy samples between your computer and device storage.
+**SSH root access and SFTP file transfers — tested on Force with OpenPlugin 0.7 RC3.** SFTP is a convenient way to copy samples between your computer and device storage.
 
 ## Connect
 
@@ -22,7 +22,7 @@ On the first connection, verify the device's host-key fingerprint before saving 
 
 Browse **`/media`** to find internal storage, SD cards and USB drives. Open your chosen sample folder, then upload or download files using your SFTP app. Our tested Force has `/media/MUSIC` and `/media/SSD`; names depend on your connected storage.
 
-SFTP upload and download were tested successfully on the owner's Force, with matching file contents. MPC Gen1 has not yet been tested on hardware.
+Tested on Force. MPC Gen1 has not yet been tested on hardware.
 
 ## Open a root terminal
 
