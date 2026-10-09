@@ -42,22 +42,51 @@ The current index has 71 entries and 57 bundled native previews. Unknown images
 use placeholders. New source packages require review; inclusion is not a
 hardware compatibility guarantee. See [image sources and limits](docs/ILLUSTRATED-CARDS.md).
 
-## Build both images
+## Build from original firmware
 
 Linux prerequisites: Python 3.12+, git, gcc, e2fsprogs, binutils, OpenSSH tools,
 Chromium runtime libraries, several GB of RAM and approximately 5 GB of space.
-Use the exact original files recorded in `inputs.json`.
+The owner already supplied both original stock **3.9.1** firmware images for
+this project: `Force-3.9.1-update.img` and `MPC-3.9.1-Gen1-update.img`.
+Their exact SHA256 checksums are recorded in [inputs.json](inputs.json).
+They are not stored in Git; use those supplied local files, or matching original
+copies. Other firmware versions are rejected; renaming them does not help.
+
+Clone the repository and place your original images in a `firmware/` folder
+inside it (or substitute their actual paths below):
 
 ```sh
 git clone https://github.com/MagicStino/force-openplugin.git
 cd force-openplugin
-bash build.sh /path/Force-3.9.1-update.img \
-  /path/MPC-3.9.1-Gen1-update.img /path/output
+mkdir -p firmware
 ```
+
+Build **Force only**; no MPC image is required:
+
+```sh
+bash build.sh --device force firmware/Force-3.9.1-update.img output-force
+```
+
+Build **MPC Gen1 only**; no Force image is required:
+
+```sh
+bash build.sh --device mpc-gen1 firmware/MPC-3.9.1-Gen1-update.img output-mpc
+```
+
+Or build **both**:
+
+```sh
+bash build.sh firmware/Force-3.9.1-update.img \
+  firmware/MPC-3.9.1-Gen1-update.img output
+```
+
+Each command builds the native payload and runs the same validation checks;
+only the requested firmware image(s) are generated. The originals remain unchanged.
+An optional final argument supplies an owner's public SSH key.
 
 Outputs: `*-openplugin-v0.7-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
-native code, artwork and both images without mounting them. It does not flash.
+native code, artwork and selected images without mounting them. It does not flash.
 OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. See [Remote Access](docs/SSH.md); SSH login and a verified SFTP round trip passed on the owner's Force; MPC Gen1 remains untested.
 
 Development container version: **3.9.1-openplugin-v0.7**. The supplied 3.9.1 files

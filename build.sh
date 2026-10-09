@@ -1,14 +1,28 @@
 #!/usr/bin/env bash
-# One entry point: fetch pinned source/tools, build native UI, build both candidates.
+# One entry point: fetch pinned source/tools, build native UI, build selected candidates.
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
-if [ "$#" -lt 3 ] || [ "$#" -gt 4 ]; then
+usage() {
   echo "Usage: bash build.sh Force.img MPC.img output-directory [owner-ed25519.pub]" >&2
+  echo "   or: bash build.sh --device force|mpc-gen1 stock.img output-directory [owner-ed25519.pub]" >&2
   exit 2
+}
+DEVICE=both
+SSH_KEY=""
+if [ "${1:-}" = "--device" ]; then
+  [ "$#" -eq 4 ] || [ "$#" -eq 5 ] || usage
+  DEVICE="$2"
+  case "$DEVICE" in force|mpc-gen1) ;; *) usage ;; esac
+  SINGLE_INPUT="$(realpath "$3")"
+  OUTPUT="$(realpath -m "$4")"
+  SSH_KEY="${5:-}"
+else
+  [ "$#" -eq 3 ] || [ "$#" -eq 4 ] || usage
+  FORCE_INPUT="$(realpath "$1")"
+  MPC_INPUT="$(realpath "$2")"
+  OUTPUT="$(realpath -m "$3")"
+  SSH_KEY="${4:-}"
 fi
-FORCE_INPUT="$(realpath "$1")"
-MPC_INPUT="$(realpath "$2")"
-OUTPUT="$(realpath -m "$3")"
 for tool in python3 git debugfs e2fsck gcc readelf; do
   command -v "$tool" >/dev/null || { echo "Missing build dependency: $tool" >&2; exit 2; }
 done
@@ -32,9 +46,13 @@ PY
 gcc -O1 -fsanitize=address,undefined -fno-omit-frame-pointer "$ROOT/tests/test_native.c" -lpthread -ldl -lm -o "$ROOT/.deps/test-native"
 ASAN_OPTIONS=detect_leaks=0 "$ROOT/.deps/test-native"
 SSH_ARGS=()
-if [ "$#" -eq 4 ]; then SSH_ARGS=(--ssh-key "$(realpath "$4")"); fi
+if [ -n "$SSH_KEY" ]; then SSH_ARGS=(--ssh-key "$(realpath "$SSH_KEY")"); fi
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build_native.py" "${SSH_ARGS[@]}"
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/verify_skin.py" "$ROOT/build/native" "$OUTPUT/preview"
-"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$FORCE_INPUT" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1-openplugin-v0.7-update.img"
-"$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "$MPC_INPUT" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-3.9.1-Gen1-openplugin-v0.7-update.img"
-echo 'Candidates built and structurally checked. Hardware flashing/boot/runtime still NOT TESTED.'
+if [ "$DEVICE" = both ] || [ "$DEVICE" = force ]; then
+  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${FORCE_INPUT:-$SINGLE_INPUT}" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1-openplugin-v0.7-update.img"
+fi
+if [ "$DEVICE" = both ] || [ "$DEVICE" = mpc-gen1 ]; then
+  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${MPC_INPUT:-$SINGLE_INPUT}" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-3.9.1-Gen1-openplugin-v0.7-update.img"
+fi
+echo 'Candidates built and structurally checked. See docs/TESTING.md for hardware validation scope.'
