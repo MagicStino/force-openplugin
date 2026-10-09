@@ -75,7 +75,7 @@ typedef struct {
     char dir[256];        /* unpacked package (install.sh / uninstall.sh), set while preparing */
 } pkg_t;
 enum { Q_INSTALL = 1, Q_REMOVE = 2 };
-enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL };
+enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL, J_REMOTE_ENABLE, J_REMOTE_DISABLE };
 
 typedef struct device device_t;
 typedef struct {
@@ -98,6 +98,7 @@ typedef struct {
     int searching;
     char rom_status[160], rom_files[5][96];
     int rom_confirm;
+    int remote_show;
     device_t *dev;   /* probed by the worker on each refresh */
 } mgr_t;
 
@@ -797,6 +798,7 @@ static void scan_installed(const device_t *d, pkg_t *pkg, int n) {
 
 #include "source_scanner.inc"
 #include "rom_setup.inc"
+#include "remote_access.inc"
 
 static int catalog_parse(const char *text,list_t *l) {
     const char *end=text?jobject(text,top_member,l):NULL;
@@ -993,7 +995,8 @@ static void *worker(void *ud) {
         m->busy = job;
         m->rev++;
         pthread_mutex_unlock(&m->mu);
-        if (job == J_REFRESH) do_refresh(m);
+        if (job == J_REMOTE_ENABLE || job == J_REMOTE_DISABLE) do_remote(m,job);
+        else if (job == J_REFRESH) do_refresh(m);
         else if (job == J_PREPARE) do_prepare(m);
         else if (job == J_LAUNCH) do_launch(m);
         else if (job == J_JV_INSTALL) { do_prepare(m); pthread_mutex_lock(&m->mu); int ready=m->ready; m->ready=0; pthread_mutex_unlock(&m->mu); if(ready) do_launch(m); }
@@ -1181,6 +1184,14 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     mgr_t *m = inst;
     double v = atof(val);
     pthread_mutex_lock(&m->mu);
+    if (!strncmp(key,"remote_",7)) {
+        if(v>=0.5 && !m->busy && !m->job) {
+            if(!strcmp(key,"remote_enable")) post(m,J_REMOTE_ENABLE);
+            else if(!strcmp(key,"remote_disable")) post(m,J_REMOTE_DISABLE);
+            else if(!strcmp(key,"remote_show")) m->remote_show=!m->remote_show;
+        }
+        m->rev++;pthread_mutex_unlock(&m->mu);return;
+    }
     if (!strncmp(key,"rom_",4)) {
         if (!m->busy && !m->job && v>0.5) {
             if (!strcmp(key,"rom_check")) {m->rom_confirm=0;post(m,J_ROM_CHECK);}
@@ -1289,6 +1300,10 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
 static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     mgr_t *m = inst;
     pthread_mutex_lock(&m->mu);
+    if (!strncmp(key,"remote_",7)) {
+        remote_field(m,key,b,n);
+        pthread_mutex_unlock(&m->mu);return 1;
+    }
     if (!strncmp(key,"rom_",4)) {
         if(!strcmp(key,"rom_status")) snprintf(b,n,"%s",m->rom_status[0]?m->rom_status:"Unload JV-880 first. Check files, import USB, or download the external archive.");
         else if(!strncmp(key,"rom_file_",9) && atoi(key+9)>=0 && atoi(key+9)<5) {

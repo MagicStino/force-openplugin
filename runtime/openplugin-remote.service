@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenPlugin device-local password SSH and SFTP
+RequiresMountsFor=/data
+After=network.target
+ConditionPathExists=!/data/openplugin/ssh/disabled
+Conflicts=sshd.service openplugin-ssh.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sh /usr/share/openplugin/remote-access.sh prepare
+ExecStartPre=/usr/sbin/sshd -t -f /usr/share/openplugin/remote-sshd_config
+ExecStart=/usr/sbin/sshd -D -e -f /usr/share/openplugin/remote-sshd_config
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

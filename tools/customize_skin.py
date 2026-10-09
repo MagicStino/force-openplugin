@@ -95,3 +95,18 @@ def customize(vst):
     controls='\n'.join(f'button cx=1010 cy={293+(row-1)*128} label="" key=r{row}_rom_install img=images/rom_install.svg w=396 h=48 when=r{row}_rom:yes' for row in range(1,4))
     textlayout=textlayout.replace('[tab FIND]',controls+'\n\n[tab FIND]')
     (vst/'layout.conf').write_text(textlayout)
+
+    remote=json.loads((vst/'params.json').read_text())
+    for key in ['remote_status','remote_ip','remote_password','remote_storage']:
+        remote['params'].append(dict(key=key,name=key,type='readout',display='string'))
+    for key in ['remote_enable','remote_disable','remote_show']:
+        remote['params'].append(dict(key=key,name=key,type='trigger',momentary=True))
+    (vst/'params.json').write_text(json.dumps(remote,indent=2)+'\n')
+    art('remote.svg',1280,628,'<rect width="1280" height="628" fill="#0c0c0d"/>'+text(32,70,'REMOTE ACCESS',38)+text(32,116,'SSH and SFTP | username: root | full device access',24)+text(32,160,'Use the IP and password below in your SSH or SFTP app.',23)+text(32,205,'Disable stops remote access and persists across reboots.',23))
+    lines=['\n[tab REMOTE ACCESS]','art file=images/remote.svg']
+    for key,y in [('remote_status',330),('remote_ip',390),('remote_password',450),('remote_storage',510)]:
+        lines.append(f'readout box=0 w=1180 h=48 cx=640 cy={y} label="" key={key} tsize=25 tcolor=e9edff tpad=0')
+    for key,label,x,w in [('remote_enable','Enable SSH',220,300),('remote_disable','Disable SSH',640,300),('remote_show','Show / Hide password',1060,360)]:
+        button(key+'.svg',label,w,56,font=24)
+        lines.append(f'button cx={x} cy=620 label="" key={key} img=images/{key}.svg w={w} h=56')
+    with (vst/'layout.conf').open('a') as f:f.write('\n'.join(lines)+'\n')

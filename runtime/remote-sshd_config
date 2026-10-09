@@ -1,0 +1,18 @@
+Port 22
+HostKey /data/openplugin/ssh/ssh_host_ed25519_key
+PermitRootLogin yes
+PasswordAuthentication yes
+PubkeyAuthentication no
+KbdInteractiveAuthentication no
+AuthenticationMethods password
+PermitEmptyPasswords no
+UsePAM no
+AllowUsers root
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTunnel no
+PermitUserEnvironment no
+LoginGraceTime 30
+MaxAuthTries 3
+Subsystem sftp internal-sftp

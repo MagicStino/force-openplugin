@@ -98,8 +98,10 @@ def main():
     folder = synths / 'poloq - VST - Plugin Manager'
     shutil.copytree(local / 'vst/build/skin/poloq - VST - Plugin Manager', folder)
     normalize_presets(folder)
+    version_file = folder / 'version.xml'
+    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.7.0.0</version>'))
     shutil.copyfile(binary, folder / 'plugin_manager.so')
-    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%')
+    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.7"')
     (folder / 'plugin-meta.xml').write_text(entry)
     helpers = payload / 'usr/share/openplugin'
     helpers.mkdir(parents=True)
@@ -113,12 +115,17 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('3.9.1.7-openplugin\n')
+    (helpers / 'VERSION').write_text('0.7\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')
     for src, dest in [(ROOT / 'native/LICENSE', 'MANAGER-LICENSE'), (mv / 'LICENSE', 'WRAPPER-LICENSE'),
                       (mv / 'tools/html_art/fonts/OFL.txt', 'FONT-OFL'), (ROOT / 'native/NOTICE.md', 'NOTICE.md')]:
         shutil.copyfile(src, helpers / dest)
+    for name in ['remote-access.sh', 'remote-sshd_config']:
+        shutil.copyfile(ROOT / 'runtime' / name, helpers / name)
+    shutil.copyfile(ROOT / 'runtime/openplugin-remote.service', units / 'openplugin-remote.service')
+    if not args.ssh_key:
+        (enabled / 'openplugin-remote.service').symlink_to('/usr/lib/systemd/system/openplugin-remote.service')
     if args.ssh_key:
         key = args.ssh_key.read_text().strip()
         if not key.startswith('ssh-ed25519 ') or len(key.splitlines()) != 1:

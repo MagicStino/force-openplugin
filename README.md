@@ -49,12 +49,12 @@ bash build.sh /path/Force-3.9.1-update.img \
   /path/MPC-3.9.1-Gen1-update.img /path/output
 ```
 
-Outputs: `*-UNTESTED.img`, checksums and validation manifests. Existing files
+Outputs: `*-openplugin-v0.7-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and both images without mounting them. It does not flash.
-For key-only remote access, see [SSH setup](docs/SSH.md).
+OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. See [Remote Access](docs/SSH.md); physical login and SFTP still need testing.
 
-Development container version: **3.9.1.7-openplugin**. The supplied 3.9.1 files
+Development container version: **3.9.1-openplugin-v0.7**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
 unchanged. [Current 3.9.1.7 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.7-openplugin-research-rc2). IMG files are release assets, not Git files.
 

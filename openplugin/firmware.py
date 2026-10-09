@@ -7,7 +7,8 @@ import subprocess
 import tempfile
 from .az01 import extract, pack, parse
 
-VERSION = '3.9.1.7-openplugin'
+VERSION = '0.7'
+CONTAINER_VERSION = '3.9.1-openplugin-v0.7'
 EPOCH = 1791417600  # 2026-10-08 00:00 UTC, metadata only
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -108,11 +109,11 @@ def build(image, device, payload, output):
         if check.returncode != 0:
             raise ValueError('Read-only filesystem check failed: ' + check.stdout + check.stderr)
         modified = fs.read_bytes()
-        final = pack(info, modified, VERSION)
+        final = pack(info, modified, CONTAINER_VERSION)
         final_info = parse(final)
         if final_info['boards'] != info['boards'] or final_info['devices'] != info['devices']:
             raise ValueError('Device compatibility changed')
-        report = dict(project_version=VERSION, device=device, input_sha256=source_hash,
+        report = dict(project_version=VERSION, container_version=CONTAINER_VERSION, device=device, input_sha256=source_hash,
                       output_sha256=hashlib.sha256(final).hexdigest(), output_size=len(final),
                       rootfs_sha256=hashlib.sha256(modified).hexdigest(),
                       injected_files=manifest, compatible_boards=info['boards'],
