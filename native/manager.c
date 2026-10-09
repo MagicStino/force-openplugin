@@ -1106,7 +1106,7 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     if (!strcmp(f, "vis")) snprintf(b, n, "%d", p != NULL && m->loaded);
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
                                  !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
-    else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880"));
+    else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880") && m->menu!=i);
     else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
     else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,0,b,n);}
     else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,1,b,n);}
