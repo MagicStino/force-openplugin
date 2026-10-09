@@ -11,7 +11,7 @@ def customize(vst):
     previews=json.loads((Path(__file__).resolve().parents[1]/'assets/previews.lock.json').read_text())['entries']
     for row in range(1,4):
         data['params'].append(dict(key=f'r{row}_rom',name='ROM setup available',options=['no','yes']))
-        data['params'].append(dict(key=f'r{row}_rom_install',name='Install ROM files',type='trigger',momentary=True))
+        data['params'].append(dict(key=f'r{row}_rom_install',name='Install ROMs + plugin',type='trigger',momentary=True))
         data['params'].append(dict(key=f'r{row}_preview',name='Preview snapshot',options=[str(i) for i in range(len(previews)+2)]))
         for suffix in ['desc1','desc2']:
             data['params'].append(dict(key=f'r{row}_{suffix}',name='Description',type='readout',display='string'))
@@ -54,10 +54,10 @@ def customize(vst):
         text(32, 119, 'Source: MPC VST Plugins community catalog + your added sources. Browse all in CATALOG.', 23, '#aab1c8') +
         '<rect x="24" y="142" width="1232" height="72" rx="16" fill="#1d2231" stroke="#535c79"/>' +
         '<rect x="24" y="228" width="1232" height="58" rx="12" fill="#151a23"/>')
-    def button(name, label, w=100, h=52, primary=False):
+    def button(name, label, w=100, h=52, primary=False, font=25):
         color = '#72e6cc' if primary else '#222838'
         ink = '#0c1715' if primary else '#e9edff'
-        art(name, w, h, f'<rect width="{w}" height="{h}" rx="12" fill="{color}"/>' + text(18, h//2+9, label, 25, ink))
+        art(name, w, h, f'<rect width="{w}" height="{h}" rx="12" fill="{color}"/>' + text(18, h//2+9, label, font, ink))
     lines = ['\n[tab FIND]', 'art file=images/sources.svg',
         'readout box=0 w=960 h=48 cx=520 cy=264 label="" key=source_url tsize=32 tcolor=e9edff tpad=0',
         'readout box=0 w=1180 h=44 cx=640 cy=349 label="" key=source_status tsize=23 tcolor=72e6cc tpad=0']
@@ -85,8 +85,13 @@ def customize(vst):
         f.write('\n'.join(lines) + '\n')
 
 
-    button('rom_install.svg','Install ROM files',196,48,True)
+    button('refresh_catalog.svg','Refresh catalog',188,52,font=22)
     textlayout=(vst/'layout.conf').read_text()
-    controls='\n'.join(f'button cx=910 cy={293+(row-1)*128} label="" key=r{row}_rom_install img=images/rom_install.svg w=196 h=48 when=r{row}_rom:yes' for row in range(1,4))
+    textlayout='\n'.join(line for line in textlayout.splitlines() if 'key=update_all ' not in line)+'\n'
+    textlayout=textlayout.replace('[tab FIND]','button cx=924 cy=678 label="" key=refresh img=images/refresh_catalog.svg w=188 h=52\n\n[tab FIND]')
+    (vst/'layout.conf').write_text(textlayout)
+    button('rom_install.svg','Install ROMs + plugin',396,48,True)
+    textlayout=(vst/'layout.conf').read_text()
+    controls='\n'.join(f'button cx=1010 cy={293+(row-1)*128} label="" key=r{row}_rom_install img=images/rom_install.svg w=396 h=48 when=r{row}_rom:yes' for row in range(1,4))
     textlayout=textlayout.replace('[tab FIND]',controls+'\n\n[tab FIND]')
     (vst/'layout.conf').write_text(textlayout)

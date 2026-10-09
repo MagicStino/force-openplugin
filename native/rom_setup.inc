@@ -64,3 +64,29 @@ static void do_rom_setup(mgr_t *m,int job) {
         if(dir)closedir(dir);
     }rom_message(m,"USB archive not found. Put jv880_rompack_v1.zip at the USB/SD drive root, then tap Import USB.");
 }
+
+/* Stage required content before fetching/installing the plugin. Existing user files win. */
+static int rom_acquire(mgr_t *m) {
+    const char *folder=WORK "/jv-content/roms";
+    if(!rom_mkdir(WORK "/jv-content") || !rom_mkdir(folder))return 0;
+    char existing[768];
+    if(rom_folder(m->dev,existing,sizeof existing))for(int i=0;i<5;i++){
+        char src[900],dst[900];snprintf(src,sizeof src,"%s/%s",existing,rom_names[i]);snprintf(dst,sizeof dst,"%s/%s",folder,rom_names[i]);
+        struct stat st;if(!lstat(src,&st) && !rom_regular(src,rom_sizes[i])){rom_message(m,"Existing ROM file has wrong size/type. Move it aside before retrying; nothing installed.");return 0;}
+        if(rom_regular(src,rom_sizes[i])) {unlink(dst);if(!rom_copy_missing(src,dst))return 0;}
+    }
+    if(rom_check(m,folder)==5){rom_message(m,"Step 2/2: ROM files ready. Downloading plugin; installation restarts the app.");return 1;}
+    struct statvfs sv;if(statvfs(WORK,&sv)||sv.f_bavail*(unsigned long long)sv.f_frsize<200ull*1024*1024){rom_message(m,"Step 1 failed: need 200 MiB temporary space. Plugin not installed.");return 0;}
+    pkg_t p={0};snprintf(p.name,sizeof p.name,"JV ROM archive");snprintf(p.url,sizeof p.url,"https://archive.org/download/jv880_rompack_v1/jv880_rompack_v1.zip");snprintf(p.sha,sizeof p.sha,ROM_ARCHIVE_SHA);
+    rom_message(m,"Step 1/2: downloading and checking required ROM files.");
+    int ok=!download(m,&p,WORK "/jv880-rompack.zip") && rom_import(m,WORK "/jv880-rompack.zip",folder);
+    unlink(WORK "/jv880-rompack.zip");
+    if(ok)rom_message(m,"Step 2/2: downloading plugin. Installation will restart the app.");
+    else rom_message(m,"Step 1 failed. Plugin not installed. Check internet/storage and retry.");
+    return ok;
+}
+static void rom_write_apply(FILE *f,const char *target) {
+    fprintf(f,"ROMDIR='%s/sd88me - VST - JV-880/jv880-roms/roms'\n[ ! -L \"$ROMDIR\" ] && [ ! -L \"$(dirname \"$ROMDIR\")\" ] || exit 1\nmkdir -p \"$ROMDIR\"\n",target);
+    for(int i=0;i<5;i++)fprintf(f,"[ -e \"$ROMDIR/%s\" ] || [ -L \"$ROMDIR/%s\" ] || cp -n '%s/%s' \"$ROMDIR/%s\"\n[ ! -L \"$ROMDIR/%s\" ] && [ -f \"$ROMDIR/%s\" ] && [ \"$(wc -c < \"$ROMDIR/%s\")\" -eq %ld ] || exit 1\n",rom_names[i],rom_names[i],WORK "/jv-content/roms",rom_names[i],rom_names[i],rom_names[i],rom_names[i],rom_names[i],rom_sizes[i]);
+    fprintf(f,"rm -rf '" WORK "/jv-content'\n");
+}

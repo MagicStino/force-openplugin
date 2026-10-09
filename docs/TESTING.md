@@ -64,3 +64,11 @@ See [DISCOVERY.md](DISCOVERY.md) and [ILLUSTRATED-CARDS.md](ILLUSTRATED-CARDS.md
 Twelve Python tests passed (six firmware/container tests and six bridge tests).
 The generated CATALOG preview checks actual image mappings, frame counts,
 geometry and sample text; it is a simulated rendering, not a device capture.
+
+## 3.9.1.7 source checks
+
+Combined JV setup stages/checks ROMs before the plugin download and one button dispatches the combined job. The interface warns that completion restarts the app. Existing files and NVRAM are preserved; invalid existing ROM files stop preparation. An integration test executes the generated ROM-copy fragment against temporary fixtures, checks five installed file sizes and preserved NVRAM, and checks staging cleanup. No ROM content or network download is used by this test.
+
+Thirteen Python tests, native search/ROM dispatch tests, catalog persistence and malformed/empty/duplicate-ID checks passed. The ARM plugin loads with both supplied runtime trees under emulation. Generated CATALOG/FIND bounds and text checks passed. Combined setup, persistent-cache behavior after device reboot, and physical MPC operation still require hardware validation.
+
+Website device visuals are styled renders of generated native assets. They are not hardware screenshots. Regenerate with `tools/verify_catalog_skin.py --jv` and `tools/render_share.py` using the native build and the bundled renderer dependencies.

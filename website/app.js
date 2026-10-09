@@ -11,7 +11,7 @@ for (const button of document.querySelectorAll('[data-preview]')) button.addEven
 $('#zoom-preview').addEventListener('click',()=>{$('#dialog-image').src=preview.src;$('#dialog-image').alt=preview.alt;$('#preview-dialog').showModal();});
 $('#close-preview').addEventListener('click',()=>$('#preview-dialog').close());
 $('#device').addEventListener('change',event=>{
- const messages={force:'A candidate was built from the exact examined Force image. Flashing, boot, touch, audio and SSH login on Force remain unvalidated.',mpc:'A candidate exists for the exact examined MPC Gen1 image. Target model, updater acceptance and device operation still require validation.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
+ const messages={force:'A candidate was built from the exact examined Force image. The owner reports successful Force boot, touch, plugin use and ROM download. Combined 3.9.1.7 setup and SSH login remain unverified.',mpc:'A candidate exists for the exact examined MPC Gen1 image. Target model, updater acceptance and device operation still require validation.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
  $('#device-result').textContent=messages[event.target.value];
 });
 for(const button of document.querySelectorAll('[data-copy]')) button.addEventListener('click',async()=>{

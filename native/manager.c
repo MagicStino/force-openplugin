@@ -49,7 +49,9 @@ typedef struct {
 #ifndef CATALOG_URL
 #define CATALOG_URL "https://magicstino.github.io/force-openplugin/catalog.json"   /* tests: a file:// fixture */
 #endif
+#ifndef WORK
 #define WORK "/tmp/pluginmgr"
+#endif
 #define MAXPKG 512
 #define ROWS 3      /* plugin cards per page */
 #ifndef ADDINS_DIR
@@ -73,7 +75,7 @@ typedef struct {
     char dir[256];        /* unpacked package (install.sh / uninstall.sh), set while preparing */
 } pkg_t;
 enum { Q_INSTALL = 1, Q_REMOVE = 2 };
-enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD };
+enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL };
 
 typedef struct device device_t;
 typedef struct {
@@ -478,7 +480,8 @@ static const char *top_member(const char *k, const char *v, void *ud) {
         memset(&x, 0, sizeof x);
         p = jobject(p, pkg_member, &x);
         if (!p) return NULL;
-        if (x.id[0] && l->n < MAXPKG) l->pkg[l->n++] = x;
+        if (!x.id[0] || l->n >= MAXPKG) return NULL;
+        l->pkg[l->n++] = x;
         p = ws(p);
         if (*p == ',') { p = ws(p + 1); continue; }
         return *p == ']' ? p + 1 : NULL;
@@ -795,14 +798,39 @@ static void scan_installed(const device_t *d, pkg_t *pkg, int n) {
 #include "source_scanner.inc"
 #include "rom_setup.inc"
 
+static int catalog_parse(const char *text,list_t *l) {
+    const char *end=text?jobject(text,top_member,l):NULL;
+    if(!end || *ws(end) || !l->n){l->n=0;return 0;}
+    for(int i=0;i<l->n;i++) {
+        if(!l->pkg[i].id[0] || !l->pkg[i].name[0]){l->n=0;return 0;}
+        for(int j=0;j<i;j++)if(!strcmp(l->pkg[i].id,l->pkg[j].id)){l->n=0;return 0;}
+    }return 1;
+}
+static void catalog_save(const char *path,const char *text) {
+    char temp[768];snprintf(temp,sizeof temp,"%s.new",path);
+    int fd=open(temp,O_WRONLY|O_CREAT|O_TRUNC|O_NOFOLLOW,0600);if(fd<0)return;
+    size_t n=strlen(text),off=0;while(off<n){ssize_t k=write(fd,text+off,n-off);if(k<=0)break;off+=k;}
+    int ok=off==n && !fsync(fd);if(close(fd))ok=0;
+    if(ok)rename(temp,path);else unlink(temp);
+}
 static void do_refresh(mgr_t *m) {
     say(m, OK, "Loading the plugin catalog\xe2\x80\xa6");
     sink_t s = {0};
     int got = fetch(m, CATALOG_URL, &s) == 0;
     pkg_t *tmp = calloc(MAXPKG, sizeof *tmp);
     list_t l = {tmp, 0};
-    int parsed = got && tmp && s.buf && jobject(s.buf, top_member, &l);
-    if (!parsed) l.n = 0;
+    int parsed = got && tmp && catalog_parse(s.buf,&l);
+    probe_device(m->dev);
+    char cache[768];snprintf(cache,sizeof cache,"%s/.pluginmgr-catalog.json",m->dev->base);
+    int cached=0;
+    if(parsed && m->dev->base[0])catalog_save(cache,s.buf);
+    if(!parsed && tmp){
+        memset(tmp,0,MAXPKG*sizeof *tmp);l.n=0;
+        char *old=m->dev->base[0]?slurp(cache,16<<20):NULL;
+        cached=catalog_parse(old,&l);free(old);
+        if(!cached){memset(tmp,0,MAXPKG*sizeof *tmp);l.n=0;}
+    }
+    if(!parsed && !cached && m->loaded){free(tmp);free(s.buf);pthread_mutex_lock(&m->mu);m->online=0;say_locked(m,WARN,"Refresh failed. Keeping the last catalog; retry when online.");pthread_mutex_unlock(&m->mu);return;}
     if (tmp) source_merge(tmp, &l.n);
     if (!tmp || (!parsed && !l.n)) {
         free(s.buf);
@@ -837,11 +865,11 @@ static void do_refresh(mgr_t *m) {
     m->npkg = l.n;
     m->sel = m->menu = -1;
     for (int i = 0; i < l.n; i++) if (!strcmp(tmp[i].id, sel)) m->sel = i;
-    m->online = got; m->loaded = 1;
+    m->online = parsed; m->loaded = 1;
     m->disk_used = used;
     snprintf(m->disk_free, sizeof m->disk_free, "%s", freebuf);
     if (m->dev->problem[0]) say_locked(m, ERR, "Installing is turned off on this MPC (%s)", m->dev->problem);
-    else { m->sticky = 0; m->rev++; }
+    else { say_locked(m,parsed?OK:WARN,parsed?"Catalog refreshed from server. Plugin versions checked.":"Offline: showing saved catalog. Tap Refresh catalog when connected."); }
     pthread_mutex_unlock(&m->mu);
     free(tmp);
 }
@@ -862,6 +890,7 @@ static void prepare(mgr_t *m, pkg_t *q) {
         pkg_t *p = &q[i];
         if (is_addin(p) && p->queued == Q_REMOVE) continue;   /* removed by the uninstall.sh in its folder: nothing to fetch */
         if (!p->url[0] || strlen(p->sha) != 64 || !safe(p->id) || !safe(p->name) || !safe(p->latest) || !p->id[0] || strspn(p->id, "abcdefghijklmnopqrstuvwxyz0123456789-") != strlen(p->id) || strspn(p->sha, "0123456789abcdefABCDEF") != 64) { err = "has no download in the catalog"; break; }
+        if (p->queued == Q_INSTALL && !strcmp(p->id,"jv-880") && !rom_acquire(m)) { err = "ROM setup failed; plugin was not installed"; break; }
         snprintf(path, sizeof path, WORK "/%s.zip", p->id);
         if (download(m, p, path)) { err = "download failed after 3 retries"; break; }
         snprintf(cmd, sizeof cmd, "rm -rf '" WORK "/%s' && unzip -q -o '%s' -d '" WORK "/%s'", p->id, path, p->id);
@@ -911,6 +940,7 @@ static void prepare(mgr_t *m, pkg_t *q) {
             else
                 fprintf(f, "echo '-- remove %s'\nsh '%s/uninstall.sh' -y $(batch '%s/uninstall.sh') -t '%s' && setstate '%s' '' && rm -rf '" WORK "/%s' '" WORK "/%s.zip' || exit 1\n",
                         p->id, p->dir, p->dir, synths, p->id, p->id, p->id);
+            if (p->queued == Q_INSTALL && !strcmp(p->id,"jv-880")) rom_write_apply(f,synths);
         }
         fprintf(f, "systemctl start acvs\ntrap - EXIT\nrm -f \"$0\"\necho \"== done $(date)\"\n");
         fclose(f);
@@ -966,6 +996,7 @@ static void *worker(void *ud) {
         if (job == J_REFRESH) do_refresh(m);
         else if (job == J_PREPARE) do_prepare(m);
         else if (job == J_LAUNCH) do_launch(m);
+        else if (job == J_JV_INSTALL) { do_prepare(m); pthread_mutex_lock(&m->mu); int ready=m->ready; m->ready=0; pthread_mutex_unlock(&m->mu); if(ready) do_launch(m); }
         else if (job == J_SCAN) do_scan(m);
         else if (job >= J_ROM_CHECK && job <= J_ROM_DOWNLOAD) do_rom_setup(m, job);
         pthread_mutex_lock(&m->mu);
@@ -1075,11 +1106,11 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     if (!strcmp(f, "vis")) snprintf(b, n, "%d", p != NULL && m->loaded);
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
                                  !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
-    else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880") && installed(p));
+    else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880"));
     else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
-    else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(p->summary,0,b,n);}
-    else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(p->summary,1,b,n);}
-    else if (!strcmp(f, "state")) snprintf(b, n, "%d", card_state(m, i));
+    else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,0,b,n);}
+    else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,1,b,n);}
+    else if (!strcmp(f, "state")) snprintf(b, n, "%d", !strcmp(p->id,"jv-880") && m->menu!=i ? S_NONE : card_state(m, i));
     else if (!strcmp(f, "inst")) snprintf(b, n, "%d", installed(p));
     else if (!strcmp(f, "init")) initials(p->name, b);
     else if (!strcmp(f, "kindtxt")) snprintf(b, n, "%s", is_addin(p) ? "ADDIN" : !strcmp(p->kind, "effect") ? "FX" : "INST");
@@ -1201,7 +1232,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     }
 
     int idx[MAXPKG], nv = visible(m, idx), pages = nv ? (nv + ROWS - 1) / ROWS : 1;
-    int busy = m->busy == J_PREPARE || m->busy == J_LAUNCH;
+    int busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
     if (!strcmp(key, "tab") || !strcmp(key, "kind")) {   /* option params: the index as a number */
         int o = (int)(v + 0.5);
         if (key[0] == 't') m->tab = o; else m->kindf = o;
@@ -1214,7 +1245,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
         /* the other params are triggers: act on press only */
     } else if (!strcmp(key, "page_prev") && m->page > 0) { m->page--; m->menu = -1; }
     else if (!strcmp(key, "page_next") && m->page + 1 < pages) { m->page++; m->menu = -1; }
-    else if (!strcmp(key, "refresh")) post(m, J_REFRESH);
+    else if (!strcmp(key, "refresh")) {if(!m->busy && !m->job)post(m, J_REFRESH);else say_locked(m,WARN,"Please wait for the current task before refreshing the catalog.");}
     else if (!strcmp(key, "update_all") && !busy) {
         for (int i = 0; i < m->npkg; i++) if (has_update(&m->pkg[i]) && !m->pkg[i].queued) requeue(m, &m->pkg[i], Q_INSTALL);
     } else if (!strcmp(key, "apply") && !busy) {
@@ -1227,9 +1258,12 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
         if (p && !busy) {
             int i = idx[k], st = card_state(m, i);
             m->sel = i;
-            if (!strcmp(f,"rom_install") && !strcmp(p->id,"jv-880") && installed(p)) {
-                if(m->busy || m->job) say_locked(m,WARN,"Please wait for the current task, then tap Install ROM files.");
-                else {snprintf(m->rom_status,sizeof m->rom_status,"Starting ROM download. Save your project and unload JV-880 first.");say_locked(m,OK,"JV-880: starting ROM download...");post(m,J_ROM_DOWNLOAD);}
+            if (!strcmp(f,"rom_install") && !strcmp(p->id,"jv-880")) {
+                int other=0;for(int j=0;j<m->npkg;j++)if(j!=i && m->pkg[j].queued)other=1;
+                if(m->busy || m->job) say_locked(m,WARN,"Please wait for the current task.");
+                else if(other) say_locked(m,WARN,"Finish or clear the other queued changes first.");
+                else if(m->dev->problem[0] || !p->url[0])say_locked(m,ERR,"JV setup unavailable: check storage and catalog download.");
+                else {requeue(m,p,Q_INSTALL);snprintf(m->rom_status,sizeof m->rom_status,"Step 1/2: checking ROM files. The app will restart after installation.");say_locked(m,OK,"JV-880: step 1/2, ROM files");post(m,J_JV_INSTALL);}
             } else if (!strcmp(f, "act")) {
                 if (st == S_INSTALL || st == S_UPDATE) requeue(m, p, Q_INSTALL);
                 else if (st == S_Q_INSTALL || st == S_Q_UPDATE || st == S_Q_REMOVE) requeue(m, p, 0);
@@ -1271,7 +1305,7 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
 
     int idx[MAXPKG], nv = visible(m, idx), pages = nv ? (nv + ROWS - 1) / ROWS : 1, ok = 1;
     if (m->page >= pages) m->page = pages - 1;
-    int upd = count_updates(m), q = count_queued(m), busy = m->busy == J_PREPARE || m->busy == J_LAUNCH;
+    int upd = count_updates(m), q = count_queued(m), busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
     if (!strcmp(key, "display_rev")) snprintf(b, n, "%u", m->rev);
     else if (!strcmp(key, "tab")) snprintf(b, n, "%d", m->tab);
     else if (!strcmp(key, "kind")) snprintf(b, n, "%d", m->kindf);

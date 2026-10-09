@@ -8,8 +8,8 @@ with Akai or inMusic.
 [Download IMG candidates](docs/DOWNLOADS.md) · [Find or publish a plugin](docs/DISCOVERY.md) ·
 [Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
 
-**Hardware status:** flashing, boot, touch, audio, installation and removal
-remain untested. These are research candidates, not a verified beginner installer.
+**Hardware status:** the owner reports successful Force use and ROM download.
+MPC Gen1 and the new combined setup remain unverified on hardware. Research candidates.
 
 ![Generated native catalog preview — not a hardware capture](website/assets/catalog-native.png)
 
@@ -20,6 +20,12 @@ remain untested. These are research candidates, not a verified beginner installe
 - Filter the catalog or add a compatible GitHub release through FIND.
 - Queue installation, updates and removal in the native manager.
 - Refresh the online catalog and website cards on a six-hour schedule.
+- Tap **Refresh catalog** on the device to fetch available plugins and versions; it does not install updates.
+- JV setup offers **Install ROMs + plugin**. Save first: completion restarts the app.
+
+For existing 3.9.1 users: the updater can ask to reinstall the **same version, 3.9.1**.
+The OpenPlugin build number labels our additions; the stock internal version remains unchanged.
+See [catalog refresh](docs/CATALOG-REFRESH.md).
 
 The current index has 71 entries and 57 bundled native previews. Unknown images
 use placeholders. New source packages require review; inclusion is not a
@@ -43,7 +49,7 @@ are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and both images without mounting them. It does not flash.
 For key-only remote access, see [SSH setup](docs/SSH.md).
 
-Development container version: **3.9.1.6-openplugin**. The supplied 3.9.1 files
+Development container version: **3.9.1.7-openplugin**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
 unchanged. The [published 3.9.1.3 prerelease](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.3-openplugin-research)
 predates illustrated native cards. IMG files are release assets, not Git files.

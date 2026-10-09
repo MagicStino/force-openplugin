@@ -3,15 +3,20 @@
 import argparse,json,textwrap
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('native',type=Path);p.add_argument('output',type=Path);a=p.parse_args()
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('native',type=Path);p.add_argument('output',type=Path);p.add_argument('--jv',action='store_true');a=p.parse_args()
 root=Path(__file__).resolve().parents[1];vst=a.native/'source/vst';skin=vst/'build/skin/poloq - VST - Plugin Manager/Plugin Skins'
 data=json.loads((skin/'TUI.json').read_text())['pageData'];defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params'];names={f'Parameter {i}':p['key'] for i,p in enumerate(params)}
 lock=json.loads((root/'assets/previews.lock.json').read_text())['entries'];catalog=json.loads((root/'website/assets/catalog.json').read_text())['plugins']
-values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Generated layout preview — hardware untested',page_txt='1 / 24')
+values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
+if a.jv:catalog=sorted(catalog,key=lambda p:(p['id'] not in ('jv-880','dexed-dx7','dub-force-siren'),p['id']))[:3]
 for row,plugin in enumerate(catalog[:3],1):
  wrapped=textwrap.wrap(plugin.get('summary') or 'No description supplied by the author.',78)
- values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_preview':next(i+2 for i,x in enumerate(lock) if x['id']==plugin['id']),f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
+ values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_state':1,f'r{row}_preview':next(i+2 for i,x in enumerate(lock) if x['id']==plugin['id']),f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
+if a.jv:
+ for row,plugin in enumerate(catalog[:3],1):
+  if plugin['id']=='jv-880':
+   values.update({f'r{row}_rom':1,f'r{row}_desc1':'Save first: installs ROMs + plugin, then restarts the app.',f'r{row}_desc2':'Required files checked before installation.'})
 image=Image.new('RGBA',(1280,628),'#0c0c0d');previews=0
 
 def render(nodes,ox=0,oy=0,key=None,depth=0):

@@ -7,11 +7,18 @@ Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-ope
 | Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v3.9.1.6-openplugin-research/Force-3.9.1.6-openplugin-UNTESTED.img) | `45420ac36669244c8b4a55dfb1acd927f0b46dd85296f5ba1be6e0798c93622d` |
 | MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v3.9.1.6-openplugin-research/MPC-Gen1-3.9.1.6-openplugin-UNTESTED.img) | `59829228d311c870df8c11c30ef8d8c7d5c9cd1344f8a0297bd56d6a51b43e1f` |
 
-**Hardware untested:** updater acceptance, flash, boot, touch, audio and plugin
-installation are not validated. The MPC Gen1 candidate is the relevant family
+**Research status:** the owner reports successful Force use, including plugins and ROM download.
+This is not comprehensive hardware validation. The MPC Gen1 candidate is the relevant family
 for an original MPC One, but no physical MPC One has been tested. Preserved
 board IDs alone do not establish model compatibility. Never use the Force
 image on an MPC or bypass updater checks.
+
+## Existing 3.9.1 users
+
+The updater may ask whether to update the **same version, 3.9.1**. This is expected:
+the internal stock application version remains 3.9.1.2; our development build number
+is not presented as a higher stock firmware version. Confirm the same-version update
+to install the OpenPlugin additions, after backing up projects and choosing the correct device image.
 
 ## Downloading for USB
 
