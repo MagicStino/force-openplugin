@@ -4,8 +4,13 @@ An experimental community instrument and plugin browser for **Akai Force and
 MPC Gen1**, developed with AI. Independent, non-commercial and unaffiliated
 with Akai or inMusic.
 
+**Start here: [Download and update in four steps](https://magicstino.github.io/force-openplugin/#downloads).**
+
+The HTML site is published at https://magicstino.github.io/force-openplugin/; its source is `website/index.html`.
+After the initial USB update, open **PLUGINS → VST → Plugin Manager** and install compatible plugins from the touchscreen.
+
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) ·
-[Download IMG candidates](docs/DOWNLOADS.md) · [Find or publish a plugin](docs/DISCOVERY.md) ·
+[USB download instructions](docs/DOWNLOADS.md) · [Find or publish a plugin](docs/DISCOVERY.md) ·
 [Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
 
 **Hardware status:** the owner reports successful Force use and ROM download.
@@ -72,3 +77,9 @@ kit editor; kit import is not implemented here.
 Credits: [poloq Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager)
 and [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins).
 Existing component licenses apply; see [NOTICE](native/NOTICE.md).
+
+## Community credits
+
+**sd88me**: [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
+
+**poloq-instruments**: [Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager), the native manager foundation, including existing device-side installation. Our additions integrate it into the firmware, add illustrated cards/search improvements, a scheduled catalog bridge, saved-catalog fallback and combined JV setup.
