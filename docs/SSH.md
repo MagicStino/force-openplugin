@@ -1,6 +1,10 @@
 # SSH and SFTP: transfer samples and access your device
 
-**SSH root access and SFTP file transfers — tested on Force with OpenPlugin 0.7 RC3.** SFTP is a convenient way to copy samples between your computer and device storage.
+**OpenSSH 9.6: SSH root access and SFTP file transfers — tested on Force with OpenPlugin 0.7 RC3.** SFTP is a convenient way to copy samples between your computer and device storage.
+
+![OpenPlugin Remote Access beside Catalog and Find, with SSH and SFTP connection settings](../website/assets/remote-access-guide.png)
+
+*AI-generated interface illustration; the device shows its own IP address.*
 
 ## Connect
 
