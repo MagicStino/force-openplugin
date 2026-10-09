@@ -35,6 +35,14 @@ Manual **Run workflow** is available in Actions. A primary-source failure,
 empty catalog or unexpected large shrink aborts publication and retains the
 previous catalog. Individual discovery failures appear in the report.
 
+## Suggest a plugin without editing JSON
+
+Use the [Submit a community plugin form](https://github.com/MagicStino/force-openplugin/issues/new?template=plugin-submission.yml). A GitHub account is required. Supply the public project URL, name/author and what should be added or updated. You can suggest someone else’s project; authors can supply the manifest and package links.
+
+An issue is a request, not an automatic catalog edit. A maintainer reviews it and adds the repository to `catalog/sources.json`. After that change is merged, the scheduled or manual catalog workflow fetches the root manifest and publishes both the device JSON and website cards. New entries appear as source only until package review enables downloads. On the device, **Refresh catalog** fetches the published result. **FIND → Add source** affects that device, not the shared server registry.
+
+For an existing registered project, publish updated package metadata in `openplugin.json`; the next successful bridge refresh picks it up. For sd88me catalog entries, correct the upstream catalog instead: it takes precedence when a repository is already present there.
+
 ## For plugin authors
 
 1. Publish a public repository with clear English documentation and a license.

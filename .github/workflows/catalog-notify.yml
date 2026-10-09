@@ -1,0 +1,22 @@
+name: Private catalog email notifications
+on:
+  issues:
+    types: [opened, reopened]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Notify privately if configured
+        env:
+          CATALOG_NOTIFY_TO: ${{ secrets.CATALOG_NOTIFY_TO }}
+          CATALOG_SMTP_HOST: ${{ secrets.CATALOG_SMTP_HOST }}
+          CATALOG_SMTP_PORT: ${{ secrets.CATALOG_SMTP_PORT }}
+          CATALOG_SMTP_USER: ${{ secrets.CATALOG_SMTP_USER }}
+          CATALOG_SMTP_PASSWORD: ${{ secrets.CATALOG_SMTP_PASSWORD }}
+          CATALOG_SMTP_FROM: ${{ secrets.CATALOG_SMTP_FROM }}
+        run: python3 tools/notify_catalog.py

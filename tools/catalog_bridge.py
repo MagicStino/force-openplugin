@@ -75,10 +75,6 @@ def update(fetch=read_json):
   p=normalize_plugin(item,cfg['upstream'])
   if p['id'] in ids:raise ValueError('Duplicate upstream ID')
   ids.add(p['id']);plugins.append(p)
- previous=ROOT/'website/catalog.json'
- if previous.exists():
-  old=json.loads(previous.read_text()).get('plugins',[])
-  if old and len(plugins)<len(old)*0.75:raise ValueError('Unexpected catalog shrink; manual review required')
  repositories=set(cfg['repositories']);candidates={}
  if os.environ.get('GITHUB_TOKEN'):
   for query in cfg['search_queries'][:4]:
@@ -107,6 +103,11 @@ def update(fetch=read_json):
   except Exception as e:
    candidates.setdefault(repo,{'repo':repo,'url':'https://github.com/'+repo,'status':'needs compatible manifest; not installable'})
    errors.append({'stage':'manifest','repo':repo,'error':str(e)[:200]})
+ # Compare the complete output: registered manifests are part of the previous catalog too.
+ previous=ROOT/'website/catalog.json'
+ if previous.exists():
+  old=json.loads(previous.read_text()).get('plugins',[])
+  if old and len(plugins)<len(old)*0.75:raise ValueError('Unexpected catalog shrink; manual review required')
  if len(plugins)>512:raise ValueError('Native catalog capacity exceeded')
  plugins.sort(key=lambda p:(p['name'].casefold(),p['id']))
  catalog={'schema':1,'bridge_schema':'openplugin.catalog/1','generated':now,'source':cfg['upstream'],'plugins':plugins}

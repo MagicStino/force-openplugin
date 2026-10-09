@@ -1,0 +1,63 @@
+name: Accept catalog submission
+on:
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: Catalog submission issue number
+        type: number
+        required: true
+      reviewed_package:
+        description: Enable downloads only after reviewing the ARMv7 package/install contract
+        type: boolean
+        default: false
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: accept-catalog-submission
+  cancel-in-progress: false
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: main
+      - name: Validate submission and prepare source list
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+          REVIEWED_PACKAGE: ${{ inputs.reviewed_package }}
+        run: |
+          python3 - <<'PYCODE'
+          import os, sys
+          sys.path.insert(0, 'tools')
+          from accept_submission import accept
+          accept(int(os.environ['ISSUE_NUMBER']), os.environ['REVIEWED_PACKAGE'] == 'true')
+          PYCODE
+      - name: Test catalog bridge
+        run: python3 -m unittest discover -s tests -p test_catalog_bridge.py
+      - name: Open catalog review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ inputs.issue_number }}
+        run: |
+          if git diff --quiet -- catalog/sources.json; then
+            echo 'Repository is already registered with the requested status.'
+            exit 0
+          fi
+          branch="catalog/submission-${GITHUB_RUN_ID}"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git checkout -b "$branch"
+          git add catalog/sources.json
+          git commit -m 'Propose validated community catalog source'
+          git push origin "$branch"
+          python3 - <<'PYCODE'
+          import os
+          from pathlib import Path
+          n=int(os.environ['ISSUE_NUMBER'])
+          Path('/tmp/catalog-pr.md').write_text(f'Validated the repository manifest from proposal #{n}. Review the source-list diff and package status before merging. This change does not execute or install a plugin.\n\nCloses #{n}\n')
+          PYCODE
+          gh pr create --base main --head "$branch" --title 'Review community catalog submission' --body-file /tmp/catalog-pr.md

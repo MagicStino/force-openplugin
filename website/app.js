@@ -1,15 +1,20 @@
 'use strict';
 const $ = s => document.querySelector(s);
-const preview = $('#screen-preview');
-for (const button of document.querySelectorAll('[data-preview]')) button.addEventListener('click', () => {
- const search=button.dataset.preview==='search',cards=button.dataset.preview==='catalog';
- preview.src=cards?'assets/catalog-native.png':search?'assets/find-search.png':'assets/find-source.png';
- preview.alt=cards?'Generated native catalog with plugin images and descriptions':search?'Generated plugin filter page with QWERTY keyboard':'Generated repository source entry page';
- $('#preview-mode').textContent=cards?'CATALOG · ILLUSTRATED':search?'FIND · FILTER':'FIND · SOURCE';
- for(const b of document.querySelectorAll('[data-preview]')) {b.classList.toggle('selected',b===button);b.setAttribute('aria-pressed',String(b===button));}
+const photoDialog = $('#photo-dialog');
+let photoOpener;
+for (const button of document.querySelectorAll('[data-photo]')) button.addEventListener('click', () => {
+ photoOpener=button;
+ $('#photo-title').textContent=button.dataset.title;
+ $('#photo-caption').textContent=button.dataset.caption;
+ $('#photo-image').src=button.dataset.photo;
+ $('#photo-image').alt=button.dataset.title+' on a physical Akai Force';
+ $('#photo-view').style.setProperty('--photo-ratio',button.dataset.ratio);
+ $('#photo-view').classList.toggle('photo-rotated',button.dataset.rotate==='true');
+ photoDialog.showModal();
 });
-$('#zoom-preview').addEventListener('click',()=>{$('#dialog-image').src=preview.src;$('#dialog-image').alt=preview.alt;$('#preview-dialog').showModal();});
-$('#close-preview').addEventListener('click',()=>$('#preview-dialog').close());
+$('#close-photo').addEventListener('click',()=>photoDialog.close());
+photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close();});
+photoDialog.addEventListener('close',()=>photoOpener?.focus());
 $('#device').addEventListener('change',event=>{
  const messages={force:'A candidate was built from the exact examined Force image. The owner reports successful Force boot, touch, plugin use and ROM download. Combined 3.9.1.7 setup and SSH login remain unverified.',mpc:'A candidate exists for the exact examined MPC Gen1 image. Target model, updater acceptance and device operation still require validation.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
  $('#device-result').textContent=messages[event.target.value];

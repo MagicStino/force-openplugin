@@ -1,0 +1,29 @@
+name: Check catalog contributions
+on:
+  pull_request:
+    paths: ['catalog/**', 'schema/**', 'tools/catalog_bridge.py', 'tools/accept_submission.py', 'tests/test_catalog_bridge.py', '.github/ISSUE_TEMPLATE/**']
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Validate source registry and example
+        run: |
+          python3 - <<'PYCODE'
+          import json,sys
+          sys.path.insert(0,'tools')
+          from catalog_bridge import REPO,validate_manifest
+          from pathlib import Path
+          c=json.loads(Path('catalog/sources.json').read_text())
+          for k in ('repositories','reviewed_manifest_repositories'):
+              assert isinstance(c[k],list) and all(isinstance(r,str) and REPO.fullmatch(r) for r in c[k])
+              assert len(c[k])==len(set(c[k])), 'Duplicate repositories'
+          assert set(c['reviewed_manifest_repositories']) <= set(c['repositories']), 'Reviewed repository must be registered'
+          m=json.loads(Path('catalog/example.openplugin.json').read_text())
+          validate_manifest(m,m['repo'])
+          PYCODE
+      - name: Exercise submission and catalog publication
+        run: python3 -m unittest discover -s tests -p test_catalog_bridge.py

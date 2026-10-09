@@ -78,8 +78,16 @@ Credits: [poloq Plugin Manager](https://github.com/poloq-instruments/mpc-vst-man
 and [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins).
 Existing component licenses apply; see [NOTICE](native/NOTICE.md).
 
+## Real Force photos
+
+[View the owner-supplied hardware gallery](https://magicstino.github.io/force-openplugin/#force-gallery): catalog, combined JV-880 setup, plugin selection and plugin interfaces. MPC imagery is labelled as a rendered preview.
+
 ## Community credits
 
 **sd88me**: [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
 
 **poloq-instruments**: [Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager), the native manager foundation, including existing device-side installation. Our additions integrate it into the firmware, add illustrated cards/search improvements, a scheduled catalog bridge, saved-catalog fallback and combined JV setup.
+
+## Community catalog contributions
+
+[Suggest a plugin](https://github.com/MagicStino/force-openplugin/issues/new?template=plugin-submission.yml), support an existing proposal with 👍, or [volunteer as a maintainer](https://github.com/MagicStino/force-openplugin/issues/new?template=maintainer-application.yml). [Community review guide](docs/COMMUNITY-CATALOG.md) explains the maintainer acceptance action, review pull requests and optional private email notifications. Submissions never enable installers automatically.

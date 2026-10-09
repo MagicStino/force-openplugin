@@ -1,0 +1,21 @@
+name: Help maintain the community catalog
+description: Volunteer to review metadata, packages, documentation or hardware reports.
+title: "[Maintainer] "
+body:
+  - type: markdown
+    attributes:
+      value: "No repository access is granted automatically. The owner reviews applications and decides on invitations."
+  - type: textarea
+    id: contribution
+    attributes:
+      label: How would you like to help?
+      description: Catalog metadata, plugin packaging, documentation, or Force/MPC testing.
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: Experience and availability
+      description: Link public work or describe relevant experience. Do not include private contact details or credentials.
+    validations:
+      required: true

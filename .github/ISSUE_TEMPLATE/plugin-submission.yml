@@ -1,0 +1,47 @@
+name: Submit a community plugin
+description: Send a public project URL for maintainer review. Submission does not automatically enable downloads.
+title: "[Catalog] "
+body:
+  - type: markdown
+    attributes:
+      value: "Search existing catalog proposals first. Add a 👍 reaction to support an existing proposal, and comment with your device, firmware, plugin version and test result. Votes express interest; they do not verify compatibility. You do not need to edit JSON to suggest a project. A maintainer checks the metadata and package format before adding it. Do not upload ROMs, keys or private files."
+  - type: input
+    id: project
+    attributes:
+      label: Public project URL
+      placeholder: https://github.com/owner/project
+    validations:
+      required: true
+  - type: dropdown
+    id: request
+    attributes:
+      label: What should change?
+      options:
+        - Add a new plugin
+        - Update an existing plugin version
+        - Correct catalog information
+    validations:
+      required: true
+  - type: input
+    id: name
+    attributes:
+      label: Plugin name and author
+    validations:
+      required: true
+  - type: input
+    id: manifest
+    attributes:
+      label: openplugin.json URL (if available)
+      description: Plugin authors should place this manifest at the root of the default branch.
+  - type: input
+    id: release
+    attributes:
+      label: Release or package URL (if available)
+      description: A compatible ARMv7 portable package is needed for installation. Source-only projects can still be listed.
+  - type: textarea
+    id: details
+    attributes:
+      label: Description, device support and testing
+      description: What does it do? Which Force or MPC hardware has the author tested? Include documentation and license links if available.
+    validations:
+      required: true
