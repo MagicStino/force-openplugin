@@ -47,7 +47,7 @@ def build(image, device, payload, output):
         fs.write_bytes(rootfs)
         del rootfs
         shadow_override = None
-        if (payload / 'usr/share/openplugin/authorized_keys').is_file():
+        if (payload / 'usr/share/openplugin/authorized_keys').is_file() or (payload / 'usr/share/openplugin/remote-sshd_config').is_file():
             shadow_override = temp / 'shadow'
             subprocess.run(['debugfs', '-R', f'dump /etc/shadow {quote(shadow_override)}', str(fs)], capture_output=True, check=True)
             lines = shadow_override.read_text().splitlines()
@@ -56,8 +56,9 @@ def build(image, device, payload, output):
                 raise ValueError('Expected exactly one root account')
             fields = lines[roots[0]].split(':')
             # Linux OpenSSH treats ! as an account lock, blocking keys as well.
-            # * is an unusable password; password/interactive auth stay disabled.
-            fields[1] = '*'
+            # Key-only builds use an unusable password. Shared password builds
+            # install the explicitly requested root/mpc hash before boot (rootfs is read-only).
+            fields[1] = '*' if (payload / 'usr/share/openplugin/authorized_keys').is_file() else subprocess.check_output(['openssl', 'passwd', '-6', '-salt', 'openplugin07', '-stdin'], input=b'mpc\n').decode().strip()
             lines[roots[0]] = ':'.join(fields)
             shadow_override.write_text('\n'.join(lines) + '\n')
         files = sorted(payload.rglob('*'))

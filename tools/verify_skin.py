@@ -56,7 +56,7 @@ for mode in [0,1]:
 print('FIND: both modes, 47 non-overlapping touch targets, bounds/text/assets PASS')
 image=Image.new('RGBA',(1280,628),'#0c0c0d')
 touches=[]
-examples={'remote_status':'Enabled on boot; connection requires network','remote_ip':'192.168.178.79','remote_password':'Hidden - tap Show / Hide password','remote_storage':'SFTP: browse /media for internal storage, SD and USB mounts'}
+examples={'remote_status':'Running - SSH / SFTP port 22','remote_ip':'192.168.178.79','remote_password':'Username: root    Password: mpc    Port: 22','remote_storage':'SFTP: browse /media for internal storage, SD and USB mounts'}
 for node in defs['REMOTE ACCESS|REMOTE ACCESS']['componentsData']:
     x,y,w,h=map(int,node['bounds']['bounds'].split())
     assert 0<=x and 0<=y and x+w<=1280 and y+h<=628,(x,y,w,h)
