@@ -51,8 +51,7 @@ For key-only remote access, see [SSH setup](docs/SSH.md).
 
 Development container version: **3.9.1.7-openplugin**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
-unchanged. The [published 3.9.1.3 prerelease](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.3-openplugin-research)
-predates illustrated native cards. IMG files are release assets, not Git files.
+unchanged. [Current 3.9.1.7 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.7-openplugin-research-rc2). IMG files are release assets, not Git files.
 
 ## Documentation
 
