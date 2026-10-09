@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-08T22:41:51+00:00",
+  "generated": "2026-10-09T06:17:57+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -1967,6 +1967,28 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.7",
+          "size": 71620877,
+          "sha256": "bd154253bf40a2f253a00bfbdde3d8732707df93dacd1cbcb51c0132a617db3b",
+          "max_glibc": "2.28",
+          "cpu": {
+            "p99_pct": 3.4,
+            "max_pct": 7.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.7-gen2-test/Crate-Digger-1.1.7-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.6",
           "size": 71620655,
           "sha256": "4f4d2215b1cf3057893bc1ced922adebc63546da2b0bbfd6bd30da073e428ed1",
@@ -3060,7 +3082,13 @@
           "warnings": [
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9",
+              "date": "2026-10-08"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -3601,7 +3629,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-commander/releases/download/commander-addin-v1.0.0/MPC-Commander-addin-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3613,7 +3645,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-commander/releases/download/commander-addin-v0.1.3/MPC-Commander-addin-0.1.3-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3625,7 +3661,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-commander/releases/download/commander-addin-v0.1.2/MPC-Commander-addin-0.1.2-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3637,7 +3677,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-commander/releases/download/commander-addin-v0.1.1/MPC-Commander-addin-0.1.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3767,6 +3811,18 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 59518,
+          "sha256": "91307b295c9460c28b6b330162316bcb1c5d5b23e70bd8306ec2220d20e0d911",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.1/MPC-Remote-addin-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 57959,
           "sha256": "f8c84fb4aad6c34e96c82865a511ad22c81c94936f9e404f85edc2a3f7248586",
@@ -3775,7 +3831,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.0/MPC-Remote-addin-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3787,7 +3847,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v0.2.2/MPC-Remote-addin-0.2.2-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -3829,7 +3893,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-remote",
@@ -3864,7 +3928,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.0/MPC-USB-audio-addin-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3876,7 +3944,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v0.1.1/MPC-USB-audio-addin-0.1.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -4028,6 +4100,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.8",
+          "size": 2910315,
+          "sha256": "636ae0f64245d2d4bed1d9628415aee0ee8ca1d1590fc1fddddcb00676e190d7",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.8/NAM-1.0.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.7",
           "size": 2909679,
           "sha256": "b59f552718e05af2eba66333f88b506a7600fedf45a23bbe2e1099ca42659716",
@@ -4105,7 +4192,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.7",
+      "latest": "1.0.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-nam",
@@ -4700,6 +4787,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 2538494,
+          "sha256": "441d944c490afae86d541514fffabb68c6131932b31e38355e7581e040bf3ad6",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.2.1/RMXXXL-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-08"
+            }
+          ]
+        },
+        {
           "version": "1.2.0",
           "size": 2627643,
           "sha256": "83d9813a7a06ba17d86d1141af77ae0f75bcfc393d52fc02bc782569df747d00",
@@ -4742,7 +4850,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/RMXXXL",
