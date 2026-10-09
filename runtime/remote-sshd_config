@@ -6,7 +6,6 @@ PubkeyAuthentication no
 KbdInteractiveAuthentication no
 AuthenticationMethods password
 PermitEmptyPasswords no
-UsePAM no
 AllowUsers root
 AllowAgentForwarding no
 AllowTcpForwarding no

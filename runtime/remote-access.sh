@@ -22,11 +22,23 @@ prepare() {
     replace_hash "$D/hash"
 }
 replace_hash() {
-    # Keep account ageing and all other users intact; replace only the root hash.
-    awk -F: 'BEGIN {OFS=":"} NR==FNR {hash=$0; next} $1=="root" {$2=hash} {print}' "$1" /etc/shadow > /etc/shadow.openplugin
-    chmod 600 /etc/shadow.openplugin
-    chown 0:0 /etc/shadow.openplugin
-    mv /etc/shadow.openplugin /etc/shadow
+    # Rootfs is read-only. Bind a private writable shadow file over the stock file.
+    awk -F: 'BEGIN {OFS=":"} NR==FNR {hash=$0; next} $1=="root" {$2=hash} {print}' "$1" /etc/shadow > "$D/shadow.new"
+    chmod 600 "$D/shadow.new"
+    chown 0:0 "$D/shadow.new"
+    if [ -f /run/openplugin-shadow-mounted ]; then
+        umount /etc/shadow
+        rm -f /run/openplugin-shadow-mounted
+    fi
+    mv "$D/shadow.new" "$D/shadow"
+    mount --bind "$D/shadow" /etc/shadow
+    touch /run/openplugin-shadow-mounted
+}
+restore_shadow() {
+    if [ -f /run/openplugin-shadow-mounted ]; then
+        umount /etc/shadow
+        rm -f /run/openplugin-shadow-mounted
+    fi
 }
 case "${1:-}" in
     prepare) prepare ;;
@@ -34,12 +46,12 @@ case "${1:-}" in
         rm -f "$D/disabled"
         if ! systemctl start openplugin-remote.service; then
             touch "$D/disabled"
-            [ ! -s "$D/original-root-hash" ] || replace_hash "$D/original-root-hash"
+            restore_shadow
             exit 1
         fi ;;
     disable)
         touch "$D/disabled"
         systemctl stop openplugin-remote.service
-        [ ! -s "$D/original-root-hash" ] || replace_hash "$D/original-root-hash" ;;
+        restore_shadow ;;
     *) exit 2 ;;
 esac

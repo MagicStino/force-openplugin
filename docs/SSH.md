@@ -11,7 +11,7 @@ SFTP starts in root's home directory. Browse **/media** for mounted internal sto
 
 **Disable SSH** stops the dedicated service, restores the previous root password hash, and saves the disabled choice across reboots. **Enable SSH** starts it again using the same device-local password. Telnet is not enabled. The password is stored only on the device in a root-readable file under `/data/openplugin/ssh`; do not share a personalized filesystem dump.
 
-SSH enables password authentication for root. Forwarding is disabled, and SFTP uses OpenSSH's internal server. Existing vendor SSH configuration is not edited. The dedicated unit conflicts with the vendor SSH unit so that two servers do not compete for port 22.
+The stock root filesystem is read-only. Startup creates a private shadow file on `/data` and bind-mounts it over `/etc/shadow`; disabling restores the original mount. Stock rootfs bytes are not rewritten at runtime. SSH enables password authentication for root. Forwarding is disabled, and SFTP uses OpenSSH's internal server. Existing vendor SSH configuration is not edited. The dedicated unit conflicts with the vendor SSH unit so that two servers do not compete for port 22.
 
 ## Optional public-key build
 
