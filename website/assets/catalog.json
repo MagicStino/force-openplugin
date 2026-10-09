@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-09T22:06:44+00:00",
+  "date": "2026-10-09T22:13:45+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -34,7 +34,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -87,7 +89,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/6w6-vst-v1.1.1/6W6-1.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -107,7 +113,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -128,7 +136,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -175,7 +185,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/8w8-vst-v1.1.1/8W8-1.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -195,7 +209,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -216,7 +232,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -263,7 +281,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/9w9-vst-v1.1.1/9W9-1.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -283,7 +305,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -304,7 +328,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -350,7 +376,11 @@
           "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.6/Acid-1.0.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -366,7 +396,11 @@
           "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.5/Acid-1.0.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -382,7 +416,11 @@
           "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.4/Acid-1.0.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -398,7 +436,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -417,7 +457,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -436,7 +477,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -500,7 +542,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -556,7 +600,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -612,7 +658,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -669,7 +717,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -726,7 +776,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -783,7 +835,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -840,7 +894,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -896,7 +952,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -952,7 +1010,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1009,7 +1069,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1066,7 +1128,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1123,7 +1187,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1179,7 +1245,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1236,7 +1304,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1293,7 +1363,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1349,7 +1421,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1406,7 +1480,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1463,7 +1539,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1520,7 +1598,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1576,7 +1656,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1633,7 +1715,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -1675,44 +1759,15 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 710658,
-          "sha256": "0badc3c957f1bfe86bb12cab184c65823ddb0a9e1af256ca7c711d7f242587b1",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/mmiroshnikov/mpc-airwindows/releases/download/v1.0.0/ZLowpass2-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC Live",
-              "firmware": "3.9.0",
-              "date": "2026-10-03"
-            },
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0",
-              "date": "2026-10-03"
-            }
-          ]
-        }
-      ],
-      "latest": "1.0.0",
+      "versions": [],
+      "latest": null,
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       },
-      "download": true
+      "download": false
     },
     {
       "id": "aphex",
@@ -1746,7 +1801,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -1794,7 +1851,11 @@
           "url": "https://github.com/sd88me/mpc-vst-boris/releases/download/v1.0.0/Boris-Granular-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -1838,7 +1899,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -1884,7 +1947,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -1934,7 +1999,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.1/Chordsmith-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -1953,7 +2022,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.0/Chordsmith-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -1979,7 +2052,9 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -2034,7 +2109,11 @@
           "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.5/Clementine-XT-0.9.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2054,7 +2133,11 @@
           "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.4/Clementine-XT-0.9.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2074,7 +2157,11 @@
           "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.3/Clementine-XT-0.9.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2094,7 +2181,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2115,7 +2204,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2136,7 +2227,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2185,7 +2278,9 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2206,7 +2301,11 @@
           "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.6/Crate-Digger-1.1.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2222,7 +2321,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2241,7 +2342,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2260,7 +2362,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2279,7 +2382,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2344,7 +2448,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/cw78-vst-v1.1.1/CW-78-1.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2364,7 +2472,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2385,7 +2495,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2431,7 +2543,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2480,7 +2594,11 @@
           "url": "https://github.com/sd88me/mpc-vst-dx7/releases/download/dx7-v1.0.6/Dexed-DX7-1.0.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2499,7 +2617,11 @@
           "url": "https://github.com/sd88me/mpc-vst-dx7/releases/download/dx7-v1.0.5/Dexed-DX7-1.0.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2515,7 +2637,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2532,7 +2656,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2597,7 +2723,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -2647,7 +2776,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -2697,7 +2829,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -2747,7 +2882,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -2803,7 +2941,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2853,7 +2993,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -2870,7 +3012,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2916,7 +3060,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -2966,7 +3112,11 @@
           "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.4/Euclidier-1.0.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -2986,7 +3136,11 @@
           "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.3/Euclidier-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3006,7 +3160,11 @@
           "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.2/Euclidier-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3027,7 +3185,8 @@
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3072,7 +3231,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3126,7 +3287,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -3179,7 +3342,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3225,7 +3390,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3271,7 +3438,11 @@
           "url": "https://github.com/Lewinator56/mpc-vst-helm/releases/download/1.0.0/Helm-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -3316,7 +3487,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -3373,7 +3546,11 @@
           "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.1/InterzoneXXL-0.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3388,7 +3565,11 @@
           "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.0/InterzoneXXL-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -3431,7 +3612,11 @@
           "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.6/JV-880-1.0.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3447,7 +3632,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -3464,7 +3651,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3513,7 +3702,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.1/Keyscope-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -3538,7 +3731,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.0/Keyscope-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -3591,7 +3788,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -3614,7 +3814,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -3671,7 +3874,11 @@
           "url": "https://github.com/sd88me/mpc-vst-luckydip/releases/download/v0.9.1/Lucky-Dip-0.9.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3690,7 +3897,11 @@
           "url": "https://github.com/sd88me/mpc-vst-luckydip/releases/download/v0.9.0/Lucky-Dip-0.9.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -3774,7 +3985,11 @@
           "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-sequencer-vst-v1.0.4/Maze-Sequencer-1.0.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3794,7 +4009,11 @@
           "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-sequencer-vst-v1.0.3/Maze-Sequencer-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3814,7 +4033,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -3835,7 +4056,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -3858,7 +4081,8 @@
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -3908,7 +4132,11 @@
           "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-voice-vst-v1.0.3/Maze-Voice-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -3928,7 +4156,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -3949,7 +4179,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -3971,7 +4203,8 @@
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4017,7 +4250,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4062,7 +4297,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4108,7 +4345,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4195,7 +4434,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4244,7 +4485,11 @@
           "url": "https://github.com/sd88me/mpc-vst-morpho-PE/releases/download/morpho-pe-v1.0.1/Morpho-PE-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4263,7 +4508,11 @@
           "url": "https://github.com/sd88me/mpc-vst-morpho-PE/releases/download/morpho-pe-v1.0.0/Morpho-PE-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -4420,7 +4669,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -4448,7 +4699,8 @@
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -4711,7 +4963,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4757,7 +5011,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -4805,7 +5061,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "Plugin Skins/sh_slider_v_32x150_3a210d8c.png is 19200 px tall; keep skin images under 16384 px (fewer or smaller filmstrip frames)"
+            "Plugin Skins/sh_slider_v_32x150_3a210d8c.png is 19200 px tall; keep skin images under 16384 px (fewer or smaller filmstrip frames)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -4824,7 +5083,8 @@
           "warnings": [
             "Plugin Skins/sh_slider_v_32x150_3a210d8c.png is 19200 px tall; keep skin images under 16384 px (fewer or smaller filmstrip frames)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -4843,7 +5103,8 @@
           "warnings": [
             "Plugin Skins/sh_slider_v_32x150_3a210d8c.png is 19200 px tall; keep skin images under 16384 px (fewer or smaller filmstrip frames)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -4895,7 +5156,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.8/NAM-1.0.8-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4910,7 +5175,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.7/NAM-1.0.7-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4925,7 +5194,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.6/NAM-1.0.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4940,7 +5213,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.5/NAM-1.0.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4955,7 +5232,11 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.4/NAM-1.0.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -4971,7 +5252,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5017,7 +5300,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5063,7 +5348,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5210,7 +5497,11 @@
           "url": "https://github.com/sd88me/mpc-vst-OTT/releases/download/ottmpc-vst-v1.0.0/OTTmpc-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -5263,7 +5554,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5290,7 +5583,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5317,7 +5612,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5344,7 +5641,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5371,7 +5670,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5398,7 +5699,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5427,7 +5730,8 @@
           "warnings": [
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5483,7 +5787,11 @@
           "url": "https://github.com/sunskiefer/PlateauXXL/releases/download/v0.4.1/PlateauXXL-0.4.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -5525,7 +5833,11 @@
           "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.1.0/Plugin-Manager-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -5541,7 +5853,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -5558,7 +5872,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -5616,7 +5932,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -5633,7 +5951,9 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5682,7 +6002,11 @@
           "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1/Profit-08-0.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         },
         {
@@ -5701,7 +6025,11 @@
           "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.0/Profit-08-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -5746,7 +6074,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5792,7 +6122,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5841,7 +6173,11 @@
           "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.2.1/RMXXXL-1.2.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -5862,7 +6198,11 @@
           "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.2.0/RMXXXL-1.2.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -5883,7 +6223,11 @@
           "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.1.1/RMXXXL-1.1.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -5930,7 +6274,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -5981,7 +6327,8 @@
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -6001,7 +6348,11 @@
           "url": "https://github.com/sd88me/mpc-vst-sturm/releases/download/sturm-tp-v0.1.0/Sturm-TP-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -6047,7 +6398,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -6064,7 +6417,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -6081,7 +6436,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -6104,7 +6461,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         },
@@ -6121,7 +6480,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -6144,7 +6505,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -6167,7 +6530,9 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -6217,7 +6582,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-vst-v1.0.0/TR-MPC-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -6260,7 +6629,11 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-tap-fx-vst-v1.0.0/TR-MPC-Tap-FX-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
           "tested": []
         }
       ],
@@ -6301,7 +6674,10 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -6350,7 +6726,8 @@
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -6403,7 +6780,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
@@ -6449,7 +6828,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
         }
