@@ -26,15 +26,10 @@ Once merged, the catalog workflow fetches metadata and deploys both the device J
 
 Already registered authors can update versions in `openplugin.json`; put the newest usable package first. Repositories already in sd88me's upstream catalog must update that upstream entry, which takes precedence. Invalid or missing manifests appear as source notices and cannot create download actions.
 
-## Private email notifications
+## GitHub notifications
 
-The notification workflow sends new catalog proposals and maintainer applications only when configured. It uses these repository **Actions secrets**, never a public email address:
+Use **Watch → Custom → Issues and Pull requests → Apply** on this repository. New plugin submissions and maintainer applications arrive as Issues; acceptance proposals arrive as pull requests. Read and manage them in [GitHub Notifications](https://github.com/notifications).
 
-- `CATALOG_NOTIFY_TO`: recipient address.
-- `CATALOG_SMTP_HOST`, `CATALOG_SMTP_PORT`: SMTP service; port 587 uses STARTTLS and 465 uses TLS.
-- `CATALOG_SMTP_USER`, `CATALOG_SMTP_PASSWORD`: sender credentials (use an app password where required).
-- `CATALOG_SMTP_FROM`: sender address authorized by that service.
-
-Configure them under **Settings → Secrets and variables → Actions**. Without the complete settings, the action says notifications are not configured and sends nothing. A manual **Run workflow** sends a test message. Credentials and recipient addresses are not printed. The repository remains usable through GitHub notifications without SMTP.
+GitHub controls delivery through your personal notification preferences. No sender account, SMTP credentials or public recipient address is needed. Notifications inform reviewers; they do not automatically accept a plugin.
 
 The owner keeps control of merging and invitations. No multi-year availability or automatic acceptance is promised.
