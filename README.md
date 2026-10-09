@@ -56,7 +56,7 @@ OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. 
 
 Development container version: **3.9.1-openplugin-v0.7**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
-unchanged. [Current 3.9.1.7 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.7-openplugin-research-rc2). IMG files are release assets, not Git files.
+unchanged. [Current OpenPlugin 0.7 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research). IMG files are release assets, not Git files.
 
 ## Documentation
 

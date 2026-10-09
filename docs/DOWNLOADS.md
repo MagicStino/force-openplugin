@@ -1,11 +1,11 @@
 # Download images
 
-Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v3.9.1.7-openplugin-research-rc2), version **3.9.1.7-openplugin**:
+Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research), version **OpenPlugin 0.7 on firmware 3.9.1**:
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v3.9.1.7-openplugin-research-rc2/Force-3.9.1-update.img) | `654a34ede3c2a8a343c90d3cf87e8d3e4cd5ca3bedccbb7dc713b27f9bb2dfd9` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v3.9.1.7-openplugin-research-rc2/MPC-3.9.1-Gen1-update.img) | `66589fbbc358ab855f4f4f292df89b07e2f97f51237e738e7827f51627088233` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research/Force-3.9.1-openplugin-v0.7-update.img) | `29e28c911be86e5574f677c6ed405a1d6b9f25375f79ca0ec129694b067340eb` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `88bf7ec43fb0c179e39e4987d6e6c4a185fb6544b840dd8bc801b9080ba88974` |
 
 **Research status:** the owner reports successful Force use, including plugins and ROM download.
 This is not comprehensive hardware validation. The MPC Gen1 candidate is the relevant family
@@ -23,13 +23,9 @@ to install the OpenPlugin additions, after backing up projects and choosing the 
 ## Downloading for USB
 
 Download the actual `.img` through the link above, not GitHub’s source-code ZIP.
-Use [SHA256SUMS-USB.txt](https://github.com/MagicStino/force-openplugin/releases/download/v3.9.1.7-openplugin-research-rc2/SHA256SUMS-USB.txt) for the USB filenames. Developer `.sha256` files retain the original build filenames; `.json` files record validation.
-Verify the downloaded image against its checksum before copying it to USB.
-Do not extract the IMG or write it as a bootable USB image.
-The latest downloads already use the stock filenames: `Force-3.9.1-update.img`
-and `MPC-3.9.1-Gen1-update.img`. If using an older development-named IMG,
-rename it to the appropriate stock filename. Renaming helps file discovery;
-it does not bypass firmware compatibility checks.
+Download the matching `.sha256` release asset and verify the IMG before renaming or copying. `.json` files record structural validation. Do not extract the IMG or write it as a bootable USB image.
+
+The filenames are `Force-3.9.1-openplugin-v0.7-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.7-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
 
 For an existing 3.9.1 installation:
 
@@ -41,7 +37,4 @@ For an existing 3.9.1 installation:
 
 USB menu/media steps follow Akai’s [Force guide](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough) and [MPC guide](https://support.akaipro.com/en/support/solutions/articles/69000816160-akai-pro-mpc-firmware-update-walkthrough). These guides describe stock updates, not approval of this custom image. Stop if the updater rejects it. Owner-reported Force success does not validate every model; MPC Gen1 remains hardware unverified.
 
-Generic release images have OpenPlugin SSH disabled. For an owner-key build,
-see [SSH setup](SSH.md). The stock application remains 3.9.1.2. Build sources
-and exact input hashes are in the repository; the release includes validation
-manifests and [candidate results](ILLUSTRATED-CANDIDATES.json).
+OpenPlugin 0.7 starts SSH/SFTP automatically with a device-generated password. Open **Plugin Manager → REMOTE ACCESS** to see the IP, reveal the password, or disable access persistently. Username: `root`; port: 22. SFTP provides full device access, including sample folders under `/media`. See [Remote Access](SSH.md). Live SSH/SFTP and the new tab remain hardware unverified. Stock application version remains 3.9.1.2.
