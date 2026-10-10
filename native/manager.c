@@ -96,6 +96,9 @@ typedef struct {
     char source_url[160], source_status[160];
     char query[96], query_draft[96];
     int searching;
+    /* Audio-thread UI polls reuse this view until state changes. Protected by mu. */
+    int view_valid, view_idx[MAXPKG], view_n, view_updates, view_queued;
+    unsigned view_rev;
     char rom_status[160], rom_files[5][96];
     int rom_confirm;
     int remote_show;
@@ -1020,6 +1023,9 @@ static int has_update(const pkg_t *p) {   /* a known older version, or an old-la
 /* Every indexed catalog entry is browseable, including source-only packages. */
 static int visible(const mgr_t *m, int *idx) {
     int n = 0;
+#ifdef MANAGER_VIEW_SCAN
+    MANAGER_VIEW_SCAN();
+#endif
     for (int i = 0; i < m->npkg; i++) {
         const pkg_t *p = &m->pkg[i];
         if (m->query[0] && !strcasestr(p->name,m->query) && !strcasestr(p->author,m->query) &&
@@ -1318,11 +1324,23 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     if (!strcmp(key,"source_mode")) {snprintf(b,n,"%d",!m->searching);pthread_mutex_unlock(&m->mu);return 1;}
     if (!strncmp(key, "source_", 7)) { snprintf(b, n, "0"); pthread_mutex_unlock(&m->mu); return 1; }
 
-    int idx[MAXPKG], nv = visible(m, idx), pages = nv ? (nv + ROWS - 1) / ROWS : 1, ok = 1;
+    /* Revision polling must be constant-time, including with a search active. */
+    if (!strcmp(key, "display_rev")) {
+        snprintf(b, n, "%u", m->rev);
+        pthread_mutex_unlock(&m->mu); return 1;
+    }
+    if (!m->view_valid || m->view_rev != m->rev) {
+        m->view_n = visible(m, m->view_idx);
+        m->view_updates = count_updates(m);
+        m->view_queued = count_queued(m);
+        m->view_rev = m->rev;
+        m->view_valid = 1;
+    }
+    const int *idx = m->view_idx;
+    int nv = m->view_n, pages = nv ? (nv + ROWS - 1) / ROWS : 1, ok = 1;
     if (m->page >= pages) m->page = pages - 1;
-    int upd = count_updates(m), q = count_queued(m), busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
-    if (!strcmp(key, "display_rev")) snprintf(b, n, "%u", m->rev);
-    else if (!strcmp(key, "tab")) snprintf(b, n, "%d", m->tab);
+    int upd = m->view_updates, q = m->view_queued, busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
+    if (!strcmp(key, "tab")) snprintf(b, n, "%d", m->tab);
     else if (!strcmp(key, "kind")) snprintf(b, n, "%d", m->kindf);
     else if (!strcmp(key, "net")) snprintf(b, n, "%d", !m->online);
     else if (!strcmp(key, "disk")) snprintf(b, n, "%d", (int)(m->disk_used * 10 + 0.5));   /* bar steps 0..10 */
