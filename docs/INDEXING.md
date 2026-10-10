@@ -8,4 +8,4 @@ The manager loads that index when opened and when **Refresh catalog** is pressed
 
 Imported sources persist in `/data/openplugin/sources.json`. Add source checks the latest stable release against the [package contract](SOURCES.md). Package updates require an explicit install action.
 
-OpenPlugin 0.8 also fetches visible preview images on load/refresh and caches them for offline use. See [preview behaviour and hardware limits](CATALOG-PREVIEWS.md).
+OpenPlugin 0.8 RC2 restores bundled indexed pictures; automatic online image refresh is disabled. See [preview behaviour and hardware limits](CATALOG-PREVIEWS.md).

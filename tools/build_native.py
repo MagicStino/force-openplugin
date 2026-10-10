@@ -81,11 +81,6 @@ def main():
         def preview_node(node):
             return any(h.startswith('IndexedEnabling/') and h.split('/',3)[-1] in preview_params for h in node['bounds'].get('additionalInvalidatingHandles',[]))
         previews=[node for node in nodes if preview_node(node)]
-        for node in previews:
-            for h in node['bounds'].get('additionalInvalidatingHandles',[]):
-                parts=h.split('/',3)
-                if len(parts)==4 and parts[0]=='IndexedEnabling' and parts[1]=='1' and parts[3] in preview_params:
-                    node['componentData']['data']['image']='/data/openplugin/previews/row'+preview_params[parts[3]]+'.png'
         definition['value']['componentsData']=[node for node in nodes if not preview_node(node)]+previews
     tui.write_text(json.dumps(ui,indent=2)+'\n')
     import ziglang

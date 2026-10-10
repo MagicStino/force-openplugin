@@ -4,11 +4,11 @@ Browse, install and update **community VST plugins on Akai Force 3.9.1 and MPC G
 
 Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
-**[Download OpenPlugin 0.8 RC1 and follow the USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
+**[Download OpenPlugin 0.8 RC2 and follow the USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Release status:** 0.8 RC1 is a research candidate. Both images pass structural and stock verifier checks; the new images have not been flashed or boot-tested. Earlier Force use and SSH/SFTP transfers are documented. Mouse interaction, refreshed touchscreen images and the search CPU fix still need device acceptance testing; MPC Gen1 remains unverified on hardware.
+**Release status:** 0.8 RC2 is a research candidate. Both images pass structural and stock verifier checks; the new images have not been flashed or boot-tested. Earlier Force use and SSH/SFTP transfers are documented. Mouse interaction, image pagination and the search CPU fix still need device acceptance testing; MPC Gen1 remains unverified on hardware.
 
 ![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
 
@@ -17,7 +17,7 @@ Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst
 - Discover community instruments, effects, samplers, trackers and tools; filter by name, author or tag.
 - Download compatible native packages, queue installs and updates, or remove managed plugins.
 - Load the online index when the manager opens or **Refresh catalog** is pressed; keep a saved index offline.
-- Fetch and cache plugin pictures in the background, with bundled fallback artwork. Host image reloads still need hardware confirmation.
+- Show bundled plugin pictures selected by plugin ID, including across page changes and filters.
 - Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
 - Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
 - Transfer samples and files using **REMOTE ACCESS** SSH/SFTP controls. See the [connection guide](docs/SSH.md) for setup and test limits.
@@ -74,7 +74,7 @@ native code, artwork and selected images without mounting them. It does not flas
 
 Development container version: **3.9.1-openplugin-v0.8**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
-unchanged. [Current OpenPlugin 0.8 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc1). IMG files are release assets, not Git files.
+unchanged. [Current OpenPlugin 0.8 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc2). IMG files are release assets, not Git files.
 
 ## Documentation
 

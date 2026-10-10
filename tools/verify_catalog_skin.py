@@ -15,7 +15,7 @@ values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sampl
 if a.jv:catalog=sorted(catalog,key=lambda p:(p['id'] not in ('jv-880','dexed-dx7','dub-force-siren'),p['id']))[:3]
 for row,plugin in enumerate(catalog[:3],1):
  wrapped=textwrap.wrap(plugin.get('summary') or 'No description supplied by the author.',78)
- values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_state':1,f'r{row}_preview':1,f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
+ values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_state':1,f'r{row}_preview':next(i+2 for i,x in enumerate(lock) if x['id']==plugin['id']),f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
 if a.jv:
  for row,plugin in enumerate(catalog[:3],1):
   if plugin['id']=='jv-880':
@@ -57,8 +57,8 @@ def render(nodes,ox=0,oy=0,key=None,depth=0):
   elif typ in defs:render(defs[typ]['componentsData'],x,y,current,depth+1)
 render(defs['CATALOG|CATALOG']['componentsData']);assert previews==3,previews
 for row in range(1,4):
- parameter=next(p for p in params if p['key']==f'r{row}_preview');assert parameter['options']==['0','1']
+ parameter=next(p for p in params if p['key']==f'r{row}_preview');assert len(parameter['options'])==len(lock)+2
 assert Image.open(vst/'images/previews/preview_0.png').getbbox() is None
 assert len(list((vst/'images/previews').glob('*.png')))==len(lock)+2
 a.output.parent.mkdir(parents=True,exist_ok=True);image.convert('RGB').save(a.output)
-print(f'CATALOG: three previews, cached row images, bounds and sample text PASS; simulated host rendering only')
+print(f'CATALOG: three previews, indexed plugin pictures, bounds and sample text PASS; simulated host rendering only')

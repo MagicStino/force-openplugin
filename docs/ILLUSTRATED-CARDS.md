@@ -49,6 +49,6 @@ images can be checked without hardware. These checks do not prove host skin
 rendering, memory use, touchscreen behavior, installation or flash acceptance
 on a physical device. The published 3.9.1.3 release predates illustrated cards.
 
-## OpenPlugin 0.8
+## OpenPlugin 0.8 RC2
 
-Bundled images are now fallback artwork for the background per-plugin cache. The skin points to writable row PNGs; see [CATALOG-PREVIEWS.md](CATALOG-PREVIEWS.md) for refresh logic and unresolved host-cache validation. The old indexed-frame description above applies to earlier releases only.
+RC1’s writable-row image cache caused pictures to stick during pagination. RC2 restores immutable per-plugin indexed frames and disables online native picture downloads. Metadata and version refreshes remain supported. See [CATALOG-PREVIEWS.md](CATALOG-PREVIEWS.md).

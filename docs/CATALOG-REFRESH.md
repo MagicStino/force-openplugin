@@ -10,4 +10,4 @@ New repositories without reviewed compatible packages remain source-only. Versio
 
 Two-year maintenance goal: pinned builds, checked downloads, offline fallback and failure tests reduce breakage. They cannot guarantee upstream availability or untested hardware compatibility. Keep a known-working IMG, checksum and stock recovery image; review Action failures and test each update on hardware before recommending it widely.
 
-OpenPlugin 0.8 refreshes visible screenshot caches with the catalog. Offline operation uses saved or bundled images. Actual Akai host image reloads still need acceptance testing; see [CATALOG-PREVIEWS.md](CATALOG-PREVIEWS.md).
+OpenPlugin 0.8 RC2 uses bundled indexed pictures. Refresh updates metadata and versions, not native artwork; see [CATALOG-PREVIEWS.md](CATALOG-PREVIEWS.md).

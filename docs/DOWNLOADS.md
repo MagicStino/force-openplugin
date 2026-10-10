@@ -1,11 +1,11 @@
 # Download images
 
-Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc1), version **OpenPlugin 0.8 RC1 on firmware 3.9.1**:
+Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc2), version **OpenPlugin 0.8 RC2 on firmware 3.9.1**:
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc1/Force-3.9.1-openplugin-v0.8-update.img) | `ac43a9eccea57a223a8cd9184d3c81bf1a3d7dd5df3f680c1cfa9dd3f5f64eef` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc1/MPC-3.9.1-Gen1-openplugin-v0.8-update.img) | `ab3338e65a50dad3794780baa351757755475438e4662dfc5183aa50a9817c3c` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc2/Force-3.9.1-openplugin-v0.8-rc2-update.img) | `210989e221fa49d746210d5823822b1977ac6d674d151c32645e607f05d77d5b` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc2/MPC-3.9.1-Gen1-openplugin-v0.8-rc2-update.img) | `111b09f1a30024531615cd2805a0393ec228664a92515020411ca7021dc4cbfe` |
 
 **Test candidate:** both images pass stock image verification and filesystem checks. These 0.8 images have not been flashed or boot-tested. Earlier Force use does not establish new mouse, image-refresh or search-CPU behaviour. MPC Gen1 remains hardware unverified. Use only your device family’s image and stop if the updater rejects it.
 
@@ -21,7 +21,7 @@ to install the OpenPlugin additions, after backing up projects and choosing the 
 Download the actual `.img` through the link above, not GitHub’s source-code ZIP.
 Download the matching `.sha256` release asset and verify the IMG before renaming or copying. `.json` files record structural validation. Do not extract the IMG or write it as a bootable USB image.
 
-The filenames are `Force-3.9.1-openplugin-v0.8-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.8-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
+The filenames are `Force-3.9.1-openplugin-v0.8-rc2-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.8-rc2-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
 
 For an existing 3.9.1 installation:
 

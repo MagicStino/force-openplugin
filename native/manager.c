@@ -1123,7 +1123,7 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
                                  !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
     else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880") && m->menu!=i);
-    else if (!strcmp(f, "preview")) snprintf(b,n,"1");
+    else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
     else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,0,b,n);}
     else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,1,b,n);}
     else if (!strcmp(f, "state")) snprintf(b, n, "%d", !strcmp(p->id,"jv-880") && m->menu!=i ? S_NONE : card_state(m, i));
@@ -1160,7 +1160,7 @@ static void *mgr_create(const char *data_dir) {
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
     snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
-    m->preview_enabled = 1;
+    m->preview_enabled = 0; /* Akai caches row images; use immutable per-plugin frames. */
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;

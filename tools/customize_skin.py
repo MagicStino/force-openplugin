@@ -12,7 +12,7 @@ def customize(vst):
     for row in range(1,4):
         data['params'].append(dict(key=f'r{row}_rom',name='ROM setup available',options=['no','yes']))
         data['params'].append(dict(key=f'r{row}_rom_install',name='Install ROMs + plugin',type='trigger',momentary=True))
-        data['params'].append(dict(key=f'r{row}_preview',name='Preview snapshot',options=['0','1']))
+        data['params'].append(dict(key=f'r{row}_preview',name='Preview snapshot',options=[str(i) for i in range(len(previews)+2)]))
         for suffix in ['desc1','desc2']:
             data['params'].append(dict(key=f'r{row}_{suffix}',name='Description',type='readout',display='string'))
     layout=(vst/'layout.conf').read_text().splitlines()
@@ -26,7 +26,7 @@ def customize(vst):
         match=re.search(r'key=card([123])\b',line)
         if match:
             row=int(match.group(1));y=210+(row-1)*128
-            files=','.join(f'images/previews/preview_{i}.png' for i in range(2))
+            files=','.join(f'images/previews/preview_{i}.png' for i in range(len(previews)+2))
             redesigned.append(f'picture x=40 y={y+14} w=176 h=86 key=r{row}_preview files="{files}"')
             for suffix,cy,size in [('desc1',y+56,20),('desc2',y+77,20),('meta',y+101,18)]:
                 redesigned.append(f'readout box=0 w=580 h=22 cx=522 cy={cy} label="" key=r{row}_{suffix} tsize={size} tcolor=b4b7bc tpad=0 talign=left when=r{row}_vis:on')

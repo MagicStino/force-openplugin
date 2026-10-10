@@ -7,15 +7,23 @@ int main(void) {
     mgr_t *m = calloc(1, sizeof *m); assert(m);
     pthread_mutex_init(&m->mu, NULL);
     m->dev = calloc(1, sizeof *m->dev); assert(m->dev);
+    strcpy(m->pkg[0].id,"pulytek"); strcpy(m->pkg[3].id,"dexed-dx7");
+    m->npkg=6;m->loaded=1;
+    char image[32];mgr_get_param(m,"r1_preview",image,sizeof image);assert(atoi(image)==preview_frame("pulytek"));
+    mgr_set_param(m,"page_next","1");mgr_get_param(m,"r1_preview",image,sizeof image);assert(atoi(image)==preview_frame("dexed-dx7"));
+    mgr_set_param(m,"page_prev","1");mgr_get_param(m,"r1_preview",image,sizeof image);assert(atoi(image)==preview_frame("pulytek"));
+    m->page=0;m->rev++;
     m->searching = 1; m->loaded = 1; m->npkg = MAXPKG;
     for (int i=0; i<MAXPKG; i++) {
         snprintf(m->pkg[i].name, sizeof m->pkg[i].name, "Catalog plugin %d", i);
         strcpy(m->pkg[i].summary, "Long catalog description with synthesizer and effect metadata");
     }
+    strcpy(m->pkg[511].id,"airwindows-air3");
     strcpy(m->query_draft, "plugin 511");
     mgr_set_param(m, "source_scan", "1");
     char b[192];
-    scans=0;
+    mgr_get_param(m,"r1_preview",image,sizeof image);assert(atoi(image)==preview_frame("airwindows-air3"));
+    m->view_valid=0;scans=0;
     assert(mgr_get_param(m, "display_rev", b, sizeof b)); assert(scans==0);
     const char *keys[]={"card1_1", "card1_1_on", "card2_1", "summary", "r1_state", "empty", "page_txt", "display_rev"};
     unsigned rev=m->rev;
