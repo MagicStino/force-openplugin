@@ -570,6 +570,14 @@
       "license": "MIT",
       "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-vibe-fx/main/preview_0.png",
       "sha256": "7f1c1a0ef3257d360e642eb80f2595383d70ed82a87cc93c03d674dfb5d76fe8"
+    },
+    {
+      "id": "pulytek",
+      "name": "PulyTek",
+      "repo": "MagicStino/pulytek",
+      "license": "GPL-3.0-only",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/pulytek/main/docs/preview_0.png",
+      "sha256": "3669f80b627d25c24b65021e9a224b505c57ff6f8a67937033b03f5cf64ef5bc"
     }
   ]
 }
