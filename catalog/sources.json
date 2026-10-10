@@ -1,8 +1,18 @@
 {
   "schema": 1,
   "upstream": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-  "repositories": ["WorldLinkStudio/mpcsample"],
-  "search_queries": ["topic:mpc-plugin", "topic:akai-force", "mpc vst armv7", "hackai mpc"],
-  "reviewed_manifest_repositories": [],
+  "repositories": [
+    "MagicStino/pulytek",
+    "WorldLinkStudio/mpcsample"
+  ],
+  "search_queries": [
+    "topic:mpc-plugin",
+    "topic:akai-force",
+    "mpc vst armv7",
+    "hackai mpc"
+  ],
+  "reviewed_manifest_repositories": [
+    "MagicStino/pulytek"
+  ],
   "max_discovered_repositories": 60
 }
