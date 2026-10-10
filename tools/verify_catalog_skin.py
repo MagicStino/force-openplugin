@@ -3,11 +3,14 @@
 import argparse,json,textwrap
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('native',type=Path);p.add_argument('output',type=Path);p.add_argument('--jv',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser(description=__doc__);p.add_argument('native',type=Path);p.add_argument('output',type=Path);p.add_argument('--jv',action='store_true');p.add_argument('--plugin',help='Show a specified catalog entry first');a=p.parse_args()
 root=Path(__file__).resolve().parents[1];vst=a.native/'source/vst';skin=vst/'build/skin/poloq - VST - Plugin Manager/Plugin Skins'
 data=json.loads((skin/'TUI.json').read_text())['pageData'];defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params'];names={f'Parameter {i}':p['key'] for i,p in enumerate(params)}
 lock=json.loads((root/'assets/previews.lock.json').read_text())['entries'];catalog=json.loads((root/'website/assets/catalog.json').read_text())['plugins']
+if a.plugin:
+ catalog=sorted([p for p in catalog if any(x['id']==p['id'] for x in lock)],key=lambda p:(p['id']!=a.plugin,p['id']))
+ assert any(p['id']==a.plugin for p in catalog)
 values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
 if a.jv:catalog=sorted(catalog,key=lambda p:(p['id'] not in ('jv-880','dexed-dx7','dub-force-siren'),p['id']))[:3]
 for row,plugin in enumerate(catalog[:3],1):
@@ -48,8 +51,8 @@ def render(nodes,ox=0,oy=0,key=None,depth=0):
   elif typ in defs:render(defs[typ]['componentsData'],x,y,current,depth+1)
 render(defs['CATALOG|CATALOG']['componentsData']);assert previews==3,previews
 for row in range(1,4):
- parameter=next(p for p in params if p['key']==f'r{row}_preview');assert len(parameter['options'])==73
+ parameter=next(p for p in params if p['key']==f'r{row}_preview');assert len(parameter['options'])==len(lock)+2
 assert Image.open(vst/'images/previews/preview_0.png').getbbox() is None
-assert len(list((vst/'images/previews').glob('*.png')))==73
+assert len(list((vst/'images/previews').glob('*.png')))==len(lock)+2
 a.output.parent.mkdir(parents=True,exist_ok=True);image.convert('RGB').save(a.output)
-print('CATALOG: three previews, 73 frames per row, bounds and sample text PASS; simulated host rendering only')
+print(f'CATALOG: three previews, {len(lock)+2} frames per row, bounds and sample text PASS; simulated host rendering only')
