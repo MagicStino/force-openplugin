@@ -47,11 +47,13 @@ class SubmissionFlowTests(unittest.TestCase):
     (root/'catalog/sources.json').write_text(json.dumps(cfg));b.update(fetch)
     plugin=next(p for p in json.loads((root/'website/catalog.json').read_text())['plugins'] if p['id']==m['id'])
     self.assertEqual(plugin['versions'][0]['version'],'0.1')
+    self.assertEqual(plugin['versions'][0]['channel'],'stable')
     self.assertTrue(next(p for p in json.loads((root/'website/assets/catalog.json').read_text())['plugins'] if p['id']==m['id'])['download'])
-    m['packages'][0].update(version='0.2',url='https://github.com/example/example-sampler/releases/download/v0.2/plugin.zip',sha256='b'*64)
+    m['packages'][0].update(version='0.2-rc1',url='https://github.com/example/example-sampler/releases/download/v0.2-rc1/plugin.zip',sha256='b'*64)
     b.update(fetch)
-    self.assertEqual(next(p for p in json.loads((root/'website/catalog.json').read_text())['plugins'] if p['id']==m['id'])['versions'][0]['version'],'0.2')
-    self.assertEqual(next(p for p in json.loads((root/'website/assets/catalog.json').read_text())['plugins'] if p['id']==m['id'])['versions'][0]['version'],'0.2')
+    self.assertEqual(next(p for p in json.loads((root/'website/catalog.json').read_text())['plugins'] if p['id']==m['id'])['versions'][0]['version'],'0.2-rc1')
+    self.assertEqual(next(p for p in json.loads((root/'website/assets/catalog.json').read_text())['plugins'] if p['id']==m['id'])['versions'][0]['version'],'0.2-rc1')
+    self.assertEqual(next(p for p in json.loads((root/'website/catalog.json').read_text())['plugins'] if p['id']==m['id'])['versions'][0]['channel'],'beta')
 
 
 class ProposalReviewTests(unittest.TestCase):
