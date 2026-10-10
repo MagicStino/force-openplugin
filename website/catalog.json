@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-10T21:07:45+00:00",
+  "generated": "2026-10-10T21:50:43+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2072,6 +2072,26 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 4357479,
+          "sha256": "effb03244c96da8b59209b327a5986c8c694e9c0fa94628c25e7a3dc142f3542",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 7.5,
+            "max_pct": 14.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.2/Chordsmith-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 4358994,
           "sha256": "222a9bfcf9007cf77fc5f85b1c6420c85e3daba14ad41d84f90f7cbb17ea34cd",
@@ -2153,7 +2173,7 @@
           ]
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-chordsmith",
@@ -2352,6 +2372,26 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.9",
+          "size": 69648842,
+          "sha256": "0d493e4e9bfa49de4101d8a32c5cf108ea2d723e36eee81541ce178823c999a9",
+          "max_glibc": "2.28",
+          "cpu": {
+            "p99_pct": 3.4,
+            "max_pct": 7.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.9-gen2-test/Crate-Digger-1.1.9-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.1.8",
           "size": 71621506,
@@ -4052,6 +4092,26 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 3304841,
+          "sha256": "291da392ffc0127faad793f7b8ad9392fab26706643537597c9c1d4f5bc26fe6",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 4.3,
+            "max_pct": 8.3,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.2/Keyscope-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 3305527,
           "sha256": "82ed96dafed896c89b4cd5b2579aa0841005fe490f65da53807c5c1ba5f26aa4",
@@ -4110,10 +4170,59 @@
           ]
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-keyscope",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "liminal-amp",
+      "name": "Liminal Amp",
+      "author": "gmorb",
+      "repo": "gmorb/mpc-vst-liminal-amp",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Lightweight, official-sound Neural Amp Modeler: A2 captures with cab IR, gate and tone stack, resampled like the official plugin; browses models/ and irs/ folders on any drive.",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-liminal-amp/v1.0.0/docs/images/page.png",
+      "style": "amp-sim",
+      "tags": [
+        "nam",
+        "guitar",
+        "amp",
+        "cab-ir",
+        "lightweight"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 5748754,
+          "sha256": "3fe7582ab60af6a3e181221f84d6f627f58c93083c05860427003ed0c29f6805",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-amp/releases/download/v1.0.0/Liminal-Amp-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "gmorb/mpc-vst-liminal-amp",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4319,7 +4428,7 @@
     {
       "id": "maschine-group",
       "name": "Maschine Group",
-      "author": "misha",
+      "author": "mmiroshnikov",
       "repo": "sd88me/mpc-vst-plugins",
       "kind": "instrument",
       "license": "MIT",
@@ -5668,6 +5777,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.9",
+          "size": 2909474,
+          "sha256": "4098406408299d05d5e1548a4bb457b63b3d11f460661e8518cd947f31976b08",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.9/NAM-1.0.9-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.8",
           "size": 2910315,
           "sha256": "636ae0f64245d2d4bed1d9628415aee0ee8ca1d1590fc1fddddcb00676e190d7",
@@ -5782,7 +5907,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.8",
+      "latest": "1.0.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-nam",
