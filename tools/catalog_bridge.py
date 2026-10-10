@@ -97,7 +97,7 @@ def update(fetch=read_json):
    # Publisher metadata alone cannot silently authorize an installer.
    if repo in cfg['reviewed_manifest_repositories']:
     for package in m.get('packages',[]):
-     versions.append({'version':package['version'],'url':package['url'],'sha256':package['sha256'],'size':package['size'],'channel':'stable','yanked':False,'os_compat':['3.x'],'manifest':{'schema':1,'arch':'armv7','layout':'portable','kind':m['kind'],'source_repo':repo}})
+     versions.append({'version':package['version'],'url':package['url'],'sha256':package['sha256'],'size':package['size'],'channel':'beta' if '-' in package['version'] else 'stable','yanked':False,'os_compat':['3.x'],'manifest':{'schema':1,'arch':'armv7','layout':'portable','kind':m['kind'],'source_repo':repo}})
    p=normalize_plugin({'id':m['id'],'name':m['name'],'author':m['author'],'summary':m['summary'],'license':m['license'],'kind':m['kind'],'style':m['category'],'tags':m.get('tags',[]),'repo':repo,'screenshot':next(iter(m.get('images',[])),''),'versions':versions},'https://github.com/'+repo+'/blob/'+branch+'/openplugin.json')
    plugins.append(p);ids.add(p['id']);candidates.pop(repo,None)
   except Exception as e:
