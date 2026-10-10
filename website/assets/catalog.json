@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T08:11:17+00:00",
+  "date": "2026-10-10T08:39:46+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6768,6 +6768,17 @@
       "repo": "MagicStino/pulytek",
       "screenshot": "https://raw.githubusercontent.com/MagicStino/pulytek/main/docs/preview_0.png",
       "versions": [
+        {
+          "version": "0.1.0-rc4",
+          "url": "https://github.com/MagicStino/pulytek/releases/download/v0.1.0-rc4/PulyTek-0.1.0-rc4-mpc-armv7.zip",
+          "sha256": "75b10fada3db834d6f9a16669dc5acb962f5b41233cb6ad4895b4f726531c5a2",
+          "size": 15636925,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.1.0-rc3",
           "url": "https://github.com/MagicStino/pulytek/releases/download/v0.1.0-rc3/PulyTek-0.1.0-rc3-mpc-armv7.zip",
