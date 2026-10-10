@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T10:50:11+00:00",
+  "date": "2026-10-10T12:41:14+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6795,33 +6795,66 @@
       "id": "pulytek",
       "name": "PulyTek",
       "author": "Alberto Barrera (ABSounds); Force/MPC port by MagicStino",
-      "summary": "Pultec-style passive circuit EQ using upstream Wave Digital Filters. Experimental Force/MPC ARMv7 native effect; hardware validation pending.",
-      "license": "GPL-3.0-only",
+      "repo": "MagicStino/pulytek",
       "kind": "effect",
-      "style": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Pultec-style WDF EQ with tube warmth, AIR, stereo VU meters and four-band side EQ.",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/pulytek/v1.0.1/docs/preview_0.png",
+      "style": "eq",
       "tags": [
         "eq",
         "pultec",
         "wdf",
-        "armv7"
+        "tube",
+        "stereo"
       ],
-      "repo": "MagicStino/pulytek",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/pulytek/main/docs/preview_0.png",
+      "source_available": false,
+      "distribution": "release",
       "versions": [
         {
           "version": "1.0.1",
-          "url": "https://github.com/MagicStino/pulytek/releases/download/v1.0.1/PulyTek-1.0.1-mpc-armv7.zip",
-          "sha256": "785743716456d9b7b9ed6e99959219bcaa72f8a6513788a2d423568afa8fb528",
           "size": 15634486,
+          "sha256": "785743716456d9b7b9ed6e99959219bcaa72f8a6513788a2d423568afa8fb528",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/MagicStino/pulytek/releases/download/v1.0.1/PulyTek-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.0.0",
+          "size": 15637851,
+          "sha256": "0764c1ff574f4703b594db6b743eec3a1732ae76a1113124de36a307aae2660b",
+          "max_glibc": "2.29",
+          "cpu": null,
           "os_compat": [
+            "2.x",
             "3.x"
-          ]
+          ],
+          "url": "https://github.com/MagicStino/pulytek/releases/download/v1.0.0/PulyTek-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
         }
       ],
+      "latest": "1.0.1",
       "provenance": {
-        "source": "https://github.com/MagicStino/pulytek/blob/main/openplugin.json",
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "MagicStino/pulytek",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
