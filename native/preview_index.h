@@ -70,7 +70,8 @@ static const char *const preview_ids[] = {
     "tr-mpc",
     "tr-mpc-tap-fx",
     "usb-audio",
-    "vibe-fx"
+    "vibe-fx",
+    "pulytek"
 };
 static int preview_frame(const char *id) {
     for (unsigned i=0;i<sizeof preview_ids/sizeof *preview_ids;i++)
