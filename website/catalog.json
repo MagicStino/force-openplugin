@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-10T09:21:41+00:00",
+  "generated": "2026-10-10T10:33:20+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3826,7 +3826,13 @@
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-09"
+            }
+          ]
         },
         {
           "version": "0.1.0",
@@ -5852,6 +5858,34 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.7.3",
+          "size": 4557348,
+          "sha256": "3530a0fb68b94b13597a7c13d12fa749e3c45b94ddb5e2b2d557c1738567496f",
+          "max_glibc": "2.36",
+          "cpu": {
+            "p99_pct": 19.1,
+            "max_pct": 20.4,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/B0ss-M/MrHighMan/releases/download/v1.7.3/Omni-Sampler-1.7.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai MPC Live II",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-10"
+            }
+          ]
+        },
+        {
           "version": "1.6.0",
           "size": 4116750,
           "sha256": "dfe96f642a93e48dc755a7e19ed8c45c9de5454c381fb5b30fa2ab3063d5b5f1",
@@ -5918,7 +5952,7 @@
           "tested": []
         }
       ],
-      "latest": "1.6.0",
+      "latest": "1.7.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "B0ss-M/MrHighMan",
@@ -6412,7 +6446,13 @@
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-09"
+            }
+          ]
         }
       ],
       "latest": "0.4.1",
@@ -7091,6 +7131,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Multichannel USB audio effect send from an MPC to a Mac. Needs BlackHole 64ch and a Mac helper app.",
+      "screenshot": "https://raw.githubusercontent.com/stampman3000-jpg/mpc-stream/764605ba1a08594e2dc5268e4f12bd6e25edb184/screenshots/stream.png",
       "style": "utility",
       "tags": [
         "utility"
@@ -7100,22 +7141,28 @@
       "versions": [
         {
           "version": "1.0.0",
-          "size": 2837977,
-          "sha256": "b2440ac207bd84401395921cffef610fe4a9046d4fbe8a88f98d155a7e6509f4",
+          "size": 2839951,
+          "sha256": "0e5f441a09e1435cfbd5fbb6aaddaebcd132803d03ab0efa3642200bf8aaa425",
           "max_glibc": "2.17",
-          "cpu": null,
+          "cpu": {
+            "p99_pct": 0.8,
+            "max_pct": 1.5,
+            "verdict": "PASS"
+          },
           "os_compat": [
             "3.x"
           ],
           "url": "https://github.com/stampman3000-jpg/mpc-stream/releases/download/v1.0.0/Stream-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC One",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-10"
+            }
+          ]
         }
       ],
       "latest": "1.0.0",
@@ -7596,7 +7643,8 @@
       "repo": "stampman3000-jpg/mpc-tributary",
       "kind": "instrument",
       "license": "GPL-3.0-only",
-      "summary": "Multitrack audio from an Elektron Digitone II over USB, one stereo output per track. Based on Overwitch.",
+      "summary": "Sums chosen Elektron Overbridge outputs onto one MPC track over USB. Based on Overwitch.",
+      "screenshot": "https://raw.githubusercontent.com/stampman3000-jpg/mpc-tributary/v1.1.0/screenshots/tributary.png",
       "style": "utility",
       "tags": [
         "utility"
@@ -7604,6 +7652,31 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.0",
+          "size": 569706,
+          "sha256": "1d5f4a3f89d6bf8e7d13971a65d20be924e30b7845c0847dc528089063381875",
+          "max_glibc": "2.17",
+          "cpu": {
+            "p99_pct": 2.5,
+            "max_pct": 5.1,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/stampman3000-jpg/mpc-tributary/releases/download/v1.1.0/Tributary-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC One",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-10"
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "size": 1934572,
@@ -7625,7 +7698,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-tributary",
