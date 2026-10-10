@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T12:41:14+00:00",
+  "date": "2026-10-10T21:07:45+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3125,6 +3125,87 @@
       "download": true
     },
     {
+      "id": "dub-station",
+      "name": "Dub Station",
+      "author": "nachtaktiv303",
+      "repo": "nachtaktiv303/mpc-vst-dub-station",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Dub-techno multi-effect: two independent tape delays, a huge modulated reverb, tape grit, a noise/crackle ambience bed, phaser, ducking and a panic kill.",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-dub-station/dub-station-vst-v0.9.0/preview_0.png",
+      "style": "delay",
+      "tags": [
+        "dub",
+        "delay",
+        "tape",
+        "reverb",
+        "space-echo",
+        "multi-effect"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 2209760,
+          "sha256": "32d1c880b6fcd9ca9e5e97a904cad125d87141570b4d649ac1e7a46c58d64b57",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 13.4,
+            "max_pct": 41.1,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.0/Dub-Station-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC One",
+              "firmware": "Hakai 3.9",
+              "date": "2026-10-10"
+            }
+          ]
+        },
+        {
+          "version": "0.9.0",
+          "size": 2209766,
+          "sha256": "1fba85dfe8e49d5fb94d24e0ead1bf3cbb0cc9ed9dc5ecbf0b4cc5f29c32d978",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 12.2,
+            "max_pct": 60.4,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v0.9.0/Dub-Station-0.9.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC One",
+              "firmware": "Hakai 3.9",
+              "date": "2026-10-10"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "nachtaktiv303/mpc-vst-dub-station",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "effectforce",
       "name": "EffectForce",
       "author": "Devko",
@@ -5315,6 +5396,7 @@
       "kind": "addin",
       "license": "MIT",
       "summary": "The MPC as a USB audio interface: its outputs and inputs as channels on the computer, next to its MIDI ports.",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-addin-usb-audio/f73cf3a1de3c3d005f30b6d38caddf587376e6d4/docs/tile.png",
       "style": "audio-interface",
       "tags": [
         "usb",
@@ -5325,6 +5407,40 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 30274,
+          "sha256": "a68120bbfc1d9bcb1c6ad68da7fced7e2b62cde1e5ec08c4e510458fc68a8e02",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.2/MPC-USB-audio-addin-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "1.0.1",
+          "size": 28718,
+          "sha256": "457737395592c0f7567741394a4f97fad8250455a81bbd5ede2ecb19a0f1542c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.1/MPC-USB-audio-addin-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Key 37",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-10"
+            }
+          ]
+        },
         {
           "version": "1.0.0",
           "size": 27797,
@@ -5386,7 +5502,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-usb-audio",
