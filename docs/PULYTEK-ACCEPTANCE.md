@@ -2,16 +2,16 @@
 
 This records acceptance of [submission #1](https://github.com/MagicStino/force-openplugin/issues/1) as a downloadable **experimental** catalog entry. Package contract review is distinct from physical Force/MPC verification; hardware testing remains pending.
 
-## Review evidence
+## Original acceptance evidence (historical)
 
 - Public separate repository: https://github.com/MagicStino/pulytek . GPL-3.0-only, source and license notices retain Alberto Barrera / ABSounds and https://github.com/ABSounds/EQP-WDF-1A .
 - Root community manifest: https://raw.githubusercontent.com/MagicStino/pulytek/main/openplugin.json . Validated repository identity, native ARMv7 portable effect target, device declarations, HTTPS release URL and checksum.
-- Current package: v0.1.0-rc3, 17,165,088 bytes, SHA256 `b8f1b7f8699c58416b635df3bdc57d54eb5e0a9d9cbbe54f958b818840e21415`. Actual published ZIP downloaded and matched against both publisher JSON formats.
+- Original reviewed package: v0.1.0-rc3, 17,165,088 bytes, SHA256 `b8f1b7f8699c58416b635df3bdc57d54eb5e0a9d9cbbe54f958b818840e21415`. Actual published ZIP downloaded and matched against both publisher JSON formats.
 - ZIP contains `mpc-plugin.json`, ARM hard-float `.so`, native Akai skin/Q-Link assets, standard portable installation/removal scripts, license notices and complete corresponding source. Installer registration, settings backup and uninstall tested in an isolated fixture; no device installer ran during acceptance.
 - DSP/native-host sanitizer checks, all 49 preset recalls/rendering at 44.1/48/96 kHz, ARM emulated loading/audio/state and skin bounds pass. [Native package and desktop VST3 CI](https://github.com/MagicStino/pulytek/actions/runs/38036183260) passed.
-- No physical audio/CPU/touch/project reload validation. Do not add a device-tested report or describe this as stable.
+- At original acceptance, physical audio/CPU/touch/project reload validation was absent. Do not infer a device-tested record from those checks.
 
-## Reproduce acceptance
+## Original acceptance workflow
 
 1. Fetch the latest default branch and read the submission and publisher manifest. Recheck the ZIP checksum, manifest and installer contract before authorizing downloads.
 2. Run `python3 tools/accept_submission.py --issue 1 --reviewed-package`. This adds `MagicStino/pulytek` to both `repositories` and `reviewed_manifest_repositories` in `catalog/sources.json`. The second list authorizes catalog downloads; omitting the flag creates a source-only entry. It authorizes subsequent valid releases from this repository too, so continue monitoring publisher updates.
@@ -24,3 +24,9 @@ This records acceptance of [submission #1](https://github.com/MagicStino/force-o
 ## Rollback
 
 Remove `MagicStino/pulytek` from `reviewed_manifest_repositories` to disable downloads while retaining a source-only listing, then refresh/deploy the catalog. Remove it from `repositories` too to unregister the project. The bridge preserves the previous catalog on primary-source failure or unexpected catalog shrink; investigate failures rather than replacing the full catalog with the publisher's single-plugin feed.
+
+## Current release and community submission — 10 October 2026
+
+[PulyTek 1.0.1](https://github.com/MagicStino/pulytek/releases/tag/v1.0.1) is in the published index on the stable release channel. The ZIP is 15,634,486 bytes, SHA256 `785743716456d9b7b9ed6e99959219bcaa72f8a6513788a2d423568afa8fb528`. The current upstream package checker passes with zero warnings. The owner reports working Force presets; no complete device/firmware tested record is supplied. Stable release metadata does not imply Verified hardware status.
+
+[Community PR #278](https://github.com/sd88me/mpc-vst-plugins/pull/278) supersedes closed #276 and adds only the catalog manifest, with a version-pinned screenshot. It remains a submission until the community maintainers accept it.

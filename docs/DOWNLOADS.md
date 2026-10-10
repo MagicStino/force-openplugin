@@ -1,17 +1,13 @@
 # Download images
 
-Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research-rc3), version **OpenPlugin 0.7 on firmware 3.9.1**:
+Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc1), version **OpenPlugin 0.8 RC1 on firmware 3.9.1**:
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc3/Force-3.9.1-openplugin-v0.7-update.img) | `062b5ed4a2e52fb033e8ce6ecaa896e07600c0a4139e18bafa1094d69e44b3f9` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.7-openplugin-research-rc3/MPC-3.9.1-Gen1-openplugin-v0.7-update.img) | `2ead532f82d2c0f343ab19bf60bb4aa2af22b62ce1c8de402a62f295a4dc43a3` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc1/Force-3.9.1-openplugin-v0.8-update.img) | `ac43a9eccea57a223a8cd9184d3c81bf1a3d7dd5df3f680c1cfa9dd3f5f64eef` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8-openplugin-research-rc1/MPC-3.9.1-Gen1-openplugin-v0.8-update.img) | `ab3338e65a50dad3794780baa351757755475438e4662dfc5183aa50a9817c3c` |
 
-**Research status:** the owner reports successful Force use, including plugins and ROM download.
-This is not comprehensive hardware validation. The MPC Gen1 candidate is the relevant family
-for an original MPC One, but no physical MPC One has been tested. Preserved
-board IDs alone do not establish model compatibility. Never use the Force
-image on an MPC or bypass updater checks.
+**Test candidate:** both images pass stock image verification and filesystem checks. These 0.8 images have not been flashed or boot-tested. Earlier Force use does not establish new mouse, image-refresh or search-CPU behaviour. MPC Gen1 remains hardware unverified. Use only your device family’s image and stop if the updater rejects it.
 
 ## Existing 3.9.1 users
 
@@ -25,7 +21,7 @@ to install the OpenPlugin additions, after backing up projects and choosing the 
 Download the actual `.img` through the link above, not GitHub’s source-code ZIP.
 Download the matching `.sha256` release asset and verify the IMG before renaming or copying. `.json` files record structural validation. Do not extract the IMG or write it as a bootable USB image.
 
-The filenames are `Force-3.9.1-openplugin-v0.7-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.7-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
+The filenames are `Force-3.9.1-openplugin-v0.8-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.8-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
 
 For an existing 3.9.1 installation:
 
@@ -37,4 +33,4 @@ For an existing 3.9.1 installation:
 
 USB menu/media steps follow Akai’s [Force guide](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough) and [MPC guide](https://support.akaipro.com/en/support/solutions/articles/69000816160-akai-pro-mpc-firmware-update-walkthrough). These guides describe stock updates, not approval of this custom image. Stop if the updater rejects it. Owner-reported Force success does not validate every model; MPC Gen1 remains hardware unverified.
 
-OpenPlugin 0.7 starts SSH/SFTP automatically with the shared password mpc. Open **Plugin Manager → REMOTE ACCESS** to see the IP, read the credentials, or disable access persistently. Username: `root`; password: `mpc`; port: 22. SFTP provides full device access, including sample folders under `/media`. See [Remote Access](SSH.md). Live SSH/SFTP and the new tab remain hardware unverified. Stock application version remains 3.9.1.2.
+SSH/SFTP controls are available in **Plugin Manager → REMOTE ACCESS**. See the [connection guide](SSH.md); earlier Force login and file transfers passed, while MPC Gen1 remains unverified. Mouse setup and limits are in [MOUSE.md](MOUSE.md). The stock application remains 3.9.1.2.

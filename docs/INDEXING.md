@@ -1,18 +1,11 @@
 # Catalog and connectivity
 
-The current index contains 71 entries: 31 instruments, 37 effects and 3 tools;
-69 have a listed package. Samplers overlap instruments. All entries are
-browsable without a query; source-only entries cannot be installed.
+Browse all indexed community plugins without a query, or try `acid`, `reverb`, `Airwindows` or `Lucky Dip` in FIND. **Show all** clears the filter. FIND searches loaded metadata, not the whole internet. Source-only entries cannot be installed.
 
-Try `acid`, `reverb`, `Airwindows` or `Lucky Dip` in FIND. **Show all** clears
-the filter. FIND searches loaded metadata, not the whole internet.
+The server [bridge](DISCOVERY.md) runs every six hours and publishes the device index and website cards. Registered compatible packages need review before downloads are enabled. Entry counts change; see the [published index](https://magicstino.github.io/force-openplugin/catalog.json).
 
-The online [bridge](DISCOVERY.md) runs every six hours and updates both the
-app catalog and website cards. Repository search results remain review
-candidates until they have usable metadata. Installation is never automatic.
+The manager loads that index when opened and when **Refresh catalog** is pressed. Successful loads save `.pluginmgr-catalog.json` beside the settings base. If a request fails, the manager keeps its existing index or reads the saved copy. Reconnect and refresh to retry; there is no continuous polling or reconnection trigger.
 
-On the device, **Refresh** requests the online catalog. Imported sources persist
-in `/data/openplugin/sources.json`; the main catalog currently has no persistent
-offline cache or automatic refresh on reconnection. A failed refresh retains
-the current in-memory view. Source addition checks the latest stable release
-using the [package contract](SOURCES.md).
+Imported sources persist in `/data/openplugin/sources.json`. Add source checks the latest stable release against the [package contract](SOURCES.md). Package updates require an explicit install action.
+
+OpenPlugin 0.8 also fetches visible preview images on load/refresh and caches them for offline use. See [preview behaviour and hardware limits](CATALOG-PREVIEWS.md).

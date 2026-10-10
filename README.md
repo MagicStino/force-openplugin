@@ -1,46 +1,30 @@
-# OpenPlugin Research
+# OpenPlugin
 
-An experimental community instrument and plugin browser for **Akai Force and
-MPC Gen1**, developed with AI. Independent, non-commercial and unaffiliated
-with Akai or inMusic.
+Browse, install and update **community VST plugins on Akai Force 3.9.1 and MPC Gen1**, directly from the touchscreen. OpenPlugin also brings combined JV-880 ROM/plugin setup, community USB mouse support and SSH/SFTP file transfers.
 
-**Start here: [Download and update in four steps](https://magicstino.github.io/force-openplugin/#downloads).**
+Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
-The HTML site is published at https://magicstino.github.io/force-openplugin/; its source is `website/index.html`.
-After the initial USB update, open **PLUGINS → VST → Plugin Manager** and install compatible plugins from the touchscreen.
+**[Download OpenPlugin 0.8 RC1 and follow the USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
 
-[Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) ·
-[USB download instructions](docs/DOWNLOADS.md) · [Find or publish a plugin](docs/DISCOVERY.md) ·
-[Package format](docs/SOURCES.md) · [Validation](docs/TESTING.md)
+[Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Hardware status:** the owner reports successful Force use and ROM download.
-SSH password login and SFTP upload/download were verified on the owner's Force on 10 October 2026. MPC Gen1 remains unverified on hardware. Research candidates.
+**Release status:** 0.8 RC1 is a research candidate. Both images pass structural and stock verifier checks; the new images have not been flashed or boot-tested. Earlier Force use and SSH/SFTP transfers are documented. Mouse interaction, refreshed touchscreen images and the search CPU fix still need device acceptance testing; MPC Gen1 remains unverified on hardware.
 
-![Generated native catalog preview — not a hardware capture](website/assets/catalog-native.png)
-
-## Transfer samples over Wi-Fi or Ethernet
-
-**Tested on the owner's Force:** SSH login and SFTP upload/download with matching contents. Open **Plugin Manager → REMOTE ACCESS**, then enter the displayed device IP in your SSH/SFTP app: **port 22 · username root · password mpc**. Browse `/media` for internal, SD and USB storage. No separate firmware build or SSH key setup is needed.
-
-The password is public and gives full root access. Use a trusted network; **Disable SSH** stops remote access. [Connection guide and test scope](docs/SSH.md). MPC Gen1 has not been tested physically.
+![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
 
 ## What it does
 
-- Browse community instruments, effects, samplers, trackers and tools.
-- Show plugin previews, descriptions, authors, licenses and package versions.
-- Filter the catalog or add a compatible GitHub release through FIND.
-- Queue installation, updates and removal in the native manager.
-- Refresh the online catalog and website cards on a six-hour schedule.
-- Tap **Refresh catalog** on the device to fetch available plugins and versions; it does not install updates.
-- JV setup offers **Install ROMs + plugin**. Save first: completion restarts the app.
+- Discover community instruments, effects, samplers, trackers and tools; filter by name, author or tag.
+- Download compatible native packages, queue installs and updates, or remove managed plugins.
+- Load the online index when the manager opens or **Refresh catalog** is pressed; keep a saved index offline.
+- Fetch and cache plugin pictures in the background, with bundled fallback artwork. Host image reloads still need hardware confirmation.
+- Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
+- Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
+- Transfer samples and files using **REMOTE ACCESS** SSH/SFTP controls. See the [connection guide](docs/SSH.md) for setup and test limits.
 
-For existing 3.9.1 users: the updater can ask to reinstall the **same version, 3.9.1**.
-The OpenPlugin build number labels our additions; the stock internal version remains unchanged.
-See [catalog refresh](docs/CATALOG-REFRESH.md).
+Only compatible ARMv7 community packages can be installed. General web pages, desktop VST bundles and source repositories alone are not installable packages. Refreshing the index does not install software automatically.
 
-The current index has 71 entries and 57 bundled native previews. Unknown images
-use placeholders. New source packages require review; inclusion is not a
-hardware compatibility guarantee. See [image sources and limits](docs/ILLUSTRATED-CARDS.md).
+For existing 3.9.1 users, a same-version update prompt is expected: the original application remains **3.9.1.2**. See the [USB guide](docs/DOWNLOADS.md).
 
 ## Build from original firmware
 
@@ -84,14 +68,13 @@ Each command builds the native payload and runs the same validation checks;
 only the requested firmware image(s) are generated. The originals remain unchanged.
 An optional final argument supplies an owner's public SSH key.
 
-Outputs: `*-openplugin-v0.7-update.img`, checksums and validation manifests. Existing files
+Outputs: `*-openplugin-v0.8-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and selected images without mounting them. It does not flash.
-OpenPlugin 0.7 adds automatic device-password SSH/SFTP and a REMOTE ACCESS tab. See [Remote Access](docs/SSH.md); SSH login and a verified SFTP round trip passed on the owner's Force; MPC Gen1 remains untested.
 
-Development container version: **3.9.1-openplugin-v0.7**. The supplied 3.9.1 files
+Development container version: **3.9.1-openplugin-v0.8**. The supplied 3.9.1 files
 contain application **3.9.1.2**; its binaries and numeric version fields stay
-unchanged. [Current OpenPlugin 0.7 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.7-openplugin-research-rc3). IMG files are release assets, not Git files.
+unchanged. [Current OpenPlugin 0.8 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc1). IMG files are release assets, not Git files.
 
 ## Documentation
 
@@ -109,8 +92,6 @@ Desktop VSTs, arbitrary websites and sample editors are not native packages.
 Hakai compatibility must be assessed per package. MPC Sample is a separate
 kit editor; kit import is not implemented here.
 
-Credits: [poloq Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager)
-and [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins).
 Existing component licenses apply; see [NOTICE](native/NOTICE.md).
 
 ## Real Force photos
@@ -118,6 +99,8 @@ Existing component licenses apply; see [NOTICE](native/NOTICE.md).
 [View the owner-supplied hardware gallery](https://magicstino.github.io/force-openplugin/#force-gallery): catalog, combined JV-880 setup, plugin selection and plugin interfaces. MPC imagery is labelled as a rendered preview.
 
 ## Community credits
+
+Mouse source: [no3z, Amit Talwar and bonsaipanda](https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares). Image decoding: [stb](https://github.com/nothings/stb). Pinned sources and licenses are preserved in `native/`.
 
 **sd88me**: [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
 

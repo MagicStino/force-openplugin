@@ -110,7 +110,4 @@ status and warnings; inclusion is not an OpenPlugin hardware test or endorsement
 
 ## Images on the device
 
-The website reads upstream screenshot URLs live. Native previews are a separate,
-hash-locked build snapshot: 57 images for 71 IDs, with placeholders elsewhere.
-Scheduled catalog updates do not silently change firmware artwork. See
-[ILLUSTRATED-CARDS.md](ILLUSTRATED-CARDS.md) for reproducibility and limitations.
+The website displays publisher screenshot URLs. OpenPlugin 0.8 downloads and caches visible previews on load/refresh, with hash-locked bundled artwork as an offline fallback. Touchscreen reload behaviour remains pending hardware testing. See [CATALOG-PREVIEWS.md](CATALOG-PREVIEWS.md).

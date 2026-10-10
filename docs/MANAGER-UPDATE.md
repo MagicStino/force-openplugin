@@ -1,6 +1,10 @@
-# Standalone Plugin Manager 0.7.1-rc1 update
+# Plugin Manager updates
 
-This experimental ZIP updates the existing OpenPlugin manager binary and Akai interface together, adding PulyTek's catalog thumbnail. It is for an existing Force/MPC Gen1 OpenPlugin 0.7 installation on 3.9.1. It is not firmware and is not installed through USB Drive Update. Physical-device validation of this standalone update is pending.
+For the current **OpenPlugin 0.8 RC1**, use the correct device firmware image from [DOWNLOADS.md](DOWNLOADS.md). No standalone 0.8 manager ZIP has been published. A single PNG or library cannot update the full interface, cache initialization and mouse service configuration.
+
+## Older standalone 0.7.1-rc1 package (historical)
+
+The instructions below apply only to that older published package. It has bundled screenshots and does not provide the 0.8 background cache or mouse integration.
 
 ## Install over SSH
 
@@ -13,7 +17,7 @@ This experimental ZIP updates the existing OpenPlugin manager binary and Akai in
    ```
 
    For a different working Synths location: `sh install.sh -t /absolute/path/Synths`. The installer verifies package checksums, backs up MPC.settings, stops MPC, installs the manager folder and replaces the existing `PlMg` plugin-list UID exactly once, then restarts MPC. The built-in firmware files, registration and remote-access services remain unchanged. Existing valid portable registration is retained by the boot synchronizer.
-4. Load Plugin Manager again and tap **Refresh catalog**. PulyTek should show its thumbnail and rc3 beta download under Effects. The picture is part of the manager's skin; installing PulyTek alone does not update the catalog thumbnail.
+4. Load Plugin Manager again and tap **Refresh catalog**. The old skin includes a bundled PulyTek thumbnail. Current plugin versions come from the online index. The picture is part of the manager's skin; installing PulyTek alone does not update the catalog thumbnail.
 
 Do not update the manager from inside its own running plugin. Use the external SSH shell so the installer survives stopping MPC. Copying a single PNG or just the `.so` is insufficient; binary frame mappings and skin assets must match.
 

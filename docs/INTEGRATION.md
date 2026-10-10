@@ -1,42 +1,15 @@
-# Integration and validation
+# Firmware integration
 
-The exact inputs in inputs.json contain AZ01 v1 containers with one XZ rootfs
-partition and SHA-1 integrity records. The parser verifies checksums, bounds
-and exact EOF and rejects unknown trailing/signature records rather than
-silently discarding them. The stock ARM az01-image verifier accepted both
-original inputs under QEMU and reported no signing keys for their containers.
-That does not establish stock updater/bootloader acceptance of custom firmware.
+OpenPlugin 0.8 RC1 targets the exact stock 3.9.1 inputs recorded in `inputs.json`. The AZ01 parser checks partition bounds, SHA-1 integrity records and exact end-of-file, rejecting unknown trailers rather than discarding them. The container label becomes `3.9.1-openplugin-v0.8`; stock application version **3.9.1.2**, board lists, application binaries, kernel and bootloader remain intact. Activation and signature checks are not patched.
 
-No executable, kernel, bootloader, signing tool, signature check, LoadPin setting
-or licensed instrument activation is patched. The AZ01 string version becomes
-3.9.1.3-openplugin; board/device lists and application binaries remain intact.
-The rootfs adapter injects the native manager, skin, helpers and services via
-debugfs without mounting. It fixes times/owners/modes, verifies all injected
-files/links, checks the filesystem read-only and recompresses with XZ CRC32,
-preset 1. Supplied input files remain unchanged.
+The builder injects the native manager, skin, helpers, services and notices through debugfs without mounting the filesystem. It sets deterministic metadata, verifies injected files and symlinks, checks the filesystem read-only, and recompresses it. Input images are preserved. A successful build does not prove flashing or boot safety.
 
-Upstream already implements catalog/cards/install/update/remove. Local changes
-add FIND search, keyboard/source scanning, persistence, bounded HTTPS downloads,
-a larger catalog and fail-fast detached systemd application scripts. The cgroup
-write fallback is removed; systemd-run is required. Artwork IDs use content
-hashes instead of build paths. Upstream licenses and the font OFL ship in images.
+The manager extends [poloq’s native Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) using [sd88me’s wrapper and tooling](https://github.com/sd88me/mpc-vst-plugins). Additions include FIND search, saved catalogs, source scanning, combined JV setup and the background preview cache. Installation uses detached systemd jobs; systemd-run is required. Component licenses and font notices ship in the payload.
 
-The registration service runs before acvs, refuses to edit while MPC runs,
-and calls the pinned sync tool which backs up and validates settings. It
-requires an existing user profile. SSH is a separate owner-key service; the
-root shadow field changes to an unusable password to permit key authentication.
-Per-device host keys are generated on first service start; no shared host key
-or private owner key is shipped.
+The registration service runs before the application, requires an existing user profile, refuses to edit while MPC runs, and invokes the pinned settings-backup/validation tool. Remote access uses device-generated SSH host keys; the default build offers the REMOTE ACCESS controls, while an optional owner public-key build has a separate SSH service. No private owner key or shared host key is shipped. See [SSH.md](SSH.md).
 
-Required hardware checks, NOT completed:
+Community mouse support is compiled from pinned source and loaded only inside the MPC application. It checks the DRM display layout before enabling pointer/input handling; unsupported layouts pass through. See [MOUSE.md](MOUSE.md).
 
-1. Exact MPC model and verified recovery/update procedure for each device.
-2. Updater policy/signing acceptance without bypassing security controls.
-3. Boot, registration, all profiles, first boot, storage/network and SSH login.
-4. Touch targets, tab navigation and Q-Links on both hardware displays.
-5. Trusted plugin install, launch, project save/reload, audio/CPU, update,
-   uninstall and reboot.
-6. Offline mode, failed downloads, full storage and interrupted install recovery.
+## Validation limits
 
-Offline tests, emulator execution and rendered previews do not substitute for
-these checks. No safe-flashing claim is made.
+Both 0.8 images pass structural, filesystem and stock ARM verifier checks. The manager loads against both stock runtimes under emulation. These images have not been flashed or boot-tested. Touchscreen preview reloads, mouse interaction, filtered-search CPU under playback, registration/reboot behaviour and physical MPC Gen1 operation still need testing. See [TESTING.md](TESTING.md) for revision-specific evidence.

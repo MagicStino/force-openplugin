@@ -1,5 +1,13 @@
 # Validation scope
 
+## OpenPlugin 0.8 RC1 — 10 October 2026
+
+Both published images passed filesystem, injected-file/symlink and container checks plus their original ARM `az01-image --verify`. The native manager loads with both stock ARM runtime trees under emulation. All 21 Python tests passed, including the offline preview codec/cache test. The filtered-polling regression exercises 80,000 idle reads with one catalog scan and no revision churn. Generated CATALOG geometry and sample text pass simulated rendering checks.
+
+The Force read-only mouse display-layout probe passed; no mouse was attached. Physical mouse interaction, changed-image reloads in Akai’s skin cache, the filtered CPU fix under real playback, and flash/boot of these 0.8 images remain unverified. MPC Gen1 remains hardware unverified. Earlier results above apply only to their named revisions; repeat-build identity of 0.8 has not been established.
+
+[Release images, checksums and validation manifests](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc1) · [Preview implementation](CATALOG-PREVIEWS.md) · [Mouse source and limits](MOUSE.md).
+
 ## Force SSH and SFTP hardware test — 10 October 2026
 
 OpenPlugin 0.7 RC3: password login as root/mpc succeeded on the owner's Force. SFTP uploaded a 64-byte temporary file into `/tmp`, downloaded it with identical bytes and SHA256, and removed it; absence was confirmed. Mounted storage directories were listed without changing sample libraries. See [Remote Access test details](SSH.md).
@@ -10,7 +18,7 @@ This validates login and a small transfer on this Force. It does not validate wr
 
 The historical image hashes and repeat-build/ARM-runtime results below refer to the earlier personalized baseline recorded in VALIDATION.json. The later catalog/category/site revision has separate candidates and must not be confused with those hashes. For that historical revision: six Python tests, native host logic tests, the real 71-entry index test and generated FIND layout checks passed; website sampler/reverb filters were checked in the browser. Hardware was untested at that stage; current Force SSH/SFTP results are above.
 
-# Test results — 2026-10-08
+## Historical results — 8 October 2026
 
 Passed on the development host:
 
@@ -50,7 +58,7 @@ Image hashes, sizes and hardware status: VALIDATION.json. Personalized images
 contain an owner's PUBLIC SSH key. Neither that private key nor stock/modified
 firmware binaries are committed to this source repository.
 
-NOT TESTED: hardware flashing/boot, updater signing policy, registration/startup
+At this historical baseline, NOT TESTED: hardware flashing/boot, updater signing policy, registration/startup
 ordering, native touchscreen event routing/Q-Links, real plugin install/update/
 uninstall, audio/CPU/project recall, SSH authentication, recovery/factory reset,
 interrupted installs, sample kit import and arbitrary Hakai plugins.
@@ -80,3 +88,4 @@ Combined JV setup stages/checks ROMs before the plugin download and one button d
 Thirteen Python tests, native search/ROM dispatch tests, catalog persistence and malformed/empty/duplicate-ID checks passed. The ARM plugin loads with both supplied runtime trees under emulation. Generated CATALOG/FIND bounds and text checks passed. Combined setup, persistent-cache behavior after device reboot, and physical MPC operation still require hardware validation.
 
 Website device visuals are styled renders of generated native assets. They are not hardware screenshots. Regenerate with `tools/verify_catalog_skin.py --jv` and `tools/render_share.py` using the native build and the bundled renderer dependencies.
+
