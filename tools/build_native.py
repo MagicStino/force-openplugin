@@ -74,13 +74,18 @@ def main():
     # row backgrounds so opaque card art cannot hide the plugin screenshots.
     tui=local/'vst/build/skin/poloq - VST - Plugin Manager/Plugin Skins/TUI.json'
     ui=json.loads(tui.read_text())
-    preview_params={f'Parameter {i}' for i,p in enumerate(json.loads((local/'vst/params.json').read_text())['params']) if p['key'].endswith('_preview')}
+    preview_params={f'Parameter {i}':p['key'][1] for i,p in enumerate(json.loads((local/'vst/params.json').read_text())['params']) if p['key'].endswith('_preview')}
     for definition in ui['pageData']['componentDefinitions']['localComponentDefinitions']:
         if definition['key']!='CATALOG|CATALOG': continue
         nodes=definition['value']['componentsData']
         def preview_node(node):
             return any(h.startswith('IndexedEnabling/') and h.split('/',3)[-1] in preview_params for h in node['bounds'].get('additionalInvalidatingHandles',[]))
         previews=[node for node in nodes if preview_node(node)]
+        for node in previews:
+            for h in node['bounds'].get('additionalInvalidatingHandles',[]):
+                parts=h.split('/',3)
+                if len(parts)==4 and parts[0]=='IndexedEnabling' and parts[1]=='1' and parts[3] in preview_params:
+                    node['componentData']['data']['image']='/data/openplugin/previews/row'+preview_params[parts[3]]+'.png'
         definition['value']['componentsData']=[node for node in nodes if not preview_node(node)]+previews
     tui.write_text(json.dumps(ui,indent=2)+'\n')
     import ziglang
@@ -121,6 +126,15 @@ def main():
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
     (helpers / 'VERSION').write_text('0.8\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
+    bundled=helpers/'bundled-previews'
+    bundled.mkdir()
+    shutil.copyfile(local/'vst/images/previews/preview_1.png',bundled/'fallback.png')
+    from PIL import Image,ImageOps
+    ImageOps.pad(Image.open(bundled/'fallback.png'),(180,90),color='#13161b').save(bundled/'fallback-row.png')
+    for i,entry in enumerate(json.loads((ROOT/'assets/previews.lock.json').read_text())['entries']):
+        shutil.copyfile(local/f'vst/images/previews/preview_{i+2}.png',bundled/(entry['id']+'.png'))
+    for name in ['LICENSE','UPSTREAM.md']:
+        shutil.copyfile(ROOT/'native/third_party/stb'/name,helpers/('STB-'+name))
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')
     for src, dest in [(ROOT / 'native/LICENSE', 'MANAGER-LICENSE'), (mv / 'LICENSE', 'WRAPPER-LICENSE'),
                       (mv / 'tools/html_art/fonts/OFL.txt', 'FONT-OFL'), (ROOT / 'native/NOTICE.md', 'NOTICE.md')]:

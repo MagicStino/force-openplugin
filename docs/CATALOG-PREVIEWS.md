@@ -1,9 +1,11 @@
-# Catalog images: website and native manager
+# Catalog preview refresh (0.8 candidate)
 
-Website cards load each catalog entry's HTTPS screenshot dynamically. PulyTek's public preview is present in the catalog and returns a valid PNG.
+The manager downloads its catalog when opened and when Refresh catalog is pressed. Preview downloads run on its background worker, never in audio rendering or host parameter reads. Browsing another page requests previews for the three visible cards. There is no periodic network polling.
 
-The native manager uses a built-in hash-locked filmstrip (`assets/previews.lock.json` and `native/preview_index.h`). Refresh catalog fetches JSON metadata only; it cannot add image frames to the installed Akai skin or add mappings to its compiled manager. An unknown plugin ID uses the NO PREVIEW frame even when the catalog includes a screenshot URL.
+HTTPS screenshots are decoded, scaled to the generated card dimensions, and saved under `/data/openplugin/previews`. Each catalog ID has a persistent cache. Startup and explicit refresh fetch screenshots again, including URLs whose content changed without a version change. Offline operation falls back to saved images, then bundled images, then generic artwork. Only changed row pixels request a display update. A generation check prevents an outdated page request replacing the current page.
 
-PulyTek is appended to the preview lock and index, preserving every existing frame number. `tools/build_native.py` builds the updated manager binary and Akai skin with the new frame; both must be distributed together. The current installed manager still needs that update to show the picture. A new firmware image is not intrinsically required: a validated manager-only update can replace the manager binary and skin together. Do not copy just the PNG or just the index, as that does not update the installed mapping/filmstrip.
+Downloads have connection and total time limits and bounded input sizes. Decoder dimensions are limited. PNG, JPEG, GIF and BMP are supported. Image encoding and decoding occur outside the mutex used by host parameter polling. Upstream stb source and licenses are shipped with the source and payload notices.
 
-For future submissions, review and hash-lock the screenshot and append its ID to the bundle as part of manager packaging. Metadata acceptance alone provides the website picture and device download listing, but cannot promise a thumbnail on an older manager. Automatic remote thumbnail loading is not currently implemented.
+## Validation and remaining hardware test
+
+Offline codec/cache tests exercise malformed input, path rejection, PNG round trips, offline fallback and unchanged-image display stability. The generated skin uses absolute writable row image paths. A simulated layout render checks dimensions and labels; it does **not** prove the Akai host reloads changed images rather than its filmstrip cache. That behaviour must be confirmed on hardware before claiming preview refresh works for every user. Mouse interaction and the filtered CPU fix also require device acceptance testing. Do not describe this candidate as hardware verified.

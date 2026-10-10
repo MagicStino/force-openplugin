@@ -75,13 +75,15 @@ typedef struct {
     char dir[256];        /* unpacked package (install.sh / uninstall.sh), set while preparing */
 } pkg_t;
 enum { Q_INSTALL = 1, Q_REMOVE = 2 };
-enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL, J_REMOTE_ENABLE, J_REMOTE_DISABLE };
+enum { J_NONE, J_PREVIEW, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL, J_REMOTE_ENABLE, J_REMOTE_DISABLE };
 
 typedef struct device device_t;
 typedef struct {
     pthread_t th;
     pthread_mutex_t mu;
     pthread_cond_t cv;
+    int preview_enabled, preview_pending;
+    unsigned preview_generation;
     int quit, job, busy, ready;   /* ready: a prepared apply.sh waits for the second APPLY press */
     pkg_t pkg[MAXPKG];
     int npkg, page, sel, menu;    /* sel, menu: pkg indexes (-1 none); menu = the card showing Reinstall/Remove */
@@ -803,6 +805,8 @@ static void scan_installed(const device_t *d, pkg_t *pkg, int n) {
 #include "rom_setup.inc"
 #include "remote_access.inc"
 
+#include "catalog_previews.inc"
+
 static int catalog_parse(const char *text,list_t *l) {
     const char *end=text?jobject(text,top_member,l):NULL;
     if(!end || *ws(end) || !l->n){l->n=0;return 0;}
@@ -877,6 +881,7 @@ static void do_refresh(mgr_t *m) {
     else { say_locked(m,parsed?OK:WARN,parsed?"Catalog refreshed from server. Plugin versions checked.":"Offline: showing saved catalog. Tap Refresh catalog when connected."); }
     pthread_mutex_unlock(&m->mu);
     free(tmp);
+    if(m->preview_enabled)preview_refresh(m);
 }
 
 /* Download, check and unpack every queued package, then write apply.sh. Nothing on the device changes yet. */
@@ -1000,6 +1005,7 @@ static void *worker(void *ud) {
         pthread_mutex_unlock(&m->mu);
         if (job == J_REMOTE_ENABLE || job == J_REMOTE_DISABLE) do_remote(m,job);
         else if (job == J_REFRESH) do_refresh(m);
+        else if (job == J_PREVIEW) preview_refresh(m);
         else if (job == J_PREPARE) do_prepare(m);
         else if (job == J_LAUNCH) do_launch(m);
         else if (job == J_JV_INSTALL) { do_prepare(m); pthread_mutex_lock(&m->mu); int ready=m->ready; m->ready=0; pthread_mutex_unlock(&m->mu); if(ready) do_launch(m); }
@@ -1008,6 +1014,7 @@ static void *worker(void *ud) {
         pthread_mutex_lock(&m->mu);
         m->busy = 0;
         m->rev++;
+        if(m->preview_pending && !m->job){m->job=J_PREVIEW;m->preview_pending=0;}
     }
     pthread_mutex_unlock(&m->mu);
     return NULL;
@@ -1116,7 +1123,7 @@ static void card_field(const mgr_t *m, int i, const char *f, char *b, int n) {
     else if (!p) snprintf(b, n, !strcmp(f, "state") || !strcmp(f, "inst") || !strcmp(f, "chan") || !strcmp(f, "cpu") ||
                                  !strcmp(f, "old") || !strcmp(f, "tested") || !strcmp(f,"preview") ? "0" : " ");
     else if (!strcmp(f,"rom")) snprintf(b,n,"%d",!strcmp(p->id,"jv-880") && m->menu!=i);
-    else if (!strcmp(f, "preview")) snprintf(b,n,"%d",preview_frame(p->id));
+    else if (!strcmp(f, "preview")) snprintf(b,n,"1");
     else if (!strcmp(f, "desc1")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,0,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,0,b,n);}
     else if (!strcmp(f, "desc2")) {if(!strcmp(p->id,"jv-880") && m->rom_status[0])description_line(m->rom_status,1,b,n);else description_line(!strcmp(p->id,"jv-880")?"Save your project first: this action installs ROMs + plugin and restarts the app.":p->summary,1,b,n);}
     else if (!strcmp(f, "state")) snprintf(b, n, "%d", !strcmp(p->id,"jv-880") && m->menu!=i ? S_NONE : card_state(m, i));
@@ -1153,6 +1160,7 @@ static void *mgr_create(const char *data_dir) {
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
     snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
+    m->preview_enabled = 1;
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;
@@ -1243,6 +1251,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
                 }
             }
             m->page=0;
+            if(!strcmp(key,"source_scan") || !strcmp(key,"source_clear"))preview_request_locked(m);
             m->rev++;
         }
         pthread_mutex_unlock(&m->mu); return;
@@ -1299,6 +1308,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
             }
         }
     }
+    if(!strcmp(key,"tab") || !strcmp(key,"kind") || (v>=0.5 && (!strcmp(key,"page_prev") || !strcmp(key,"page_next"))))preview_request_locked(m);
     m->rev++;
     pthread_mutex_unlock(&m->mu);
 }
