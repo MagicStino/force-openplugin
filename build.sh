@@ -50,9 +50,9 @@ if [ -n "$SSH_KEY" ]; then SSH_ARGS=(--ssh-key "$(realpath "$SSH_KEY")"); fi
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build_native.py" "${SSH_ARGS[@]}"
 "$ROOT/.deps/venv/bin/python" "$ROOT/tools/verify_skin.py" "$ROOT/build/native" "$OUTPUT/preview"
 if [ "$DEVICE" = both ] || [ "$DEVICE" = force ]; then
-  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${FORCE_INPUT:-$SINGLE_INPUT}" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1-openplugin-v0.7-update.img"
+  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${FORCE_INPUT:-$SINGLE_INPUT}" --device force --native "$ROOT/build/native/payload" --output "$OUTPUT/Force-3.9.1-openplugin-v0.8-update.img"
 fi
 if [ "$DEVICE" = both ] || [ "$DEVICE" = mpc-gen1 ]; then
-  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${MPC_INPUT:-$SINGLE_INPUT}" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-3.9.1-Gen1-openplugin-v0.7-update.img"
+  "$ROOT/.deps/venv/bin/python" "$ROOT/tools/build.py" build "${MPC_INPUT:-$SINGLE_INPUT}" --device mpc-gen1 --native "$ROOT/build/native/payload" --output "$OUTPUT/MPC-3.9.1-Gen1-openplugin-v0.8-update.img"
 fi
 echo 'Candidates built and structurally checked. See docs/TESTING.md for hardware validation scope.'

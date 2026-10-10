@@ -7,8 +7,8 @@ import subprocess
 import tempfile
 from .az01 import extract, pack, parse
 
-VERSION = '0.7'
-CONTAINER_VERSION = '3.9.1-openplugin-v0.7'
+VERSION = '0.8'
+CONTAINER_VERSION = '3.9.1-openplugin-v0.8'
 EPOCH = 1791417600  # 2026-10-08 00:00 UTC, metadata only
 ROOT = Path(__file__).resolve().parents[1]
 

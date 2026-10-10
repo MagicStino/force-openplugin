@@ -91,6 +91,10 @@ def main():
         '-fPIC', '-shared', '-fvisibility=hidden', '-std=gnu11', '-I' + str(local / 'vst/build'),
         ROOT / 'native/manager.c', mv / 'wrapper/vst2_wrap.c', '-lpthread', '-ldl', '-lm',
         '-Wl,--no-undefined', '-o', binary, env=env)
+    mouse = out / 'libforce_cursor.so'
+    run(zig, 'cc', '-target', 'arm-linux-gnueabihf.2.31', '-mcpu=cortex_a17', '-O2', '-g0', '-s',
+        '-fPIC', '-shared', '-std=gnu11', ROOT / 'native/mouse/force_cursor_drm.c',
+        '-lpthread', '-ldl', '-Wl,--no-undefined', '-o', mouse, env=env)
     payload = out / 'payload'
     if payload.exists():
         shutil.rmtree(payload)
@@ -99,9 +103,9 @@ def main():
     shutil.copytree(local / 'vst/build/skin/poloq - VST - Plugin Manager', folder)
     normalize_presets(folder)
     version_file = folder / 'version.xml'
-    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.7.0.0</version>'))
+    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.0.0</version>'))
     shutil.copyfile(binary, folder / 'plugin_manager.so')
-    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.7"')
+    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8"')
     (folder / 'plugin-meta.xml').write_text(entry)
     helpers = payload / 'usr/share/openplugin'
     helpers.mkdir(parents=True)
@@ -115,7 +119,7 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('0.7\n')
+    (helpers / 'VERSION').write_text('0.8\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')
     for src, dest in [(ROOT / 'native/LICENSE', 'MANAGER-LICENSE'), (mv / 'LICENSE', 'WRAPPER-LICENSE'),
@@ -136,6 +140,15 @@ def main():
             shutil.copyfile(ROOT / 'runtime' / name, helpers / name)
         shutil.copyfile(ROOT / 'runtime/openplugin-ssh.service', units / 'openplugin-ssh.service')
         (enabled / 'openplugin-ssh.service').symlink_to('/usr/lib/systemd/system/openplugin-ssh.service')
+    mouse_lib = payload / 'usr/lib/openplugin'
+    mouse_lib.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(mouse, mouse_lib / 'libforce_cursor.so')
+    mouse_override = payload / 'etc/systemd/system/acvs.service.d'
+    mouse_override.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ROOT / 'runtime/openplugin-mouse.conf', mouse_override / '20-openplugin-mouse.conf')
+    shutil.copyfile(ROOT / 'runtime/force_cursor.conf', payload / 'etc/force_cursor.conf')
+    for name in ['LICENSE', 'UPSTREAM.md']:
+        shutil.copyfile(ROOT / 'native/mouse' / name, helpers / ('MOUSE-' + name))
     print('Native payload:', payload)
 
 if __name__ == '__main__':

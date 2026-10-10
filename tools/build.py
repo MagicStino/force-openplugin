@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-PROJECT_VERSION = "0.7"
+PROJECT_VERSION = "0.8"
 
 def inspect_image(path):
     digest = hashlib.sha256()
