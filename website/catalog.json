@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-11T13:02:08+00:00",
+  "generated": "2026-10-11T22:05:29+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3476,6 +3476,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.6",
+          "size": 1665218,
+          "sha256": "93c6d3dab0edee7945a47cec9d13d6ee8ded7f70fa817810d4c0ffe9507ddd3e",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.6/Euclidier-1.0.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        },
+        {
           "version": "1.0.5",
           "size": 1665213,
           "sha256": "8e8fc078f96c5834a2d66f4a69400af3d4232d782471a713fe5c9b05f418cf4b",
@@ -3610,7 +3635,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.5",
+      "latest": "1.0.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-euclidier",
@@ -4545,6 +4570,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.5.4",
+          "size": 10061847,
+          "sha256": "f6747aac875fab42353e01896e020c10c1571afff7542c8e680c9fa4aa21a1be",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.4/LXRXXL-0.5.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.5.3",
           "size": 10062143,
           "sha256": "f3164b021a8994e233c82d60c6f35c10daf4119c042e0ddc77d9d38c5f585b6a",
@@ -4627,7 +4671,7 @@
           ]
         }
       ],
-      "latest": "0.5.3",
+      "latest": "0.5.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
@@ -5475,6 +5519,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Mutable Instruments Plaits, all 24 models, with LFOs, envelopes, two mod matrices, tempo sync and a touchscreen skin.",
+      "screenshot": "https://raw.githubusercontent.com/poloq-instruments/mpc-vst-plaits/a30c24b83663a5efead73bbaca674ba4502a3eb5/docs/screenshots/card.png",
       "style": "synth",
       "tags": [
         "mutable-instruments",
@@ -5756,6 +5801,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.3",
+          "size": 31389,
+          "sha256": "2983a9fa1d7e5d872eeec12ad9c7c305cff0bba3131424d216ce52d5abc5d919",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.3/MPC-USB-audio-addin-1.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.2",
           "size": 30274,
           "sha256": "a68120bbfc1d9bcb1c6ad68da7fced7e2b62cde1e5ec08c4e510458fc68a8e02",
@@ -5850,7 +5911,7 @@
           ]
         }
       ],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-usb-audio",
@@ -7029,6 +7090,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Install, update and remove catalog plugins from the MPC screen, with one MPC restart per batch.",
+      "screenshot": "https://raw.githubusercontent.com/poloq-instruments/mpc-vst-manager/9ee0b5aa61acafc935481426beff23cd2db1aaef/docs/screenshot.png",
       "style": "utility",
       "tags": [
         "manager",
@@ -7038,6 +7100,32 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.2.0",
+          "size": 3521000,
+          "sha256": "5c45ad48a82e7c8cdb3ceabbe79c58bbbcbb4b29743611cbb9f560b33727d22a",
+          "max_glibc": "2.15",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.2.0/Plugin-Manager-1.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai MPC One",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        },
         {
           "version": "1.1.0",
           "size": 374338,
@@ -7110,7 +7198,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "poloq-instruments/mpc-vst-manager",
@@ -7615,6 +7703,59 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/RMXXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "steprunner-8",
+      "name": "StepRunner-8",
+      "author": "djokenzi",
+      "repo": "djokenzi/steprunner-8",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "8-track, 64-step sequencer with step conditions, step and CC locks, patterns, states and performance effects, driving a drum program over MIDI.",
+      "screenshot": "https://raw.githubusercontent.com/djokenzi/steprunner-8/76285a3aa34dcdc85bf8e72e3aa18baa7f6428cd/docs/screenshots/steprunner-8.png",
+      "style": "sequencer",
+      "tags": [
+        "midi",
+        "step-sequencer",
+        "drums",
+        "step-locks"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 6661351,
+          "sha256": "e9883b35580b42c9c4f2caf39f97dd1acf3daf9eb9a5c4603a0502e9f1ce97ee",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/djokenzi/steprunner-8/releases/download/v1.0.0/StepRunner-8-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-10"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "djokenzi/steprunner-8",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
