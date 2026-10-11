@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T05:57:25+00:00",
+  "date": "2026-10-11T13:02:08+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2446,7 +2446,14 @@
           "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.9-gen2-test/Crate-Digger-1.1.9-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
+          ],
           "tested": [
             {
               "device": "MPC Live III (Gen2)",
@@ -2472,7 +2479,14 @@
           "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.8-gen2-test/Crate-Digger-1.1.8-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
+          ],
           "tested": []
         },
         {
@@ -2495,7 +2509,13 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -2519,7 +2539,13 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -2544,7 +2570,13 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -2564,7 +2596,13 @@
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -2584,7 +2622,13 @@
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -2604,7 +2648,13 @@
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -2622,7 +2672,13 @@
           "yanked": false,
           "warnings": [
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "payload/vst/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "payload/vst/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "payload/vst/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "payload/vst/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "payload/vst/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "payload/vst/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         }
@@ -3476,7 +3532,10 @@
           "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.5/Euclidier-1.0.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -3505,7 +3564,9 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -3535,7 +3596,9 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -3559,7 +3622,9 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -3582,7 +3647,9 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         }
@@ -4323,7 +4390,8 @@
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -4380,7 +4448,8 @@
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/Gm0rb - VST - Liminal Hz/liminal_hz.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -4406,7 +4475,8 @@
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/Gm0rb - VST - Liminal Hz/liminal_hz.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -4533,6 +4603,63 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.5.3",
+          "size": 10062143,
+          "sha256": "f3164b021a8994e233c82d60c6f35c10daf4119c042e0ddc77d9d38c5f585b6a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.3/LXRXXL-0.5.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.2",
+          "size": 10061883,
+          "sha256": "6590958980913f8697930fdb9dd08af166e467ce041e626dab72f53d7130acf5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.2/LXRXXL-0.5.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.1",
+          "size": 10267060,
+          "sha256": "e19271bd18fe6b1f0b798a3dafa3628b71c0f873ade35bd8093f40c6a851f7b2",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.1/LXRXXL-0.5.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.5.0",
           "size": 10266730,
           "sha256": "bd48f7f33f9e8898a7cb6bd912d6c97dae1f3af44170c456c241ef7836486f08",
@@ -4558,7 +4685,7 @@
           ]
         }
       ],
-      "latest": "0.5.0",
+      "latest": "0.5.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
@@ -5328,7 +5455,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5344,7 +5472,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5360,7 +5489,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5376,7 +5506,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5392,7 +5523,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         }
@@ -5521,7 +5653,9 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.2/MPC-Remote-addin-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
           "tested": []
         },
         {
@@ -5533,7 +5667,9 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.1/MPC-Remote-addin-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
           "tested": []
         },
         {
@@ -5548,7 +5684,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5564,7 +5701,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -5586,7 +5724,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -5602,7 +5741,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         }
@@ -5611,6 +5751,60 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-remote",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "skipback",
+      "name": "MPC Skipback",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-addin-skipback",
+      "kind": "addin",
+      "license": "MIT",
+      "summary": "Records the main output all the time and saves the last 30 to 60 seconds as a WAV when you double-press a hardware button (Rec Arm on a Force; Overdub, or a button you teach it, on other models). Experimental: tested on a Force only.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-addin-skipback/dc82602b2a05354d42445c8a330fb92a864892fb/docs/img/skipback.png",
+      "style": "utility",
+      "tags": [
+        "skipback",
+        "recording",
+        "sampling",
+        "wav",
+        "buffer"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.0",
+          "size": 25800,
+          "sha256": "c997603b8a22dbd61b8110f95cf615e2b50a9b5ada5388068df1f08320a6c71c",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.4.0/MPC-Skipback-0.4.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "0.3.0",
+          "size": 24552,
+          "sha256": "1e3dbc909c7c6dac7562b89e2d2f9c6e30a0fff1efee4bbd5e6c5084c2a50140",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.3.0/MPC-Skipback-0.3.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        }
+      ],
+      "latest": null,
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-addin-skipback",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -5983,7 +6177,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-nam/releases/download/v1.0.9/NAM-1.0.9-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
           "tested": []
         },
         {
@@ -6001,7 +6197,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6020,7 +6217,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6039,7 +6237,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6058,7 +6257,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6077,7 +6277,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6096,7 +6297,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         }
@@ -6939,7 +7141,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6958,7 +7161,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
         },
@@ -6977,7 +7181,8 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
             {
@@ -7639,7 +7844,9 @@
           "url": "https://github.com/stampman3000-jpg/mpc-stream/releases/download/v1.0.0/Stream-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "portable/johnny - VST - Stream/stream.so calls network (sendto, socket): flagged for manual review (the author can explain why)"
+          ],
           "tested": [
             {
               "device": "MPC One",
