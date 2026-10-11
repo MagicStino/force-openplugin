@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-10T21:50:43+00:00",
+  "date": "2026-10-11T05:57:25+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -400,6 +400,32 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.7",
+          "size": 2894391,
+          "sha256": "38e70117a2cfc163f36d3fe65e2153fe284d46595c60a6bb7202d18fe03c38c3",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.7/Acid-1.0.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        },
+        {
           "version": "1.0.6",
           "size": 2883155,
           "sha256": "e3bccd6902d6f3e0d3750a4e9cc738232c57d7c1c5894ab2458c3ecdf2f18f21",
@@ -543,7 +569,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
@@ -2421,7 +2447,13 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 5.0.18",
+              "date": "2026-10-11"
+            }
+          ]
         },
         {
           "version": "1.1.8",
@@ -3432,6 +3464,28 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.5",
+          "size": 1665213,
+          "sha256": "8e8fc078f96c5834a2d66f4a69400af3d4232d782471a713fe5c9b05f418cf4b",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.5/Euclidier-1.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        },
+        {
           "version": "1.0.4",
           "size": 1659659,
           "sha256": "c1f208c46941557b135a9dd45d8291193cb48f40c7029cc75504ea7e4d58c6e7",
@@ -3533,7 +3587,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-euclidier",
@@ -4255,8 +4309,8 @@
       "versions": [
         {
           "version": "1.0.0",
-          "size": 5748754,
-          "sha256": "3fe7582ab60af6a3e181221f84d6f627f58c93083c05860427003ed0c29f6805",
+          "size": 5745218,
+          "sha256": "edcd0832d76d3ce73b03c18c1abe76dfba4126087f7c836a4f065b5b414a8cca",
           "max_glibc": "2.34",
           "cpu": null,
           "os_compat": [
@@ -4271,7 +4325,13 @@
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC 3.x / MockbaMod",
+              "date": "2026-10-10"
+            }
+          ]
         }
       ],
       "latest": "1.0.0",
@@ -4444,6 +4504,64 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-luckydip",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "lxrxxl",
+      "name": "LXRXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/LXR02XXL",
+      "kind": "instrument",
+      "license": "LicenseRef-LXR02-Open",
+      "summary": "The Sonic Potions + Erica Synths LXR-02 drum machine, modded: its whole front panel on one page (L'Cronx's artwork), the LXR's own voices from LXR02Open with the LXR-02's PWM and FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets. Non-commercial license.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/main/docs/img/page.png",
+      "style": "drum-machine",
+      "tags": [
+        "drums",
+        "drum-machine",
+        "lxr",
+        "lxr-02",
+        "sonic-potions",
+        "erica-synths",
+        "sequencer",
+        "randomizer"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "size": 10266730,
+          "sha256": "bd48f7f33f9e8898a7cb6bd912d6c97dae1f3af44170c456c241ef7836486f08",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.0/LXRXXL-0.5.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        }
+      ],
+      "latest": "0.5.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/LXR02XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -6973,30 +7091,27 @@
       "versions": [
         {
           "version": "0.1.1",
-          "size": 7714118,
-          "sha256": "2522b6a7d40c7620c942439ffd5ae7b823757b73a2b8dbdd4b5a3080bffafc59",
+          "size": 4677012,
+          "sha256": "04019f458f4891ccb158c77aab4e6739599038ca94d5ff157524afe8ea0a171d",
           "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 34.2,
-            "max_pct": 36.3,
-            "verdict": "WARN"
-          },
+          "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1/Profit-08-0.1.1-mpc-armv7.zip",
-          "channel": "stable",
+          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1-gen2-test/Profit-08-0.1.1-mpc-armv7.zip",
+          "channel": "beta",
           "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
+          "warnings": [],
           "tested": [
             {
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-10"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 5.0.18",
+              "date": "2026-10-11"
             }
           ]
         },
@@ -7024,7 +7139,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit8",
