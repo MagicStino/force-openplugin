@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-11T22:05:29+00:00",
+  "date": "2026-10-12T06:07:51+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2850,16 +2850,15 @@
     },
     {
       "id": "dexed-dx7",
-      "name": "Dexed (DX7)",
+      "name": "Dexed",
       "author": "sd88me",
       "repo": "sd88me/mpc-vst-dx7",
       "kind": "instrument",
       "license": "GPL-3.0-only",
-      "summary": "Yamaha DX7-style 6-operator FM synth (Dexed/MSFA engine) as a native instrument, with .syx bank browsing, all 32 algorithm diagrams and a touchscreen skin with Q-Links.",
+      "summary": "DX7-style 6-operator FM synth (Dexed/MSFA engine) as a native instrument, with .syx bank browsing, all 32 algorithm diagrams and a touchscreen skin with Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-dx7/main/docs/img/dexed-dx7.png",
       "style": "fm-synth",
       "tags": [
-        "yamaha",
         "dx7",
         "emulation"
       ],
@@ -2996,6 +2995,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Early Reflections as a native insert effect, with a touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-early-reflections/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/early.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3049,6 +3049,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Hall reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-hall/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/hall.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3102,6 +3103,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Plate reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-plate/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/plate.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3155,6 +3157,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Room reverb as a native insert effect, with a touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-room/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/room.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3520,6 +3523,32 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.7",
+          "size": 1664869,
+          "sha256": "2d5b40fedbfa397c0a74fc7f4301c40fda457aa7bf59241adb3b5f092d872278",
+          "max_glibc": "2.30",
+          "cpu": {
+            "p99_pct": 2.3,
+            "max_pct": 9.4,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.7/Euclidier-1.0.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.6",
           "size": 1665218,
           "sha256": "93c6d3dab0edee7945a47cec9d13d6ee8ded7f70fa817810d4c0ffe9507ddd3e",
@@ -3679,7 +3708,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-euclidier",
@@ -4182,97 +4211,6 @@
       "download": true
     },
     {
-      "id": "jv-880",
-      "name": "JV-880",
-      "author": "sd88me",
-      "repo": "sd88me/mpc-vst-jv880",
-      "kind": "instrument",
-      "license": "MAME license",
-      "summary": "Roland JV-880 sample-based sound engine as a native instrument, with the original reverb and chorus, a Play page with eight macros and a touchscreen skin.",
-      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-jv880/1af7e13fa7076bb7e04be7aec22e9e617f4405cc/docs/screenshots/jv880.png",
-      "style": "rompler",
-      "tags": [
-        "roland",
-        "emulation"
-      ],
-      "source_available": true,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.6",
-          "size": 1877887,
-          "sha256": "7d43792cbb6d0ec9f28773f528a051401aaa15cadcf30f48b3e3b6184b1c2973",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "2.x",
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.6/JV-880-1.0.6-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-10"
-            }
-          ]
-        },
-        {
-          "version": "1.0.5",
-          "size": 1995833,
-          "sha256": "9db843f36c85970ecd9762f4f0c1e549790f4339f9aa6ec36abf8a3a126bf8be",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.5/JV-880-1.0.5-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.4",
-          "size": 1995833,
-          "sha256": "129f191a95ec1d753834aeacbec1efccb9a01ddfd9ed7f1b84075323ac94c02c",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.4/JV-880-1.0.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.6",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "sd88me/mpc-vst-jv880",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
       "id": "keyscope",
       "name": "Keyscope",
       "author": "jacob-sabella",
@@ -4605,140 +4543,6 @@
       "download": true
     },
     {
-      "id": "lxrxxl",
-      "name": "LXRXXL",
-      "author": "L'Cronx",
-      "repo": "sunskiefer/LXR02XXL",
-      "kind": "instrument",
-      "license": "LicenseRef-LXR02-Open",
-      "summary": "The Sonic Potions + Erica Synths LXR-02 drum machine, modded: its whole front panel on one page (L'Cronx's artwork), the LXR's own voices from LXR02Open with the LXR-02's PWM and FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets. Non-commercial license.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/main/docs/img/page.png",
-      "style": "drum-machine",
-      "tags": [
-        "drums",
-        "drum-machine",
-        "lxr",
-        "lxr-02",
-        "sonic-potions",
-        "erica-synths",
-        "sequencer",
-        "randomizer"
-      ],
-      "source_available": true,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "0.5.4",
-          "size": 10061847,
-          "sha256": "f6747aac875fab42353e01896e020c10c1571afff7542c8e680c9fa4aa21a1be",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.4/LXRXXL-0.5.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.5.3",
-          "size": 10062143,
-          "sha256": "f3164b021a8994e233c82d60c6f35c10daf4119c042e0ddc77d9d38c5f585b6a",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.3/LXRXXL-0.5.3-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.5.2",
-          "size": 10061883,
-          "sha256": "6590958980913f8697930fdb9dd08af166e467ce041e626dab72f53d7130acf5",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.2/LXRXXL-0.5.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.5.1",
-          "size": 10267060,
-          "sha256": "e19271bd18fe6b1f0b798a3dafa3628b71c0f873ade35bd8093f40c6a851f7b2",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.1/LXRXXL-0.5.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.5.0",
-          "size": 10266730,
-          "sha256": "bd48f7f33f9e8898a7cb6bd912d6c97dae1f3af44170c456c241ef7836486f08",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.0/LXRXXL-0.5.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.1",
-              "date": "2026-10-11"
-            }
-          ]
-        }
-      ],
-      "latest": "0.5.4",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "sunskiefer/LXR02XXL",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
       "id": "machinemodule",
       "name": "Machinemodule",
       "author": "sd88me",
@@ -4820,6 +4624,56 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.6",
+          "size": 3219043,
+          "sha256": "3702b96a2af7616984aee6c60a23884989510e045b1a7e7e5c35a363c26e6bcb",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 1.2,
+            "max_pct": 1.9,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-sequencer-vst-v1.0.6/Maze-Sequencer-1.0.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.0.5",
+          "size": 3218392,
+          "sha256": "604edefdfd4d7f96f93ac4862a21fe4511dcf8ffb67dba0cf5e504c01b1de969",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-sequencer-vst-v1.0.5/Maze-Sequencer-1.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
         {
           "version": "1.0.4",
           "size": 3218150,
@@ -4951,7 +4805,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.4",
+      "latest": "1.0.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
@@ -5185,6 +5039,113 @@
       "download": true
     },
     {
+      "id": "jv-880",
+      "name": "Mini-JV",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-jv880",
+      "kind": "instrument",
+      "license": "MAME license",
+      "summary": "An emulation of the Roland JV-880 sample-based sound engine as a native instrument, with the original reverb and chorus, a Play page with eight macros and a touchscreen skin.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-jv880/f24bd1c922f2e8b2cf56eb497c6e13465ef8dad3/docs/screenshots/jv880.png",
+      "style": "rompler",
+      "tags": [
+        "roland",
+        "emulation"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.7",
+          "size": 1877335,
+          "sha256": "f66f9e515e2a9e070dafe7c1d33bcd7a10cbc584cb321e7d66de939a7d87fbee",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.7/JV-880-1.0.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "1.0.6",
+          "size": 1877887,
+          "sha256": "7d43792cbb6d0ec9f28773f528a051401aaa15cadcf30f48b3e3b6184b1c2973",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.6/JV-880-1.0.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-10"
+            }
+          ]
+        },
+        {
+          "version": "1.0.5",
+          "size": 1995833,
+          "sha256": "9db843f36c85970ecd9762f4f0c1e549790f4339f9aa6ec36abf8a3a126bf8be",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.5/JV-880-1.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.0.4",
+          "size": 1995833,
+          "sha256": "129f191a95ec1d753834aeacbec1efccb9a01ddfd9ed7f1b84075323ac94c02c",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.4/JV-880-1.0.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.7",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-jv880",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "monksynth",
       "name": "MonkSynth",
       "author": "saustin2010",
@@ -5338,54 +5299,6 @@
         "validation": "listed-only"
       },
       "download": false
-    },
-    {
-      "id": "raffosynth",
-      "name": "Moog",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-moog",
-      "kind": "instrument",
-      "license": "MIT",
-      "summary": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-moog/v1.0.0/screenshots/page_0.png",
-      "style": "synth",
-      "tags": [
-        "minimoog",
-        "monophonic",
-        "ladder-filter",
-        "analog-modelling"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 6697233,
-          "sha256": "4ef30df4772c0fc1eff578f528a4e19a60393fb3aeeb7dcfae6f5581d195252f",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.0.0/SYN-Moog-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-moog",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
     },
     {
       "id": "morpho-pe",
@@ -5699,6 +5612,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
             "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -5713,6 +5629,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
             "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -5822,6 +5741,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.5.0",
+          "size": 27254,
+          "sha256": "f8260ef7c59e692bed0c79ea6fc07d4004454af2bdb2fef54a58d20679cd3ae1",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.5.0/MPC-Skipback-0.5.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.4.0",
           "size": 25800,
           "sha256": "c997603b8a22dbd61b8110f95cf615e2b50a9b5ada5388068df1f08320a6c71c",
@@ -5830,7 +5765,11 @@
           "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.4.0/MPC-Skipback-0.4.0-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -5842,7 +5781,11 @@
           "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.3.0/MPC-Skipback-0.3.0-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         }
       ],
@@ -5883,11 +5826,7 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.3/MPC-USB-audio-addin-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
+          "warnings": [],
           "tested": []
         },
         {
@@ -5899,7 +5838,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.2/MPC-USB-audio-addin-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -7506,6 +7449,73 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "MagicStino/pulytek",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "raffosynth",
+      "name": "RaffoSynth",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-moog",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-moog/v1.0.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "minimoog",
+        "monophonic",
+        "ladder-filter",
+        "analog-modelling"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 6703698,
+          "sha256": "361ee2541ce4d49647720773590967348893343d2459673791818c4acec07221",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.1.0/SYN-Moog-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.0.0",
+          "size": 6697233,
+          "sha256": "4ef30df4772c0fc1eff578f528a4e19a60393fb3aeeb7dcfae6f5581d195252f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.0.0/SYN-Moog-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-moog",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
