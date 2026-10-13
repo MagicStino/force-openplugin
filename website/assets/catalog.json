@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-13T14:21:04+00:00",
+  "date": "2026-10-13T22:52:30+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -400,6 +400,32 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "2.0.0",
+          "size": 4341735,
+          "sha256": "dc57195c4e74084b23e2598946a972eae7726dcd830578eae5385d065182a4f7",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v2.0.0/Acid-2.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
+        {
           "version": "1.0.8",
           "size": 2894689,
           "sha256": "b06e2e6a46ebb57aa2f3cfb6f13c52ec7d43b69ede51499531f8be0a54e61e34",
@@ -595,7 +621,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.8",
+      "latest": "2.0.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
@@ -2392,6 +2418,40 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.0",
+          "size": 70189626,
+          "sha256": "3e44fcaab1b19f9911123998de0192a1cdc03208ae72c72c36c1741510e50449",
+          "max_glibc": "2.28",
+          "cpu": {
+            "p99_pct": 3.4,
+            "max_pct": 7.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.2.0/Crate-Digger-1.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
+        {
           "version": "1.1.9",
           "size": 69648842,
           "sha256": "0d493e4e9bfa49de4101d8a32c5cf108ea2d723e36eee81541ce178823c999a9",
@@ -2647,7 +2707,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.6",
+      "latest": "1.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-cratedigger",
@@ -2959,7 +3019,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Early Reflections as a native insert effect, with a touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-early-reflections/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/early.png",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-early-reflections/2044beed9f510a3963df7b61da6a4c19c6c7e7b3/docs/banners/early.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3013,7 +3073,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Hall reverb as a native insert effect, with a touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-hall/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/hall.png",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-hall/eb9f41f22ea93414776db40760c2387b36cf3144/docs/banners/hall.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3067,7 +3127,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Plate reverb as a native insert effect, with a touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-plate/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/plate.png",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-plate/a9087385948d18ae38739c44ddf42ab826d1a567/docs/banners/plate.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -3121,7 +3181,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Dragonfly Room reverb as a native insert effect, with a touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-room/440ec7b3b3db2fec34b9f80cf4890102ca14d1c3/docs/banners/room.png",
+      "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-room/6c62e1a5c9ef57f0c31897afa0faf07d7a446585/docs/banners/room.png",
       "style": "reverb",
       "tags": [
         "reverb",
@@ -8407,6 +8467,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 2784338,
+          "sha256": "4e58d0ec636c349dee969728a23c63822766e470e5cb69adc556eac59cd0c0be",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/djokenzi/steprunner-8/releases/download/v1.1.1/StepRunner-8-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-13"
+            }
+          ]
+        },
+        {
           "version": "1.1.0",
           "size": 6753738,
           "sha256": "cce9ad9c7d297dc7b4c7345ebbf67cfc315d1d90827e9b7961c8e303e735ca6a",
@@ -8470,7 +8555,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "djokenzi/steprunner-8",
@@ -8935,6 +9020,93 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-superarp",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "surgexxl",
+      "name": "SurgeXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/SurgeXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "The open-source Surge XT synth engine, headless, for Gen1: 2 scenes of 3 oscillators (12 types, wavetables with a picture of each), dual filters, waveshaper, 6 LFOs per scene shown with step sequencer, mod matrix with learn, 16 FX slots (every Surge effect but Spring Reverb, Airwindows included) and the 8 macros, on eight pages. Every factory and third-party patch (3008) and wavetable (761), plus your own patches and wavetables. MPC OS 3.x.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/SurgeXXL/08c3c3eed8a3ad6792211fb1dc2351ded2383995/docs/img/osc.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "polysynth",
+        "wavetable",
+        "fm",
+        "surge",
+        "subtractive",
+        "lfo",
+        "modulation",
+        "step-sequencer",
+        "presets",
+        "airwindows"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "size": 308787369,
+          "sha256": "be533d325b998963e8c39372374f49d629bcad8cf674c13904368492d519d99c",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.2/SurgeXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.1",
+          "size": 308413238,
+          "sha256": "ae8081a4c8fbb49238fa3c3551de26040c5a31eca702a4058fc33bb1c912a7e2",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.1/SurgeXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 308412450,
+          "sha256": "67a57117391489414b86d8535e2a3027a514d599d34ecbf10c8f4a245bfead7a",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.0/SurgeXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.2",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/SurgeXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
