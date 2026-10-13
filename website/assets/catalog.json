@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-12T15:40:07+00:00",
+  "date": "2026-10-13T00:48:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -400,6 +400,32 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.8",
+          "size": 2894689,
+          "sha256": "b06e2e6a46ebb57aa2f3cfb6f13c52ec7d43b69ede51499531f8be0a54e61e34",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.8/Acid-1.0.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
           "version": "1.0.7",
           "size": 2894391,
           "sha256": "38e70117a2cfc163f36d3fe65e2153fe284d46595c60a6bb7202d18fe03c38c3",
@@ -569,7 +595,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.7",
+      "latest": "1.0.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
@@ -1974,72 +2000,6 @@
       "download": true
     },
     {
-      "id": "braids",
-      "name": "Braids",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-braids",
-      "kind": "instrument",
-      "license": "MIT",
-      "summary": "Mutable Instruments Braids: a macro oscillator with 47 synthesis models.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-braids/v1.0.0/screenshots/page_0.png",
-      "style": "synth",
-      "tags": [
-        "mutable-instruments",
-        "macro-oscillator",
-        "eurorack"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.1",
-          "size": 8394407,
-          "sha256": "d057710fdbb3a523a3d07b340c506c2cb1f99bad62cdf620148e817045f2a1a8",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-braids/releases/download/v1.0.1/SYN-Braids-1.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 8394262,
-          "sha256": "3baa64b6beda9605f0592cc7f7f63e0832aa22d584c9745119c955283e3c0b42",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-braids/releases/download/v1.0.0/SYN-Braids-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.1",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-braids",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
       "id": "chordism",
       "name": "Chordism",
       "author": "saustin2010",
@@ -3204,6 +3164,54 @@
       "download": true
     },
     {
+      "id": "grids",
+      "name": "Drum Map",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-drum-map",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Drum Map: a topographic drum sequencer that plays kick, snare and hats from MPC's clock through its own MIDI port, from Émilie Gillet's open-source Grids.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-drum-map/v1.1.0/screenshots/page_0.png",
+      "style": "sequencer",
+      "tags": [
+        "drum",
+        "midi",
+        "euclidean",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 383669,
+          "sha256": "adf85f7e9f2630054e255f22c45faef473f5cee2487e044393270e1900bb2a4c",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-drum-map/releases/download/v1.1.0/SEQ-Drum-Map-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-drum-map",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "dub-force-siren",
       "name": "Dub Force Siren",
       "author": "no3z",
@@ -3402,54 +3410,6 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/EffectForce",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
-      "id": "elements",
-      "name": "Elements",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-elements",
-      "kind": "instrument",
-      "license": "MIT",
-      "summary": "Mutable Instruments Elements: a modal synthesis voice you bow, blow and strike, with 12 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-elements/v1.0.0/screenshots/page_0.png",
-      "style": "synth",
-      "tags": [
-        "mutable-instruments",
-        "modal",
-        "physical-modelling",
-        "eurorack"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 1241032,
-          "sha256": "78b39088e72b07634b91d6b5289dd5d241b7cf33c2cbdcc3d7a2c9170e363923",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-elements/releases/download/v1.0.0/SYN-Elements-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-elements",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -3840,55 +3800,6 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "FullPace/glass-spheres",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
-      "id": "grids",
-      "name": "Grids",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-grids",
-      "kind": "instrument",
-      "license": "GPL-3.0-only",
-      "summary": "Mutable Instruments Grids: a topographic drum sequencer that plays kick, snare and hats from MPC's clock through its own MIDI port.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-grids/v1.0.0/screenshots/page_0.png",
-      "style": "sequencer",
-      "tags": [
-        "mutable-instruments",
-        "drum",
-        "midi",
-        "euclidean",
-        "eurorack"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 383080,
-          "sha256": "fadc32b7c351b4d6cebf39cb19d9a1f27cb369278e69877ff272abac2a2c14fd",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-grids/releases/download/v1.0.0/SEQ-Grids-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-grids",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -4338,6 +4249,35 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 5746339,
+          "sha256": "30e7af4425e0c4a18e18e2fcd361e1cf2859b8d425403d286bf1f2cc2310bcdb",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-amp/releases/download/v1.0.1/Liminal-Amp-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force (Gen1)",
+              "firmware": "MPC 3.9.1",
+              "date": "2026-10-12"
+            },
+            {
+              "device": "MPC Live 3 (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
           "version": "1.0.0",
           "size": 5745218,
           "sha256": "edcd0832d76d3ce73b03c18c1abe76dfba4126087f7c836a4f065b5b414a8cca",
@@ -4365,7 +4305,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-amp",
@@ -4543,6 +4483,473 @@
       "download": true
     },
     {
+      "id": "lxrxxl",
+      "name": "LXRXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/LXR02XXL",
+      "kind": "instrument",
+      "license": "LicenseRef-LXR02-Open",
+      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. Inspired by the Erica Synths LXR-02. The whole panel on one page (artwork by Suns Kiefer), the LXR's voices with PWM and an FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets. Non-commercial license.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/v0.5.8/docs/img/page.png",
+      "style": "drum-machine",
+      "tags": [
+        "drums",
+        "drum-machine",
+        "lxr",
+        "lxr-02",
+        "sonic-potions",
+        "erica-synths",
+        "sequencer",
+        "randomizer"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.5.8",
+          "size": 10733055,
+          "sha256": "629b21296e6b3c00bf6e080a007733f8a6f38ea964f7f8012c4eead619507d55",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.8/LXRXXL-0.5.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "version": "0.5.7",
+          "size": 10733066,
+          "sha256": "eddfe42070db3404b63c9aad9d3b2c7e362ca4955a59e22747acc55c5e48b498",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.7/LXRXXL-0.5.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.6",
+          "size": 10045782,
+          "sha256": "0243689e47784591c676080c5d79a85e0fd94acd64c4584cf94a37d66b2fbac7",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.6/LXRXXL-0.5.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.5",
+          "size": 10045701,
+          "sha256": "1eaf4c53d02cdc5435e7934c2e2f468b095a6ed06a6d8d0bf38bcafc07b9ae4d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.5/LXRXXL-0.5.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.4",
+          "size": 10061847,
+          "sha256": "f6747aac875fab42353e01896e020c10c1571afff7542c8e680c9fa4aa21a1be",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.4/LXRXXL-0.5.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        },
+        {
+          "version": "0.5.3",
+          "size": 10062143,
+          "sha256": "f3164b021a8994e233c82d60c6f35c10daf4119c042e0ddc77d9d38c5f585b6a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.3/LXRXXL-0.5.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.2",
+          "size": 10061883,
+          "sha256": "6590958980913f8697930fdb9dd08af166e467ce041e626dab72f53d7130acf5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.2/LXRXXL-0.5.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.1",
+          "size": 10267060,
+          "sha256": "e19271bd18fe6b1f0b798a3dafa3628b71c0f873ade35bd8093f40c6a851f7b2",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.1/LXRXXL-0.5.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.5.0",
+          "size": 10266730,
+          "sha256": "bd48f7f33f9e8898a7cb6bd912d6c97dae1f3af44170c456c241ef7836486f08",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.0/LXRXXL-0.5.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-11"
+            }
+          ]
+        }
+      ],
+      "latest": "0.5.8",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/LXR02XXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "lxrxxl-bazzline",
+      "name": "LXRXXL BAZZLINE",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/LXRXXL-BAZZLINE",
+      "kind": "instrument",
+      "license": "LicenseRef-LXR02-Open",
+      "summary": "An 8-track bass synth: a variation of LXRXXL with bass voices inspired by the Erica Synths Bassline DB-01 on the LXR's oscillators (VCO/FM/wavetable, sub, swarm, drive, Polivoks or diode filter, accent, slide), the LXR-02 style sequencer with the DB-01's step functions, a tape/digital delay, a MIDI gate/duck, an 8-track mixer and sound / performance presets saved on the device. Three full-screen pages of artwork by Suns Kiefer. Not a DB-01; no Erica Synths code. Non-commercial license.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXRXXL-BAZZLINE/v0.2.2/docs/img/panel.png",
+      "style": "bass-synth",
+      "tags": [
+        "bass",
+        "acid",
+        "303",
+        "bassline",
+        "db-01",
+        "lxr",
+        "lxr-02",
+        "sequencer",
+        "delay",
+        "sidechain",
+        "mixer",
+        "presets"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.2.8",
+          "size": 16958933,
+          "sha256": "e88c3f427657ad9505081fae3f5b8547a135ad252bfc2f6ccbd849d8401c883a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.8/LXRXXL-BAZZLINE-0.2.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "version": "0.2.7",
+          "size": 16960452,
+          "sha256": "fc864163b80df8220a91d073c9074b6c89462758af2b083aa3ea0b6e7e07117c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.7/LXRXXL-BAZZLINE-0.2.7-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.6",
+          "size": 16912932,
+          "sha256": "819f4ac24a3ad744d26c256d6b37c16277f9d3b6c15998889105a23ba933f2d8",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.6/LXRXXL-BAZZLINE-0.2.6-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.5",
+          "size": 16927214,
+          "sha256": "4e840ebe2e78f19cb206906420b3bc7c9bcbd96f1e7239a200218badaaceeb9e",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.5/LXRXXL-BAZZLINE-0.2.5-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.4",
+          "size": 16928721,
+          "sha256": "07a8306a92264e67fbaf396b9bcb778330632c61e53c8d317225a0e3bc7240a7",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.4/LXRXXL-BAZZLINE-0.2.4-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.3",
+          "size": 16904076,
+          "sha256": "d34245057817ff52ae61c82922452bad0901da8f6d029ef56d656a09c7936c6a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.3/LXRXXL-BAZZLINE-0.2.3-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.2",
+          "size": 16903959,
+          "sha256": "17af2cf763d7abae445e26eedcfa93bec1f8266ac63b983ded5d6a63bdb69a8e",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.2/LXRXXL-BAZZLINE-0.2.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.1",
+          "size": 16904243,
+          "sha256": "3869e08a109062b024ff5859ca55839e3803964de84cb869834f09cb9e4deac0",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.1/LXRXXL-BAZZLINE-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "version": "0.2.0",
+          "size": 16912563,
+          "sha256": "c93001da8c0bff79e4298d323f9bfe7391f19f82a6366e9807c766d8d2dfed70",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.0/LXRXXL-BAZZLINE-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
+          "version": "0.1.0",
+          "size": 12355865,
+          "sha256": "2c044397d907889566c9bdc9efd915c3656b9763202c96d694cfbdd53d24f02f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.1.0/LXRXXL-BAZZLINE-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.2.8",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/LXRXXL-BAZZLINE",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "machinemodule",
       "name": "Machinemodule",
       "author": "sd88me",
@@ -4576,6 +4983,52 @@
         "validation": "listed-only"
       },
       "download": false
+    },
+    {
+      "id": "braids",
+      "name": "Macro Osc",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-macro-osc",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Macro Osc: a macro oscillator with 47 synthesis models, from Émilie Gillet's open-source Braids.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-macro-osc/v1.1.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "macro-oscillator",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 8394487,
+          "sha256": "c30f20316fa56f9fc8f31a59e0fd2fe71d59749b9f32d065a451bf9e175e2a33",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-macro-osc/releases/download/v1.1.0/SYN-Macro-Osc-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-macro-osc",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
     },
     {
       "id": "maschine-group",
@@ -4991,6 +5444,54 @@
       "download": true
     },
     {
+      "id": "warps",
+      "name": "Meta Mod",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-meta-mod",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Meta Mod: ring mod, folding, XOR, vocoder and frequency shifting as an insert effect; 12 presets, from Émilie Gillet's open-source Warps.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-meta-mod/v1.1.0/screenshots/page_0.png",
+      "style": "modulation",
+      "tags": [
+        "ring-mod",
+        "vocoder",
+        "frequency-shifter",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 1067786,
+          "sha256": "1f3d1ee318c6715634494946a72ec0998de72b19f2df3849b6c8eb9140a49b0d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-meta-mod/releases/download/v1.1.0/FX-Meta-Mod-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-meta-mod",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "midi-player",
       "name": "MIDI Player",
       "author": "saustin2010",
@@ -5140,6 +5641,53 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-jv880",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "elements",
+      "name": "Modal Voice",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-modal-voice",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Modal Voice: a modal synthesis voice you bow, blow and strike, with 12 presets, from Émilie Gillet's open-source Elements.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-modal-voice/v1.1.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "modal",
+        "physical-modelling",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 1241385,
+          "sha256": "48e8e46d50d44b778ed0ffb2a9c7c90ecdaa168896eca50b3d2b049a92e27062",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-modal-voice/releases/download/v1.1.0/SYN-Modal-Voice-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-modal-voice",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -6903,12 +7451,12 @@
     {
       "id": "percolator",
       "name": "Percolator",
-      "author": "Steve A",
+      "author": "saustin2010",
       "repo": "saustin2010/mpc-vst-percolator",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "Four-voice percussion synth laid out like the Erica Synths Pērkons HD-01 (three algorithms per voice, BBD delay, LFO to every knob), with envelope displays; plays the Pērkons' free kit packs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v1.2.0/screenshots/page_0.png",
+      "summary": "Four-voice percussion synth laid out like the Erica Synths Pērkons HD-01 (three algorithms per voice, BBD delay, LFO to every knob), with envelope displays; each voice on its own MIDI channel with the Pērkons' CCs, and on its own track with Percolator OUT; plays the Pērkons' free kit packs.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.0.0/screenshots/page_1.png",
       "style": "drum-machine",
       "tags": [
         "drums",
@@ -6920,6 +7468,31 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "2.0.1",
+          "size": 8054108,
+          "sha256": "929f7e8539ffa52dbee71159e0a99f37c1f139bdcf848b2e7ff3f1ae25ea2a01",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-percolator/releases/download/v2.0.1/DRUM-Percolator-2.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
         {
           "version": "2.0.0",
           "size": 8053913,
@@ -7022,7 +7595,85 @@
           "tested": []
         }
       ],
-      "latest": "2.0.0",
+      "latest": "2.0.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-percolator",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "percolator-out",
+      "name": "Percolator OUT",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-percolator",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Companion to Percolator: plays one of its OUT 1-4 on its own MPC track (an audio track will do), so a voice gets that track's fader, inserts and outputs, in time with the kit. Needs Percolator 2.0.0 or later in the same project.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.0.0/percolatorout/screenshots/page_0.png",
+      "style": "utility",
+      "tags": [
+        "routing",
+        "multi-out",
+        "drum"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "2.0.1",
+          "size": 150308,
+          "sha256": "e877554ef89c8d605afe56c44c06ed2584f3120f3b0cad43adc2cfcacb3ffd44",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-percolator/releases/download/percolator-out-v2.0.1/FX-Percolator-OUT-2.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
+        {
+          "version": "2.0.0",
+          "size": 150299,
+          "sha256": "6fab4fe96565f09f72adf74aa500fb34c982cdd09739da59ddc654949c3799e0",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-percolator/releases/download/percolator-out-v2.0.0/FX-Percolator-OUT-2.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        }
+      ],
+      "latest": "2.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
@@ -7483,11 +8134,11 @@
       "id": "raffosynth",
       "name": "RaffoSynth",
       "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-moog",
+      "repo": "saustin2010/mpc-vst-raffosynth",
       "kind": "instrument",
       "license": "MIT",
       "summary": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-moog/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-raffosynth/v1.2.0/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "minimoog",
@@ -7499,15 +8150,15 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.1.0",
-          "size": 6703698,
-          "sha256": "361ee2541ce4d49647720773590967348893343d2459673791818c4acec07221",
+          "version": "1.2.0",
+          "size": 6707238,
+          "sha256": "476ea18ceb2f2bcedf0119ae0879ed2729ccfbca2898bb03e1cf9afefb7486f3",
           "max_glibc": "2.29",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.1.0/SYN-Moog-1.1.0-mpc-armv7.zip",
+          "url": "https://github.com/saustin2010/mpc-vst-raffosynth/releases/download/v1.2.0/SYN-RaffoSynth-1.2.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -7515,32 +8166,19 @@
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 6697233,
-          "sha256": "4ef30df4772c0fc1eff578f528a4e19a60393fb3aeeb7dcfae6f5581d195252f",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-moog/releases/download/v1.0.0/SYN-Moog-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-moog",
+        "repository": "saustin2010/mpc-vst-raffosynth",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -7598,16 +8236,15 @@
     },
     {
       "id": "rings",
-      "name": "Rings",
+      "name": "Resonator",
       "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-rings",
+      "repo": "saustin2010/mpc-vst-resonator",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "Mutable Instruments Rings: seven resonator models (strings, modal, FM, chords) strummed by the notes you play; 14 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-rings/v1.0.0/screenshots/page_0.png",
+      "summary": "Resonator: seven resonator models (strings, modal, FM, chords) strummed by the notes you play; 14 presets, from Émilie Gillet's open-source Rings.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator/v1.1.0/screenshots/page_0.png",
       "style": "synth",
       "tags": [
-        "mutable-instruments",
         "resonator",
         "physical-modelling",
         "eurorack"
@@ -7616,34 +8253,15 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.1",
-          "size": 4327578,
-          "sha256": "a1ab989387b1c5fa1e422da98ef8139b853fc72042eaf80d1828bf16f9d20a72",
+          "version": "1.1.0",
+          "size": 4329335,
+          "sha256": "4a5d37766fb17349fd6601033702254392592a7a9fae2ba8080c8adb54743715",
           "max_glibc": "2.27",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/saustin2010/mpc-vst-rings/releases/download/v1.0.1/SYN-Rings-1.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 4327472,
-          "sha256": "051bfa7643fba02626849a5dc4adcd8d140fbb3585356dc5a91820f5500b76fc",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-rings/releases/download/v1.0.0/SYN-Rings-1.0.0-mpc-armv7.zip",
+          "url": "https://github.com/saustin2010/mpc-vst-resonator/releases/download/v1.1.0/SYN-Resonator-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -7654,10 +8272,10 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-rings",
+        "repository": "saustin2010/mpc-vst-resonator",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -7665,16 +8283,15 @@
     },
     {
       "id": "rings-fx",
-      "name": "Rings FX",
+      "name": "Resonator FX",
       "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-ringsfx",
+      "repo": "saustin2010/mpc-vst-resonator-fx",
       "kind": "effect",
       "license": "MIT",
-      "summary": "Rings as an insert effect: the track's audio strums the resonator, turning drums and loops into tuned strings; 12 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-ringsfx/v1.0.0/screenshots/page_0.png",
+      "summary": "Resonator FX: Resonator as an insert effect, the track's audio strums it, turning drums and loops into tuned strings; 12 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator-fx/v1.1.0/screenshots/page_0.png",
       "style": "resonator",
       "tags": [
-        "mutable-instruments",
         "rings",
         "resonator",
         "eurorack"
@@ -7683,34 +8300,15 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.1",
-          "size": 1242817,
-          "sha256": "1206f24952472ba02551f76af64053f102812515105f01d14c892ea3e053884a",
+          "version": "1.1.0",
+          "size": 1243349,
+          "sha256": "e1d1caea21fe6c2961f205834e433dd919c3364efe7e0b2ddab6ca31d9d311ff",
           "max_glibc": "2.27",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/saustin2010/mpc-vst-ringsfx/releases/download/v1.0.1/FX-Rings-FX-1.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 1242678,
-          "sha256": "210e19fe18b943f77f346ad8ab7d999541f16ca96ea225cf3e37b444648d77cf",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-ringsfx/releases/download/v1.0.0/FX-Rings-FX-1.0.0-mpc-armv7.zip",
+          "url": "https://github.com/saustin2010/mpc-vst-resonator-fx/releases/download/v1.1.0/FX-Resonator-FX-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -7721,10 +8319,10 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-ringsfx",
+        "repository": "saustin2010/mpc-vst-resonator-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -7858,6 +8456,44 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.0",
+          "size": 6753738,
+          "sha256": "cce9ad9c7d297dc7b4c7345ebbf67cfc315d1d90827e9b7961c8e303e735ca6a",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/djokenzi/steprunner-8/releases/download/v1.1.0/StepRunner-8-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.0.2",
+          "size": 6733490,
+          "sha256": "e62b4a026534abdfde04b533bf3131cc292f8b55f16ebe80c1f224d00f764ad8",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/djokenzi/steprunner-8/releases/download/v1.0.2/StepRunner-8-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 6661351,
           "sha256": "e9883b35580b42c9c4f2caf39f97dd1acf3daf9eb9a5c4603a0502e9f1ce97ee",
@@ -7883,7 +8519,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "djokenzi/steprunner-8",
@@ -7895,7 +8531,7 @@
     {
       "id": "stevequencer",
       "name": "Stevequencer",
-      "author": "Steve A",
+      "author": "saustin2010",
       "repo": "saustin2010/mpc-vst-stevequencer",
       "kind": "instrument",
       "license": "MIT",
@@ -7943,7 +8579,7 @@
     {
       "id": "stevequencer-16",
       "name": "Stevequencer 16",
-      "author": "Steve A",
+      "author": "saustin2010",
       "repo": "saustin2010/mpc-vst-stevequencer16",
       "kind": "instrument",
       "license": "MIT",
@@ -8589,11 +9225,10 @@
       "repo": "saustin2010/mpc-vst-verglas",
       "kind": "effect",
       "license": "MIT",
-      "summary": "Mutable Instruments Clouds as an insert effect: granular, stretch, looper and spectral modes, freeze; 12 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-verglas/v1.0.0/screenshots/page_0.png",
+      "summary": "Verglas: granular, stretch, looper and spectral modes and freeze as an insert effect; 12 presets, from Émilie Gillet's open-source Clouds.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-verglas/v1.1.0/screenshots/page_0.png",
       "style": "granular",
       "tags": [
-        "mutable-instruments",
         "clouds",
         "granular",
         "texture",
@@ -8602,6 +9237,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.0",
+          "size": 657553,
+          "sha256": "24b253fe561e38ef6b9acca1cde1938399f2e90ec8192bb3c8eec2dc5ee3b8e7",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-verglas/releases/download/v1.1.0/FX-Verglas-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.0.0",
           "size": 657107,
@@ -8622,7 +9276,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-verglas",
@@ -8682,55 +9336,6 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
-      "id": "warps",
-      "name": "Warps",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-warps",
-      "kind": "effect",
-      "license": "MIT",
-      "summary": "Mutable Instruments Warps as an insert effect: ring mod, folding, XOR, vocoder and frequency shifting; 12 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-warps/v1.0.0/screenshots/page_0.png",
-      "style": "modulation",
-      "tags": [
-        "mutable-instruments",
-        "ring-mod",
-        "vocoder",
-        "frequency-shifter",
-        "eurorack"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 1067486,
-          "sha256": "f712c967ef19bfb5f1ea9475f6e5f9027871c6c5be6ac6e21e8388bdd0500423",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-warps/releases/download/v1.0.0/FX-Warps-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-warps",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
