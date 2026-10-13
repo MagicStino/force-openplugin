@@ -1,18 +1,18 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-13T00:48:00+00:00",
+  "generated": "2026-10-13T14:21:04+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
       "id": "open303",
       "name": "303",
       "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-303",
+      "repo": "saustin2010/mpc-vst-open303",
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-303/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-open303/v1.0.0/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "tb-303",
@@ -24,15 +24,15 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.0",
-          "size": 1974142,
-          "sha256": "e99d5024d7b14ec328b9dc4367230505d55175268bf701e6b3341c5c77bcfe49",
+          "version": "1.1.0",
+          "size": 1974899,
+          "sha256": "8703144b3811fd9e670611d6ab97677ed8e45be8d966263d6d3eeb7374f5f17f",
           "max_glibc": "2.29",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/saustin2010/mpc-vst-303/releases/download/v1.0.0/SYN-303-1.0.0-mpc-armv7.zip",
+          "url": "https://github.com/saustin2010/mpc-vst-open303/releases/download/v1.1.0/SYN-Open303-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -44,15 +44,15 @@
             {
               "device": "MPC Live II",
               "firmware": "3.9.1",
-              "date": "2026-10-08"
+              "date": "2026-10-13"
             }
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-303",
+        "repository": "saustin2010/mpc-vst-open303",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -2075,7 +2075,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.2/Chordsmith-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -2377,6 +2379,7 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
@@ -2410,6 +2413,7 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
@@ -3126,6 +3130,62 @@
       }
     },
     {
+      "id": "drips",
+      "name": "Drips",
+      "author": "Padbangers",
+      "repo": "padbangers/drips",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Drips: a granular texture synthesizer with four recording qualities, a delay and beat slicer, tempo-synced seeding, wavetables and a modulation page, from Émilie Gillet's open-source Beads.",
+      "screenshot": "https://raw.githubusercontent.com/padbangers/drips/85683cebf7b4fcf1716ed6f32faa89041768b24e/docs/drips-main.png",
+      "style": "granular",
+      "tags": [
+        "granular",
+        "texture",
+        "delay",
+        "beat-slicer",
+        "wavetable",
+        "reverb",
+        "tempo-sync"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 3336602,
+          "sha256": "4362a35b664c369ffbca05650518b190227252a9671625e980c6ae9fc1656b5b",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 9.9,
+            "max_pct": 11.1,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/padbangers/drips/releases/download/drips-v1.0.0/Drips-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai MPC X",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "padbangers/drips",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "grids",
       "name": "Drum Map",
       "author": "saustin2010",
@@ -3260,7 +3320,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.0/Dub-Station-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC One",
@@ -3285,7 +3347,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v0.9.0/Dub-Station-0.9.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC One",
@@ -3479,6 +3543,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
@@ -3504,6 +3569,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
@@ -3720,43 +3786,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.0",
-          "size": 6954675,
-          "sha256": "c09d22a5347e4c9324c9e8bf3ace1fb79f56a237fc851554a3040e536effff9c",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 3.8,
-            "max_pct": 6.6,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/glass-spheres/releases/download/glass-spheres-v1.0.0/Glass-Spheres-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-04"
-            }
-          ]
-        }
-      ],
+      "versions": [],
       "latest": "1.0.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "FullPace/glass-spheres",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -4106,7 +4142,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.2/Keyscope-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -4210,6 +4248,7 @@
           "yanked": false,
           "warnings": [
             "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -4283,6 +4322,36 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.0",
+          "size": 23478746,
+          "sha256": "902cbe16ef7fc413819c88f8424fa489e919a40a0ae6c13bf0d48dc45e1bffad",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-hz/releases/download/v1.2.0/Liminal-Hz-1.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/Gm0rb - VST - Liminal Hz/liminal_hz.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
           "version": "1.1.0",
           "size": 23488815,
           "sha256": "1ef153e5e929c790d49b1b61c2729f4648ca51369de66cbbe7eadd1e292d5556",
@@ -4337,7 +4406,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-hz",
@@ -4975,11 +5044,11 @@
       "id": "maschine-group",
       "name": "Maschine Group",
       "author": "mmiroshnikov",
-      "repo": "sd88me/mpc-vst-plugins",
+      "repo": "mmiroshnikov/mpc-maschine-group",
       "kind": "instrument",
       "license": "MIT",
       "summary": "Opens a Native Instruments Maschine 2 drum group (.mxgrp) and plays its pads and stored patterns, with a three-page touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-plugins/main/ports/maschine/docs/group.png",
+      "screenshot": "https://raw.githubusercontent.com/mmiroshnikov/mpc-maschine-group/main/docs/group.png",
       "style": "sampler",
       "tags": [
         "drums",
@@ -4989,13 +5058,32 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [],
-      "latest": null,
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 172677,
+          "sha256": "fe6116fffee1405d93a8f8023eb166ddd75691b215b5a4b61fa27a52aae4e623",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mmiroshnikov/mpc-maschine-group/releases/download/maschine-group-v1.0.0/Maschine-Group-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/mmiroshnikov - VST - Maschine Group/maschine_group.so calls runs programs (popen); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.0.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "sd88me/mpc-vst-plugins",
+        "repository": "mmiroshnikov/mpc-maschine-group",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "metadata-validated"
       }
     },
     {
@@ -5017,6 +5105,34 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.7",
+          "size": 3193286,
+          "sha256": "1a570166aedb92ceebbff64abc44832d655d0c1d4d8f2b6537cb7bd8c30e395e",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 1.2,
+            "max_pct": 1.9,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-sequencer-vst-v1.0.7/Maze-Sequencer-1.0.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        },
         {
           "version": "1.0.6",
           "size": 3219043,
@@ -5198,7 +5314,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
@@ -5225,6 +5341,34 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.4",
+          "size": 4373239,
+          "sha256": "b39c13054e4ecbe33314d2b60634ab530bdbafbf6ef7c30b1400c05e415e23a0",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 9.8,
+            "max_pct": 11.2,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-voice-vst-v1.0.4/Maze-Voice-1.0.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-10"
+            }
+          ]
+        },
         {
           "version": "1.0.3",
           "size": 4394827,
@@ -5325,7 +5469,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.3",
+      "latest": "1.0.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
@@ -5504,7 +5648,9 @@
           "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.7/JV-880-1.0.7-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -6651,6 +6797,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/jacob-sabella - VST - NAM/nam_vst.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -7148,218 +7295,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.6",
-          "size": 4034678,
-          "sha256": "18f8a48194bd57ec1c05c099e59c0b2b79f56fac67a88747e17930a300f1c0f0",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.4,
-            "max_pct": 10.1,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.6/Overcast-1.0.6-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-04"
-            }
-          ]
-        },
-        {
-          "version": "1.0.5",
-          "size": 4034469,
-          "sha256": "6e786330c99b8020413b1aeafa433426841a4f7e8ac5fc1fb0b0aef9f57531f8",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.5,
-            "max_pct": 10.3,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.5/Overcast-1.0.5-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-04"
-            }
-          ]
-        },
-        {
-          "version": "1.0.4",
-          "size": 3998380,
-          "sha256": "6965e87420bbb0ddf96c0ce4ace49e2cf48bf147b1e27253e744fd03f666faa9",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.6,
-            "max_pct": 11.0,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.4/Overcast-1.0.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-04"
-            }
-          ]
-        },
-        {
-          "version": "1.0.3",
-          "size": 3845808,
-          "sha256": "52b1b2562ba10dddf5b4f080af467960321cb4a3a277ac2dab8d9f512db912e6",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.9,
-            "max_pct": 11.8,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.3/Overcast-1.0.3-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-04"
-            }
-          ]
-        },
-        {
-          "version": "1.0.2",
-          "size": 4911371,
-          "sha256": "1ae55bc110938a4cee3e751e8546861d7848b8962793301a4e414e2d23c05e8d",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.6,
-            "max_pct": 10.9,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.2/Overcast-1.0.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-03"
-            }
-          ]
-        },
-        {
-          "version": "1.0.1",
-          "size": 4582012,
-          "sha256": "93866fa1ba7e471451ab3d847127dfedd4211fdc53d31e7bd45434f9a9d0bb03",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 9.3,
-            "max_pct": 11.3,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.1/Overcast-1.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-03"
-            }
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "size": 4579713,
-          "sha256": "575bb715c95983c119d2c03f7de80e1508c335bd79a7deea78f667c639a238f6",
-          "max_glibc": "2.34",
-          "cpu": {
-            "p99_pct": 9.8,
-            "max_pct": 11.3,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/FullPace/overcast/releases/download/overcast-v1.0.0/Overcast-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC X",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-03"
-            }
-          ]
-        }
-      ],
+      "versions": [],
       "latest": "1.0.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "FullPace/overcast",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -7921,7 +7863,9 @@
           "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1-gen2-test/Profit-08-0.1.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -8093,11 +8037,11 @@
       "id": "rampage",
       "name": "Rampage",
       "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-rampage",
+      "repo": "saustin2010/mpc-vst-dual-slope",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
       "summary": "Befaco Rampage: a dual slope generator (envelopes, LFOs, slew) whose outputs go out of its own MIDI port as CCs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-rampage/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-dual-slope/v1.0.0/screenshots/page_0.png",
       "style": "modulation",
       "tags": [
         "befaco",
@@ -8111,15 +8055,15 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.0",
-          "size": 3295790,
-          "sha256": "95e8beca3883a65f2eacfe1c548badf5ffccf1a77ce8f6d3d43ff2bc912c89cd",
+          "version": "1.1.0",
+          "size": 3296885,
+          "sha256": "3a9c2b31b072c68ee7e92f37f03f5c7335c0ed41f37700f1eb9e167ce59b1deb",
           "max_glibc": "2.27",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/saustin2010/mpc-vst-rampage/releases/download/v1.0.0/SEQ-Rampage-1.0.0-mpc-armv7.zip",
+          "url": "https://github.com/saustin2010/mpc-vst-dual-slope/releases/download/v1.1.0/SEQ-Dual-Slope-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -8127,13 +8071,19 @@
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-rampage",
+        "repository": "saustin2010/mpc-vst-dual-slope",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -8556,6 +8506,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/johnny - VST - Stream/stream.so calls network (sendto, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -9070,7 +9021,9 @@
           "url": "https://github.com/stampman3000-jpg/mpc-tributary/releases/download/v1.1.0/Tributary-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC One",
