@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-14T05:01:33+00:00",
+  "generated": "2026-10-14T12:03:19+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3579,13 +3579,19 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.8/Euclidier-1.0.8-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
+            }
+          ]
         },
         {
           "version": "1.0.7",
@@ -3775,7 +3781,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.7",
+      "latest": "1.0.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-euclidier",
