@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-14T17:19:08+00:00",
+  "generated": "2026-10-14T21:47:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3790,6 +3790,60 @@
       }
     },
     {
+      "id": "evil-tuner-xxl",
+      "name": "Evil Tuner XXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/Evil-Tuner-XXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Internet radio (Radio Browser: 30,000+ stations by genre, country or search), a phone over Wi-Fi (Roc Droid on Android) or AirPlay (iPhone) played into an MPC track, through an 8-voice granular engine, a multimode filter, eleven character stages, a saturator, an Erica-style delay, plate / reverse / room reverb with shimmer, a 16-step trance gate, stutter, MIDI duck, a tempo-synced looper with a rolling 3-minute tape and stretch renders, and three LFOs. Inspired by the concept of the Endorphin.es Evil Pet (no affiliation, no code). Needs a network.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/Evil-Tuner-XXL/main/docs/img/RADIO.png",
+      "style": "radio-granular",
+      "tags": [
+        "radio",
+        "internet-radio",
+        "granular",
+        "airplay",
+        "roc",
+        "phone",
+        "looper",
+        "trance-gate",
+        "stutter",
+        "delay",
+        "reverb",
+        "lo-fi",
+        "sampling"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 10842810,
+          "sha256": "a9630227d39fff74c47482ed7d94ee32c814a4c1a12e34c63e5448e06c8604de",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Evil-Tuner-XXL/releases/download/v0.1.0/Evil-Tuner-XXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/ANDREALPHEUS - VST - Evil Tuner XXL/evil_tuner_xxl.so calls network (getaddrinfo); runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/Evil-Tuner-XXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "fizzik",
       "name": "Fizzik",
       "author": "saustin2010",
@@ -3850,6 +3904,55 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-fizzik",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "force-link-audio",
+      "name": "Force Link Audio",
+      "author": "Mac Digi / Rare Data",
+      "repo": "macdigi/force-link-audio",
+      "kind": "addin",
+      "license": "GPL-2.0-or-later",
+      "summary": "Publish the Force stereo main mix to Link Audio receivers on your trusted LAN while staying standalone. Disable the legacy Force Link Audio addon first. Off until enabled in settings; no remote-control server. Other MPC hardware is unverified.",
+      "screenshot": "https://github.com/macdigi/force-link-audio/releases/download/v1.1.0/force-link-audio-card.png",
+      "style": "network-audio",
+      "tags": [
+        "link-audio",
+        "network-audio",
+        "recording",
+        "compa"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 262789,
+          "sha256": "fb60eedca879c97fbd5a8aaa442d50397fa1ea221524957e7306b8aaace8df68",
+          "max_glibc": "2.15",
+          "cpu": null,
+          "url": "https://github.com/macdigi/force-link-audio/releases/download/v1.1.0/Force-Link-Audio-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "forceLinkAudio calls network (bind, recv, recvfrom, sendto, socket): flagged for manual review (the author can explain why)",
+            "forceLinkAudioAddin.so calls network (sendto, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-14"
+            }
+          ]
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "macdigi/force-link-audio",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4505,6 +4608,71 @@
       }
     },
     {
+      "id": "loop-saboteurxxl",
+      "name": "Loop-SaboteurXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/Loop-SaboteurXXL",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "A port of Loop Saboteur by Stephen McLeod Blythe (clickysteve): a glitch / chop / beat-slicer that records the last bars and sabotages them on the MPC tempo with retriggered, pitched, reversed, stretched and crushed slices. Eight Acts, a 64-step sequencer with trig conditions, ratchets and p-locks, four MODs per Act, eleven output stages, 19 factory presets, a big readout and 16 banks. Art and build by Claude.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/Loop-SaboteurXXL/v0.1.0/docs/img/3-acts-seq.png",
+      "style": "glitch",
+      "tags": [
+        "glitch",
+        "slicer",
+        "stutter",
+        "beat-repeat",
+        "chopper",
+        "bitcrusher",
+        "sequencer",
+        "p-lock",
+        "lfo",
+        "lo-fi",
+        "tape"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 8629283,
+          "sha256": "72cbdeff0b938c6502287e4a6ab3fc3b38217f6098b1f38bfc0ccb008c810dab",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.1/Loop-SaboteurXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 8628307,
+          "sha256": "add8723421a915255ec0aa5bb259d44ce7ed8ce1680c1a1562953b71040076bb",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.0/Loop-SaboteurXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/Loop-SaboteurXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "lucky-dip",
       "name": "Lucky Dip",
       "author": "sd88me",
@@ -5097,7 +5265,7 @@
             "3.x"
           ],
           "url": "https://github.com/sunskiefer/LXRXXL-ZYNTH/releases/download/v0.2.0/LXRXXL-ZYNTH-0.2.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
@@ -5132,7 +5300,7 @@
           ]
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXRXXL-ZYNTH",
@@ -9066,40 +9234,6 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.1.2",
-          "size": 308787369,
-          "sha256": "be533d325b998963e8c39372374f49d629bcad8cf674c13904368492d519d99c",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.2/SurgeXXL-0.1.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.1.1",
-          "size": 308413238,
-          "sha256": "ae8081a4c8fbb49238fa3c3551de26040c5a31eca702a4058fc33bb1c912a7e2",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.1/SurgeXXL-0.1.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
           "version": "0.1.0",
           "size": 308412450,
           "sha256": "67a57117391489414b86d8535e2a3027a514d599d34ecbf10c8f4a245bfead7a",
@@ -9117,7 +9251,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.2",
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/SurgeXXL",
