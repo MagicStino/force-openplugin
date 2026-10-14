@@ -1,61 +1,7 @@
 {
-  "date": "2026-10-13T22:52:30+00:00",
+  "date": "2026-10-14T05:01:33+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
-    {
-      "id": "open303",
-      "name": "303",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-open303",
-      "kind": "instrument",
-      "license": "GPL-3.0-only",
-      "summary": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-open303/v1.0.0/screenshots/page_0.png",
-      "style": "synth",
-      "tags": [
-        "tb-303",
-        "acid",
-        "bass",
-        "monophonic"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.1.0",
-          "size": 1974899,
-          "sha256": "8703144b3811fd9e670611d6ab97677ed8e45be8d966263d6d3eeb7374f5f17f",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-open303/releases/download/v1.1.0/SYN-Open303-1.1.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live II",
-              "firmware": "3.9.1",
-              "date": "2026-10-13"
-            }
-          ]
-        }
-      ],
-      "latest": "1.1.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-open303",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
     {
       "id": "tr-6w6",
       "name": "6W6",
@@ -615,6 +561,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
@@ -2695,6 +2642,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it",
             "payload/vst/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
@@ -2997,6 +2945,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
@@ -3333,6 +3282,62 @@
       "download": true
     },
     {
+      "id": "rampage",
+      "name": "Dual Slope",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-dual-slope",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Dual Slope, based on Befaco's Rampage VCV Rack module: two rise-and-fall generators (envelopes, LFOs, slew) whose outputs go out of its own MIDI port as CCs.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-dual-slope/v1.1.0/screenshots/page_0.png",
+      "style": "modulation",
+      "tags": [
+        "vcv",
+        "envelope",
+        "lfo",
+        "slew",
+        "midi-cc",
+        "eurorack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 3296885,
+          "sha256": "3a9c2b31b072c68ee7e92f37f03f5c7335c0ed41f37700f1eb9e167ce59b1deb",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-dual-slope/releases/download/v1.1.0/SEQ-Dual-Slope-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-dual-slope",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "dub-force-siren",
       "name": "Dub Force Siren",
       "author": "no3z",
@@ -3607,6 +3612,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.8",
+          "size": 1665483,
+          "sha256": "a8cc22327bbb715bc23c36b54a2b0dcb2b724c796472bc9aee296b1fce1b1927",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-euclidier/releases/download/euclidier-vst-v1.0.8/Euclidier-1.0.8-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
         {
           "version": "1.0.7",
           "size": 1664869,
@@ -4619,7 +4643,7 @@
       "repo": "sunskiefer/LXR02XXL",
       "kind": "instrument",
       "license": "LicenseRef-LXR02-Open",
-      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. Inspired by the Erica Synths LXR-02. The whole panel on one page (artwork by Suns Kiefer), the LXR's voices with PWM and an FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets. Non-commercial license.",
+      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. Inspired by the Erica Synths LXR-02. The whole panel on one page (artwork by Suns Kiefer), the LXR's voices with PWM and an FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/v0.5.8/docs/img/page.png",
       "style": "drum-machine",
       "tags": [
@@ -4841,7 +4865,7 @@
       "repo": "sunskiefer/LXRXXL-BAZZLINE",
       "kind": "instrument",
       "license": "LicenseRef-LXR02-Open",
-      "summary": "An 8-track bass synth: a variation of LXRXXL with bass voices inspired by the Erica Synths Bassline DB-01 on the LXR's oscillators (VCO/FM/wavetable, sub, swarm, drive, Polivoks or diode filter, accent, slide), the LXR-02 style sequencer with the DB-01's step functions, a tape/digital delay, a MIDI gate/duck, an 8-track mixer and sound / performance presets saved on the device. Three full-screen pages of artwork by Suns Kiefer. Not a DB-01; no Erica Synths code. Non-commercial license.",
+      "summary": "An 8-track bass synth: a variation of LXRXXL with bass voices inspired by the Erica Synths Bassline DB-01 on the LXR's oscillators, the LXR-02 style sequencer with the DB-01's step functions, a tape/digital delay, a MIDI gate/duck, an 8-track mixer and sound / performance presets saved on the device.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXRXXL-BAZZLINE/v0.2.2/docs/img/panel.png",
       "style": "bass-synth",
       "tags": [
@@ -5074,6 +5098,96 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXRXXL-BAZZLINE",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "lxrxxl-zynth",
+      "name": "LXRXXL ZYNTH",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/LXRXXL-ZYNTH",
+      "kind": "instrument",
+      "license": "LicenseRef-LXR02-Open",
+      "summary": "An experimental synth: 19 coded voices on unconventional maths. A Lorenz-attractor CHAOS, a Hilbert-transform frequency SHIFTer, Euclidean rhythms and sine-wave melodies, and voices coded after the Yamaha DX7, the Casio CZ, the Minimoog, Hammond tonewheels, NES / console chips, Mutable Instruments Braids and Plaits, the LXR-02's drum voices and the Erica Synths DB-01 bass via LXRXXL BAZZLINE, plus ANALOG, FM4, VOICE, GRAIN, NOISE, DRONE, TEXTURE and FX. Eight tracks, each voice with 20 controls and 8 starter sounds, an LXR-02 style sequencer with a melodic STEP RANDOM and a voice-aware SOUND RANDOM, a tape/digital delay, an 8-track mixer, presets; ",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXRXXL-ZYNTH/v0.2.0/docs/img/panel.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "groovebox",
+        "fm",
+        "dx7",
+        "wavetable",
+        "braids",
+        "plaits",
+        "physical-modelling",
+        "granular",
+        "organ",
+        "chiptune",
+        "lxr",
+        "lxr-02",
+        "sequencer",
+        "delay",
+        "sidechain",
+        "experimental",
+        "chaos",
+        "frequency-shifter",
+        "drone",
+        "fx"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "size": 23514779,
+          "sha256": "99bd0b63b179e62f9192e9af7a18b0712db5b73cd2667ebf00364841b00c7e28",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-ZYNTH/releases/download/v0.2.0/LXRXXL-ZYNTH-0.2.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 20034641,
+          "sha256": "61d67acfb28b6ddaf88b78ce4dbeff6885ac8c1d32a8aa95c2f46c0b677ba568",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-ZYNTH/releases/download/v0.1.0/LXRXXL-ZYNTH-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/LXRXXL-ZYNTH",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -7274,6 +7388,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
@@ -7302,6 +7417,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
@@ -7324,6 +7440,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
@@ -7346,6 +7463,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
             "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
@@ -7356,6 +7474,60 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "B0ss-M/MrHighMan",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "open303",
+      "name": "Open303",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-open303",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-open303/v1.1.0/screenshots/page_0.png",
+      "style": "synth",
+      "tags": [
+        "tb-303",
+        "acid",
+        "bass",
+        "monophonic"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.1.0",
+          "size": 1974899,
+          "sha256": "8703144b3811fd9e670611d6ab97677ed8e45be8d966263d6d3eeb7374f5f17f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-open303/releases/download/v1.1.0/SYN-Open303-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-13"
+            }
+          ]
+        }
+      ],
+      "latest": "1.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-open303",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -8184,62 +8356,6 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-raffosynth",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
-      "id": "rampage",
-      "name": "Rampage",
-      "author": "saustin2010",
-      "repo": "saustin2010/mpc-vst-dual-slope",
-      "kind": "instrument",
-      "license": "GPL-3.0-or-later",
-      "summary": "Befaco Rampage: a dual slope generator (envelopes, LFOs, slew) whose outputs go out of its own MIDI port as CCs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-dual-slope/v1.0.0/screenshots/page_0.png",
-      "style": "modulation",
-      "tags": [
-        "befaco",
-        "envelope",
-        "lfo",
-        "slew",
-        "midi-cc",
-        "eurorack"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.1.0",
-          "size": 3296885,
-          "sha256": "3a9c2b31b072c68ee7e92f37f03f5c7335c0ed41f37700f1eb9e167ce59b1deb",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/saustin2010/mpc-vst-dual-slope/releases/download/v1.1.0/SEQ-Dual-Slope-1.1.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live II",
-              "firmware": "3.9.1",
-              "date": "2026-10-13"
-            }
-          ]
-        }
-      ],
-      "latest": "1.1.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "saustin2010/mpc-vst-dual-slope",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
