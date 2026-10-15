@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-15T11:39:57+00:00",
+  "date": "2026-10-15T14:19:49+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -5542,6 +5542,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-13"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-15"
             }
           ]
         },
@@ -5998,6 +6003,44 @@
       "download": true
     },
     {
+      "id": "microfreeze",
+      "name": "Microfreeze",
+      "author": "MagicStino",
+      "summary": "Experimental independent synth: 16 oscillator prototypes, four-voice paraphony and a 5x7 modulation matrix. Original sound equivalence and full preset compatibility are unverified.",
+      "license": "MIT",
+      "kind": "instrument",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "cleanroom",
+        "experimental",
+        "force",
+        "armv7"
+      ],
+      "repo": "MagicStino/microfreeze",
+      "screenshot": "",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.1.0/Microfreeze-0.1.0-mpc-armv7.zip",
+          "sha256": "74f3944d4caa4e6eba4c0629a6a2c3ea8b0945d329ca1ff5b14c4f782663463a",
+          "size": 63257,
+          "channel": "stable",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "https://github.com/MagicStino/microfreeze/blob/main/openplugin.json",
+        "repository": "MagicStino/microfreeze",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "midi-player",
       "name": "MIDI Player",
       "author": "saustin2010",
@@ -6255,6 +6298,11 @@
           "tested": [
             {
               "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-15"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-15"
             }
