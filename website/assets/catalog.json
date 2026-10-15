@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-14T21:47:00+00:00",
+  "date": "2026-10-15T04:50:09+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -5622,6 +5622,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-10"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
             }
           ]
         },
@@ -5779,6 +5784,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-10"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
             }
           ]
         },
@@ -6068,7 +6078,18 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
+            },
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
+            }
+          ]
         },
         {
           "version": "1.0.6",
@@ -6186,6 +6207,64 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-modal-voice",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "model-72",
+      "name": "Model-72",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-model72",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "A port of Idle Foundry's CA-72, a circuit-modelled 1970s monosynth: three oscillators, the ladder filter and contours, mono, poly or unison with stereo and 19 presets. LO is the fitted light model; HI runs the circuit's own filter in real time.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-model72/main/docs/img/mixer_filter.png",
+      "style": "synth",
+      "tags": [
+        "analog",
+        "mono",
+        "bass",
+        "circuit-model",
+        "stereo",
+        "presets"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 33102087,
+          "sha256": "92b8736f424ec54b5735feb4aa3599e77feae8b99bc46cf9d98ad486d64db1cd",
+          "max_glibc": "2.30",
+          "cpu": {
+            "p99_pct": 69.5,
+            "max_pct": 77.6,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-model72/releases/download/model72-v1.0.0/Model-72-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Model-72/model72.so calls network (bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execvp, fork, posix_spawnp); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-15"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-model72",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -6773,7 +6852,7 @@
       "repo": "sd88me/mpc-addin-skipback",
       "kind": "addin",
       "license": "MIT",
-      "summary": "Records the main output all the time and saves the last 30 to 60 seconds as a WAV when you double-press a hardware button (Rec Arm on a Force; Overdub, or a button you teach it, on other models). Experimental: tested on a Force only.",
+      "summary": "Records the main output all the time and saves the last 30 to 60 seconds as a WAV when you double-press a hardware button (Rec Arm on a Force; Overdub, or a button you teach it, on other models). Tested on a Gen1 Force; other models are unverified.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-addin-skipback/dc82602b2a05354d42445c8a330fb92a864892fb/docs/img/skipback.png",
       "style": "utility",
       "tags": [
@@ -6786,6 +6865,24 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.6.0",
+          "size": 28568,
+          "sha256": "f19eb1ed9fd04c6cd8487e9cda7140aae1aee06e9074c375151bf61b6be781be",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.6.0/MPC-Skipback-0.6.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-15"
+            }
+          ]
+        },
         {
           "version": "0.5.0",
           "size": 27254,
@@ -6835,7 +6932,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.6.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-addin-skipback",
@@ -8354,19 +8451,57 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.1.1",
-          "size": 4677012,
-          "sha256": "04019f458f4891ccb158c77aab4e6739599038ca94d5ff157524afe8ea0a171d",
+          "version": "0.1.2",
+          "size": 4677281,
+          "sha256": "b87a7d89dce61fee9a0e54cd0cdfc2872d8a2c2d7eabdbaf8668ad9a51730f30",
           "max_glibc": "2.27",
-          "cpu": null,
+          "cpu": {
+            "p99_pct": 34.2,
+            "max_pct": 36.3,
+            "verdict": "WARN"
+          },
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1-gen2-test/Profit-08-0.1.1-mpc-armv7.zip",
-          "channel": "beta",
+          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.2/Profit-08-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-15"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
+            }
+          ]
+        },
+        {
+          "version": "0.1.1",
+          "size": 7714118,
+          "sha256": "2522b6a7d40c7620c942439ffd5ae7b823757b73a2b8dbdd4b5a3080bffafc59",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 34.2,
+            "max_pct": 36.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.1/Profit-08-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": [
             {
@@ -8378,6 +8513,11 @@
               "device": "MPC Live III (Gen2)",
               "firmware": "MPC OS 5.0.18",
               "date": "2026-10-11"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-14"
             }
           ]
         },
@@ -8405,7 +8545,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit8",
