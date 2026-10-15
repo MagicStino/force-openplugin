@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-15T16:41:35+00:00",
+  "generated": "2026-10-15T17:08:08+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9440,7 +9440,7 @@
       "id": "tinyfreaky",
       "name": "Tinyfreaky",
       "author": "MagicStino",
-      "summary": "Synth with a readable 5x7 matrix, arp, swing and editable 64-step sequencer. Eleven oscillator paths use original Mutable Instruments cores. 448 factory entries: 334 translated, 114 require unavailable engines. Original sound equivalence is unverified.",
+      "summary": "Eight-voice paraphony, clearer 16-model signal path, real SuperWave detuning, prominent engine display, 5x7 matrix, arp/swing and 64-step sequencer. 448 factory entries: 334 approximate translations, 114 unavailable/muted. Exact MicroFreak sound remains unverified.",
       "license": "MIT",
       "kind": "instrument",
       "style": "synth",
@@ -9451,8 +9451,30 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.0-preview.1/tinyfreaky-artwork.png",
+      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.2-preview.1/tinyfreaky-artwork.png",
       "versions": [
+        {
+          "version": "0.3.2-preview.1",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.2-preview.1/Tinyfreaky-0.3.2-preview.1-mpc-armv7.zip",
+          "sha256": "315baa0c4980dbaee30a4bf6b166fc217587f5032697b8ac916687ae9471ddde",
+          "size": 12626611,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
+        {
+          "version": "0.3.1-preview.1",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.1-preview.1/Tinyfreaky-0.3.1-preview.1-mpc-armv7.zip",
+          "sha256": "01e524037a4df76a48ec0f112b28727c97b0c7b8f4b334354972cbc9daa174dd",
+          "size": 12625445,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.3.0-preview.1",
           "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.0-preview.1/Tinyfreaky-0.3.0-preview.1-mpc-armv7.zip",
