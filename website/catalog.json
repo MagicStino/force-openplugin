@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-15T04:50:09+00:00",
+  "generated": "2026-10-15T11:39:57+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9371,31 +9371,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.1.0",
-          "size": 308412450,
-          "sha256": "67a57117391489414b86d8535e2a3027a514d599d34ecbf10c8f4a245bfead7a",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.1.0/SurgeXXL-0.1.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/ANDREALPHEUS - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "0.1.0",
+      "versions": [],
+      "latest": null,
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/SurgeXXL",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
