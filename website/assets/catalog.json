@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-15T15:45:39+00:00",
+  "date": "2026-10-15T16:41:35+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9554,7 +9554,7 @@
       "id": "tinyfreaky",
       "name": "Tinyfreaky",
       "author": "MagicStino",
-      "summary": "Experimental synth with readable controls and live OLED-style display. 448 factory entries: 334 partial, 114 unavailable/muted. Original sound equivalence unverified.",
+      "summary": "Synth with a readable 5x7 matrix, arp, swing and editable 64-step sequencer. Eleven oscillator paths use original Mutable Instruments cores. 448 factory entries: 334 translated, 114 require unavailable engines. Original sound equivalence is unverified.",
       "license": "MIT",
       "kind": "instrument",
       "style": "synth",
@@ -9565,8 +9565,19 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.2-preview.1/force-readable-preview.png",
+      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.0-preview.1/tinyfreaky-artwork.png",
       "versions": [
+        {
+          "version": "0.3.0-preview.1",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.0-preview.1/Tinyfreaky-0.3.0-preview.1-mpc-armv7.zip",
+          "sha256": "1d58e5b53a9652dc013ce191fb9d07274d96cec4d045f0d062139d0b7456248e",
+          "size": 12071429,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.2.2-preview.1",
           "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.2-preview.1/Tinyfreaky-0.2.2-preview.1-mpc-armv7.zip",
