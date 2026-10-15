@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-15T19:06:53+00:00",
+  "generated": "2026-10-15T19:37:51+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9451,13 +9451,13 @@
         "armv7"
       ],
       "repo": "MagicStino/TinyFreaky",
-      "screenshot": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.3.6/tinyfreaky-artwork.png",
+      "screenshot": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.3.7/tinyfreaky-artwork.png",
       "versions": [
         {
-          "version": "0.3.6",
-          "url": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.3.6/Tinyfreaky-0.3.6-mpc-armv7.zip",
-          "sha256": "3f2f9f6bad57940993eb685ea5df9934eca9f13bd0002701e0cfc6cd67574de6",
-          "size": 2052484,
+          "version": "0.3.7",
+          "url": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.3.7/Tinyfreaky-0.3.7-mpc-armv7.zip",
+          "sha256": "d06c64d62f2d4801b9f75aa3191f78b65c47f3a9ec9271a6f198349726ce91a2",
+          "size": 5243551,
           "channel": "stable",
           "yanked": false,
           "os_compat": [
