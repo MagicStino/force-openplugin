@@ -4,7 +4,7 @@
   "repositories": [
     "MagicStino/pulytek",
     "WorldLinkStudio/mpcsample",
-    "MagicStino/microfreeze"
+    "MagicStino/TinyFreaky"
   ],
   "search_queries": [
     "topic:mpc-plugin",
@@ -14,7 +14,7 @@
   ],
   "reviewed_manifest_repositories": [
     "MagicStino/pulytek",
-    "MagicStino/microfreeze"
+    "MagicStino/TinyFreaky"
   ],
   "max_discovered_repositories": 60
 }
