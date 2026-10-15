@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-15T14:19:49+00:00",
+  "generated": "2026-10-15T14:22:04+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -5949,7 +5949,7 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/microfreeze/main/assets/microfreeze-cover.png",
       "versions": [
         {
           "version": "0.1.0",
