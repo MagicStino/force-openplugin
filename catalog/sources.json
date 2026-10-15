@@ -3,7 +3,8 @@
   "upstream": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "repositories": [
     "MagicStino/pulytek",
-    "WorldLinkStudio/mpcsample"
+    "WorldLinkStudio/mpcsample",
+    "MagicStino/microfreeze"
   ],
   "search_queries": [
     "topic:mpc-plugin",
@@ -12,7 +13,8 @@
     "hackai mpc"
   ],
   "reviewed_manifest_repositories": [
-    "MagicStino/pulytek"
+    "MagicStino/pulytek",
+    "MagicStino/microfreeze"
   ],
   "max_discovered_repositories": 60
 }
