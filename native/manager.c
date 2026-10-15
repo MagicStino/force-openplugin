@@ -54,6 +54,9 @@ typedef struct {
 #endif
 #define MAXPKG 512
 #define ROWS 3      /* plugin cards per page */
+#define PREVIEW_COLS 60
+#define PREVIEW_LINES 30
+#define PREVIEW_PIXELS (PREVIEW_COLS * PREVIEW_LINES)
 #ifndef ADDINS_DIR
 #define ADDINS_DIR "/data/mpc-addins"   /* one folder per addin id, as mpc-vst-plugins' addin installer lays them out */
 #endif
@@ -69,6 +72,7 @@ typedef struct {
     char installed[24];   /* "" not installed, "?" installed (version unknown), else the version */
     char synths[200];     /* the Synths folder it is installed in; an addin: its own folder under ADDINS_DIR */
     char uids[4][16];     /* build-yourself components' VST uids (catalog "components") */
+    int preview_checked; /* one image attempt per catalog refresh, including failures */
     int legacy;           /* registered, but not from a plugin folder (old /sdcard/vst layout); an addin folder
                            * without uninstall.sh (made by hand): either is updated in place, not removed */
     int queued;           /* 0, Q_INSTALL, Q_REMOVE */
@@ -84,6 +88,8 @@ typedef struct {
     pthread_cond_t cv;
     int preview_enabled, preview_pending;
     unsigned preview_generation;
+    uint16_t preview_pixels[ROWS][PREVIEW_PIXELS];
+    char preview_row_id[ROWS][48];
     int quit, job, busy, ready;   /* ready: a prepared apply.sh waits for the second APPLY press */
     pkg_t pkg[MAXPKG];
     int npkg, page, sel, menu;    /* sel, menu: pkg indexes (-1 none); menu = the card showing Reinstall/Remove */
@@ -881,7 +887,7 @@ static void do_refresh(mgr_t *m) {
     else { say_locked(m,parsed?OK:WARN,parsed?"Catalog refreshed from server. Plugin versions checked.":"Offline: showing saved catalog. Tap Refresh catalog when connected."); }
     pthread_mutex_unlock(&m->mu);
     free(tmp);
-    if(m->preview_enabled)preview_refresh(m);
+    pthread_mutex_lock(&m->mu);preview_request_locked(m);pthread_mutex_unlock(&m->mu);
 }
 
 /* Download, check and unpack every queued package, then write apply.sh. Nothing on the device changes yet. */
@@ -1160,7 +1166,7 @@ static void *mgr_create(const char *data_dir) {
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
     snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
-    m->preview_enabled = 0; /* Akai caches row images; use immutable per-plugin frames. */
+    m->preview_enabled = 1; /* Live filmstrip pixels use value changes, never cached file replacement. */
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;
@@ -1196,6 +1202,7 @@ static void requeue(mgr_t *m, pkg_t *p, int q) {   /* any change to the queue dr
 
 static void mgr_set_param(void *inst, const char *key, const char *val) {
     mgr_t *m = inst;
+    if (!strncmp(key,"previewpx_",10)) return; /* display-only pixels are never restored as user controls */
     double v = atof(val);
     pthread_mutex_lock(&m->mu);
     if (!strncmp(key,"remote_",7)) {
@@ -1345,6 +1352,15 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
         m->view_queued = count_queued(m);
         m->view_rev = m->rev;
         m->view_valid = 1;
+    }
+    if (!strncmp(key,"previewpx_",10)) {
+        int row=-1,pixel=-1;char tail;
+        if (sscanf(key+10,"%d_%d%c",&row,&pixel,&tail)==2 && row>=1 && row<=ROWS && pixel>=0 && pixel<PREVIEW_PIXELS) {
+            int k=m->page*ROWS+row-1;
+            int valid=k<m->view_n && !strcmp(m->preview_row_id[row-1],m->pkg[m->view_idx[k]].id);
+            snprintf(b,n,"%u",valid?m->preview_pixels[row-1][pixel]:0x111);
+        } else snprintf(b,n,"0");
+        pthread_mutex_unlock(&m->mu);return 1;
     }
     const int *idx = m->view_idx;
     int nv = m->view_n, pages = nv ? (nv + ROWS - 1) / ROWS : 1, ok = 1;

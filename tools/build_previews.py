@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build bounded, offline device thumbnails from hash-locked upstream screenshots."""
 import argparse, hashlib, io, json, os
+from datetime import datetime,timezone
 from pathlib import Path
 import urllib.request, urllib.parse
 from concurrent.futures import ThreadPoolExecutor
@@ -48,7 +49,7 @@ def main():
                 except Exception as e: entry['unavailable_reason']=type(e).__name__
             return entry
         with ThreadPoolExecutor(max_workers=4) as pool: entries=list(pool.map(capture,sorted(source,key=lambda x:x['id'])))
-        lock={'schema':1,'snapshot_date':'2026-10-08','entries':entries}
+        lock={'schema':1,'snapshot_date':datetime.now(timezone.utc).date().isoformat(),'entries':entries}
         lockpath.write_text(json.dumps(lock,indent=2)+'\n')
         (ROOT/'native/preview_index.h').write_text(index_header(entries))
     else:
