@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-15T17:08:08+00:00",
+  "date": "2026-10-15T17:14:13+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9554,7 +9554,7 @@
       "id": "tinyfreaky",
       "name": "Tinyfreaky",
       "author": "MagicStino",
-      "summary": "Eight-voice paraphony, clearer 16-model signal path, real SuperWave detuning, prominent engine display, 5x7 matrix, arp/swing and 64-step sequencer. 448 factory entries: 334 approximate translations, 114 unavailable/muted. Exact MicroFreak sound remains unverified.",
+      "summary": "Eight-voice paraphony, live output scope and state icons, clearer 16-model signal path, real SuperWave detuning, prominent engine display, 5x7 matrix, arp/swing and 64-step sequencer. 448 factory entries: 334 approximate translations, 114 unavailable/muted. Exact MicroFreak sound remains unverified.",
       "license": "MIT",
       "kind": "instrument",
       "style": "synth",
@@ -9565,8 +9565,19 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.2-preview.1/tinyfreaky-artwork.png",
+      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.3-preview.1/tinyfreaky-artwork.png",
       "versions": [
+        {
+          "version": "0.3.3-preview.1",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.3-preview.1/Tinyfreaky-0.3.3-preview.1-mpc-armv7.zip",
+          "sha256": "f193fa8fc2522cde612a0e579690bc8eeb26c8acfcd1cb283c27c47e6a0dbda6",
+          "size": 12670758,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.3.2-preview.1",
           "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.2-preview.1/Tinyfreaky-0.3.2-preview.1-mpc-armv7.zip",
