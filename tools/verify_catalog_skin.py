@@ -20,7 +20,14 @@ if a.jv:
  for row,plugin in enumerate(catalog[:3],1):
   if plugin['id']=='jv-880':
    values.update({f'r{row}_rom':1,f'r{row}_desc1':'Save first: installs ROMs + plugin, then restarts the app.',f'r{row}_desc2':'Required files checked before installation.'})
-image=Image.new('RGBA',(1280,628),'#0c0c0d');previews=0
+# Model the live RGB444 values from the worker's 60x30 thumbnail, not host screenshots.
+for row,plugin in enumerate(catalog[:3],1):
+ path=a.native/'payload/usr/share/openplugin/bundled-previews'/(plugin['id']+'.png')
+ if not path.exists():path=path.parent/'fallback.png'
+ thumb=ImageOps.pad(Image.open(path).convert('RGB'),(180,90),color='#13161b').resize((60,30),Image.Resampling.BOX)
+ for pixel,(rr,gg,bb) in enumerate(thumb.getdata()):
+  values[f'previewpx_{row}_{pixel}']=((rr+8)//17<<8)|((gg+8)//17<<4)|((bb+8)//17)
+image=Image.new('RGBA' ,(1280,628),'#0c0c0d');previews=0
 
 def render(nodes,ox=0,oy=0,key=None,depth=0):
  global previews
@@ -41,6 +48,8 @@ def render(nodes,ox=0,oy=0,key=None,depth=0):
     path=a.native/'payload/usr/share/openplugin/bundled-previews'/(plugin['id']+'.png')
    asset=Image.open(path).convert('RGBA')
    if info['image'].startswith('/data/openplugin/previews/row'):asset=ImageOps.pad(asset,(180,90),color='#13161b')
+   if info.get('imageType')=='FilmStrip':
+    frame=int(values[current]);fh=asset.height//info['numFrames'];asset=asset.crop((0,frame*fh,asset.width,(frame+1)*fh))
    assert asset.size==(w,h),(str(path),asset.size,(w,h))
    image.alpha_composite(asset,(x,y))
    if any(names.get(h.split('/',3)[-1],'').endswith('_preview') for h in bounds.get('additionalInvalidatingHandles',[])):previews+=1
@@ -61,4 +70,5 @@ for row in range(1,4):
 assert Image.open(vst/'images/previews/preview_0.png').getbbox() is None
 assert len(list((vst/'images/previews').glob('*.png')))==len(lock)+2
 a.output.parent.mkdir(parents=True,exist_ok=True);image.convert('RGB').save(a.output)
-print(f'CATALOG: three previews, indexed plugin pictures, bounds and sample text PASS; simulated host rendering only')
+assert sum(p['key'].startswith('previewpx_') for p in params)==5400
+print('CATALOG: three live RGB444 thumbnails, indexed fallbacks, bounds and sample text PASS; simulated rendering only')

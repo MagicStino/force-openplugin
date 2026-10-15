@@ -1,0 +1,38 @@
+{
+  "release": "0.8.1-rc2",
+  "catalog_version_verified": "TinyFreaky 0.3.9",
+  "python_tests": "22 run: 21 passed, one skipped",
+  "online_artwork": "Same URL is re-fetched on each catalog refresh; last-good and bundled fallback images retained; worker generation prevents stale-page image publication.",
+  "skin": "Three live RGB444 thumbnails, fallbacks, handles and bounds passed simulated rendering.",
+  "images": [
+    {
+      "device": "force",
+      "output_sha256": "6ece844eea48900f85af54f7c7164acac6c4c8c98be7e181274b0b5ab4498bd4",
+      "output_size": 199279744,
+      "stock_app_version": "3.9.1.2",
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "native_load_exports": "pass: manager dlopen and VSTPluginMain export with both stock ARM runtime trees under emulation",
+        "vendor_verifier": "pass: original stock ARM az01-image --verify under qemu-arm"
+      }
+    },
+    {
+      "device": "mpc-gen1",
+      "output_sha256": "007a6ddd46e24be454e1fc4c0b12dff944abecba919365d1687a3efe82f60496",
+      "output_size": 179683496,
+      "stock_app_version": "3.9.1.2",
+      "validation": {
+        "container_sha1": "pass",
+        "ext_filesystem": "pass",
+        "hardware_flash_boot_runtime": "NOT TESTED",
+        "injected_files": "pass",
+        "native_load_exports": "pass: manager dlopen and VSTPluginMain export with both stock ARM runtime trees under emulation",
+        "vendor_verifier": "pass: original stock ARM az01-image --verify under qemu-arm"
+      }
+    }
+  ],
+  "hardware": "Flash, boot, physical touchscreen redraw and audio-load performance remain untested."
+}
