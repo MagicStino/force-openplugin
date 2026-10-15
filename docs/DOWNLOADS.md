@@ -4,8 +4,8 @@ Hosted as public [GitHub Release assets](https://github.com/MagicStino/force-ope
 
 | Device family | Image | SHA256 |
 |---|---|---|
-| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.1-rc2/Force-3.9.1-openplugin-v0.8.1-rc2-update.img) | `6ece844eea48900f85af54f7c7164acac6c4c8c98be7e181274b0b5ab4498bd4` |
-| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.1-rc2/MPC-3.9.1-Gen1-openplugin-v0.8.1-rc2-update.img) | `007a6ddd46e24be454e1fc4c0b12dff944abecba919365d1687a3efe82f60496` |
+| Akai Force | [Force IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.1-rc2/Force-3.9.1-update.img) | `6ece844eea48900f85af54f7c7164acac6c4c8c98be7e181274b0b5ab4498bd4` |
+| MPC Gen1 | [MPC Gen1 IMG](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.1-rc2/MPC-3.9.1-Gen1-update.img) | `007a6ddd46e24be454e1fc4c0b12dff944abecba919365d1687a3efe82f60496` |
 
 **Test candidate:** both images pass stock image verification and filesystem checks. These 0.8.1 RC2 images have not been flashed or boot-tested. Earlier Force use does not establish new mouse, image-refresh or search-CPU behaviour. MPC Gen1 remains hardware unverified. Use only your device family’s image and stop if the updater rejects it.
 
@@ -21,7 +21,7 @@ to install the OpenPlugin additions, after backing up projects and choosing the 
 Download the actual `.img` through the link above, not GitHub’s source-code ZIP.
 Download the matching `.sha256` release asset and verify the IMG before renaming or copying. `.json` files record structural validation. Do not extract the IMG or write it as a bootable USB image.
 
-The filenames are `Force-3.9.1-openplugin-v0.8.1-rc2-update.img` and `MPC-3.9.1-Gen1-openplugin-v0.8.1-rc2-update.img`. If not detected, rename to `Force-3.9.1-update.img` or `MPC-3.9.1-Gen1-update.img` respectively. Renaming helps discovery; it does not bypass compatibility checks.
+The filenames are `Force-3.9.1-update.img` and `MPC-3.9.1-Gen1-update.img`. These USB-ready names match the original downloads; no renaming is required.
 
 For an existing 3.9.1 installation:
 
