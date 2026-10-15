@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-15T17:14:13+00:00",
+  "date": "2026-10-15T17:42:50+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9565,8 +9565,30 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.3-preview.1/tinyfreaky-artwork.png",
+      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.4/tinyfreaky-artwork.png",
       "versions": [
+        {
+          "version": "0.3.4",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.4/Tinyfreaky-0.3.4-mpc-armv7.zip",
+          "sha256": "acac7994ac3a76b4235fa6feebdaa093cea1cdcca2a35057e160fe15cf8756cf",
+          "size": 12671251,
+          "channel": "stable",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
+        {
+          "version": "0.3.3",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.3/Tinyfreaky-0.3.3-mpc-armv7.zip",
+          "sha256": "e2659dc8b59560872a97fc87340d36dac67d000f03e1d1747a572b8d23af6c0a",
+          "size": 12669964,
+          "channel": "stable",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.3.3-preview.1",
           "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.3.3-preview.1/Tinyfreaky-0.3.3-preview.1-mpc-armv7.zip",
