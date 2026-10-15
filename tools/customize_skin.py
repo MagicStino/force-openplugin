@@ -42,6 +42,8 @@ def customize(vst):
         data['params'].append(dict(key=key,name=key,type='readout',display='string'))
     for key in ['rom_check','rom_usb','rom_download']:
         data['params'].append(dict(key=key,name=key,type='trigger',momentary=True))
+    from live_preview_skin import add_parameters
+    add_parameters(data)
     (vst / 'params.json').write_text(json.dumps(data, indent=2) + '\n')
     def art(name, width, height, body):
         (vst / 'images' / name).write_text(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">{body}</svg>\n')

@@ -83,6 +83,8 @@ def main():
         previews=[node for node in nodes if preview_node(node)]
         definition['value']['componentsData']=[node for node in nodes if not preview_node(node)]+previews
     tui.write_text(json.dumps(ui,indent=2)+'\n')
+    from live_preview_skin import install
+    install(local/'vst',tui)
     import ziglang
     zig = Path(ziglang.__file__).parent / 'zig'
     env = dict(os.environ, ZIG_GLOBAL_CACHE_DIR=str(out / 'zig-global'), ZIG_LOCAL_CACHE_DIR=str(out / 'zig-local'))
@@ -103,9 +105,9 @@ def main():
     shutil.copytree(local / 'vst/build/skin/poloq - VST - Plugin Manager', folder)
     normalize_presets(folder)
     version_file = folder / 'version.xml'
-    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.0.0</version>'))
+    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.1.0</version>'))
     shutil.copyfile(binary, folder / 'plugin_manager.so')
-    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8"')
+    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8.1"')
     (folder / 'plugin-meta.xml').write_text(entry)
     helpers = payload / 'usr/share/openplugin'
     helpers.mkdir(parents=True)
@@ -119,7 +121,7 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('0.8\n')
+    (helpers / 'VERSION').write_text('0.8.1\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
     bundled=helpers/'bundled-previews'
     bundled.mkdir()

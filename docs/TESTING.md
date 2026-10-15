@@ -89,3 +89,7 @@ Thirteen Python tests, native search/ROM dispatch tests, catalog persistence and
 
 Website device visuals are styled renders of generated native assets. They are not hardware screenshots. Regenerate with `tools/verify_catalog_skin.py --jv` and `tools/render_share.py` using the native build and the bundled renderer dependencies.
 
+
+## 0.8.1 RC1 live-image candidate
+
+See CATALOG-PREVIEWS.md for the cache-independent RGB444 thumbnail path and its 5,400 display-parameter cost. Native cache/codec/generation tests and palette/skin wiring tests pass. Both generated device-family images pass stock ARM `az01-image --verify`. Hardware flash/boot, native image rendering and redraw cost remain unverified. Prior release results do not establish these new behaviours.
