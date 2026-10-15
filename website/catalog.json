@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-15T14:55:26+00:00",
+  "generated": "2026-10-15T15:12:25+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9440,7 +9440,7 @@
       "id": "tinyfreaky",
       "name": "Tinyfreaky",
       "author": "MagicStino",
-      "summary": "Experimental first release: hardware-style interface, 448 factory entries (334 partial translations; 114 unavailable and muted). Original sound equivalence and Force hardware playback unverified.",
+      "summary": "Experimental synth with readable controls and live OLED-style display. 448 factory entries: 334 partial, 114 unavailable/muted. Original sound equivalence unverified.",
       "license": "MIT",
       "kind": "instrument",
       "style": "synth",
@@ -9451,8 +9451,19 @@
         "armv7"
       ],
       "repo": "MagicStino/microfreeze",
-      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.0-preview.1/tinyfreaky-panel.png",
+      "screenshot": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.1-preview.1/force-readable-preview.png",
       "versions": [
+        {
+          "version": "0.2.1-preview.1",
+          "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.1-preview.1/Tinyfreaky-0.2.1-preview.1-mpc-armv7.zip",
+          "sha256": "1320da403fedd7c7d257e4d76e6570dd28311e44388fed2410e318b5821742ec",
+          "size": 11734008,
+          "channel": "beta",
+          "yanked": false,
+          "os_compat": [
+            "3.x"
+          ]
+        },
         {
           "version": "0.2.0-preview.1",
           "url": "https://github.com/MagicStino/microfreeze/releases/download/v0.2.0-preview.1/Tinyfreaky-0.2.0-preview.1-mpc-armv7.zip",
