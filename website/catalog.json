@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-16T04:40:17+00:00",
+  "generated": "2026-10-16T11:33:58+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -7645,6 +7645,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.4.3",
+          "size": 28041007,
+          "sha256": "118a1921ce1dadf8aa439f15250ca919f3f7a57b8026c5065083b9cdcaf74cb4",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Odin2-MPC/releases/download/odin2-v1.4.3/Odin-2-1.4.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.4.2",
           "size": 13425110,
           "sha256": "abd53ceabaf14d1235d90e514014efb345ccca09e83aea884e301f2a18a6812e",
@@ -7664,7 +7683,7 @@
           "tested": []
         }
       ],
-      "latest": "1.4.2",
+      "latest": "1.4.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/Odin2-MPC",
