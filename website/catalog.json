@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-17T04:37:37+00:00",
+  "generated": "2026-10-17T10:54:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3818,6 +3818,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.1",
+          "size": 10853279,
+          "sha256": "2aa322aafd0885205c8af0243b8beb17a31e688fd606b5bee8a671219c2b7ce1",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Evil-Tuner-XXL/releases/download/v0.1.1/Evil-Tuner-XXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/L'Cronx - VST - Evil Tuner XXL/evil_tuner_xxl.so calls network (getaddrinfo); runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.0",
           "size": 10842810,
           "sha256": "a9630227d39fff74c47482ed7d94ee32c814a4c1a12e34c63e5448e06c8604de",
@@ -3835,7 +3854,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/Evil-Tuner-XXL",
@@ -3970,6 +3989,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.8.3",
+          "size": 73186232,
+          "sha256": "ce55ce435c2163c92fef9813d7e4573021325768251df960edecf69d3b5210eb",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/fretty-mpc/releases/download/v0.8.3/Fretty-0.8.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.8.2",
           "size": 73182492,
           "sha256": "210d74d880e99d38a15bee0eb70eb63801789ccdc1daea0845bb36c55d2c92bc",
@@ -3989,7 +4023,7 @@
           "tested": []
         }
       ],
-      "latest": "0.8.2",
+      "latest": "0.8.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/fretty-mpc",
@@ -4287,6 +4321,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.2",
+          "size": 14270279,
+          "sha256": "ebd57184d3c502e2a7dc6b49e29109134a6ba3e48b8bedf98d9c3433ad58435d",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.2/InterzoneXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.1",
           "size": 14275210,
           "sha256": "ba53790987815f5d216a992a69b5de9a483f92167ef358a784034ae95b2e785f",
@@ -4331,7 +4384,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/InterzoneXXL",
@@ -4674,6 +4727,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.2",
+          "size": 8625627,
+          "sha256": "6747869fa78be7324ce455903e77811d44111204b8c9bb198f830f58b6a2a080",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.2/Loop-SaboteurXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.1",
           "size": 8629283,
           "sha256": "72cbdeff0b938c6502287e4a6ab3fc3b38217f6098b1f38bfc0ccb008c810dab",
@@ -4704,7 +4775,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/Loop-SaboteurXXL",
@@ -4817,6 +4888,25 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.5.9",
+          "size": 10731860,
+          "sha256": "ac69012405883ee5aaf8f0f953b76463ca6e1a94d854388b437ea99876d1fa66",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.9/LXRXXL-0.5.9-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.5.8",
           "size": 10733055,
@@ -5007,7 +5097,7 @@
           ]
         }
       ],
-      "latest": "0.5.8",
+      "latest": "0.5.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
@@ -5042,6 +5132,25 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.9",
+          "size": 16954959,
+          "sha256": "b8ce0778ff6b4d462b509801c37b81006f8f505efef8b5aece75d0c33c72040f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.9/LXRXXL-BAZZLINE-0.2.9-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.2.8",
           "size": 16958933,
@@ -5230,25 +5339,6 @@
               "date": "2026-10-12"
             }
           ]
-        },
-        {
-          "version": "0.1.0",
-          "size": 12355865,
-          "sha256": "2c044397d907889566c9bdc9efd915c3656b9763202c96d694cfbdd53d24f02f",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.1.0/LXRXXL-BAZZLINE-0.1.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
         }
       ],
       "latest": "0.2.8",
@@ -5295,6 +5385,25 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.1",
+          "size": 23508220,
+          "sha256": "e4f66da3193a2a46ea839a46408034d95f7b0304a678caa2a5b20805f2248636",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-ZYNTH/releases/download/v0.2.1/LXRXXL-ZYNTH-0.2.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.2.0",
           "size": 23514779,
@@ -6699,6 +6808,20 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.3",
+          "size": 70599,
+          "sha256": "1a9fc7ebb37817f51249273e59320a8963c80d44c74e34db29bd0c29d1bee766",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-remote/releases/download/remote-addin-v1.0.3/MPC-Remote-addin-1.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.2",
           "size": 66755,
           "sha256": "394b6b78538f7a54f452013750a627c822c1da2ee82fdb8262690034cb2c9039",
@@ -6807,7 +6930,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-remote",
@@ -8284,6 +8407,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.4.2",
+          "size": 13481095,
+          "sha256": "998e2c79ae302d7e4072077a973508730f447d59357ae8c47537bd42bf52ca2a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PlateauXXL/releases/download/v0.4.2/PlateauXXL-0.4.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.4.1",
           "size": 13484938,
           "sha256": "8dc7d83f002e1206cb4180e7f096b00b66bda441d1eed6eee44b6c7b03368752",
@@ -8309,7 +8451,7 @@
           ]
         }
       ],
-      "latest": "0.4.1",
+      "latest": "0.4.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/PlateauXXL",
@@ -8868,6 +9010,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.2",
+          "size": 2536532,
+          "sha256": "b698a9c9c571187ac0fb45d49d8294825264be49b339b642bd32b96e6d063a19",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.2.2/RMXXXL-1.2.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.1",
           "size": 2538494,
           "sha256": "441d944c490afae86d541514fffabb68c6131932b31e38355e7581e040bf3ad6",
@@ -8943,7 +9104,7 @@
           ]
         }
       ],
-      "latest": "1.2.1",
+      "latest": "1.2.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/RMXXXL",
@@ -8965,8 +9126,8 @@
       "versions": [
         {
           "version": "0.3.8",
-          "size": 131656776,
-          "sha256": "b2c5c8d07ffaa54e71304e5260a90d5615e9eb27990a4379b026347830912635",
+          "size": 131392647,
+          "sha256": "1a258f5a2f8d4a7d174123eeaf0ab117f88deda24f6374a360e65965495e5982",
           "max_glibc": "2.29",
           "cpu": null,
           "os_compat": [
