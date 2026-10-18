@@ -1,7 +1,14 @@
 {
-  "generated": "2026-10-17T20:42:24+00:00",
+  "generated": "2026-10-18T04:43:03+00:00",
   "indexed": 127,
   "candidates": [
+    {
+      "repo": "gmorb/mpc-vst-sfizz",
+      "name": "mpc-vst-sfizz",
+      "summary": "sfizz 1.2.3 SFZ sampler for MPC OS standalone hardware (Gen1 armv7 + Gen2 aarch64), with a one-page screen modelled on sfizz's editor",
+      "url": "https://github.com/gmorb/mpc-vst-sfizz",
+      "status": "discovered; not installable"
+    },
     {
       "repo": "WorldLinkStudio/mpcsample",
       "url": "https://github.com/WorldLinkStudio/mpcsample",
@@ -12,6 +19,11 @@
     {
       "stage": "manifest",
       "repo": "WorldLinkStudio/mpcsample",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "manifest",
+      "repo": "gmorb/mpc-vst-sfizz",
       "error": "HTTP Error 404: Not Found"
     }
   ],
