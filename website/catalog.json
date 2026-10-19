@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-19T13:32:11+00:00",
+  "generated": "2026-10-19T22:27:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6572,7 +6572,7 @@
       "repo": "sd88me/mpc-vst-model72",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "A port of Idle Foundry's CA-72, a circuit-modelled 1970s monosynth: three oscillators, the ladder filter and contours, mono, poly or unison with stereo and 19 presets. LO is the fitted light model; HI runs the circuit's own filter in real time.",
+      "summary": "A port of Idle Foundry's CA-72, a circuit-modelled 1970s Minimoog Model-D: three oscillators, the ladder filter and contours, mono, poly or unison with stereo and 19 presets. LO is the fitted light model; HI runs the circuit's own filter in real time.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-model72/main/docs/img/mixer_filter.png",
       "style": "synth",
       "tags": [
@@ -9178,7 +9178,7 @@
     {
       "id": "pulytek",
       "name": "PulyTek",
-      "author": "Alberto Barrera (ABSounds); Force/MPC port by MagicStino",
+      "author": "MagicStino",
       "repo": "MagicStino/pulytek",
       "kind": "effect",
       "license": "GPL-3.0-only",
@@ -9784,6 +9784,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.0",
+          "size": 3523276,
+          "sha256": "4acb0652e1d46516c36c556707f2acac46651e1bd21546da733f7173af22efcf",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/djokenzi/steprunner-8/releases/download/v1.2.0/StepRunner-8-1.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-19"
+            }
+          ]
+        },
+        {
           "version": "1.1.1",
           "size": 2784338,
           "sha256": "4e58d0ec636c349dee969728a23c63822766e470e5cb69adc556eac59cd0c0be",
@@ -9872,7 +9897,7 @@
           ]
         }
       ],
-      "latest": "1.1.1",
+      "latest": "1.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "djokenzi/steprunner-8",
