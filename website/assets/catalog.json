@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-19T04:51:16+00:00",
+  "date": "2026-10-19T13:32:11+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -1941,7 +1941,7 @@
       "repo": "sd88me/mpc-vst-boris",
       "kind": "effect",
       "license": "GPL-3.0-only",
-      "summary": "Real-time granular insert effect: incoming audio is written to a 10 s buffer and up to 24 overlapping grains replay it with per-grain random size, delay, pitch, direction, volume and pan. Tempo sync to MPC (1/16 to 4/1, dotted and triplet), freeze, feedback, dry/wet, three grain envelopes, 22 presets and a one-page touchscreen skin with two Q-Link sets. DSP from boris-move, a port of Boris Granular Station by Alessandro Gaiba.",
+      "summary": "Real-time granular insert effect: incoming audio fills a 10 s buffer and up to 24 overlapping grains replay it with random size, delay, pitch, direction and pan. MPC tempo sync, freeze, feedback, 22 presets and a one-page touchscreen skin with Q-Links. A port of Boris Granular Station by Alessandro Gaiba.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-boris/2d7b1360c68ccc91b22b0c5030152e08dd3682b8/docs/screenshot-force.png",
       "style": "granular",
       "tags": [
@@ -3557,7 +3557,7 @@
       "repo": "Devko/EffectForce",
       "kind": "effect",
       "license": "MIT",
-      "summary": "A live looper and an Octatrack-style performance mixer in one insert slot: the looper records the next bars on MPC's grid (or keeps the bar just played) and plays, layers, rolls (1/2 to 1/32), slows, stops or reverses them; a crossfader (learn the Force's own to it) blends two scenes from a library of 64 one-tap effects (filter sweeps, echo throws, washes, rolls, tape stops, gates), whose sweeps and risers move by themselves from the next bar line. Underneath, a ten-module effect rack in any order (drive, filter, EQ, compressor / OTT, chorus, phaser / flanger, tremolo / gate, granular, delay, shimmer reverb) with macros, LFOs and an 8-slot mod matrix; 62 presets and a 14-page touchscreen skin with Q-Links.",
+      "summary": "A live looper and performance mixer in one insert slot: record bars on MPC's grid, then roll, slow, reverse and layer them, and crossfade two scenes from 64 one-tap effects. Plus a ten-module effect rack with macros, LFOs and a mod matrix, 62 presets and a 14-page touchscreen skin with Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/Devko/EffectForce/v0.0.1/docs/img/looper.png",
       "style": "multi-fx",
       "tags": [
@@ -3917,7 +3917,7 @@
       "repo": "sunskiefer/Evil-Tuner-XXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "Internet radio (Radio Browser: 30,000+ stations by genre, country or search), a phone over Wi-Fi (Roc Droid on Android) or AirPlay (iPhone) played into an MPC track, through an 8-voice granular engine, a multimode filter, eleven character stages, a saturator, an Erica-style delay, plate / reverse / room reverb with shimmer, a 16-step trance gate, stutter, MIDI duck, a tempo-synced looper with a rolling 3-minute tape and stretch renders, and three LFOs. Inspired by the concept of the Endorphin.es Evil Pet (no affiliation, no code). Needs a network.",
+      "summary": "Internet radio (30,000+ stations), or a phone over Wi-Fi or AirPlay, played into an MPC track through a granular engine, filter, character stages, delay, reverb, trance gate, stutter, tempo-synced looper and three LFOs. Inspired by the Endorphin.es Evil Pet (no affiliation, no code). Needs a network.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/Evil-Tuner-XXL/main/docs/img/RADIO.png",
       "style": "radio-granular",
       "tags": [
@@ -3925,14 +3925,9 @@
         "internet-radio",
         "granular",
         "airplay",
-        "roc",
-        "phone",
         "looper",
-        "trance-gate",
         "stutter",
-        "delay",
         "reverb",
-        "lo-fi",
         "sampling"
       ],
       "source_available": false,
@@ -4484,13 +4479,122 @@
       "download": true
     },
     {
+      "id": "incipience",
+      "name": "Incipience",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-incipience",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Eleven-instrument drum synth laid out like the Jomox AlphaBase Mk II (kick, MBrane, hats, clap, rim, cymbals, two sample players, 4-op FM, reverb, delay), with RANDOMISE per instrument and a mod matrix; each instrument chromatic on its own MIDI channel and on its own track with Incipience OUT; plays the AlphaBase's free samples and your own WAVs.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.0.0/screenshots/page_0.png",
+      "style": "drum-machine",
+      "tags": [
+        "drums",
+        "alphabase",
+        "fm",
+        "samples",
+        "multi-out",
+        "mod-matrix"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 7338585,
+          "sha256": "d8b5f14f3622d23ed7259ed97923e443027cab933d6a6ad613d3271917db451f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-incipience/releases/download/v1.0.0/DRUM-Incipience-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-19"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-incipience",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "incipience-out",
+      "name": "Incipience OUT",
+      "author": "saustin2010",
+      "repo": "saustin2010/mpc-vst-incipience",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Companion to Incipience: plays one of its OUT 1-11 on its own MPC track (an audio track will do), so an instrument gets that track's fader, inserts and outputs, in time with the kit. Needs Incipience 1.0.0 or later in the same project.",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.0.0/incipienceout/screenshots/page_0.png",
+      "style": "utility",
+      "tags": [
+        "routing",
+        "multi-out",
+        "drum"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 106699,
+          "sha256": "aaf243454388ad53e81459a62a1b1ab4e5cb7a32c759f60d89fc6982a0a9fcd5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-incipience/releases/download/incipience-out-v1.0.0/FX-Incipience-OUT-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-19"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "saustin2010/mpc-vst-incipience",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "interzonexxl",
       "name": "InterzoneXXL",
       "author": "L'Cronx",
       "repo": "sunskiefer/InterzoneXXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "Valley Audio's Interzone synth voice from VCV Rack, played from MIDI in mono or up to 16-voice poly, on the module's own panel with its sliders, knobs and switches, every input jack patched to a built-in source (four Bogaudio LFOs, Tidal Modulator 2, Random Sampler, step and gate sequencers, an extra oscillator) on the MPC tempo, a brickwall limiter, Panic and 16 presets.",
+      "summary": "Valley Audio's Interzone synth voice from VCV Rack, played from MIDI in mono or up to 16-voice poly on the module's own panel. Every input jack is patched to a built-in source (LFOs, sequencers, random) on the MPC tempo, with a brickwall limiter and 16 presets.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/InterzoneXXL/v0.1.0/docs/img/vco.png",
       "style": "synth",
       "tags": [
@@ -4498,12 +4602,10 @@
         "monosynth",
         "polysynth",
         "analog",
-        "valley",
         "vcv",
-        "subtractive",
+        "valley",
         "lfo",
-        "modulation",
-        "sequencer"
+        "modulation"
       ],
       "source_available": false,
       "distribution": "release",
@@ -4899,7 +5001,7 @@
       "repo": "sunskiefer/Loop-SaboteurXXL",
       "kind": "effect",
       "license": "GPL-3.0-or-later",
-      "summary": "A port of Loop Saboteur by Stephen McLeod Blythe (clickysteve): a glitch / chop / beat-slicer that records the last bars and sabotages them on the MPC tempo with retriggered, pitched, reversed, stretched and crushed slices. Eight Acts, a 64-step sequencer with trig conditions, ratchets and p-locks, four MODs per Act, eleven output stages, 19 factory presets, a big readout and 16 banks. Art and build by Claude.",
+      "summary": "A port of Loop Saboteur by Stephen McLeod Blythe (clickysteve): a glitch / chop / beat-slicer that records the last bars and replays them on the MPC tempo as retriggered, pitched, reversed, stretched and crushed slices. Eight Acts, a 64-step sequencer with trig conditions, ratchets and p-locks, and 19 factory presets.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/Loop-SaboteurXXL/v0.1.0/docs/img/3-acts-seq.png",
       "style": "glitch",
       "tags": [
@@ -4907,11 +5009,8 @@
         "slicer",
         "stutter",
         "beat-repeat",
-        "chopper",
-        "bitcrusher",
         "sequencer",
         "p-lock",
-        "lfo",
         "lo-fi",
         "tape"
       ],
@@ -5066,7 +5165,7 @@
       "repo": "sunskiefer/LXR02XXL",
       "kind": "instrument",
       "license": "LicenseRef-LXR02-Open",
-      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. Inspired by the Erica Synths LXR-02. The whole panel on one page (artwork by Suns Kiefer), the LXR's voices with PWM and an FX unit, the 64-step sequencer with songs, rolls and the euclidean generator, Force pads and MPC's step sequencer playing the voices in order, voice and step randomizers, a RESET key and the Hrtl LXR-02 DLC presets.",
+      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. The whole panel on one page, 64-step sequencer with songs, rolls and a euclidean generator, Force pads playing the voices, randomizers and the Hrtl LXR-02 DLC presets. Artwork by Suns Kiefer.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/v0.5.8/docs/img/page.png",
       "style": "drum-machine",
       "tags": [
@@ -5317,12 +5416,8 @@
         "bassline",
         "db-01",
         "lxr",
-        "lxr-02",
         "sequencer",
-        "delay",
-        "sidechain",
-        "mixer",
-        "presets"
+        "delay"
       ],
       "source_available": true,
       "distribution": "release",
@@ -5552,31 +5647,18 @@
       "repo": "sunskiefer/LXRXXL-ZYNTH",
       "kind": "instrument",
       "license": "LicenseRef-LXR02-Open",
-      "summary": "An experimental synth: 19 coded voices on unconventional maths. A Lorenz-attractor CHAOS, a Hilbert-transform frequency SHIFTer, Euclidean rhythms and sine-wave melodies, and voices coded after the Yamaha DX7, the Casio CZ, the Minimoog, Hammond tonewheels, NES / console chips, Mutable Instruments Braids and Plaits, the LXR-02's drum voices and the Erica Synths DB-01 bass via LXRXXL BAZZLINE, plus ANALOG, FM4, VOICE, GRAIN, NOISE, DRONE, TEXTURE and FX. Eight tracks, each voice with 20 controls and 8 starter sounds, an LXR-02 style sequencer with a melodic STEP RANDOM and a voice-aware SOUND RANDOM, a tape/digital delay, an 8-track mixer, presets; ",
+      "summary": "An experimental 8-track synth with 19 voices on unconventional maths (Lorenz chaos, Hilbert frequency shifter, Euclidean rhythms) and voices coded after the DX7, CZ, Minimoog, Hammond, NES chips, Braids and Plaits. LXR-02 style sequencer with random functions, tape/digital delay, mixer and presets.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXRXXL-ZYNTH/v0.2.0/docs/img/panel.png",
       "style": "synth",
       "tags": [
         "synth",
         "groovebox",
         "fm",
-        "dx7",
         "wavetable",
-        "braids",
-        "plaits",
-        "physical-modelling",
-        "granular",
-        "organ",
-        "chiptune",
-        "lxr",
-        "lxr-02",
         "sequencer",
-        "delay",
-        "sidechain",
         "experimental",
         "chaos",
-        "frequency-shifter",
-        "drone",
-        "fx"
+        "lxr"
       ],
       "source_available": true,
       "distribution": "release",
@@ -8823,8 +8905,7 @@
         "vcv",
         "freeze",
         "lfo",
-        "modulation",
-        "sequencer"
+        "modulation"
       ],
       "source_available": false,
       "distribution": "release",
@@ -9602,6 +9683,55 @@
       "download": true
     },
     {
+      "id": "setbfree-organ",
+      "name": "setBfree Organ",
+      "author": "SamplingHigh",
+      "repo": "SamplingHigh/mpc-vst-setbfree",
+      "kind": "instrument",
+      "license": "GPL-2.0-or-later",
+      "summary": "Tonewheel organ with three drawbar manuals, rotary speaker and keyboard splits.",
+      "screenshot": "https://raw.githubusercontent.com/SamplingHigh/mpc-vst-setbfree/v0.1.12/docs/images/setbfree-organ-force.png",
+      "style": "organ",
+      "tags": [
+        "tonewheel",
+        "drawbar",
+        "rotary"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.12",
+          "size": 981871,
+          "sha256": "8bbc4e5ce2cf8afc9999ca56e243e7082ebc1c4819e8559076bb6c33a897dbac",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.1.12/setBfree-Organ-0.1.12-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-19"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.12",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "SamplingHigh/mpc-vst-setbfree",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "sfizz",
       "name": "sfizz",
       "author": "gmorb (MPC port); sfizz by sfztools",
@@ -9700,6 +9830,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.3.9",
+          "size": 130899290,
+          "sha256": "c55fdbe7b323e96a6a7ad4f024ec050edb9e8878ed06140b1ed5dc870e94d4e6",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Sonix/releases/download/v0.3.9/Sonix-0.3.9-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.3.8",
           "size": 131392647,
           "sha256": "1a258f5a2f8d4a7d174123eeaf0ab117f88deda24f6374a360e65965495e5982",
@@ -9719,7 +9868,7 @@
           "tested": []
         }
       ],
-      "latest": "0.3.8",
+      "latest": "0.3.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/Sonix",
@@ -10003,14 +10152,16 @@
       "repo": "sd88me/mpc-vst-sturm",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "Six-voice analog-style drum and synth voice modelled on a classic drum machine: two analog and two sample oscillators, 2/4-pole lowpass, highpass, five envelopes, two LFOs, eight mod paths, kit mode, distortion, compressor and a delay that plays repeated notes, with a bank browser and a touchscreen skin with Q-Links. Loads its sound and project SysEx dumps.",
+      "summary": "Six-voice analog-style drum and synth voice modelled on the Tempest drum machine: two analog and two sample oscillators, lowpass and highpass filters, five envelopes, two LFOs, eight mod paths, kit mode, distortion, compressor and delay. Bank browser with Q-Links; loads its SysEx dumps.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-sturm/sturm-tp-v0.1.1/docs/img/sturm.png",
       "style": "drum-machine",
       "tags": [
         "analog-modelling",
         "drums",
         "sampler",
-        "kit"
+        "kit",
+        "tempest",
+        "dsi"
       ],
       "source_available": false,
       "distribution": "release",
@@ -10084,7 +10235,7 @@
       "repo": "Devko/SubForce",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "Analog-style monosynth in the spirit of a 37-key American paraphonic classic: two morphing oscillators with hard sync, a sub and white-to-pink noise, a mixer with its own feedback loop, a 4-pole transistor ladder (6 to 24 dB) with Multidrive, two looping DAHDSR envelopes, two mod busses, glide and Duo, 57 presets (many for melodic techno) and a six-tab touchscreen skin with Q-Links.",
+      "summary": "Analog-style monosynth in the spirit of a 37-key American paraphonic classic: two morphing oscillators with hard sync, sub and noise, a feedback mixer, a 4-pole ladder filter with Multidrive, two looping envelopes, glide and Duo. 57 presets and a six-tab touchscreen skin with Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/Devko/SubForce/main/docs/img/filter.png",
       "style": "synth",
       "tags": [
@@ -10332,7 +10483,7 @@
       "repo": "sunskiefer/SurgeXXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "The open-source Surge XT synth engine, headless, for Gen1: 2 scenes of 3 oscillators (12 types, wavetables with a picture of each), dual filters, waveshaper, 6 LFOs per scene shown with step sequencer, mod matrix with learn, 16 FX slots (every Surge effect but Spring Reverb, Airwindows included) and the 8 macros, on eight pages. Every factory and third-party patch (3008) and wavetable (761), plus your own patches and wavetables. MPC OS 3.x.",
+      "summary": "The open-source Surge XT synth engine, headless, for Gen1: 2 scenes of 3 oscillators, dual filters, 6 LFOs per scene, mod matrix, 16 FX slots and 8 macros on eight pages. Loads every factory and third-party patch (3008) and wavetable (761), plus your own. MPC OS 3.x.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/SurgeXXL/08c3c3eed8a3ad6792211fb1dc2351ded2383995/docs/img/osc.png",
       "style": "synth",
       "tags": [
@@ -10341,10 +10492,7 @@
         "wavetable",
         "fm",
         "surge",
-        "subtractive",
         "lfo",
-        "modulation",
-        "step-sequencer",
         "presets",
         "airwindows"
       ],
@@ -10455,21 +10603,6 @@
             "3.x"
           ],
           "url": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.4.0/Tinyfreaky-0.4.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.3.9",
-          "size": 5247671,
-          "sha256": "b96f25aed5b8e3a21d5532b6616b3a374ce29dc4c50526eccf1ff404ad9b639d",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/MagicStino/TinyFreaky/releases/download/v0.3.9/Tinyfreaky-0.3.9-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [],
