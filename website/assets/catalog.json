@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-21T04:58:29+00:00",
+  "date": "2026-10-21T11:59:49+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -5918,7 +5918,7 @@
         }
       ],
       "versions": [],
-      "latest": "0.3.6",
+      "latest": "0.3.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
