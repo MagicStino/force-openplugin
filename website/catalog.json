@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-21T11:59:49+00:00",
+  "generated": "2026-10-21T17:19:59+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -1932,6 +1932,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 10819392,
+          "sha256": "6778f592bc6c6a049c12462ae7a71c04806b64e83cb42d21fd211d36d06c0143",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-boris/releases/download/v1.0.1/Boris-Granular-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 8000868,
           "sha256": "595dfc079914b0105965c9d28f19890a53f87cec3ffb48ea730318c42d49424e",
@@ -1957,7 +1972,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-boris",
@@ -2182,6 +2197,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.9.6",
+          "size": 2608980,
+          "sha256": "e63c82607f69d2418bc7d95fceaaa2c204de7907fed72e558c1542ac949d4e98",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.6/Clementine-XT-0.9.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.9.5",
           "size": 2572509,
           "sha256": "63a26fc491fcfaea5b4130893a44668c023ba1ae22a31c8835ffb0c70e17f062",
@@ -2329,7 +2359,7 @@
           "tested": []
         }
       ],
-      "latest": "0.9.5",
+      "latest": "0.9.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-clementineXT",
@@ -2784,6 +2814,23 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 744100,
+          "sha256": "b28fa8db2db91517bc1c99ec36384a9eb321d2234bd800dd8d599a5d6f36afbd",
+          "max_glibc": "2.28",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.1/Daemon-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Daemon/daemon.so calls network (connect, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 743087,
           "sha256": "b21e247c3f7c82f9379b1c70658784ab877ffaeb0204b7967b34af0e199893ab",
@@ -2808,7 +2855,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-daemon",
@@ -2834,6 +2881,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 37027,
+          "sha256": "f57306bebbdcd5fb5f705f705710cda6ee319541d4dbd618c4a57da8611fbba8",
+          "max_glibc": "2.4",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.1/Daemon-Listen-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 37008,
           "sha256": "19b09aba27c964851ca4d82042ddf1685430e753c4fffd74e90f218bc47a6710",
@@ -2856,7 +2918,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-daemon",
@@ -2947,6 +3009,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.7",
+          "size": 3891230,
+          "sha256": "0cc5bed1404c9d0758fe3c25c862684110b0b73e2973d3ac64f09d9e014c6fc1",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-dx7/releases/download/dx7-v1.0.7/Dexed-DX7-1.0.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.6",
           "size": 3886473,
@@ -3061,7 +3138,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.6",
+      "latest": "1.0.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-dx7",
@@ -5851,7 +5928,7 @@
         }
       ],
       "versions": [],
-      "latest": "0.3.7",
+      "latest": "0.4.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -6553,6 +6630,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.8",
+          "size": 1831029,
+          "sha256": "cf054f00f9921ae56c956c6ce6d46c878a96a2af2f045e3cea7eb6587ea769e4",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.8/JV-880-1.0.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.7",
           "size": 1877335,
           "sha256": "f66f9e515e2a9e070dafe7c1d33bcd7a10cbc584cb321e7d66de939a7d87fbee",
@@ -6646,7 +6739,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.7",
+      "latest": "1.0.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-jv880",
@@ -6741,6 +6834,23 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 33101891,
+          "sha256": "c25e07c4fcf7a945fa87044f77bc3e85c2dcc7982db88d8adf94d16847397700",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-model72/releases/download/model72-v1.0.1/Model-72-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Model-72/model72.so calls network (bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execvp, fork, posix_spawnp); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 33102087,
           "sha256": "92b8736f424ec54b5735feb4aa3599e77feae8b99bc46cf9d98ad486d64db1cd",
@@ -6773,7 +6883,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-model72",
@@ -6972,6 +7082,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 2267021,
+          "sha256": "44346610c1df311bf1e2dc2644edcdc89549e73e8dd15b7e38e03042b48f07eb",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-morpho-PE/releases/download/morpho-pe-v1.0.2/Morpho-PE-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 6890493,
           "sha256": "99bdf63ab2179bf4b109f10884114d04b414ac6bb119d288433bf528654e8ef0",
@@ -7024,7 +7149,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-morpho-PE",
@@ -9227,6 +9352,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.3",
+          "size": 4677414,
+          "sha256": "938d597c30a6fc06363ad010c357a71a39ec696cc67b114f785cc53dc28d46cd",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.3/Profit-08-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.1.2",
           "size": 4677281,
           "sha256": "b87a7d89dce61fee9a0e54cd0cdfc2872d8a2c2d7eabdbaf8668ad9a51730f30",
@@ -9321,10 +9461,63 @@
           "tested": []
         }
       ],
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit8",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "profit-5",
+      "name": "Profit-5",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-profit5",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Five-voice analog polysynth modelled on an early SSM-chip classic: two oscillators, a four-pole resonant filter, Poly-Mod, wheel-mod, glide and unison, 38 factory programs, and a Rev 2 / Rev 4 voicing switch.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-profit5/5724d1fe8fdb0aab2c72837228a7fd77f1980ec1/docs/img/screenshot-osc.png",
+      "style": "synth",
+      "tags": [
+        "analog",
+        "poly",
+        "vintage",
+        "poly-mod"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 21636448,
+          "sha256": "583aff7bf432f09cf314a34b5ba533f58bd4efcef6c62cf0278137b44a215d6f",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 31.4,
+            "max_pct": 37.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.1.0/Profit-5-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force (Gen1)",
+              "firmware": "5.0.17",
+              "date": "2026-10-21"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-profit5",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -10244,6 +10437,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.2",
+          "size": 4685060,
+          "sha256": "c8cf394d3b1630b1c1220dc10fd7f14353f5a60d3de5d6978ec7e28f929c81db",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-sturm/releases/download/sturm-tp-v0.1.2/Sturm-TP-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.1.1",
           "size": 4684030,
           "sha256": "7920decfa129256d54bc2137d84007ea7f807d44f5e187aa298db35c83d23920",
@@ -10296,7 +10504,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-sturm",
