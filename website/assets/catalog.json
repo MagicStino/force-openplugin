@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-20T21:42:37+00:00",
+  "date": "2026-10-21T04:58:29+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2786,6 +2786,112 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "daemon",
+      "name": "Daemon",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-daemon",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "AI generative assistant: type or say what you hear and Daemon writes chords, basslines, melodies and beats in your key and plays them in time on its MIDI port. Agent mode builds the session too (tracks, instruments, presets, effects, clips) as a plan you RUN. Gemini or Claude; needs network and an API key.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-daemon/v1.0.0/docs/screenshots/daemon.png",
+      "style": "sequencer",
+      "tags": [
+        "generative",
+        "ai",
+        "midi",
+        "chords",
+        "melody",
+        "beats",
+        "agent",
+        "voice"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 743087,
+          "sha256": "b21e247c3f7c82f9379b1c70658784ab877ffaeb0204b7967b34af0e199893ab",
+          "max_glibc": "2.28",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.0/Daemon-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Daemon/daemon.so calls network (connect, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-21"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-daemon",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "daemon-listen",
+      "name": "Daemon Listen",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-daemon",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "Companion to Daemon: insert it on the audio track that carries your mic, and Daemon's TALK button hears you. Passes audio through unchanged. Needs Daemon in the same project.",
+      "style": "utility",
+      "tags": [
+        "voice",
+        "mic",
+        "ai"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 37008,
+          "sha256": "19b09aba27c964851ca4d82042ddf1685430e753c4fffd74e90f218bc47a6710",
+          "max_glibc": "2.4",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.0/Daemon-Listen-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-21"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-daemon",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
