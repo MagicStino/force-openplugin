@@ -58,6 +58,19 @@ def normalize_plugin(p,source):
  p['provenance']={'source':source,'repository':p['repo'],'hardware_verified_by_openplugin':False,'validation':'metadata-validated' if p['versions'] else 'listed-only'}
  return p
 
+def apply_verified_updates(plugins, path):
+ if not path.exists():return plugins
+ data=json.loads(path.read_text())
+ if data.get('schema')!=1:raise ValueError('Invalid reviewed updates schema')
+ indexed={p['id']:p for p in plugins}
+ for p in data['plugins']:
+  if not ID.fullmatch(p.get('id','')) or not REPO.fullmatch(p.get('repo','')):raise ValueError('Invalid reviewed identity')
+  for v in p['versions'][:1]:
+   u=urllib.parse.urlsplit(v['url']);parts=u.path.strip('/').split('/')
+   if u.scheme!='https' or u.hostname!='raw.githubusercontent.com' or u.username or u.password or u.port not in (None,443) or len(parts)!=4 or '/'.join(parts[:2])!=p['repo'] or not re.fullmatch('[0-9a-f]{40}',parts[2]) or not parts[3].endswith('.zip') or not SHA.fullmatch(v['sha256']) or not isinstance(v['size'],int) or v['size']<=0:raise ValueError('Reviewed update must use an immutable, hashed package')
+  indexed[p['id']]=p
+ return list(indexed.values())
+
 def atomic_json(path,value):
  path.parent.mkdir(parents=True,exist_ok=True)
  data=json.dumps(value,indent=2,ensure_ascii=False)+'\n'
@@ -103,6 +116,7 @@ def update(fetch=read_json):
   except Exception as e:
    candidates.setdefault(repo,{'repo':repo,'url':'https://github.com/'+repo,'status':'needs compatible manifest; not installable'})
    errors.append({'stage':'manifest','repo':repo,'error':str(e)[:200]})
+ plugins=apply_verified_updates(plugins,ROOT/'catalog/verified-updates.json')
  # Compare the complete output: registered manifests are part of the previous catalog too.
  previous=ROOT/'website/catalog.json'
  if previous.exists():
