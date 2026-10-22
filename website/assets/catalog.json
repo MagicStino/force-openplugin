@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-22T17:17:24+00:00",
+  "date": "2026-10-22T21:43:20+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -391,6 +391,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "2.1.0",
+          "size": 3386648,
+          "sha256": "4962c6d6bf325b5a3a556ad44a752dcc37f8356495ffef22ffdd4d62f3cc41e7",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v2.1.0/Acid-2.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "2.0.0",
           "size": 4341735,
           "sha256": "dc57195c4e74084b23e2598946a972eae7726dcd830578eae5385d065182a4f7",
@@ -592,28 +608,9 @@
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 1903560,
-          "sha256": "ed7c828a5bae4007cd873db98e95f731c94e762d933b5577ac57a9dba89f6ebe",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v1.0.0/Acid-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
-            "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
         }
       ],
-      "latest": "2.0.0",
+      "latest": "2.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
@@ -2139,6 +2136,26 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.3",
+          "size": 4358024,
+          "sha256": "81f04760add15914db1b88d27a801f64a6a59043402fc65f3305c999c87272ec",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 7.5,
+            "max_pct": 14.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.3/Chordsmith-1.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.2",
           "size": 4357479,
           "sha256": "effb03244c96da8b59209b327a5986c8c694e9c0fa94628c25e7a3dc142f3542",
@@ -2242,7 +2259,7 @@
           ]
         }
       ],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-chordsmith",
@@ -4177,6 +4194,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.0",
+          "size": 13370418,
+          "sha256": "ee6bd6517686fda1e340f48e1d65c3bd25bb1737838e4e087fd4b9d7a7decc11",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Evil-Tuner-XXL/releases/download/v0.2.0/Evil-Tuner-XXL-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/L'Cronx - VST - Evil Tuner XXL/evil_tuner_xxl.so calls network (getaddrinfo); runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-22"
+            }
+          ]
+        },
+        {
           "version": "0.1.1",
           "size": 10853279,
           "sha256": "2aa322aafd0885205c8af0243b8beb17a31e688fd606b5bee8a671219c2b7ce1",
@@ -4213,7 +4255,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/Evil-Tuner-XXL",
@@ -4390,6 +4432,96 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/fretty-mpc",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "gaiaxxl",
+      "name": "GAIAXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/GAIAXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Three-tone virtual-analog synth modelled on the discontinued Roland GAIA SH-01 (not affiliated with Roland): the editor's parameters over six full-screen pages, 21 oscillator variations (with KORG logue-sdk wave tables), SYNC/RING, the GAIA's effects chain and arpeggiator, two beams, a musical randomizer and 64 patches.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/GAIAXXL/v0.1.2/docs/img/tone.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "virtual-analog",
+        "supersaw",
+        "gaia",
+        "arpeggiator",
+        "pad",
+        "lead",
+        "randomizer"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "size": 8064950,
+          "sha256": "b3bdc5edeeafdd5426039106695fdd6c20c7b05fe75d305481e5f133b073e249",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/GAIAXXL/releases/download/v0.1.2/GAIAXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.1",
+          "size": 8050132,
+          "sha256": "d317a19adbe5c492e98794e5d95aa0745b3794c2e0ae0ade41ae33d7d135afa3",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/GAIAXXL/releases/download/v0.1.1/GAIAXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 8052717,
+          "sha256": "a10155c37c04148f0f6550634fee3bcd6b03793106d86b21b28275af2b84ae21",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/GAIAXXL/releases/download/v0.1.0/GAIAXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.2",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/GAIAXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -5050,6 +5182,26 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.3",
+          "size": 3305368,
+          "sha256": "223d0b79d72394edb606df80cbbfdfafa167a5a01ba2379facde99cc1d603f70",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 4.3,
+            "max_pct": 8.3,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.3/Keyscope-1.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.2",
           "size": 3304841,
           "sha256": "291da392ffc0127faad793f7b8ad9392fab26706643537597c9c1d4f5bc26fe6",
@@ -5130,7 +5282,7 @@
           ]
         }
       ],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-vst-keyscope",
@@ -6895,6 +7047,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-21"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-22"
             }
           ]
         },
@@ -10283,7 +10440,7 @@
       "kind": "instrument",
       "license": "GPL-2.0-or-later",
       "summary": "Tonewheel organ with drawbars, percussion, scanner, editable Leslie and keyboard splits.",
-      "screenshot": "https://raw.githubusercontent.com/SamplingHigh/mpc-vst-setbfree/v0.2.0/docs/images/setbfree-organ-force.png",
+      "screenshot": "https://raw.githubusercontent.com/SamplingHigh/mpc-vst-setbfree/v0.2.1/docs/images/setbfree-organ-force.png",
       "style": "organ",
       "tags": [
         "tonewheel",
@@ -10293,6 +10450,27 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.1",
+          "size": 1365066,
+          "sha256": "de907428be7fc1969633400f882237f5178ad2fe3086364b66900257e2fa89a2",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.2.1/setBfree-Organ-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-22"
+            }
+          ]
+        },
         {
           "version": "0.2.0",
           "size": 1365019,
@@ -10306,13 +10484,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.1.2",
-              "date": "2026-10-20"
-            }
-          ]
+          "tested": []
         },
         {
           "version": "0.1.12",
@@ -10330,7 +10502,7 @@
           "tested": []
         }
       ],
-      "latest": "0.2.0",
+      "latest": "0.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "SamplingHigh/mpc-vst-setbfree",
