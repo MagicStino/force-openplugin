@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-21T21:48:10+00:00",
+  "generated": "2026-10-22T04:59:49+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -20,6 +20,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.2",
+          "size": 1921161,
+          "sha256": "c0b29a763b71beeef401c4b384f2bfc256faff37061c7b0b2f5fdb97800446c5",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/6w6-vst-v1.1.2/6W6-1.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.1.1",
           "size": 2071650,
@@ -103,7 +118,7 @@
           ]
         }
       ],
-      "latest": "1.1.1",
+      "latest": "1.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -127,6 +142,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.2",
+          "size": 3520719,
+          "sha256": "1f655e9b9f77da15a5470c4b3e7c5e3ff51a887d229c4edcf1e50090de06599a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/8w8-vst-v1.1.2/8W8-1.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.1.1",
           "size": 3792785,
@@ -210,7 +240,7 @@
           ]
         }
       ],
-      "latest": "1.1.1",
+      "latest": "1.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -234,6 +264,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.2",
+          "size": 4676082,
+          "sha256": "9e907e3161890ec06a933bfcccb4532fac9a061cd4634f7dfe23074db507db8a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/9w9-vst-v1.1.2/9W9-1.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.1.1",
           "size": 4934220,
@@ -317,7 +362,7 @@
           ]
         }
       ],
-      "latest": "1.1.1",
+      "latest": "1.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -2700,6 +2745,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.2",
+          "size": 5106699,
+          "sha256": "1777423b0c66eeda355026b50caf6c0cde9064ac1d82fdb1e50f3acb3e483454",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/cw78-vst-v1.1.2/CW-78-1.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.1.1",
           "size": 5417680,
           "sha256": "6a8e516cd9df8e2df1e26e4318631ac4453186e11917036174758ac64163c42f",
@@ -2782,7 +2842,7 @@
           ]
         }
       ],
-      "latest": "1.1.1",
+      "latest": "1.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -4858,6 +4918,59 @@
       }
     },
     {
+      "id": "j106",
+      "name": "JN-106",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-jn106",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Faithful, circuit-modelled and hardware-profiled six-voice Juno emulation (Ultramaster KR-106 DSP): IR3109 filter, BA662 VCA and MN3009 BBD chorus modelled from the circuits, the 106 CPU firmware reimplemented from its disassembly, curves fitted to real hardware and checked against the service notes. 256 factory presets, realistic panel skin.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-jn106/9053529f679d2a5f07781f002004e27cc12959e0/docs/img/screenshot-lfo-dco.png",
+      "style": "synth",
+      "tags": [
+        "analog",
+        "poly",
+        "vintage",
+        "chorus"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 24590491,
+          "sha256": "0610bf7401c32b902128570dc9fa811b7ff2597e32fbc7e9d5e6e1308760153c",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 47.1,
+            "max_pct": 48.4,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jn106/releases/download/jn-106-vst-v0.1.0/JN-106-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-22"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-jn106",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "keyscope",
       "name": "Keyscope",
       "author": "jacob-sabella",
@@ -5266,6 +5379,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.9.2",
+          "size": 2096726,
+          "sha256": "0ef43f26c77fb69ffea52ff045ee2d41f6c6cc945771a868a081edcebf8f7a37",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-luckydip/releases/download/v0.9.2/Lucky-Dip-0.9.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.9.1",
           "size": 2096593,
           "sha256": "6370d8d6102a9708acae84773395720e2846dfbedb187c3a4fdf6b18d5ffe6d6",
@@ -5319,7 +5448,7 @@
           "tested": []
         }
       ],
-      "latest": "0.9.1",
+      "latest": "0.9.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-luckydip",
@@ -6293,6 +6422,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.5",
+          "size": 4374375,
+          "sha256": "fbb44f52491c9dd062faf64d56ccc389f54fdfb9b480554ba28a0e59a2ee0b38",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-voice-vst-v1.0.5/Maze-Voice-1.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-12"
+            }
+          ]
+        },
+        {
           "version": "1.0.4",
           "size": 4373239,
           "sha256": "b39c13054e4ecbe33314d2b60634ab530bdbafbf6ef7c30b1400c05e415e23a0",
@@ -6425,7 +6575,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.4",
+      "latest": "1.0.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
@@ -6643,7 +6793,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-21"
+            }
+          ]
         },
         {
           "version": "1.0.7",
@@ -8699,6 +8855,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 1810558,
+          "sha256": "588a1718bfd96b1c28b56fc1de13c351b1cc31f49a6c88babb2f38f4e07cf081",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-OTT/releases/download/ottmpc-vst-v1.0.1/OTTmpc-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 1809434,
           "sha256": "00f220611b89a0c2c1c430c3fbe873c26146699a4ce35296cbf00f24fb5cfa2b",
@@ -8728,7 +8899,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-OTT",
@@ -9476,7 +9647,7 @@
       "repo": "sd88me/mpc-vst-profit5",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "Five-voice analog polysynth modelled on an early SSM-chip classic: two oscillators, a four-pole resonant filter, Poly-Mod, wheel-mod, glide and unison, 38 factory programs, and a Rev 2 / Rev 4 voicing switch.",
+      "summary": "Five-voice analog polysynth modelled on an early SSM-chip classic: two oscillators, a four-pole resonant filter, Poly-Mod, wheel-mod, glide and unison, 38 factory programs, a Rev 2 / Rev 4 voicing switch, and an importer for Repro-5 .h2p patches.",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-profit5/5724d1fe8fdb0aab2c72837228a7fd77f1980ec1/docs/img/screenshot-osc.png",
       "style": "synth",
       "tags": [
@@ -9488,6 +9659,56 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.0",
+          "size": 21356410,
+          "sha256": "a15b6e5cfa462f69f95bac0ef669b1e71e54242c9cb4f4e498203e88c10d99c8",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 31.4,
+            "max_pct": 37.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.2.0/Profit-5-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force (Gen1)",
+              "firmware": "5.0.17",
+              "date": "2026-10-22"
+            }
+          ]
+        },
+        {
+          "version": "0.1.1",
+          "size": 21636494,
+          "sha256": "59b0891560a0a123ce639441dc2878e9f6c8fce32ae1c8073f7f24a93b948e07",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 31.4,
+            "max_pct": 37.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.1.1/Profit-5-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force (Gen1)",
+              "firmware": "5.0.17",
+              "date": "2026-10-22"
+            }
+          ]
+        },
         {
           "version": "0.1.0",
           "size": 21636448,
@@ -9514,7 +9735,7 @@
           ]
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit5",
@@ -10918,6 +11139,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 21121219,
+          "sha256": "46b9a95b7a9e5ba509c18f3e420b07d0264dd036103cb05b1cb3186056f2ae4d",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-vst-v1.0.1/TR-MPC-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 24084439,
           "sha256": "dd4b5ac3354a77ecf4b554f10e09c80631029113eb8414c95446007e333f7eea",
@@ -10947,7 +11183,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -10974,6 +11210,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 526378,
+          "sha256": "57d14ccd933182cdd069b97ef17ed70f6ab8d7dde408e604e3a0a4d555998c49",
+          "max_glibc": "2.7",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-tap-fx-vst-v1.0.1/TR-MPC-Tap-FX-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 524090,
           "sha256": "4d0c7102724395247686772ec3d04ae3afd3feeca5d60f0ac6cec422d0bf96f1",
@@ -10999,7 +11250,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
