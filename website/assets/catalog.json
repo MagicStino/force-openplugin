@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-22T04:59:49+00:00",
+  "date": "2026-10-22T12:02:39+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6676,6 +6676,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 4679302,
+          "sha256": "cf56abcc02be0e9f1da035546d840de74536de0bb63b5d74b63e91ff2253e99b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mcardonaserrano/meowsynth-mpc/releases/download/v1.0.2/MeowSynth-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-22"
+            }
+          ]
+        },
+        {
           "version": "1.0.1",
           "size": 4675345,
           "sha256": "0bf7b0cf9d3138ef64dd16a084e437d817750610637d1adb086c8f12e94e0e88",
@@ -6695,7 +6716,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "mcardonaserrano/meowsynth-mpc",
