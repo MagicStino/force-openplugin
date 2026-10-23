@@ -1,14 +1,14 @@
 # OpenPlugin
 
-Browse, install and update **community VST plugins on Akai Force 3.9.1 and MPC Gen1**, directly from the touchscreen. OpenPlugin also brings combined JV-880 ROM/plugin setup, community USB mouse support and SSH/SFTP file transfers.
+Browse, install and update **community VST plugins on Akai Force 3.10.0 and MPC Gen1**, directly from the touchscreen. OpenPlugin also brings combined JV-880 ROM/plugin setup, community USB mouse support and SSH/SFTP file transfers.
 
 Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
-**[Download OpenPlugin 0.8.1 RC2 and follow the USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
+**[OpenPlugin 0.8.2 RC2 build information and USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Release status:** 0.8.1 RC2 is a research candidate. Both images pass structural and stock verifier checks; the new images have not been flashed or boot-tested. Earlier Force use and SSH/SFTP transfers are documented. Mouse interaction, image pagination and the search CPU fix still need device acceptance testing; MPC Gen1 remains unverified on hardware.
+**Release status:** 0.8.2 RC2 includes the Force-confirmed bitmap thumbnail correction, larger 64 × 64 paging targets and catalog/install text increased by one point. Force boot and SSH were checked after RC1; the thumbnail correction was subsequently confirmed on the device. The rebuilt RC2 images and new touch/text changes still need hardware validation; MPC Gen1 remains hardware untested. See the download guide for availability and checksums.
 
 ![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
 
@@ -17,64 +17,57 @@ Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst
 - Discover community instruments, effects, samplers, trackers and tools; filter by name, author or tag.
 - Download compatible native packages, queue installs and updates, or remove managed plugins.
 - Load the online index when the manager opens or **Refresh catalog** is pressed; keep a saved index offline.
-- Refresh online plugin artwork on each catalog refresh, retain the last good image offline and use bundled fallbacks.
+- Display cached bundled bitmap artwork with fallbacks for unknown entries; no per-pixel rendering or live artwork download jobs.
 - Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
 - Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
 - Transfer samples and files using **REMOTE ACCESS** SSH/SFTP controls. See the [connection guide](docs/SSH.md) for setup and test limits.
 
 Only compatible ARMv7 community packages can be installed. General web pages, desktop VST bundles and source repositories alone are not installable packages. Refreshing the index does not install software automatically.
 
-For existing 3.9.1 users, a same-version update prompt is expected: the original application remains **3.9.1.2**. See the [USB guide](docs/DOWNLOADS.md).
+For existing 3.10.0 users, a same-version update prompt is expected: the original application remains **3.10.0.49**. See the [USB guide](docs/DOWNLOADS.md).
 
 ## Build from original firmware
 
 Linux prerequisites: Python 3.12+, git, gcc, e2fsprogs, binutils, OpenSSH tools,
 Chromium runtime libraries, several GB of RAM and approximately 5 GB of space.
-The owner already supplied both original stock **3.9.1** firmware images for
-this project: `Force-3.9.1-update.img` and `MPC-3.9.1-Gen1-update.img`.
+The owner already supplied both original stock **3.10.0** firmware images for
+this project: `Force-3.10.0-update.img` and `MPC-3.10.0-Gen1-update.img`.
 Their exact SHA256 checksums are recorded in [inputs.json](inputs.json).
 They are not stored in Git; use those supplied local files, or matching original
 copies. Other firmware versions are rejected; renaming them does not help.
 
-Clone the repository and place your original images in a `firmware/` folder
-inside it (or substitute their actual paths below):
-
-```sh
-git clone https://github.com/MagicStino/force-openplugin.git
-cd force-openplugin
-mkdir -p firmware
-```
+For this candidate, download and extract **OpenPlugin-0.8.2-rc2-source.zip** from the [RC2 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2-rc2). This attached archive contains the complete build changes; GitHub's automatic source archives do not. Place the original images in a `firmware/` folder inside the extracted source, then run the commands below there.
 
 Build **Force only**; no MPC image is required:
 
 ```sh
-bash build.sh --device force firmware/Force-3.9.1-update.img output-force
+bash build.sh --device force firmware/Force-3.10.0-update.img output-force
 ```
 
 Build **MPC Gen1 only**; no Force image is required:
 
 ```sh
-bash build.sh --device mpc-gen1 firmware/MPC-3.9.1-Gen1-update.img output-mpc
+bash build.sh --device mpc-gen1 firmware/MPC-3.10.0-Gen1-update.img output-mpc
 ```
 
 Or build **both**:
 
 ```sh
-bash build.sh firmware/Force-3.9.1-update.img \
-  firmware/MPC-3.9.1-Gen1-update.img output
+bash build.sh firmware/Force-3.10.0-update.img \
+  firmware/MPC-3.10.0-Gen1-update.img output
 ```
 
 Each command builds the native payload and runs the same validation checks;
 only the requested firmware image(s) are generated. The originals remain unchanged.
 An optional final argument supplies an owner's public SSH key.
 
-Outputs: `*-openplugin-v0.8-update.img`, checksums and validation manifests. Existing files
+Outputs: `*-openplugin-v0.8.2-rc2-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and selected images without mounting them. It does not flash.
 
-Development container version: **3.9.1-openplugin-v0.8**. The supplied 3.9.1 files
-contain application **3.9.1.2**; its binaries and numeric version fields stay
-unchanged. [Current OpenPlugin 0.8 research release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8-openplugin-research-rc2). IMG files are release assets, not Git files.
+Development container version: **3.10.0-openplugin-v0.8.2-rc2**. The supplied 3.10.0 files
+contain application **3.10.0.49**; its binaries and numeric version fields stay
+unchanged. See [current build availability](docs/DOWNLOADS.md). Firmware images are distributed separately from Git source.
 
 ## Documentation
 
