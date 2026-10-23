@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-23T00:55:09+00:00",
+  "generated": "2026-10-23T05:00:31+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -624,7 +624,7 @@
       "repo": "sd88me/mpc-vst-acid303",
       "kind": "instrument",
       "license": "AGPL-3.0-only",
-      "summary": "An accurate, circuit-modelled TB-303, matched to the hardware: the voice (from Lemus) solves the original schematic transistor by transistor and is fitted to 400 notes from a real unit. Switchable Devil Fish mods; Gen1 and Gen2 (WARN for CPU on Gen1: one or two instances, ECO).",
+      "summary": "An accurate, circuit-modelled 303 voice, matched to the hardware: the voice (from Lemus) solves the original schematic transistor by transistor and is fitted to 400 notes from a real unit. Switchable Devil Fish mods; Gen1 and Gen2 (WARN for CPU on Gen1: one or two instances, ECO).",
       "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-acid303/main/docs/device-303.png",
       "style": "synth",
       "tags": [
@@ -4389,6 +4389,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
             "forceLinkAudio calls network (bind, recv, recvfrom, sendto, socket): flagged for manual review (the author can explain why)",
             "forceLinkAudioAddin.so calls network (sendto, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
@@ -4489,6 +4492,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.3",
+          "size": 8066550,
+          "sha256": "002ff09ca05228515fdea700860dfd3e6f3b341c3593b8aabf445b9ffc7726e0",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/GAIAXXL/releases/download/v0.1.3/GAIAXXL-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.2",
           "size": 8064950,
           "sha256": "b3bdc5edeeafdd5426039106695fdd6c20c7b05fe75d305481e5f133b073e249",
@@ -4546,7 +4567,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/GAIAXXL",
@@ -5056,6 +5077,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.3",
+          "size": 14264341,
+          "sha256": "b0d9c1ea07f1dfe9dd4dcaa833883c19d7cbea083c5fbc31834a2c29ef4f9f4c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/InterzoneXXL/releases/download/v0.1.3/InterzoneXXL-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.2",
           "size": 14270279,
           "sha256": "ebd57184d3c502e2a7dc6b49e29109134a6ba3e48b8bedf98d9c3433ad58435d",
@@ -5119,7 +5158,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/InterzoneXXL",
@@ -5532,6 +5571,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.3",
+          "size": 8625684,
+          "sha256": "57e8398367cfc660d5546c91fa3da195a7b22436d8ad21c973a7888d0bb69679",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.3/Loop-SaboteurXXL-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.2",
           "size": 8625627,
           "sha256": "6747869fa78be7324ce455903e77811d44111204b8c9bb198f830f58b6a2a080",
@@ -5580,7 +5637,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.2",
+      "latest": "0.1.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/Loop-SaboteurXXL",
@@ -5709,6 +5766,24 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.5.10",
+          "size": 10737869,
+          "sha256": "049f499cec710bbd256250f97c3ed1f2299b9e3b7908d72954e7cbdb6b9765ac",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.10/LXRXXL-0.5.10-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.5.9",
           "size": 10731860,
@@ -5891,34 +5966,9 @@
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
-        },
-        {
-          "version": "0.5.0",
-          "size": 10266730,
-          "sha256": "bd48f7f33f9e8898a7cb6bd912d6c97dae1f3af44170c456c241ef7836486f08",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.0/LXRXXL-0.5.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.1",
-              "date": "2026-10-11"
-            }
-          ]
         }
       ],
-      "latest": "0.5.9",
+      "latest": "0.5.10",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
@@ -5949,6 +5999,30 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.10",
+          "size": 16957463,
+          "sha256": "a5858ebda8022943a1ab8962d1d874739f50a0d51e4c93b4358bffef4a063e99",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.10/LXRXXL-BAZZLINE-0.2.10-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        },
         {
           "version": "0.2.9",
           "size": 16954959,
@@ -6131,34 +6205,9 @@
               "date": "2026-10-12"
             }
           ]
-        },
-        {
-          "version": "0.2.0",
-          "size": 16912563,
-          "sha256": "c93001da8c0bff79e4298d323f9bfe7391f19f82a6366e9807c766d8d2dfed70",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXRXXL-BAZZLINE/releases/download/v0.2.0/LXRXXL-BAZZLINE-0.2.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.1",
-              "date": "2026-10-12"
-            }
-          ]
         }
       ],
-      "latest": "0.2.8",
+      "latest": "0.2.10",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXRXXL-BAZZLINE",
@@ -6189,6 +6238,30 @@
       "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.2",
+          "size": 23509798,
+          "sha256": "901e7ee52937a628f5cc1000ae81ceda472dac0159c96140ba785ce542ccc36d",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXRXXL-ZYNTH/releases/download/v0.2.2/LXRXXL-ZYNTH-0.2.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        },
         {
           "version": "0.2.1",
           "size": 23508220,
@@ -6253,7 +6326,7 @@
           ]
         }
       ],
-      "latest": "0.2.0",
+      "latest": "0.2.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXRXXL-ZYNTH",
@@ -7632,6 +7705,29 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.0",
+          "size": 43919,
+          "sha256": "d899a43be75abd3876f8ba04e1364fc6079ea3de06558a70b8f90062c453c63c",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-commander/releases/download/commander-addin-v1.1.0/MPC-Commander-addin-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_commander_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        },
+        {
           "version": "1.0.0",
           "size": 40881,
           "sha256": "f7c2cd7fb022066c83cf67f93faef6f3beb08ca66e46485b3d6b5ce5e99b10f2",
@@ -7717,7 +7813,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-commander",
@@ -7841,6 +7937,9 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
             "mpc_remote_addin.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -7991,7 +8090,11 @@
           "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.6.0/MPC-Skipback-0.6.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -8085,7 +8188,11 @@
           "url": "https://github.com/jacob-sabella/mpc-addin-usb-audio/releases/download/usb-audio-addin-v1.0.3/MPC-USB-audio-addin-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -9559,6 +9666,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.4.3",
+          "size": 13482568,
+          "sha256": "e4c4322a2b990bd1b78fd758d1102bfa52d294ed911338acf3ad644f395e73e9",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PlateauXXL/releases/download/v0.4.3/PlateauXXL-0.4.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.4.2",
           "size": 13481095,
           "sha256": "998e2c79ae302d7e4072077a973508730f447d59357ae8c47537bd42bf52ca2a",
@@ -9603,7 +9728,7 @@
           ]
         }
       ],
-      "latest": "0.4.2",
+      "latest": "0.4.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/PlateauXXL",
@@ -10315,6 +10440,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.3",
+          "size": 2538149,
+          "sha256": "090a95a075ba1fce6a654d21d48359d683516118f8c2aeda0ae8976db56fd4da",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.2.3/RMXXXL-1.2.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.2",
           "size": 2536532,
           "sha256": "b698a9c9c571187ac0fb45d49d8294825264be49b339b642bd32b96e6d063a19",
@@ -10409,7 +10552,7 @@
           ]
         }
       ],
-      "latest": "1.2.2",
+      "latest": "1.2.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/RMXXXL",
