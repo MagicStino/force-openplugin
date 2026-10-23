@@ -1,21 +1,21 @@
 # Download images
 
-## Current build: firmware 3.10.0 / OpenPlugin v0.8.2-rc2
+## Current build: firmware 3.10.0 / OpenPlugin v0.8.2-rc3
 
 The current Force and MPC Gen1 images are based on stock firmware **3.10.0** (application **3.10.0.49**). Both include OpenPlugin, SSH/SFTP support and the mouse/cursor integration.
 
-Download the **[OpenPlugin v0.8.2-rc2 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2-rc2)** below. These images include the persistent thumbnail fix, paging touch targets enlarged from 44 × 44 to 64 × 64, and catalog/install text increased by one point.
+Download the **[OpenPlugin v0.8.2-rc3 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2-rc3)** below. These images include the persistent thumbnail fix, paging touch targets enlarged from 44 × 44 to 64 × 64, and catalog/install text increased by one point.
 
 | Device family | Current filename | SHA256 |
 |---|---|---|
-| Akai Force | [Force-3.10.0-openplugin-v0.8.2-rc2-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2-rc2/Force-3.10.0-openplugin-v0.8.2-rc2-update.img) | `2a591c7ee6d75c24aaa0ebf329e0ef3648a4b5c6471e12b3d38ad9ab67cac06a` |
-| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.2-rc2-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2-rc2/MPC-3.10.0-Gen1-openplugin-v0.8.2-rc2-update.img) | `3d5b48a74653694bd160a1c74c8342e5d508d9332a199fc9bc1c2103b0a91003` |
+| Akai Force | [Force-3.10.0-openplugin-v0.8.2-rc3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2-rc3/Force-3.10.0-openplugin-v0.8.2-rc3-update.img) | `391a923242fb56afa248ddaa90af17f4b14a7804cded75151eef06a0e117675b` |
+| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.2-rc3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2-rc3/MPC-3.10.0-Gen1-openplugin-v0.8.2-rc3-update.img) | `447dd92215c094108fab16572eae88070834af3adfb5747ea2efaf214b05df4b` |
 
 ## Validation status
 
 - Both images passed stock image verification, filesystem checks and injected-file verification.
 - On 23 October 2026, the Force owner reported the device working after the RC1 update. A subsequent SSH login succeeded and the Force application service was active. This confirms remote access and a running application on that device; it is not a full feature or audio test.
-- The owner confirmed the corrected bitmap thumbnails visible on Force. RC2 embeds this correction permanently; the larger paging targets and text still need hardware acceptance testing. The complete RC2 images have not yet been flashed.
+- The owner confirmed the corrected bitmap thumbnails visible on Force. RC3 embeds this correction permanently; the larger paging targets and text still need hardware acceptance testing. The complete RC3 images have not yet been flashed.
 - Mouse operation and paging CPU usage have not yet been measured on the updated Force.
 - MPC Gen1 remains hardware untested.
 
@@ -43,3 +43,5 @@ SSH/SFTP is enabled at startup in these builds. The default login is **username 
 ## Older release — firmware 3.9.1
 
 [OpenPlugin v0.8.1-rc2 release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.1-rc2) remain available for reference. They are based on **3.9.1**, not the current **3.10.0** build.
+
+RC3 adds the approved three-head Magic Tape Echo thumbnail and final catalog versions: Magic Tape Echo 0.1.1, PulyTek 1.0.2 and TinyFreaky 0.4.1. Older versions of these three are removed from the current catalog.
