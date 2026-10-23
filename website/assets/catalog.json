@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-23T11:47:57+00:00",
+  "date": "2026-10-23T17:15:18+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2009,6 +2009,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 7736750,
+          "sha256": "8a222c1dac08a51a4a2099109bd186b50bd831cee3463079d3344e8ea5dedef8",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-aphex/releases/download/v1.1.1/SYN-Aphex-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 7736092,
           "sha256": "4709dd5a456378f2a599beec45b4577b190f2bbff6bb20d2e5e5190186d8255b",
@@ -2047,7 +2066,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-aphex",
@@ -2091,7 +2110,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -2148,6 +2173,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 2464163,
+          "sha256": "718e16d263c3bbbc0d9a42fd6e8ad6c972a6d6378b582db4b32dbbebf58c1360",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-chordism/releases/download/v1.0.2/SYN-Chordism-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 2463469,
           "sha256": "32e42d46546f9b942507f2437d8eb02ce5bf3ebcd256f0785ffb815daad140f8",
@@ -2186,7 +2230,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-chordism",
@@ -2379,7 +2423,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "0.9.5",
@@ -3016,7 +3066,13 @@
           "warnings": [
             "portable/sd88me - VST - Daemon/daemon.so calls network (connect, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -3082,7 +3138,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -3136,6 +3198,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 5666573,
+          "sha256": "84058c8e3a28a17eb67516030d497747773cba2c07db31c4faa3f31d7c04f0f5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-denis/releases/download/v1.1.1/SYN-Denis-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 5665874,
           "sha256": "1cd5ae856836550dc67897391d8cc999d04422831d89ca9450d3d80ece0e789c",
@@ -3174,7 +3255,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-denis",
@@ -3213,7 +3294,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.6",
@@ -3631,6 +3718,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 344782,
+          "sha256": "e04d3367ef7d37df9d94986e3ccf4586d387e04c245daf8f6c6630e680b997b3",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-drum-map/releases/download/v1.2.1/SEQ-Drum-Map-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.0",
           "size": 344105,
           "sha256": "94a7faad8f737c459e07640a6c8dda1ffef79eadfbde0c3ae3f0d73d4cbe886c",
@@ -3669,7 +3775,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-drum-map",
@@ -3699,6 +3805,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.2.1",
+          "size": 3297072,
+          "sha256": "b15e0cdf21d0168df7980304ccb651c726c43e3100de5601859e87dd2e30e311",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-dual-slope/releases/download/v1.2.1/SEQ-Dual-Slope-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.2.0",
           "size": 3296558,
@@ -3744,7 +3869,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-dual-slope",
@@ -3813,7 +3938,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Dub-techno multi-effect: two independent tape delays, a huge modulated reverb, tape grit, a noise/crackle ambience bed, phaser, ducking and a panic kill.",
-      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-dub-station/dub-station-vst-v0.9.0/preview_0.png",
+      "screenshot": "https://raw.githubusercontent.com/nachtaktiv303/mpc-vst-dub-station/main/preview_0.png",
       "style": "delay",
       "tags": [
         "dub",
@@ -3826,6 +3951,36 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 2222604,
+          "sha256": "485fdaaa758787b4654b48aca9067e7369da2eebdaf457b780714b0195cdda2a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.2/Dub-Station-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
+          "version": "1.0.1",
+          "size": 2219746,
+          "sha256": "77febaa9b91f72060c78b90e7758de80fd3a8cf01d1773eaf7ba58b8ab4deb79",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.1/Dub-Station-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.0",
           "size": 2209760,
@@ -3881,7 +4036,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-dub-station",
@@ -3981,6 +4136,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 559425,
+          "sha256": "6884f849accd01df6d6f5b49bfa88eb55de795de85ad1e84da2ee7926e6880ef",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-eucalypso/releases/download/v1.0.1/SEQ-Eucalypso-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 558556,
           "sha256": "656737e4cefae8eadb1ed863d108db592fc6de93bd615201669ec6596f3b8878",
@@ -4000,7 +4174,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-eucalypso",
@@ -4363,6 +4537,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 1930474,
+          "sha256": "fa9216465d6917110022d73c1ce002ef51c93a27911540b49f4d1c0fce2b43d9",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-fizzik/releases/download/v1.0.2/SYN-Fizzik-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 1929018,
           "sha256": "52e8c521888b9a91cf7eea6ac73dd9dbedc33785d07b4b64a65f90dfad8a9032",
@@ -4401,7 +4594,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-fizzik",
@@ -4680,6 +4873,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 872803,
+          "sha256": "d8e722095eca72cee836e69369c1620f8a29afa9a31491a71b55deaa5ec3b141",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-groovebank/releases/download/v1.1.1/SEQ-Groove-Bank-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 872117,
           "sha256": "f4bf69d56a5b51dfc2eb75e30d666fcdeea948119dd790f807c4c29a46754c10",
@@ -4737,7 +4949,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-groovebank",
@@ -4765,6 +4977,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 2237141,
+          "sha256": "6a0fe45cc802b358fed4332f6d30785086b5076ed19e149bff9709ca9cda0a1b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-hank/releases/download/v1.1.1/SYN-Hank-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 2236424,
@@ -4804,7 +5035,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-hank",
@@ -4882,6 +5113,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 3463208,
+          "sha256": "763906bdaf8528df13458d786fe9776b12281a2fea26f3fd1d2b06357456e6e9",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-hera/releases/download/v1.1.1/SYN-Hera-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 3462559,
           "sha256": "94bcfede9efb5f3e83522deab34336fde855021abb8ad8fe764ea7845e20404e",
@@ -4945,7 +5195,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-hera",
@@ -4975,6 +5225,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 7331704,
+          "sha256": "613afa9c5d28e88899a8db2c070432698550a6ca719273ad8b432bc8cf50db63",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-incipience/releases/download/v1.1.1/DRUM-Incipience-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 7331727,
@@ -5026,7 +5295,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-incipience",
@@ -5053,6 +5322,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 106749,
+          "sha256": "64d92e82587cffeb155d5f08f216b440d5f7311432fde95fe993fbfb9e33984b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-incipience/releases/download/incipience-out-v1.1.1/FX-Incipience-OUT-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 106701,
@@ -5104,7 +5392,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-incipience",
@@ -5447,18 +5735,7 @@
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
-          "tested": [
-            {
-              "device": "Akai Force (Gen1)",
-              "firmware": "MPC 3.9.1",
-              "date": "2026-10-12"
-            },
-            {
-              "device": "MPC Live 3 (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-12"
-            }
-          ]
+          "tested": []
         },
         {
           "version": "1.0.0",
@@ -5479,13 +5756,7 @@
             "plugin_list.awk differs from this repo's current copy: review it",
             "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "MPC 3.x / MockbaMod",
-              "date": "2026-10-10"
-            }
-          ]
+          "tested": []
         }
       ],
       "latest": "1.0.1",
@@ -5745,7 +6016,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "0.9.1",
@@ -6457,6 +6734,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 8395217,
+          "sha256": "de7d11274fb341b92f7446a06bf191758fd5a672107a7194d201b17e643fbe3f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-macro-osc/releases/download/v1.1.1/SYN-Macro-Osc-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 8394487,
           "sha256": "c30f20316fa56f9fc8f31a59e0fd2fe71d59749b9f32d065a451bf9e175e2a33",
@@ -6476,7 +6772,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-macro-osc",
@@ -6675,6 +6971,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-12"
+            },
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
             }
           ]
         },
@@ -6860,6 +7161,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-12"
+            },
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
             }
           ]
         },
@@ -7094,6 +7400,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 1075364,
+          "sha256": "cdadb86c276465500d85f91c4e6d8cbb764760dc3609d2d95efb4aca95e84bec",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-meta-mod/releases/download/v1.2.1/FX-Meta-Mod-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.0",
           "size": 1074698,
           "sha256": "c94e142ddde843abf5b2b90f8ffc26c032ab6e29a7de834edef355fdbf747d71",
@@ -7132,7 +7457,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-meta-mod",
@@ -7160,6 +7485,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 147436,
+          "sha256": "2db67748b929f1e0f36efa8fa52da4952b64477f3a359a0e8ea8003f585362c5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-midiplayer/releases/download/v1.1.1/SEQ-MIDI-Player-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 146790,
@@ -7199,7 +7543,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-midiplayer",
@@ -7374,6 +7718,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 1242361,
+          "sha256": "bd60e28e839a37ff56ee0b0269488e7f872020c944b1940168a9b6c45ead704e",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-modal-voice/releases/download/v1.2.1/SYN-Modal-Voice-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.0",
           "size": 1241515,
           "sha256": "091af5a09edb0bcbbe7f88391e4255f166c1f0c61accffa207deeb0ea2631d91",
@@ -7412,7 +7775,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-modal-voice",
@@ -7457,7 +7820,13 @@
           "warnings": [
             "portable/sd88me - VST - Model-72/model72.so calls network (bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execvp, fork, posix_spawnp); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -7520,6 +7889,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 1720894,
+          "sha256": "fa56702465ed068c011cbbaeeb2a2fdaf8e27ae2db026f294fde7eb44905b8cf",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-monksynth/releases/download/v1.1.1/SYN-MonkSynth-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 1720221,
           "sha256": "fd781352e2c2a53a7d028ab0bec078c2e40ed1c2467c690ba861a95c38cae18d",
@@ -7558,7 +7946,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-monksynth",
@@ -7586,6 +7974,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 255603,
+          "sha256": "c9263c1c0389762de82ac376cca020c675487be4c7c7c5d582e33018c5570b9d",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-monovoice/releases/download/v1.0.2/SYN-Mono-Voice-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.0.1",
           "size": 254912,
@@ -7625,7 +8032,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-monovoice",
@@ -7707,7 +8114,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.1",
@@ -8412,6 +8825,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 474676,
+          "sha256": "17ac0d93388a4f5291c9c960db80504be1fc50cada74292544e14ff07f803a8a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-mrdrums/releases/download/v1.1.1/DRUM-Mr-Drums-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 474038,
           "sha256": "8c79ff5939db1144bad9c680904e6cb212d445b8aa99707a560cecc6467e9ee8",
@@ -8450,7 +8882,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-mrdrums",
@@ -8478,6 +8910,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 1976254,
+          "sha256": "275b22f473949c422671fb0907d27a946b83493aca5742e452fe35c02b1a03b4",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-mrhyde/releases/download/v1.1.1/SYN-Mr-Hyde-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 1973300,
@@ -8536,7 +8987,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-mrhyde",
@@ -8566,6 +9017,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.9.3",
+          "size": 1190021,
+          "sha256": "222eeb86c00fc36d31018111845650cf22b41da9ea38fcc36d05fd54fc25e5b2",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-mutable-vibe/releases/download/mutable-vibe-vst-v0.9.3/Mutable-Vibe-MPC-0.9.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "0.9.2",
           "size": 1673084,
@@ -8633,7 +9099,7 @@
           ]
         }
       ],
-      "latest": "0.9.2",
+      "latest": "0.9.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-mutable-vibe",
@@ -8831,6 +9297,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 5584979,
+          "sha256": "e8140cb3641053aa462c466e3e93aca363309871345552c8d11b141ec43fc4d8",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-noisemaker/releases/download/v1.1.1/SYN-Noisemaker-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 5584351,
           "sha256": "bef7d6288d11b7f47778f68c92f3bbf6dd500c87262cfeef887d25e960fb2f4a",
@@ -8869,7 +9354,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-noisemaker",
@@ -8897,6 +9382,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 2337181,
+          "sha256": "288cc90fa565d992251d0a34b1dba006c3e4107cb5cda5bbe378df26d04795a8",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-nusaw/releases/download/v1.0.2/SYN-NuSaw-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.0.1",
           "size": 2336468,
@@ -8936,7 +9440,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-nusaw",
@@ -8964,6 +9468,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 1606354,
+          "sha256": "6ddf97e4d274aa6cc80cccff56dddb997741afcbb7528b21e1d393836035d136",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-obxd/releases/download/v1.1.1/SYN-OB-Xd-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 1605683,
@@ -9003,7 +9526,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-obxd",
@@ -9290,6 +9813,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 2052351,
+          "sha256": "a731754f1ceee4a61b47582a45a801b6309fcb3a0486eaeabb2f8fe0298fbe4c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-open303/releases/download/v1.2.1/SYN-Open303-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.0",
           "size": 2051857,
           "sha256": "72a9c111f4d54108dd819938c6413bb14d1808bd53c8ff31a8c6a8679720b0f3",
@@ -9334,7 +9876,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-open303",
@@ -9375,7 +9917,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "1.0.0",
@@ -9468,6 +10016,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "2.1.0",
+          "size": 6869297,
+          "sha256": "d2644c475ec9a88a144230f1199bf8cd8cf3821a72a48ca684340683882984a0",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-percolator/releases/download/v2.1.0/DRUM-Percolator-2.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "2.0.1",
           "size": 8054108,
@@ -9595,7 +10162,7 @@
           "tested": []
         }
       ],
-      "latest": "2.0.1",
+      "latest": "2.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
@@ -9622,6 +10189,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "2.1.0",
+          "size": 150672,
+          "sha256": "3580c8b38c61716aefe3e2e8d8386fed8d4e7db37a403665f7ecbd2f4c4b6347",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-percolator/releases/download/percolator-out-v2.1.0/FX-Percolator-OUT-2.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "2.0.1",
           "size": 150308,
@@ -9673,7 +10259,7 @@
           ]
         }
       ],
-      "latest": "2.0.1",
+      "latest": "2.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
@@ -9701,6 +10287,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 383510,
+          "sha256": "4f0682f9569ec0b9f05e93b4c60877899c01dd29875e2baec1ae290ef64870c9",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-pixelwalkers/releases/download/v1.1.1/SEQ-Pixel-Walkers-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 382836,
@@ -9740,7 +10345,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-pixelwalkers",
@@ -10069,7 +10674,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "0.1.2",
@@ -10347,6 +10958,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.3.1",
+          "size": 6711079,
+          "sha256": "7bad32aee3b9c78a78213115a6ff48faa827b2915a6eea1ae3aed7cb75be07ba",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-raffosynth/releases/download/v1.3.1/SYN-RaffoSynth-1.3.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.3.0",
           "size": 6710417,
           "sha256": "2c76623271857b7c902aab20063700a0d0633f6a636bb818cbb1477b22a83222",
@@ -10391,7 +11021,7 @@
           ]
         }
       ],
-      "latest": "1.3.0",
+      "latest": "1.3.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-raffosynth",
@@ -10418,6 +11048,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.2.1",
+          "size": 4332353,
+          "sha256": "39aa4cbb11fa7aa6c270ceab79393080ee07168b498c2d3118850d3b3b99774c",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-resonator/releases/download/v1.2.1/SYN-Resonator-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.2.0",
           "size": 4331607,
@@ -10457,7 +11106,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-resonator",
@@ -10484,6 +11133,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.2.1",
+          "size": 1245388,
+          "sha256": "f070c7a22b3232797b9b74e6b319f6012f6b1f11552ee9008ad792cde2c46240",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-resonator-fx/releases/download/v1.2.1/FX-Resonator-FX-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.2.0",
           "size": 1244700,
@@ -10523,7 +11191,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-resonator-fx",
@@ -10780,6 +11448,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 1501974,
+          "sha256": "7877062ddbeeb72eab5358aa400265302b80c67ee06512092571b5f54a4e984a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-sfizz/releases/download/v1.1.1/sfizz-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 1501639,
           "sha256": "d8f7ca0ffac31aced2e06c2845b5796cdbb58add8a0c6247b60e94f08293df0e",
@@ -10832,7 +11515,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-sfizz",
@@ -11064,6 +11747,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 1209912,
+          "sha256": "574b2fb8389e34d8138071298c4f842616c8840b800002bededada18a2203f26",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-stevequencer/releases/download/v1.0.1/SEQ-Stevequencer-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 1209149,
           "sha256": "3b23d7132d5a8cbcdeaf440588fbf035cd78a3d838b32f37364edaa7a60a5cbc",
@@ -11083,7 +11785,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer",
@@ -11113,6 +11815,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 641758,
+          "sha256": "f3855ae6b1266adc2800926ade2a24f3d5d04c525a50cee04a9fdaa1e8371b30",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-stevequencer16/releases/download/v1.0.1/SEQ-Stevequencer-16-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 640873,
           "sha256": "8e5a099d46f8295a0dae5660b11c60fcfa3d12dccdc70937ae8122f227bf1977",
@@ -11132,7 +11853,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer16",
@@ -11229,7 +11950,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
         },
         {
           "version": "0.1.1",
@@ -11494,6 +12221,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 2458577,
+          "sha256": "9401ddde5f4c0dbf829b414fc04f565fd207b62139354f7c5ce1e7fbefdd85ab",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-superarp/releases/download/v1.1.1/SEQ-Super-Arp-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 2457845,
           "sha256": "ce4cee39bb73abc9627afb275cc7628d5c5fe5c6d89dc7c05d1b2dd22cef7265",
@@ -11532,7 +12278,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-superarp",
@@ -11592,6 +12338,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 21257317,
+          "sha256": "23074fabf14df12502d8d413b04a2e3d531f1bd238901f0f706f8df02616dd05",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-tablor/releases/download/v1.1.1/SYN-Tablor-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 21256640,
           "sha256": "932d0a4b9263e7b74e25b32cccf22b16b8da1a4499419adb3e2615aa1670b24f",
@@ -11630,7 +12395,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-tablor",
@@ -11705,6 +12470,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 21121242,
+          "sha256": "a61463cde2ec0dd922ddd5060e148deb9bfc39c90ecf021fdb3f1365db098513",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-vst-v1.0.2/TR-MPC-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        },
+        {
           "version": "1.0.1",
           "size": 21121219,
           "sha256": "46b9a95b7a9e5ba509c18f3e420b07d0264dd036103cb05b1cb3186056f2ae4d",
@@ -11749,7 +12535,7 @@
           ]
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
@@ -11919,6 +12705,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 657673,
+          "sha256": "69e4417541c06fb84c48d9a4817edfd7320fb539d439d91bf58fcf726666b5a8",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-verglas/releases/download/v1.2.1/FX-Verglas-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.0",
           "size": 656936,
           "sha256": "1c01429d949e051226129389deded1fb3d6c6fab956610a5268c1093484902ca",
@@ -11976,7 +12781,7 @@
           "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-verglas",
@@ -12007,6 +12812,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.0",
+          "size": 928011,
+          "sha256": "47f8c37df09fc453da0f541ec973b71a6cf8d8db52439c18ddfd94add0ea2440",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/nachtaktiv303/mpc-vst-vibe-fx/releases/download/vibe-fx-vst-v1.0.0/Vibe-FX-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.9.0",
           "size": 923972,
           "sha256": "39f80bf57c48508a0e7de3a83321a50b1791ad82643fdb5ebe26c6cfd9c68ff1",
@@ -12032,7 +12852,7 @@
           ]
         }
       ],
-      "latest": "0.9.0",
+      "latest": "1.0.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
@@ -12060,6 +12880,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 846802,
+          "sha256": "042f6a375bf3dd55444ecbd2f61b7a3ac3911c19870f709d94035dc0421e4dd0",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-wurl/releases/download/v1.1.1/SYN-Wurl-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 846135,
@@ -12099,7 +12938,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-wurl",
