@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-24T16:02:43+00:00",
+  "generated": "2026-10-24T20:56:22+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -4092,6 +4092,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.0.3",
+          "size": 3100911,
+          "sha256": "5cd76d209d3e94dcf984108a7d65695855514c360c4e883a51d9ca7e96be45e4",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/EffectForce/releases/download/v0.0.3/EffectForce-0.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.0.2",
           "size": 3103474,
           "sha256": "e4e7b25a4ffd91e3d5099ab53802a5b4e9c5a3dff49ff358da6a73476ee07bda",
@@ -4130,7 +4149,7 @@
           "tested": []
         }
       ],
-      "latest": "0.0.2",
+      "latest": "0.0.3",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/EffectForce",
@@ -5832,6 +5851,36 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.3.0",
+          "size": 23494723,
+          "sha256": "3d033c0540902b7cde8ef4996c067e70ffa3481535480ef182fcf261fe5c237b",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-hz/releases/download/v1.3.0/Liminal-Hz-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/Gm0rb - VST - Liminal Hz/liminal_hz.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-24"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-24"
+            }
+          ]
+        },
+        {
           "version": "1.2.0",
           "size": 23478746,
           "sha256": "902cbe16ef7fc413819c88f8424fa489e919a40a0ae6c13bf0d48dc45e1bffad",
@@ -5916,7 +5965,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-hz",
@@ -9248,6 +9297,62 @@
       }
     },
     {
+      "id": "ms20xxl",
+      "name": "MS20XXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/MS20XXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Korg MS-20-style semi-modular mono synth, circuit-modelled from the MS-20 schematics: the KLM-307 (MK2) and KORG35 (MK1) filter boards solved from their circuit equations, Hz/V sockets, the panel's voltage laws. Every MS-20 patch jack in its place, normalled like the hardware, patched by touch; an SQ-10-style sequencer; 62 patches with cables.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/MS20XXL/v0.1.0/docs/img/patch.png",
+      "style": "synth",
+      "tags": [
+        "ms-20",
+        "semi-modular",
+        "mono",
+        "patch-panel",
+        "sequencer",
+        "sq-10",
+        "korg35",
+        "analog"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 20207861,
+          "sha256": "dc64efb260f06e662c422e3589768fa46fa8e51fbafd3561630dc51bd56d5607",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/MS20XXL/releases/download/v0.1.0/MS20XXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-24"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/MS20XXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "mutable-vibe",
       "name": "Mutable Vibe MPC",
       "author": "nachtaktiv303",
@@ -10830,6 +10935,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.0.5",
+          "size": 6625130,
+          "sha256": "7afcd938febc577d953d518f8bd293b197daacbb348a0775db09c68fd3c43ce4",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/PolyForce/releases/download/v0.0.5/PolyForce-0.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.0.4",
           "size": 6625118,
           "sha256": "2975f80df6aca3407cf6f8f2e3475e68600139d837b9dcac081e4e7734f23ab4",
@@ -10868,7 +10992,7 @@
           "tested": []
         }
       ],
-      "latest": "0.0.4",
+      "latest": "0.0.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/PolyForce",
@@ -11580,7 +11704,7 @@
       "kind": "instrument",
       "license": "GPL-2.0-or-later",
       "summary": "Tonewheel organ with drawbars, percussion, scanner, editable Leslie and keyboard splits.",
-      "screenshot": "https://raw.githubusercontent.com/SamplingHigh/mpc-vst-setbfree/v0.2.1/docs/images/setbfree-organ-force.png",
+      "screenshot": "https://raw.githubusercontent.com/SamplingHigh/mpc-vst-setbfree/v0.3.0/docs/images/setbfree-organ.png",
       "style": "organ",
       "tags": [
         "tonewheel",
@@ -11590,6 +11714,31 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.3.0",
+          "size": 2313481,
+          "sha256": "ccf2876cd7e3b160c1ffebe77e8534f05e537f206bc983749b1c03582e143378",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 8119.9,
+            "max_pct": 8199.7,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.3.0/setBfree-Organ-0.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-24"
+            }
+          ]
+        },
         {
           "version": "0.2.1",
           "size": 1365066,
@@ -11642,7 +11791,7 @@
           "tested": []
         }
       ],
-      "latest": "0.2.1",
+      "latest": "0.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "SamplingHigh/mpc-vst-setbfree",
@@ -11970,6 +12119,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.1",
+          "size": 1211524,
+          "sha256": "9bdcbec07e8d3ae8576ca46daa315cbf3dcc952fdf0c4ef1299c63d85764d809",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-stevequencer/releases/download/v1.1.1/SEQ-Stevequencer-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.1.0",
           "size": 1203538,
           "sha256": "5176f662c4fb278f90a272928f712cab78b2c4ee169ae7dea75d4025a01faa37",
@@ -12027,7 +12195,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer",
@@ -12055,6 +12223,25 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.1.1",
+          "size": 643183,
+          "sha256": "dadd676443e7b94a8b3f0b13171b4d6fb656dfe3283859e33641219e17e1533f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/saustin2010/mpc-vst-stevequencer16/releases/download/v1.1.1/SEQ-Stevequencer-16-1.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
         {
           "version": "1.1.0",
           "size": 635202,
@@ -12113,7 +12300,7 @@
           "tested": []
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer16",
@@ -12298,6 +12485,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.0.8",
+          "size": 1084810,
+          "sha256": "2deac8c1e1e5722da0f50b1eb49eda27cd5623a3fb726b9027bd5c120fd5cb65",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.8/SubForce-0.0.8-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.0.7",
           "size": 1082228,
           "sha256": "fd3d77f14430ef89aa2c62b4df982af2045b8064d2051c2b69cd2ff1bc34dce5",
@@ -12449,7 +12655,7 @@
           "tested": []
         }
       ],
-      "latest": "0.0.7",
+      "latest": "0.0.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/SubForce",
