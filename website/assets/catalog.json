@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-23T21:29:27+00:00",
+  "date": "2026-10-24T04:45:52+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -1997,7 +1997,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Korg MS-10/MS-20 style mono synth with a patch bay, an ESP section and both MS filters.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-aphex/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-aphex/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "ms-20",
@@ -2161,7 +2161,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "One key in, a four-voice chord out: morphing oscillators, FM, filter, lo-fi, delay, reverb and an arpeggiator.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-chordism/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-chordism/v1.0.2/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "chords",
@@ -3186,7 +3186,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "West Coast / Serge-inspired mono synth: complex oscillators, a wavefolder and a modulation matrix.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-denis/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-denis/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "west-coast",
@@ -3699,6 +3699,75 @@
       "download": true
     },
     {
+      "id": "drloguexxl",
+      "name": "DrLogueXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/DrLogueXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Hybrid drum machine modelled on the KORG drumlogue (not affiliated with KORG): analogue-style kick, snare and toms, six sample parts with 192 synthesised sounds and your own WAVs, a MULTI part with VPM, noise and six open logue SDK units, delay, reverb and master effects, choke groups, a mixer and four macros, on a panel in the machine's look.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/DrLogueXXL/v0.2.0/docs/img/perform.png",
+      "style": "drum-machine",
+      "tags": [
+        "drums",
+        "analog",
+        "hybrid",
+        "samples",
+        "fm",
+        "logue",
+        "drumlogue",
+        "mixer"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.2.1",
+          "size": 8202238,
+          "sha256": "26707d02063184994f69deb333d8d5affcecfb949eebf59c2702e0c0580f9d3c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/DrLogueXXL/releases/download/v0.2.1/DrLogueXXL-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.2.0",
+          "size": 8202247,
+          "sha256": "cc7a09124809f26f4b1b5806f9283621be2454fb06287bca4829b2300ebc874a",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/DrLogueXXL/releases/download/v0.2.0/DrLogueXXL-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.2.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/DrLogueXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "grids",
       "name": "Drum Map",
       "author": "saustin2010",
@@ -3706,7 +3775,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "Drum Map: a topographic drum sequencer that plays kick, snare and hats from MPC's clock through its own MIDI port, from Émilie Gillet's open-source Grids.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-drum-map/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-drum-map/v1.2.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "drum",
@@ -3792,7 +3861,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
       "summary": "Dual Slope, based on Befaco's Rampage VCV Rack module: two rise-and-fall generators (envelopes, LFOs, slew) whose outputs go out of its own MIDI port as CCs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-dual-slope/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-dual-slope/v1.2.1/screenshots/page_0.png",
       "style": "modulation",
       "tags": [
         "vcv",
@@ -4124,7 +4193,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Four-lane Euclidean sequencer that turns the notes you hold into interlocking rhythms for other tracks.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-eucalypso/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-eucalypso/v1.0.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "euclidean",
@@ -4526,7 +4595,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Physical modelling: an exciter and two coupled resonators (string, beam, plate, membrane).",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-fizzik/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-fizzik/v1.0.2/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "physical-modelling",
@@ -4861,7 +4930,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Replays the chord you hold in genre grooves from its library, with swing, strum and latch, through its own MIDI port.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-groovebank/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-groovebank/v1.1.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "midi",
@@ -4966,7 +5035,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Small, immediate two-operator FM synth on one page: ratio, brightness, bite, envelopes, noise; 32 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hank/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hank/v1.1.1/screenshots/page_0.png",
       "style": "fm-synth",
       "tags": [
         "fm",
@@ -5101,7 +5170,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "Roland Juno-60: jpcima's Hera engine with its 56 presets, the BBD chorus and a touchscreen skin with Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hera/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-hera/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "juno-60",
@@ -5212,7 +5281,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Eleven-instrument drum synth laid out like the Jomox AlphaBase Mk II (kick, MBrane, hats, clap, rim, cymbals, two sample players, 4-op FM, reverb, delay), with RANDOMISE per instrument and a mod matrix; each instrument chromatic on its own MIDI channel and on its own track with Incipience OUT; plays the AlphaBase's free samples and your own WAVs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.1.1/screenshots/page_0.png",
       "style": "drum-machine",
       "tags": [
         "drums",
@@ -5312,7 +5381,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Companion to Incipience: plays one of its OUT 1-11 on its own MPC track (an audio track will do), so an instrument gets that track's fader, inserts and outputs, in time with the kit. Needs Incipience 1.0.0 or later in the same project.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.0.0/incipienceout/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-incipience/v1.1.1/incipienceout/screenshots/page_0.png",
       "style": "utility",
       "tags": [
         "routing",
@@ -5719,6 +5788,25 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 5755698,
+          "sha256": "1c968f039a3c96b258e42ed7b6f2e8d52ab73840663313f51840b3b3a554b634",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-liminal-amp/releases/download/v1.0.2/Liminal-Amp-1.0.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/Gm0rb - VST - Liminal Amp/liminal_amp.so calls network (accept, bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 5746339,
           "sha256": "30e7af4425e0c4a18e18e2fcd361e1cf2859b8d425403d286bf1f2cc2310bcdb",
@@ -5759,7 +5847,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-amp",
@@ -6111,6 +6199,39 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.6.1",
+          "size": 10723483,
+          "sha256": "0da19cd40d393ba7789ba2f2a25f0b7f473cba4bb1112c75f96ebafe7198edf0",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.6.1/LXRXXL-0.6.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.6.0",
+          "size": 10723479,
+          "sha256": "2a86459c7582ff3f3f6631c6006d6f20582e74769cdd3f5df4f5aba9ad27e841",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.6.0/LXRXXL-0.6.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.5.10",
           "size": 10737869,
           "sha256": "049f499cec710bbd256250f97c3ed1f2299b9e3b7908d72954e7cbdb6b9765ac",
@@ -6272,47 +6393,9 @@
             "plugin_list.awk differs from this repo's current copy: review it"
           ],
           "tested": []
-        },
-        {
-          "version": "0.5.2",
-          "size": 10061883,
-          "sha256": "6590958980913f8697930fdb9dd08af166e467ce041e626dab72f53d7130acf5",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.2/LXRXXL-0.5.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.5.1",
-          "size": 10267060,
-          "sha256": "e19271bd18fe6b1f0b798a3dafa3628b71c0f873ade35bd8093f40c6a851f7b2",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.5.1/LXRXXL-0.5.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
         }
       ],
-      "latest": "0.5.10",
+      "latest": "0.6.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
@@ -6724,7 +6807,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Macro Osc: a macro oscillator with 47 synthesis models, from Émilie Gillet's open-source Braids.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-macro-osc/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-macro-osc/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "macro-oscillator",
@@ -7388,7 +7471,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Meta Mod: ring mod, folding, XOR, vocoder and frequency shifting as an insert effect; 12 presets, from Émilie Gillet's open-source Warps.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-meta-mod/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-meta-mod/v1.2.1/screenshots/page_0.png",
       "style": "modulation",
       "tags": [
         "ring-mod",
@@ -7467,6 +7550,141 @@
       "download": true
     },
     {
+      "id": "meta4mpcxxl",
+      "name": "Meta4MPCXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/Meta4MPCXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Plays 4ms MetaModule-format patches (VCV Rack patches exported with the MetaModule hub) with 4ms's own open-source patch player and 215 built-in modules: every parameter on Q-Link pages, MIDI and the Force's clock into the patch, pads and keys to the hub's gate/CV inputs, patch outs 3-8 as MIDI for a CV track, and Wi-Fi patch upload from VCV Rack.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/Meta4MPCXXL/v0.1.1/docs/img/meta4mpcxxl.png",
+      "style": "modular",
+      "tags": [
+        "modular",
+        "vcv",
+        "metamodule",
+        "patch-player",
+        "eurorack",
+        "generative",
+        "cv"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "size": 11706471,
+          "sha256": "9badbc762a568ecb0303d016a169e83dc624882ab48ce2ab2bc74ad19ac61761",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Meta4MPCXXL/releases/download/v0.1.2/Meta4MPCXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/L'Cronx - VST - Meta4MPCXXL/meta4mpcxxl.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.1",
+          "size": 11706461,
+          "sha256": "828d5fa8e5933f5b54f6e3920096effb50b06bcd53a3f63a065d5cbfeb3a85d9",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Meta4MPCXXL/releases/download/v0.1.1/Meta4MPCXXL-0.1.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "portable/L'Cronx - VST - Meta4MPCXXL/meta4mpcxxl.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.2",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/Meta4MPCXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "meta4mpcxxl-fx",
+      "name": "Meta4MPCXXL FX",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/Meta4MPCXXL",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "Meta4MPCXXL as an effect: the track's audio goes into a 4ms MetaModule-format (VCV Rack) patch's In 1 / In 2, with every parameter on Q-Links, MIDI and clock into the patch, and Wi-Fi patch upload from VCV Rack.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/Meta4MPCXXL/v0.1.1/docs/img/meta4mpcxxl.png",
+      "style": "modular",
+      "tags": [
+        "modular",
+        "vcv",
+        "metamodule",
+        "patch-player",
+        "eurorack",
+        "multi-fx"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.2",
+          "size": 11711144,
+          "sha256": "22b4bf525fcfd4dabe0f5731f5b149af3e49644a8d20cda4ddccd993769304c0",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Meta4MPCXXL/releases/download/v0.1.2/Meta4MPCXXL-FX-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/L'Cronx - VST - Meta4MPCXXL FX/meta4mpcxxl_fx.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.1",
+          "size": 11711140,
+          "sha256": "85efccebf401728ce411f897d8bf4ee0b4641688965534c374efe474e14d9ec2",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/Meta4MPCXXL/releases/download/v0.1.1/Meta4MPCXXL-FX-0.1.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "portable/L'Cronx - VST - Meta4MPCXXL FX/meta4mpcxxl_fx.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.2",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/Meta4MPCXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "midi-player",
       "name": "MIDI Player",
       "author": "saustin2010",
@@ -7474,7 +7692,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Plays Standard MIDI Files in time with MPC's tempo and transport, one track or all, through its own MIDI port.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-midiplayer/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-midiplayer/v1.1.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "midi",
@@ -7707,7 +7925,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Modal Voice: a modal synthesis voice you bow, blow and strike, with 12 presets, from Émilie Gillet's open-source Elements.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-modal-voice/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-modal-voice/v1.2.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "modal",
@@ -7878,7 +8096,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "A formant (FOF) singing voice with 12 characters and a choir.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monksynth/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monksynth/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "formant",
@@ -7963,7 +8181,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Elektron Monomachine-style digital voice: SuperWave, SID, DigiPRO, FM and more machines; 12 factory patches.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monovoice/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-monovoice/v1.0.2/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "monomachine",
@@ -8316,6 +8534,79 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-commander",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "filebrowser",
+      "name": "MPC File Browser",
+      "author": "jacob-sabella",
+      "repo": "jacob-sabella/mpc-addin-filebrowser",
+      "kind": "addin",
+      "license": "MIT AND Apache-2.0",
+      "summary": "FileBrowser Quantum beside MPC: browse the device's drives in a web browser, upload and download samples and projects, play audio, edit text files. Listens on the device only: reach it through an SSH tunnel (login admin / mpcadmin; change it). bind=0.0.0.0 opens it to your network.",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-addin-filebrowser/88b86eb39f907485995497cf0eaeeb5ddd7aa3e4/docs/tile.png",
+      "style": "utility",
+      "tags": [
+        "files",
+        "browser",
+        "upload",
+        "samples",
+        "editor"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 20121075,
+          "sha256": "bc1ab44762b1fa2ee4ffc497de8cf9db23f598d277e386fe3326526e85be4744",
+          "max_glibc": "2.7",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-filebrowser/releases/download/filebrowser-addin-v0.1.1/MPC-File-Browser-0.1.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "mpc_filebrowser_addin.so calls runs programs (execve, fork): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Key 37 (Gen1)",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-23"
+            }
+          ]
+        },
+        {
+          "version": "0.1.0",
+          "size": 20120314,
+          "sha256": "91225c7eb46b477f0e41251db1e9cffc9140866a5390623cd7891d94ac7c229a",
+          "max_glibc": "2.7",
+          "cpu": null,
+          "url": "https://github.com/jacob-sabella/mpc-addin-filebrowser/releases/download/filebrowser-addin-v0.1.0/MPC-File-Browser-0.1.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it",
+            "mpc_filebrowser_addin.so calls runs programs (execve, fork): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Key 37 (Gen1)",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-23"
+            }
+          ]
+        }
+      ],
+      "latest": null,
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "jacob-sabella/mpc-addin-filebrowser",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -8814,7 +9105,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "A 16-pad drum sampler: kits of samples on pads 36-51.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrdrums/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrdrums/v1.1.1/screenshots/page_0.png",
       "style": "sampler",
       "tags": [
         "drums",
@@ -8899,7 +9190,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "MicroFreak-style voice on Plaits' 17 models, with a low-pass gate, filter, cycling envelope and a 6x6 mod matrix; 19 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrhyde/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-mrhyde/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "microfreak",
@@ -9285,7 +9576,7 @@
       "kind": "instrument",
       "license": "GPL-2.0-only",
       "summary": "TAL-NoiseMaker: a virtual-analog polysynth with 12 filter types, three envelopes and effects; all 256 factory presets built in, and folders of .noisemakerpreset files load as banks (the README links a free collection of 442).",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-noisemaker/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-noisemaker/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "tal",
@@ -9371,7 +9662,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Detuned supersaw polysynth with a sub, resonant filter, chorus and delay; 27 presets for pads, stabs and leads.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-nusaw/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-nusaw/v1.0.2/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "supersaw",
@@ -9457,7 +9748,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "OB-Xd, the Oberheim OB-X emulation: two oscillators with sync and cross-mod, a 12/24 dB filter, voice variation; 128 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-obxd/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-obxd/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "ob-x",
@@ -9801,7 +10092,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "TB-303 bass line: Open303 with the Devilfish mods, a drive stage and 13 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-open303/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-open303/v1.2.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "tb-303",
@@ -10004,7 +10295,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Four-voice percussion synth laid out like the Erica Synths Pērkons HD-01 (three algorithms per voice, BBD delay, LFO to every knob), with envelope displays; each voice on its own MIDI channel with the Pērkons' CCs, and on its own track with Percolator OUT; plays the Pērkons' free kit packs.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.0.0/screenshots/page_1.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.1.0/screenshots/page_1.png",
       "style": "drum-machine",
       "tags": [
         "drums",
@@ -10179,7 +10470,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Companion to Percolator: plays one of its OUT 1-4 on its own MPC track (an audio track will do), so a voice gets that track's fader, inserts and outputs, in time with the kit. Needs Percolator 2.0.0 or later in the same project.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.0.0/percolatorout/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-percolator/v2.1.0/percolatorout/screenshots/page_0.png",
       "style": "utility",
       "tags": [
         "routing",
@@ -10276,7 +10567,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Generative gravity sequencer: each note you play becomes a walker that bounces and retriggers its note as it lands.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-pixelwalkers/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-pixelwalkers/v1.1.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "generative",
@@ -10946,7 +11237,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "RaffoSynth: a Minimoog-style mono synth with four oscillators and a ladder filter.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-raffosynth/v1.3.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-raffosynth/v1.3.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "minimoog",
@@ -11038,7 +11329,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Resonator: seven resonator models (strings, modal, FM, chords) strummed by the notes you play; 14 presets, from Émilie Gillet's open-source Rings.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator/v1.2.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "resonator",
@@ -11123,7 +11414,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Resonator FX: Resonator as an insert effect, the track's audio strums it, turning drums and loops into tuned strings; 12 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator-fx/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-resonator-fx/v1.2.1/screenshots/page_0.png",
       "style": "resonator",
       "tags": [
         "rings",
@@ -11735,7 +12026,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Melodic step sequencer edited from the Q-Links: 16 steps on a 4x4 grid, up to 64, with chance, ratchets and MOD lanes.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-stevequencer/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-stevequencer/v1.0.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "step-sequencer",
@@ -11802,7 +12093,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "16-step sequencer with eight modulation lanes that move any parameter of the instrument (CC or NRPN), on any page.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-stevequencer16/v1.0.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-stevequencer16/v1.0.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "step-sequencer",
@@ -12209,7 +12500,7 @@
       "kind": "instrument",
       "license": "MIT",
       "summary": "Arpeggiator that splits note order from rhythm: 40 patterns, 40 rhythms and seeded random modifiers.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-superarp/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-superarp/v1.1.1/screenshots/page_0.png",
       "style": "sequencer",
       "tags": [
         "arpeggiator",
@@ -12327,7 +12618,7 @@
       "kind": "instrument",
       "license": "BSD-3-Clause",
       "summary": "Two-oscillator wavetable synth with unison, filter and mod envelopes; ships its wavetable library and 9 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-tablor/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-tablor/v1.1.1/screenshots/page_0.png",
       "style": "synth",
       "tags": [
         "wavetable",
@@ -12693,7 +12984,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "Verglas: granular, stretch, looper and spectral modes and freeze as an insert effect; 12 presets, from Émilie Gillet's open-source Clouds.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-verglas/v1.2.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-verglas/v1.2.1/screenshots/page_0.png",
       "style": "granular",
       "tags": [
         "clouds",
@@ -12869,7 +13160,7 @@
       "kind": "instrument",
       "license": "GPL-3.0-only",
       "summary": "A physically modelled Wurlitzer 200A electric piano (OpenWurli) that barks with velocity, with tremolo and 10 presets.",
-      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-wurl/v1.1.0/screenshots/page_0.png",
+      "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-wurl/v1.1.1/screenshots/page_0.png",
       "style": "electric-piano",
       "tags": [
         "wurlitzer",
