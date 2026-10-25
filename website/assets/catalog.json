@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25T04:52:49+00:00",
+  "date": "2026-10-25T11:43:08+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6249,21 +6249,21 @@
       "author": "L'Cronx",
       "repo": "sunskiefer/LXR02XXL",
       "kind": "instrument",
-      "license": "LicenseRef-LXR02-Open",
-      "summary": "A port of the open-source Sonic Potions LXR engine to MPC, with LXR-02-style features written from the manual. The whole panel on one page, 64-step sequencer with songs, rolls and a euclidean generator, Force pads playing the voices, randomizers and the Hrtl LXR-02 DLC presets. Artwork by Suns Kiefer.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/v0.5.8/docs/img/page.png",
+      "license": "GPL-3.0-only",
+      "summary": "Inspired by the LXR-02: its open-source sound engine (GPL-3.0) with the real FX unit and the plate reverb, the whole panel on one page, 64-step sequencer with songs, rolls and a euclidean generator, Force pads playing the voices, randomizers and the Hrtl LXR-02 DLC presets old and new. Artwork by Suns Kiefer.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/LXR02XXL/v0.6.0/docs/img/page.png",
       "style": "drum-machine",
       "tags": [
         "drums",
         "drum-machine",
         "lxr",
         "lxr-02",
-        "sonic-potions",
         "erica-synths",
         "sequencer",
+        "reverb",
         "randomizer"
       ],
-      "source_available": true,
+      "source_available": false,
       "distribution": "release",
       "versions": [
         {
@@ -6297,7 +6297,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
         },
         {
           "version": "0.5.10",
@@ -9400,8 +9406,8 @@
       "repo": "sunskiefer/MS20XXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "Korg MS-20-style semi-modular mono synth, circuit-modelled from the MS-20 schematics: the KLM-307 (MK2) and KORG35 (MK1) filter boards solved from their circuit equations, Hz/V sockets, the panel's voltage laws. Every MS-20 patch jack in its place, normalled like the hardware, patched by touch; an SQ-10-style sequencer; 62 patches with cables.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/MS20XXL/v0.1.0/docs/img/patch.png",
+      "summary": "Korg MS-20-style semi-modular mono synth, circuit-modelled from the MS-20 schematics: the KLM-307 (MK2) and KORG35 (MK1) filter boards solved from their circuit equations, Hz/V sockets, the panel's voltage laws. Every MS-20 patch jack in its place, normalled like the hardware, patched by touch; an SQ-10-style sequencer; 63 patches with cables.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/MS20XXL/v0.1.1/docs/img/patch.png",
       "style": "synth",
       "tags": [
         "ms-20",
@@ -9416,6 +9422,24 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.1.1",
+          "size": 20204206,
+          "sha256": "d487634fb26977461ee10f0df45cbe8ffebec831d53d6da3a753705c38239b5e",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/MS20XXL/releases/download/v0.1.1/MS20XXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.1.0",
           "size": 20207861,
@@ -9441,7 +9465,7 @@
           ]
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/MS20XXL",
@@ -10340,6 +10364,77 @@
       "download": true
     },
     {
+      "id": "osirus",
+      "name": "Osirus",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-osirus",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "An emulation of the Access Virus A, B and C synthesizers' original firmware (gearmulator's DSP56300 emulator) as a native instrument for Gen2 MPC devices, with a touchscreen skin, banks and patch browser, Q-Link control and knob values on every page. Gen2 (aarch64) only; you need your own Virus ROM.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-osirus/e39d03c538f4fde79d558cd4c423b18964cc5ffc/docs/screenshots/osirus-osc.png",
+      "style": "synth",
+      "tags": [
+        "emulation",
+        "virtual-analog",
+        "rompler-free",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.2.4",
+          "size": 4537201,
+          "sha256": "46125a823e945043cad1ad96688dd4f41637283caddb140f7962353c36bdfefa",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.4/Osirus-0.2.4-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "version": "0.2.3",
+          "size": 4523291,
+          "sha256": "23129c663414e7f407d477d94db1025dd45f3bc99f7d2b8c8e032768663396dd",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.3/Osirus-0.2.3-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        }
+      ],
+      "latest": "0.2.4",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-osirus",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "ottmpc",
       "name": "OTTmpc",
       "author": "sd88me",
@@ -11116,6 +11211,81 @@
       "download": true
     },
     {
+      "id": "prloguexxl",
+      "name": "PrLogueXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/PrLogueXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "16-voice poly synth modelled on the KORG prologue-16 (not affiliated with KORG): two VCOs, a multi engine (noise, 16 VPM types, KORG's logue-sdk waves oscillator), Poly/Duo/Mono/Unison/Chord, Main and Sub timbres, arpeggiator on MPC's grid, mod FX, delay/reverb and a low-frequency compressor with a live meter, over four pages.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/PrLogueXXL/v0.1.1/docs/img/osc.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "poly",
+        "analog-modelled",
+        "vpm",
+        "fm",
+        "arpeggiator",
+        "pad",
+        "lead"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 18917539,
+          "sha256": "e108de89ea61899c0dfafe54ff9f7a26caa50075ff03e47e0e7227f81eecf70b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PrLogueXXL/releases/download/v0.1.1/PrLogueXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "version": "0.1.0",
+          "size": 18951164,
+          "sha256": "31a83ba8050463584d7ea063e9d97d279eced35f168180d75dfd9666a9533700",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PrLogueXXL/releases/download/v0.1.0/PrLogueXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/PrLogueXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "profit-08",
       "name": "Profit-08",
       "author": "sd88me",
@@ -11358,6 +11528,116 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit5",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "ps3100xxl",
+      "name": "PS3100XXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/PS3100XXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Semi-modular poly synth modelled on the 1977 Korg PS-3100 (not affiliated with Korg): one oscillator, filter and envelope per key up to 48 voices, three-peak resonators, ensemble, two modulation generators, sample & hold, twelve temperament knobs and a patch bay you patch by touch, on one zoomable page.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/PS3100XXL/v0.1.5/docs/img/overview.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "poly",
+        "semi-modular",
+        "analog-modelled",
+        "patch-bay",
+        "ensemble",
+        "resonator"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.5",
+          "size": 16648165,
+          "sha256": "04008f2db5abaa32ccc433f400ada12e1c75f0b233bb7dd536122bedce3fc625",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PS3100XXL/releases/download/v0.1.5/PS3100XXL-0.1.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "version": "0.1.4",
+          "size": 20902296,
+          "sha256": "86dac2fc0751bbcbcbdfa48433dd6b7371c0178b75ed0342ad73a0e176790ac9",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PS3100XXL/releases/download/v0.1.4/PS3100XXL-0.1.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.3",
+          "size": 20890483,
+          "sha256": "28bffa2d47c9ea4c8609dd9a82fbdfa90bc3fd0fe3ff6d6374affe5067a86d81",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PS3100XXL/releases/download/v0.1.3/PS3100XXL-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.2",
+          "size": 20744915,
+          "sha256": "33629c49c821fd81af77fe4b0ec425493f9ed2eeb422d594ca4a0160d0d8139c",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PS3100XXL/releases/download/v0.1.2/PS3100XXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.5",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/PS3100XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -12615,6 +12895,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.0.9",
+          "size": 1084855,
+          "sha256": "730231a010c010ebc272669a6a74dfb5b2d1be690548cffede4f050ae859f229",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.9/SubForce-0.0.9-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.0.31",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
           "version": "0.0.8",
           "size": 1084810,
           "sha256": "2deac8c1e1e5722da0f50b1eb49eda27cd5623a3fb726b9027bd5c120fd5cb65",
@@ -12785,7 +13090,7 @@
           "tested": []
         }
       ],
-      "latest": "0.0.8",
+      "latest": "0.0.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/SubForce",
@@ -12887,7 +13192,7 @@
       "repo": "sunskiefer/SurgeXXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "The open-source Surge XT synth engine, headless, for Gen1: 2 scenes of 3 oscillators, dual filters, 6 LFOs per scene, mod matrix, 16 FX slots and 8 macros on eight pages. Loads every factory and third-party patch (3008) and wavetable (761), plus your own. MPC OS 3.x.",
+      "summary": "The open-source Surge XT synth engine, headless, for Gen1: 2 scenes of 3 oscillators, dual filters, 6 LFOs per scene, mod matrix, 16 FX slots and 8 macros on eight pages. Loads every factory and third-party patch (3008) and wavetable (761), plus your own. Install it on its own (about 450 MB). MPC OS 3.x.",
       "screenshot": "https://raw.githubusercontent.com/sunskiefer/SurgeXXL/08c3c3eed8a3ad6792211fb1dc2351ded2383995/docs/img/osc.png",
       "style": "synth",
       "tags": [
@@ -12902,15 +13207,41 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [],
-      "latest": null,
+      "versions": [
+        {
+          "version": "0.2.0",
+          "size": 308727522,
+          "sha256": "59e3a2b7554eb11a377bb87bc81660644ff438c1f096b0cee59382314858a5de",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/SurgeXXL/releases/download/v0.2.0/SurgeXXL-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/L'Cronx - VST - SurgeXXL/surgexxl.so calls network (accept, bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execv, execvp, fork, popen, system); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        }
+      ],
+      "latest": "0.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/SurgeXXL",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "metadata-validated"
       },
-      "download": false
+      "download": true
     },
     {
       "id": "tablor",
@@ -13273,6 +13604,243 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-tributary",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "vader",
+      "name": "VADER",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/VADER",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "An orbit-based vector synth: an orbiter travels a shape (15 built in, two in 3D, or your own SVG, OBJ, PNG or JPG) across four corners of overtone generators, blends and filters. Two timbres, arpeggiator, drive, chorus, delay, reverb. Its screen runs on your phone: tap the logo for the QR code and scan it, load shapes from the phone too.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/VADER/v0.6.1/docs/img/main_star.png",
+      "style": "synth",
+      "tags": [
+        "synth",
+        "vector",
+        "orbit",
+        "additive",
+        "morphing",
+        "arpeggiator",
+        "svg",
+        "3d"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.6.1",
+          "size": 1523011,
+          "sha256": "c6b60938652c18920638ba908aa24e82e0d6bc5e3e8bfede66dcd332b027166f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.6.1/VADER-0.6.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/L'Cronx - VST - VADER/vader.so calls network (bind, listen, recv, recvfrom, send, sendto, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "version": "0.6.0",
+          "size": 1618245,
+          "sha256": "a61536d961fc5ed0668f52b0f0bf6bb8555d041f0f47fafa6ffc6cfc6a1e6c04",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.6.0/VADER-0.6.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it",
+            "portable/L'Cronx - VST - VADER/vader.so calls network (bind, listen, recv, recvfrom, send, sendto, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-25"
+            }
+          ]
+        },
+        {
+          "version": "0.4.5",
+          "size": 37125034,
+          "sha256": "fdb589fbd29f8a71b492e12d50a914631cbd08ca0a7e6ab88919ac622d953d79",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.5/VADER-0.4.5-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.4.4",
+          "size": 37123597,
+          "sha256": "91e6e045861463d2d60fdd83d86da6f03b381d9fa86c8745530fdffd8b3069d4",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.4/VADER-0.4.4-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.4.3",
+          "size": 37105784,
+          "sha256": "0b501d31432a5b628fabd2a5836d88457765d937eff5b14741cb1a77cb417a10",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.3/VADER-0.4.3-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.4.2",
+          "size": 36765816,
+          "sha256": "b8c5763e47d1ab50fe1794609a1c8723a711f6de3834bf3c0eb2b77ddb5ccc80",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.2/VADER-0.4.2-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.4.1",
+          "size": 36597971,
+          "sha256": "ade5dd45cca3ac3a8932774b98570b28eafb1dba36050fb9d80a0f38b7a69b9b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.1/VADER-0.4.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.4.0",
+          "size": 36597728,
+          "sha256": "936f2b6cac6e9998185257c2e7169c26aa56b92f1cd8b146cea192674cf57fd2",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.4.0/VADER-0.4.0-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.3.2",
+          "size": 13110512,
+          "sha256": "d04f0e6bc4885b1701afbdc15b7ec2328bf11b2187ec86ac1061d4769c3ef71f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.3.2/VADER-0.3.2-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.3.1",
+          "size": 14038573,
+          "sha256": "b01eb1af4e603f00509c8e58ae8b57ae9ffabdc9d16fa71b5c8a23d8f6f14bd9",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/VADER/releases/download/v0.3.1/VADER-0.3.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.6.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/VADER",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
