@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-26T13:15:10+00:00",
+  "generated": "2026-10-26T22:44:59+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3972,6 +3972,31 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "2.1.0",
+          "size": 119360,
+          "sha256": "bf12f387e66481c076e5cea5d89de94703c6692f27bfc4589c0f8e3d0da84059",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/no3z/mpc-dubsiren/releases/download/v2.1.0/Dub-Force-Siren-2.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-26"
+            }
+          ]
+        },
+        {
           "version": "2.0.0",
           "size": 168392,
           "sha256": "f10021e2b300f459d2b74bc80c99624d13be4c5c2e443e03bca98d819d28db09",
@@ -3995,7 +4020,7 @@
           "tested": []
         }
       ],
-      "latest": "2.0.0",
+      "latest": "2.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "no3z/mpc-dubsiren",
@@ -4780,6 +4805,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.8.4",
+          "size": 73186480,
+          "sha256": "7e13d5f45f9dc00efb946bee68bd04b581fe96bea9df02fcc2d7b282ab1df3a9",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/fretty-mpc/releases/download/v0.8.4/Fretty-0.8.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-26"
+            }
+          ]
+        },
+        {
           "version": "0.8.3",
           "size": 73186232,
           "sha256": "ce55ce435c2163c92fef9813d7e4573021325768251df960edecf69d3b5210eb",
@@ -4814,7 +4860,7 @@
           "tested": []
         }
       ],
-      "latest": "0.8.3",
+      "latest": "0.8.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/fretty-mpc",
@@ -8605,7 +8651,7 @@
       "kind": "effect",
       "license": "MIT",
       "summary": "One-slot live DJ effect: 3-band isolator, DJ filter, beat repeat, delay, reverb, through-zero flanger, limiter and one macro knob that moves them together.",
-      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-djfx/main/docs/screen-after.png",
+      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-djfx/main/docs/img/panel.png",
       "style": "multi-fx",
       "tags": [
         "dj",
@@ -9104,7 +9150,7 @@
       "kind": "effect",
       "license": "GPL-3.0-only",
       "summary": "Three-head tape echo with a spring tank: 12 head and reverb modes, tape saturation, wow and flutter, tempo sync, live VU.",
-      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-tape-echo/main/docs/device.png",
+      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-tape-echo/main/docs/img/panel.png",
       "style": "delay",
       "tags": [
         "delay",
@@ -10125,6 +10171,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.4.4",
+          "size": 11198338,
+          "sha256": "3829697c0475e348dc468b18167abc7c757761a8a7a7b146de82af2d99eb956c",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/OB-XD-MPC/releases/download/ob-xd-mpc-0.4.4/OB-Xd-0.4.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-26"
+            }
+          ]
+        },
+        {
           "version": "0.4.3",
           "size": 11196902,
           "sha256": "4d596064a5bc704b22ee34e0d1082394297058c3d115f2a8f4ed9552322c5e0f",
@@ -10144,7 +10211,7 @@
           "tested": []
         }
       ],
-      "latest": "0.4.3",
+      "latest": "0.4.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/OB-XD-MPC",
@@ -10165,6 +10232,27 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.4.4",
+          "size": 18460698,
+          "sha256": "983ea5a97f79b96848d39cc4506bf95f8ed5d88aa41160a73df1965c6a86b0ca",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Odin2-MPC/releases/download/odin2-v1.4.4/Odin-2-1.4.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-26"
+            }
+          ]
+        },
         {
           "version": "1.4.3",
           "size": 28041007,
@@ -10204,7 +10292,7 @@
           "tested": []
         }
       ],
-      "latest": "1.4.3",
+      "latest": "1.4.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/Odin2-MPC",
@@ -12529,6 +12617,104 @@
       }
     },
     {
+      "id": "shapey-5-band-eq",
+      "name": "Shapey 5-Band EQ",
+      "author": "3dthc",
+      "repo": "3dthc/Shapey-MPC",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "The 5-band version of Shapey EQ, made for touch: every band has its own lane under a taller curve, so any dot drags directly. Any band can be a bell, shelf, cut, notch or band pass. Live analyzer, zero latency.",
+      "screenshot": "https://raw.githubusercontent.com/3dthc/Shapey-MPC/ddbf9bbc9f66f2af0802070b38bb3d113140131c/docs/shapey-5-band-eq.png",
+      "style": "eq",
+      "tags": [
+        "eq",
+        "parametric-eq",
+        "analyzer",
+        "mixing"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 3583693,
+          "sha256": "3d1881958b73386830eb628b0733941b33d06691fac531410799202672cdd055",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Shapey-MPC/releases/download/shapey-5-band-eq-vst-v1.0.0/Shapey-5-Band-EQ-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "3dthc/Shapey-MPC",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "shapey-eq",
+      "name": "Shapey EQ",
+      "author": "3dthc",
+      "repo": "3dthc/Shapey-MPC",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "An 8-band parametric EQ you shape by touch: tap or drag on the curve, drag numbered dots, and make any band a bell, shelf, cut, notch or band pass. Live analyzer, zero latency, presets and four themes.",
+      "screenshot": "https://raw.githubusercontent.com/3dthc/Shapey-MPC/ddbf9bbc9f66f2af0802070b38bb3d113140131c/docs/shapey-eq.png",
+      "style": "eq",
+      "tags": [
+        "eq",
+        "parametric-eq",
+        "analyzer",
+        "mixing"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.6.1",
+          "size": 4491537,
+          "sha256": "271cde64a37431502b7049e303b893234c5ee22944ce2ee4a33a8dd28275a9ea",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Shapey-MPC/releases/download/shapey-eq-vst-v1.6.1/Shapey-EQ-1.6.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        }
+      ],
+      "latest": "1.6.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "3dthc/Shapey-MPC",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "sonix",
       "name": "Sonix",
       "author": "3dthc",
@@ -12554,7 +12740,13 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-26"
+            }
+          ]
         },
         {
           "version": "0.3.9",
@@ -13888,6 +14080,109 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-tributary",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "tuner",
+      "name": "Tuner",
+      "author": "jacob-sabella",
+      "repo": "jacob-sabella/mpc-vst-tuner",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "A chromatic tuner insert with a live needle drawn straight onto the MPC's screen at 20-24 fps: note, cents and Hz, A4 from 430 to 450 Hz, and a mute for silent tuning. It writes into MPC's display memory, which MPC OS doesn't offer plugins, so a firmware update could break it. Not affiliated with Akai.",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-tuner/a3e4c099eacce3cdd440d54eb3ff059c96baafa5/docs/screenshots/needle.png",
+      "style": "utility",
+      "tags": [
+        "tuner",
+        "guitar",
+        "bass",
+        "pitch",
+        "screen-draw"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "size": 679308,
+          "sha256": "295e2bd48552bc274abffc7f953c43ed0324ddd5c5b8ce11d1da92bf2381d408",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 1.0,
+            "max_pct": 1.9,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-tuner/releases/download/tuner-vst-v0.0.1/Tuner-0.0.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Key 37",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-26"
+            }
+          ]
+        }
+      ],
+      "latest": null,
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "jacob-sabella/mpc-vst-tuner",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "tuney",
+      "name": "Tuney",
+      "author": "3dthc",
+      "repo": "3dthc/Tuney-MPC",
+      "kind": "effect",
+      "license": "MIT",
+      "summary": "Real-time vocal pitch correction: key and scale or your own notes on a touch keyboard, a pitch dial, Retune, Transition, Amount, Vibrato and Humanize, voice ranges and a reference pitch. Presets from hard tune to subtle.",
+      "screenshot": "https://raw.githubusercontent.com/3dthc/Tuney-MPC/55862ef83ab6938b5f1e3e20f5fa1ead7449e9b2/docs/tuney.png",
+      "style": "pitch",
+      "tags": [
+        "pitch-correction",
+        "vocal",
+        "tuner",
+        "effect"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.4.2",
+          "size": 9745791,
+          "sha256": "227092fb735c4df5cb3aa2b40ab6b250134bfdd883f05e7f65c2a946cec5158f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Tuney-MPC/releases/download/tuney-vst-v1.4.2/Tuney-1.4.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-23"
+            }
+          ]
+        }
+      ],
+      "latest": "1.4.2",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "3dthc/Tuney-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
