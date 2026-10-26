@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-25T20:56:50+00:00",
+  "generated": "2026-10-26T04:56:55+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3721,6 +3721,55 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/DrLogueXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "dronexxl",
+      "name": "DroneXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/DroneXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Drone and experimental synth, after the Solar 42, built on Neil Baumberger's AmbientModules: a 15-module rack (4 drones, mixer, filter, pads, 2 PapaSrapa, 2 VCOs, LFOs, joystick, sequencer, detector) patched by touch, with 8 macros, an XY pad, a randomizer that never repeats and a brickwall limiter.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/DroneXXL/v0.1.0/docs/img/overview.png",
+      "style": "synth",
+      "tags": [
+        "drone",
+        "experimental",
+        "modular",
+        "patch-panel",
+        "ambient",
+        "randomizer",
+        "vcv-rack"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 87796069,
+          "sha256": "1b5d2d3ff5147c6a6c112dbf3eaf581be268f16859eac0b847b8360548cf6d36",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/DroneXXL/releases/download/v0.1.0/DroneXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/DroneXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -10706,6 +10755,164 @@
       }
     },
     {
+      "id": "phyxxl",
+      "name": "PhyXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/PhyXXL",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "Eight filters in the style of classic synths (MS-20, SEM, Minimoog, Matrix-12, 2600, Wasp, prologue, Polivoks) in one effect. Route audio from any filter into any other; modulate each from ten sources by touch patch bay or matrix. 28 patches. By L'Cronx, GPL-3. No third-party code; not endorsed by the makers of the originals.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/PhyXXL/v0.1.2/docs/img/overview.png",
+      "style": "filter",
+      "tags": [
+        "filter",
+        "multi-filter",
+        "ms-20",
+        "sem",
+        "moog",
+        "matrix-12",
+        "arp-2600",
+        "polivoks"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.6",
+          "size": 19140269,
+          "sha256": "c1a2bd70bada373032543da11e41dc47f34fefa9cac4c69e168a8bf46f8b6cca",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.6/PhyXXL-0.1.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.5",
+          "size": 19140218,
+          "sha256": "5f9c51bee38695a1e3529fd489aafb8947db9dab5ba243f685345bdcf881f0b5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.5/PhyXXL-0.1.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.4",
+          "size": 20817144,
+          "sha256": "dbc85df6e734f05e0fa64102073eafdc7471d101a6fe2c92a720e36075000cdc",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.4/PhyXXL-0.1.4-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.3",
+          "size": 20814015,
+          "sha256": "78149d9ae29efbed0a95276df74b652ee77a1d7a18e1c55e982bff1327c47fec",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.3/PhyXXL-0.1.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.2",
+          "size": 21727817,
+          "sha256": "7bafcbd55afc7b79c984b1208965518ba9c2c7e40f873572dce851a3e263dc7a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.2/PhyXXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.1",
+          "size": 21593062,
+          "sha256": "927daaa594dcfe467338b94d7abee4fdeaebce7505c91fcaf8ff55a609277cd8",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.1/PhyXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 21598473,
+          "sha256": "5330c3017430d0ad38d2fa80f36e07c26faf7c3eab8b9b36fb8fe86f7d681c5f",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/PhyXXL/releases/download/v0.1.0/PhyXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.6",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/PhyXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "pixel-walkers",
       "name": "Pixel Walkers",
       "author": "saustin2010",
@@ -12189,6 +12396,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.3.10",
+          "size": 130901965,
+          "sha256": "ce0f78feed4db8e9e00df88776740195bcc9716bc4712d83b2b725dc9d1ad377",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Sonix/releases/download/v0.3.10/Sonix-0.3.10-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.3.9",
           "size": 130899290,
           "sha256": "c55fdbe7b323e96a6a7ad4f024ec050edb9e8878ed06140b1ed5dc870e94d4e6",
@@ -12227,7 +12449,7 @@
           "tested": []
         }
       ],
-      "latest": "0.3.9",
+      "latest": "0.3.10",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "3dthc/Sonix",
@@ -12581,6 +12803,62 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer16",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "stompbox",
+      "name": "Stompbox",
+      "author": "jacob-sabella",
+      "repo": "jacob-sabella/mpc-vst-stompbox",
+      "kind": "effect",
+      "license": "GPL-3.0-or-later",
+      "summary": "A whole guitar rig from guitarix's DSP: gate, comp, wah, any number of pedals, amp, tone stack, power amp, cabinet with an IR loader, post FX, mod, delay, reverb and EQ. 219 models and guitarix's 40 factory presets in the PRESET menu. Not affiliated with guitarix.",
+      "screenshot": "https://raw.githubusercontent.com/jacob-sabella/mpc-vst-stompbox/bc70be3dd01103bc792db0c2b0e54a589fc37d36/docs/screenshots/stompbox.png",
+      "style": "amp-sim",
+      "tags": [
+        "guitar",
+        "amp",
+        "pedals",
+        "cabinet",
+        "cab-ir",
+        "guitarix",
+        "presets"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.0.1",
+          "size": 7074681,
+          "sha256": "ed06c8f1c0b966f9b370e28cd50ec6c8756f258a24de90fed2994b992222a20a",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 21.3,
+            "max_pct": 38.2,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/jacob-sabella/mpc-vst-stompbox/releases/download/stompbox-vst-v0.0.1/Stompbox-0.0.1-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Key 37",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-26"
+            }
+          ]
+        }
+      ],
+      "latest": null,
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "jacob-sabella/mpc-vst-stompbox",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
