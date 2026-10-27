@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-26T22:44:59+00:00",
+  "generated": "2026-10-27T05:14:35+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6913,12 +6913,110 @@
         }
       ],
       "versions": [],
-      "latest": "0.4.1",
+      "latest": "0.5.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
+      }
+    },
+    {
+      "id": "machinemodule-gen2",
+      "name": "Machinemodule (Gen2)",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-machinedrum",
+      "kind": "instrument",
+      "license": "AGPL-3.0-only",
+      "summary": "The Elektron Machinedrum UW sound engine as an instrument for Gen2 MPC devices: 16 tracks in one plugin, touchscreen skin, bank and kit lists, Q-Links. A ready-made download with nothing of Elektron's in it: you add your own OS file (and optionally your flash image) in the plugin folder. Gen2 only.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-machinedrum/main/docs/img/machinemodule-gen2.png",
+      "style": "drum-machine",
+      "tags": [
+        "elektron",
+        "machinedrum",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "size": 5485524,
+          "sha256": "e03fdf654415599a3f10b25cff74d77a70c194c743bcaa66e6cfb5acd41c2134",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.0/Machinemodule-0.5.0-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.5.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-machinedrum",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "machinemodule-tap-gen2",
+      "name": "Machinemodule Tap (Gen2)",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-machinedrum",
+      "kind": "effect",
+      "license": "AGPL-3.0-only",
+      "summary": "Puts any Machinemodule tracks, and its reverb and delay sends, on their own MPC return or FX track, so MPC's mixer and effects can process them. Needs Machinemodule in the same project. Gen2 (aarch64) only.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-machinedrum/main/docs/img/machinemodule-tap-gen2.png",
+      "style": "utility",
+      "tags": [
+        "elektron",
+        "machinedrum",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "size": 96306,
+          "sha256": "86c62c8a3a1dd5297856bd428cd3279d47607e1ca10d78ec65bd8ad04b98db9b",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.0/Machinemodule-Tap-0.5.0-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.5.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-machinedrum",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
       }
     },
     {
@@ -8367,6 +8465,102 @@
       }
     },
     {
+      "id": "monomodule-fx-gen2",
+      "name": "Monomodule FX (Gen2)",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-monomodule",
+      "kind": "effect",
+      "license": "AGPL-3.0-or-later",
+      "summary": "The Elektron Monomachine's seven effect machines (thru, reverb, chorus, dynamix, ring mod, phaser, flanger) as an audio effect for Gen2 MPC devices, with a touchscreen skin and Q-Links. A ready-made download with nothing of Elektron's in it: it reads your own Monomachine OS file from the plugin folder. Gen2 only.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-monomodule/main/docs/img/monomodule-fx-gen2.png",
+      "style": "multi-effect",
+      "tags": [
+        "elektron",
+        "monomachine",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.11.0",
+          "size": 4249808,
+          "sha256": "73438e7b07aa772c5ced929dc5ea14b288d1e3e9b49041c0d7014e6b8f8c3b40",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.0/Monomodule-FX-0.11.0-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.11.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-monomodule",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "monomodule-one-gen2",
+      "name": "Monomodule One (Gen2)",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-monomodule",
+      "kind": "instrument",
+      "license": "AGPL-3.0-or-later",
+      "summary": "The Elektron Monomachine's synth engine (15 machines) as an instrument for Gen2 MPC devices, with a touchscreen skin, banks and preset lists, and Q-Links. A ready-made download: nothing of Elektron's is in the zip; you put your own Monomachine OS file in the plugin folder and it makes its skin and sound from that. Gen2 (aarch64) only.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-monomodule/main/docs/img/monomodule-gen2.png",
+      "style": "synth",
+      "tags": [
+        "elektron",
+        "monomachine",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.11.0",
+          "size": 4256674,
+          "sha256": "c322dc3db4abd1ccf58a84e9d345fc9c054445034852928554569d8e75bd49d0",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.0/Monomodule-One-0.11.0-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.11.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-monomodule",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "monomodule",
       "name": "Monomodule One + FX",
       "author": "sd88me",
@@ -8398,7 +8592,7 @@
         }
       ],
       "versions": [],
-      "latest": "0.10.2",
+      "latest": "0.11.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
