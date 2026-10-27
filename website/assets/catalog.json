@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27T05:14:35+00:00",
+  "date": "2026-10-27T12:23:53+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -30,7 +30,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/6w6-vst-v1.1.2/6W6-1.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -153,7 +155,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/8w8-vst-v1.1.2/8W8-1.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -276,7 +280,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/9w9-vst-v1.1.2/9W9-1.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -403,7 +409,9 @@
           "url": "https://github.com/sd88me/mpc-vst-acid/releases/download/acid-vst-v2.1.0/Acid-2.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -656,7 +664,9 @@
           "url": "https://github.com/sd88me/mpc-vst-acid303/releases/download/acid303-vst-v1.0.2/Acid-303-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -671,7 +681,9 @@
           "url": "https://github.com/sd88me/mpc-vst-acid303/releases/download/acid303-vst-v1.0.1/Acid-303-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -686,7 +698,9 @@
           "url": "https://github.com/sd88me/mpc-vst-acid303/releases/download/acid303-vst-v1.0.0/Acid-303-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         }
       ],
@@ -2109,7 +2123,9 @@
           "url": "https://github.com/sd88me/mpc-vst-boris/releases/download/v1.0.1/Boris-Granular-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -2276,7 +2292,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-chordsmith/releases/download/chordsmith-vst-v1.0.3/Chordsmith-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -2422,7 +2440,9 @@
           "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.6/Clementine-XT-0.9.6-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -2933,7 +2953,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/cw78-vst-v1.1.2/CW-78-1.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -3064,6 +3086,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Daemon/daemon.so calls network (connect, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -3088,6 +3111,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Daemon/daemon.so calls network (connect, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -3137,7 +3161,9 @@
           "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.1/Daemon-Listen-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -3159,7 +3185,9 @@
           "url": "https://github.com/sd88me/mpc-vst-daemon/releases/download/v1.0.0/Daemon-Listen-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -3293,7 +3321,9 @@
           "url": "https://github.com/sd88me/mpc-vst-dx7/releases/download/dx7-v1.0.7/Dexed-DX7-1.0.7-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -3679,7 +3709,9 @@
           "url": "https://github.com/padbangers/drips/releases/download/drips-v1.0.0/Drips-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai MPC X",
@@ -4107,7 +4139,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.2/Dub-Station-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -4122,7 +4156,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-dub-station/releases/download/dub-station-vst-v1.0.1/Dub-Station-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -4404,6 +4440,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Euclidier/euclidier calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)",
             "portable/sd88me - VST - Euclidier/euclidier.so calls network (connect, recv, send, socket); runs programs (posix_spawn): flagged for manual review (the author can explain why)"
           ],
@@ -4692,6 +4729,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/ANDREALPHEUS - VST - Evil Tuner XXL/evil_tuner_xxl.so calls network (getaddrinfo); runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -4869,7 +4907,9 @@
           "url": "https://github.com/3dthc/fretty-mpc/releases/download/v0.8.4/Fretty-0.8.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -4890,7 +4930,9 @@
           "url": "https://github.com/3dthc/fretty-mpc/releases/download/v0.8.3/Fretty-0.8.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -5778,7 +5820,9 @@
           "url": "https://github.com/sd88me/mpc-vst-jn106/releases/download/jn-106-vst-v0.1.0/JN-106-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -5833,7 +5877,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-keyscope/releases/download/keyscope-vst-v1.0.3/Keyscope-1.0.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -6231,7 +6277,9 @@
           "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.1/Loop-SaboteurXXL-0.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -6246,7 +6294,9 @@
           "url": "https://github.com/sunskiefer/Loop-SaboteurXXL/releases/download/v0.1.0/Loop-SaboteurXXL-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         }
       ],
@@ -6292,7 +6342,9 @@
           "url": "https://github.com/sd88me/mpc-vst-luckydip/releases/download/v0.9.2/Lucky-Dip-0.9.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -6417,7 +6469,9 @@
           "url": "https://github.com/sunskiefer/LXR02XXL/releases/download/v0.6.0/LXRXXL-0.6.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -6985,7 +7039,7 @@
         }
       ],
       "versions": [],
-      "latest": "0.5.0",
+      "latest": "0.5.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -7013,30 +7067,25 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.5.0",
-          "size": 5485524,
-          "sha256": "e03fdf654415599a3f10b25cff74d77a70c194c743bcaa66e6cfb5acd41c2134",
+          "version": "0.5.2",
+          "size": 5470933,
+          "sha256": "568eb17c25302f9c4e5034e9b9ae1efd674d3a368b798fc4d7ce06ee7522ce0a",
           "max_glibc": "2.36",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.0/Machinemodule-0.5.0-mpc-aarch64.zip",
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.2/Machinemodule-0.5.2-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-27"
-            }
-          ]
+          "tested": []
         }
       ],
-      "latest": "0.5.0",
+      "latest": "0.5.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -7064,28 +7113,24 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.5.0",
-          "size": 96306,
-          "sha256": "86c62c8a3a1dd5297856bd428cd3279d47607e1ca10d78ec65bd8ad04b98db9b",
+          "version": "0.5.2",
+          "size": 96380,
+          "sha256": "0cbbd51a22080347a70e33ed658bd2df666a8d632b8268b9550ed242cbdf16f4",
           "max_glibc": "2.36",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.0/Machinemodule-Tap-0.5.0-mpc-aarch64.zip",
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.2/Machinemodule-Tap-0.5.2-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-27"
-            }
-          ]
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
         }
       ],
-      "latest": "0.5.0",
+      "latest": "0.5.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -7533,7 +7578,9 @@
           "url": "https://github.com/sd88me/mpc-vst-maze/releases/download/maze-voice-vst-v1.0.5/Maze-Voice-1.0.5-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -7720,7 +7767,9 @@
           "url": "https://github.com/mcardonaserrano/meowsynth-mpc/releases/download/v1.0.2/MeowSynth-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live III (Gen2)",
@@ -7898,6 +7947,7 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/L'Cronx - VST - Meta4MPCXXL/meta4mpcxxl.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -7965,6 +8015,7 @@
           "channel": "beta",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/L'Cronx - VST - Meta4MPCXXL FX/meta4mpcxxl_fx.so calls network (bind, listen, recv, send, socket); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
           ],
           "tested": []
@@ -8095,7 +8146,9 @@
           "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.8/JV-880-1.0.8-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -8331,6 +8384,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Model-72/model72.so calls network (bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execvp, fork, posix_spawnp); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -8358,6 +8412,7 @@
           "channel": "stable",
           "yanked": false,
           "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "portable/sd88me - VST - Model-72/model72.so calls network (bind, connect, getaddrinfo, listen, recv, recvfrom, send, sendto, socket); runs programs (execvp, fork, posix_spawnp); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)"
           ],
           "tested": [
@@ -8573,28 +8628,24 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.11.0",
-          "size": 4249808,
-          "sha256": "73438e7b07aa772c5ced929dc5ea14b288d1e3e9b49041c0d7014e6b8f8c3b40",
+          "version": "0.11.1",
+          "size": 4249893,
+          "sha256": "46071d4db223ccb4007d2d24b08dc2247a25026d5472055093ed4f7b651c1830",
           "max_glibc": "2.36",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.0/Monomodule-FX-0.11.0-mpc-aarch64.zip",
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.1/Monomodule-FX-0.11.1-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-27"
-            }
-          ]
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
         }
       ],
-      "latest": "0.11.0",
+      "latest": "0.11.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -8622,28 +8673,24 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "0.11.0",
-          "size": 4256674,
-          "sha256": "c322dc3db4abd1ccf58a84e9d345fc9c054445034852928554569d8e75bd49d0",
+          "version": "0.11.1",
+          "size": 4256764,
+          "sha256": "ee0eccf01fa7abad845a293270e1834240c3dd75e8e58deb7280ee6233598a24",
           "max_glibc": "2.36",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.0/Monomodule-One-0.11.0-mpc-aarch64.zip",
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.1/Monomodule-One-0.11.1-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-27"
-            }
-          ]
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
         }
       ],
-      "latest": "0.11.0",
+      "latest": "0.11.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -8684,7 +8731,7 @@
         }
       ],
       "versions": [],
-      "latest": "0.11.0",
+      "latest": "0.11.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -8724,7 +8771,9 @@
           "url": "https://github.com/sd88me/mpc-vst-morpho-PE/releases/download/morpho-pe-v1.0.2/Morpho-PE-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -8967,7 +9016,9 @@
           "url": "https://github.com/mitchoster/mpc-vst-djfx/releases/download/v1.0.1/MPC-DJ-FX-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -8982,7 +9033,9 @@
           "url": "https://github.com/mitchoster/mpc-vst-djfx/releases/download/v1.0.0/MPC-DJ-FX-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -9471,7 +9524,9 @@
           "url": "https://github.com/mitchoster/mpc-vst-tape-echo/releases/download/v1.0.0/MPC-Tape-Echo-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -9865,6 +9920,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.2",
+          "size": 20204284,
+          "sha256": "65f69098106fee48496b4a713b35d0bfe9cb60e7d15fdce7d1f50f09e6ca6f58",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/MS20XXL/releases/download/v0.1.2/MS20XXL-0.1.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.1.1",
           "size": 20204206,
           "sha256": "d487634fb26977461ee10f0df45cbe8ffebec831d53d6da3a753705c38239b5e",
@@ -9907,7 +9980,7 @@
           ]
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/MS20XXL",
@@ -9949,7 +10022,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-mutable-vibe/releases/download/mutable-vibe-vst-v0.9.3/Mutable-Vibe-MPC-0.9.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -10486,7 +10561,9 @@
           "url": "https://github.com/3dthc/OB-XD-MPC/releases/download/ob-xd-mpc-0.4.4/OB-Xd-0.4.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -10549,7 +10626,9 @@
           "url": "https://github.com/3dthc/Odin2-MPC/releases/download/odin2-v1.4.4/Odin-2-1.4.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -10644,7 +10723,9 @@
           "url": "https://github.com/B0ss-M/MrHighMan/releases/download/v1.8.0/Omni-Sampler-1.8.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -10878,7 +10959,9 @@
           "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.4/Osirus-0.2.4-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live III (Gen2)",
@@ -10899,7 +10982,9 @@
           "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.3/Osirus-0.2.3-mpc-aarch64.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live III (Gen2)",
@@ -10949,7 +11034,9 @@
           "url": "https://github.com/sd88me/mpc-vst-OTT/releases/download/ottmpc-vst-v1.0.1/OTTmpc-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -11959,7 +12046,9 @@
           "url": "https://github.com/sd88me/mpc-vst-profit8/releases/download/profit-08-v0.1.3/Profit-08-0.1.3-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -12107,7 +12196,9 @@
           "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.2.0/Profit-5-0.2.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force (Gen1)",
@@ -12132,7 +12223,9 @@
           "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.1.1/Profit-5-0.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force (Gen1)",
@@ -12157,7 +12250,9 @@
           "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.1.0/Profit-5-0.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force (Gen1)",
@@ -12775,7 +12870,9 @@
           "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.3.0/setBfree-Organ-0.3.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -12796,7 +12893,9 @@
           "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.2.1/setBfree-Organ-0.2.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -12817,7 +12916,9 @@
           "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.2.0/setBfree-Organ-0.2.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -12832,7 +12933,9 @@
           "url": "https://github.com/SamplingHigh/mpc-vst-setbfree/releases/download/v0.1.12/setBfree-Organ-0.1.12-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         }
       ],
@@ -12880,7 +12983,9 @@
           "url": "https://github.com/gmorb/mpc-vst-sfizz/releases/download/v1.1.1/sfizz-1.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -12895,7 +13000,9 @@
           "url": "https://github.com/gmorb/mpc-vst-sfizz/releases/download/v1.1.0/sfizz-1.1.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -12921,7 +13028,9 @@
           "url": "https://github.com/gmorb/mpc-vst-sfizz/releases/download/v1.0.4/sfizz-1.0.4-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -12976,7 +13085,9 @@
           "url": "https://github.com/3dthc/Shapey-MPC/releases/download/shapey-5-band-eq-vst-v1.0.0/Shapey-5-Band-EQ-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -13026,7 +13137,9 @@
           "url": "https://github.com/3dthc/Shapey-MPC/releases/download/shapey-eq-vst-v1.6.1/Shapey-EQ-1.6.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -13060,8 +13173,8 @@
       "versions": [
         {
           "version": "0.3.10",
-          "size": 130901965,
-          "sha256": "ce0f78feed4db8e9e00df88776740195bcc9716bc4712d83b2b725dc9d1ad377",
+          "size": 130923963,
+          "sha256": "31252f71f0f32fa630fa64527345e76742234af8e0c3d6b1f174e49bc3bf7a98",
           "max_glibc": "2.29",
           "cpu": null,
           "os_compat": [
@@ -13070,7 +13183,9 @@
           "url": "https://github.com/3dthc/Sonix/releases/download/v0.3.10/Sonix-0.3.10-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -13518,7 +13633,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-stompbox/releases/download/stompbox-vst-v0.0.1/Stompbox-0.0.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -13624,7 +13741,9 @@
           "url": "https://github.com/sd88me/mpc-vst-sturm/releases/download/sturm-tp-v0.1.2/Sturm-TP-0.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -14226,7 +14345,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-vst-v1.0.2/TR-MPC-1.0.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "Akai Force",
@@ -14247,7 +14368,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-vst-v1.0.1/TR-MPC-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -14319,7 +14442,9 @@
           "url": "https://github.com/sd88me/mpc-vst-TR-MPC/releases/download/trmpc-tap-fx-vst-v1.0.1/TR-MPC-Tap-FX-1.0.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -14466,7 +14591,9 @@
           "url": "https://github.com/jacob-sabella/mpc-vst-tuner/releases/download/tuner-vst-v0.0.1/Tuner-0.0.1-mpc-armv7.zip",
           "channel": "beta",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Key 37",
@@ -14516,7 +14643,9 @@
           "url": "https://github.com/3dthc/Tuney-MPC/releases/download/tuney-vst-v1.4.2/Tuney-1.4.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": [
             {
               "device": "MPC Live II",
@@ -14910,7 +15039,9 @@
           "url": "https://github.com/nachtaktiv303/mpc-vst-vibe-fx/releases/download/vibe-fx-vst-v1.0.0/Vibe-FX-1.0.0-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
-          "warnings": [],
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
           "tested": []
         },
         {
@@ -15029,6 +15160,58 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-wurl",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "xenia",
+      "name": "Xenia",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-xenia",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "An emulation of the Microwave XT wavetable synthesizer's original firmware (gearmulator's 68k and DSP56300 emulators) as a native instrument for Gen2 MPC devices: ten touchscreen pages, ROM banks and patch browser, assignable play knobs and Q-Link control on every page. Gen2 (aarch64) only; you need your own Microwave XT ROM.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-xenia/aeb6a25cfe8e5e14fc1df592526b2c2a32eb99be/docs/screenshots/xenia-play.png",
+      "style": "synth",
+      "tags": [
+        "emulation",
+        "wavetable",
+        "rompler-free",
+        "gen2"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 8764068,
+          "sha256": "d85abfccc685bce6b3ec9cc60a0a3379f060ed21ae9a0801f0a4e6328d5cdb27",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-xenia/releases/download/v0.1.0/Xenia-0.1.0-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-xenia",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
