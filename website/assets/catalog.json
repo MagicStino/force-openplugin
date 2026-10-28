@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28T05:53:00+00:00",
+  "date": "2026-10-28T13:08:58+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2626,6 +2626,45 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.3.0",
+          "size": 71081053,
+          "sha256": "ea6053cd9d833f7e48f6a63daa7cee73b3cf996c215486d9a52da1c60fcdfc99",
+          "max_glibc": "2.28",
+          "cpu": {
+            "p99_pct": 3.4,
+            "max_pct": 7.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.3.0/Crate-Digger-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/sd88me - VST - Crate Digger/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
+            "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "az01 base 5.0.17",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "Akai Force",
+              "firmware": "az01 base 5.0.17",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        {
           "version": "1.2.0",
           "size": 70189626,
           "sha256": "3e44fcaab1b19f9911123998de0192a1cdc03208ae72c72c36c1741510e50449",
@@ -2656,6 +2695,11 @@
               "device": "Akai Force",
               "firmware": "MPC OS 3.9.1",
               "date": "2026-10-13"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "az01 base 5.0.17",
+              "date": "2026-10-28"
             }
           ]
         },
@@ -2889,34 +2933,9 @@
             "portable/sd88me - VST - Crate Digger/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
           ],
           "tested": []
-        },
-        {
-          "version": "1.1.1",
-          "size": 71361545,
-          "sha256": "68f3df11ce5b482b5b86a07e25a8385677b30f9713310f2ce4466e2a40322520",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-cratedigger/releases/download/cratedigger-vst-v1.1.1/Crate-Digger-1.1.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "old layout (payload/, installs the .so to /sdcard/vst, no \"layout\" field): re-release with the current tools/release.py (docs/RELEASING.md)",
-            "needs GLIBC 2.36: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
-            "plugin_list.awk differs from this repo's current copy: review it",
-            "payload/vst/cratedigger.so calls runs programs (posix_spawn): flagged for manual review (the author can explain why)",
-            "payload/vst/cratedigger/bin/python3/bin/python3.11 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
-            "payload/vst/cratedigger/bin/python3/lib/libpython3.11.so.1.0 calls network (accept, bind, connect, getaddrinfo, gethostbyname, listen, recv, recvfrom, send, sendto, socket); runs programs (execlp, execv, execve, fork, posix_spawn, posix_spawnp, system, vfork); loads code at runtime (dlopen); changes the system (chroot, setgid, setuid): flagged for manual review (the author can explain why)",
-            "payload/vst/cratedigger/bin/python3/lib/libtcl9.0.so calls network (accept, bind, connect, getaddrinfo, listen, recv, send, socket); runs programs (execvp, vfork); loads code at runtime (dlopen): flagged for manual review (the author can explain why)",
-            "payload/vst/cratedigger/bin/python3/lib/libtcl9tk9.0.so calls network (connect, getaddrinfo, recv, socket): flagged for manual review (the author can explain why)",
-            "payload/vst/cratedigger/bin/python3/lib/python3.11/lib-dynload/_dbm.cpython-311-arm-linux-gnueabihf.so calls network (accept, bind, connect, getaddrinfo, listen, send, socket): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-cratedigger",
@@ -5868,6 +5887,32 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.0",
+          "size": 26541267,
+          "sha256": "5fc6250eb2fb20bc7b22a7e1d893958e5b4a2a7534bf8f3f03014fa0686eaa75",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jn106/releases/download/jn-106-vst-v0.2.0/JN-106-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "Akai MPC Live III (aarch64)",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        {
           "version": "0.1.0",
           "size": 24590491,
           "sha256": "0610bf7401c32b902128570dc9fa811b7ff2597e32fbc7e9d5e6e1308760153c",
@@ -5895,7 +5940,7 @@
           ]
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-jn106",
@@ -10984,6 +11029,60 @@
       "download": true
     },
     {
+      "id": "plugin-manager-g2",
+      "name": "Open MPC Plugin Manager G2",
+      "author": "sd88me",
+      "repo": "sd88me/mpc-vst-plugins",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "The official OpenMPC plugin manager for Gen1 and Gen2 MPCs (32-bit build for Force, Live, One, X, Key; 64-bit for the Live III and kin). Browse this catalog and install, update and remove plugins on the MPC itself, with rollback if an install fails. Built on poloq's mpc-vst-manager.",
+      "screenshot": "https://raw.githubusercontent.com/sd88me/mpc-vst-plugins/588466d/tools/plugin_manager_g2/docs/screenshots/manager-discover-light.png",
+      "style": "utility",
+      "tags": [
+        "installer",
+        "catalog",
+        "manager",
+        "gen1",
+        "gen2",
+        "utility"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "size": 19501550,
+          "sha256": "6d252261e78b67632eb5e4aeaa945ce97971cf01ce9db99850e8f7ab8a5b8551",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.0/Plugin-Manager-G2-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "Force (Gen1)",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-28"
+            }
+          ]
+        }
+      ],
+      "latest": "0.2.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sd88me/mpc-vst-plugins",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "open303",
       "name": "Open303",
       "author": "saustin2010",
@@ -11095,6 +11194,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.5",
+          "size": 4537706,
+          "sha256": "7977669ea43a86e3ed93faaed2370d4919a91783358939cc73d4ecfbaf716670",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.5/Osirus-0.2.5-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.2.4",
           "size": 4537201,
           "sha256": "46125a823e945043cad1ad96688dd4f41637283caddb140f7962353c36bdfefa",
@@ -11141,7 +11255,7 @@
           ]
         }
       ],
-      "latest": "0.2.4",
+      "latest": "0.2.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
@@ -12328,6 +12442,33 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.1",
+          "size": 21356544,
+          "sha256": "c980c79b16df8b2679d88dfde0849eccbf51254331262c1704dbab44c5d973ac",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 31.4,
+            "max_pct": 37.3,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-profit5/releases/download/profit-5-vst-v0.2.1/Profit-5-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "Akai MPC Live III (Gen2)",
+              "firmware": "3.10",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        {
           "version": "0.2.0",
           "size": 21356410,
           "sha256": "a15b6e5cfa462f69f95bac0ef669b1e71e54242c9cb4f4e498203e88c10d99c8",
@@ -12409,7 +12550,7 @@
           ]
         }
       ],
-      "latest": "0.2.0",
+      "latest": "0.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-profit5",
