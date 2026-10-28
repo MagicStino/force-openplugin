@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27T22:22:29+00:00",
+  "date": "2026-10-28T05:53:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -5475,6 +5475,69 @@
       "download": true
     },
     {
+      "id": "hexachord-73",
+      "name": "HexChord 73",
+      "author": "Eurikon",
+      "repo": "Eurikon/mpc-vst-plugins",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Stereo chord synthesizer with four engines, eight chords, four voicings and a touchscreen chord diagram.",
+      "screenshot": "https://raw.githubusercontent.com/Eurikon/mpc-vst-plugins/9eed16e63f97e5ad87621a21cead85b6a7fee35b/media/hexachord-73.png",
+      "style": "synth",
+      "tags": [
+        "chord",
+        "polyphonic",
+        "stereo"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "size": 3026068,
+          "sha256": "e18a72658b0579149b600a76d060498e28b2aa2a6e414f577c5e386fc977cdc8",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 22.5,
+            "max_pct": 24.2,
+            "verdict": "WARN",
+            "instance_note": "CPU verdict WARN: start with one or two instances and check the MPC project CPU meter."
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Eurikon/mpc-vst-plugins/releases/download/hexachord-73-v1.0.0/HexChord-73-1.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II Retro",
+              "firmware": "3.9.1",
+              "date": "2026-10-14"
+            },
+            {
+              "device": "MPC Live II Retro",
+              "firmware": "3.10",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Eurikon/mpc-vst-plugins",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "incipience",
       "name": "Incipience",
       "author": "saustin2010",
@@ -8741,6 +8804,69 @@
       "download": false
     },
     {
+      "id": "monoslide",
+      "name": "MonoSlide",
+      "author": "Eurikon",
+      "repo": "Eurikon/mpc-vst-plugins",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Monophonic acid bass voice with overlapping-note slide, velocity accents and an MPC touchscreen skin.",
+      "screenshot": "https://raw.githubusercontent.com/Eurikon/mpc-vst-plugins/0b9a58444c7d84a78e38d95818eeb53172195782/media/monoslide.png",
+      "style": "synth",
+      "tags": [
+        "303",
+        "acid",
+        "bass",
+        "monophonic"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.3",
+          "size": 4694689,
+          "sha256": "54d1b1191de35ad9f2db8b32ffbf22beb9707b7ab80b9fcfa65030f31ff63aa2",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 10.5,
+            "max_pct": 15.9,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Eurikon/mpc-vst-plugins/releases/download/monoslide-v1.0.3/MonoSlide-1.0.3-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II Retro",
+              "firmware": "3.9.1",
+              "date": "2026-10-14"
+            },
+            {
+              "device": "MPC Live II Retro",
+              "firmware": "3.10",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.3",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Eurikon/mpc-vst-plugins",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "morpho-pe",
       "name": "Morpho-PE",
       "author": "sd88me",
@@ -9509,6 +9635,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.1.0",
+          "size": 627505,
+          "sha256": "86eb6954dabeb0e322b7e1b783f6bfde3571e5081d451acc71e6d8a724fcb522",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 21.6,
+            "max_pct": 22.7,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-tape-echo/releases/download/v1.1.0/MPC-Tape-Echo-1.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.0.0",
           "size": 2069848,
           "sha256": "6aaa611896329d93dd4dfc68ac4e4fa3f0a5ea4c466fea3888f4d90c0d4305ae",
@@ -9536,7 +9683,7 @@
           ]
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "mitchoster/mpc-vst-tape-echo",
@@ -14550,6 +14697,62 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-tributary",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "tropix",
+      "name": "Tropix",
+      "author": "3dthc",
+      "repo": "3dthc/Tropix",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Island and afro ROMpler: 128 presets and 65 instruments for afrobeat, amapiano, kompa, soca, reggae and Hawaiian music - steel pans, log drums, saxes and trumpets, kompa and slack-key guitars, steels, keys, mallets, basses and percussion, from redistributable recordings and original synthesis. Two layers, glide, horn scoop, vibrato, nine colorways.",
+      "screenshot": "https://raw.githubusercontent.com/3dthc/Tropix/1005f9c4dc719f58bd17b02fac750457e6c8cb1e/docs/images/browse.jpg",
+      "style": "sampler",
+      "tags": [
+        "rompler",
+        "afrobeat",
+        "amapiano",
+        "kompa",
+        "soca",
+        "reggae",
+        "steel-pan",
+        "horns"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "size": 225757053,
+          "sha256": "27c4bffe7867f247ad2fe78dd1767a67c22b6679c7cb7ccbfdd62420fe6bd78d",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Tropix/releases/download/v0.1.0/Tropix-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1",
+              "date": "2026-10-27"
+            }
+          ]
+        }
+      ],
+      "latest": "0.1.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "3dthc/Tropix",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
