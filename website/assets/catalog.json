@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-28T13:08:58+00:00",
+  "date": "2026-10-28T22:40:38+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9680,6 +9680,50 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.2.1",
+          "size": 10717538,
+          "sha256": "8e4cfe8512fde1ec72a48ef11e792dac9d3cfa9349b28fc817d7b01fe4669d57",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-tape-echo/releases/download/v1.2.1/MPC-Tape-Echo-1.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "1.2.0",
+          "size": 10698845,
+          "sha256": "6ed6ab3febc947f36483356a9e6d0ab2440ca4e3cdd2bd39593325e54002730d",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 22.6,
+            "max_pct": 23.7,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-tape-echo/releases/download/v1.2.0/MPC-Tape-Echo-1.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        {
           "version": "1.1.0",
           "size": 627505,
           "sha256": "86eb6954dabeb0e322b7e1b783f6bfde3571e5081d451acc71e6d8a724fcb522",
@@ -9728,7 +9772,7 @@
           ]
         }
       ],
-      "latest": "1.1.0",
+      "latest": "1.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "mitchoster/mpc-vst-tape-echo",
@@ -11050,6 +11094,34 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.1",
+          "size": 19501749,
+          "sha256": "0f5bb0b30789b209d74109697523e45f353c39b8a999215a27bf63730e0be768",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.1/Plugin-Manager-G2-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.10.0.49",
+              "date": "2026-10-29"
+            },
+            {
+              "device": "Force (Gen1)",
+              "firmware": "3.9.1.2",
+              "date": "2026-10-29"
+            }
+          ]
+        },
+        {
           "version": "0.2.0",
           "size": 19501550,
           "sha256": "6d252261e78b67632eb5e4aeaa945ce97971cf01ce9db99850e8f7ab8a5b8551",
@@ -11069,11 +11141,16 @@
               "device": "Force (Gen1)",
               "firmware": "3.9.1.2",
               "date": "2026-10-28"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.10.0.49",
+              "date": "2026-10-29"
             }
           ]
         }
       ],
-      "latest": "0.2.0",
+      "latest": "0.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-plugins",
@@ -11194,6 +11271,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.6",
+          "size": 4537659,
+          "sha256": "34a36481cbfc5b5e4b02063fd0894faebd891e54fabfd46f45d1d97c71f0e3c3",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.6/Osirus-0.2.6-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-29"
+            }
+          ]
+        },
+        {
           "version": "0.2.5",
           "size": 4537706,
           "sha256": "7977669ea43a86e3ed93faaed2370d4919a91783358939cc73d4ecfbaf716670",
@@ -11255,7 +11353,7 @@
           ]
         }
       ],
-      "latest": "0.2.5",
+      "latest": "0.2.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
