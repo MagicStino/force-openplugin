@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T13:15:21+00:00",
+  "generated": "2026-10-29T13:43:16+00:00",
   "indexed": 165,
   "candidates": [
     {
@@ -8,6 +8,11 @@
       "summary": "Analog-style monosynth VST for MPC OS on the Akai Force: morphing oscillators, a nonlinear transistor ladder, feedback, Multidrive, Duo, 57 presets, touchscreen pages",
       "url": "https://github.com/Devko/SubWerk",
       "status": "discovered; not installable"
+    },
+    {
+      "repo": "MagicStino/Clif-Tape",
+      "url": "https://github.com/MagicStino/Clif-Tape",
+      "status": "needs compatible manifest; not installable"
     },
     {
       "repo": "WorldLinkStudio/mpcsample",
@@ -19,6 +24,11 @@
     {
       "stage": "manifest",
       "repo": "Devko/SubWerk",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "manifest",
+      "repo": "MagicStino/Clif-Tape",
       "error": "HTTP Error 404: Not Found"
     },
     {
