@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-29T00:26:08+00:00",
+  "generated": "2026-10-29T05:57:11+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3484,7 +3484,7 @@
       "author": "gmorb",
       "repo": "gmorb/mpc-vst-dragonfly-early-reflections",
       "kind": "effect",
-      "license": "GPL-3.0-only",
+      "license": "GPL-3.0-or-later",
       "summary": "Dragonfly Early Reflections as a native insert effect, with a touchscreen skin and Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-early-reflections/2044beed9f510a3963df7b61da6a4c19c6c7e7b3/docs/banners/early.png",
       "style": "reverb",
@@ -3497,33 +3497,35 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.2.0",
-          "size": 789802,
-          "sha256": "0288c0a5c34ad4f11a940b39572cbb59fb6b9dd8e59694e8b4ec37c431f4739c",
+          "version": "1.3.1",
+          "size": 784749,
+          "sha256": "1b338a260d23928b4ec1c31cfc3f0e11d9f25d2656c653799b692a1841a14e09",
           "max_glibc": "2.34",
           "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/gmorb/mpc-vst-dragonfly-early-reflections/releases/download/v1.2.0/Early-Refl-1.2.0-mpc-armv7.zip",
+          "url": "https://github.com/gmorb/mpc-vst-dragonfly-early-reflections/releases/download/v1.3.1/Early-Reflections-1.3.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
-            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)",
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
           ],
           "tested": [
             {
-              "device": "Force",
-              "firmware": "",
-              "date": ""
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
             }
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-early-reflections",
@@ -3537,7 +3539,7 @@
       "author": "gmorb",
       "repo": "gmorb/mpc-vst-dragonfly-hall",
       "kind": "effect",
-      "license": "GPL-3.0-only",
+      "license": "GPL-3.0-or-later",
       "summary": "Dragonfly Hall reverb as a native insert effect, with a touchscreen skin and Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-hall/eb9f41f22ea93414776db40760c2387b36cf3144/docs/banners/hall.png",
       "style": "reverb",
@@ -3549,6 +3551,34 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.3.0",
+          "size": 2540919,
+          "sha256": "3b52ff2c967a8c713f5feb8501e59a8b18edf5241aec1f1cea31afec5cac8708",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-dragonfly-hall/releases/download/v1.3.0/Hall-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            }
+          ]
+        },
         {
           "version": "1.2.0",
           "size": 2548527,
@@ -3576,7 +3606,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-hall",
@@ -3590,7 +3620,7 @@
       "author": "gmorb",
       "repo": "gmorb/mpc-vst-dragonfly-plate",
       "kind": "effect",
-      "license": "GPL-3.0-only",
+      "license": "GPL-3.0-or-later",
       "summary": "Dragonfly Plate reverb as a native insert effect, with a touchscreen skin and Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-plate/a9087385948d18ae38739c44ddf42ab826d1a567/docs/banners/plate.png",
       "style": "reverb",
@@ -3602,6 +3632,34 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.3.0",
+          "size": 1207987,
+          "sha256": "dff95659431d6b01ace66faeb8e2736c0a83e685110e0cc4bd0bcde59d96606e",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-dragonfly-plate/releases/download/v1.3.0/Plate-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            }
+          ]
+        },
         {
           "version": "1.2.0",
           "size": 1214553,
@@ -3629,7 +3687,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-plate",
@@ -3643,7 +3701,7 @@
       "author": "gmorb",
       "repo": "gmorb/mpc-vst-dragonfly-room",
       "kind": "effect",
-      "license": "GPL-3.0-only",
+      "license": "GPL-3.0-or-later",
       "summary": "Dragonfly Room reverb as a native insert effect, with a touchscreen skin and Q-Links.",
       "screenshot": "https://raw.githubusercontent.com/gmorb/mpc-vst-dragonfly-room/6c62e1a5c9ef57f0c31897afa0faf07d7a446585/docs/banners/room.png",
       "style": "reverb",
@@ -3655,6 +3713,34 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.3.0",
+          "size": 2049688,
+          "sha256": "d17d62e7c97b5b1360ac690c794e085ae6715cb89b781d602f70212bc98c1512",
+          "max_glibc": "2.34",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/gmorb/mpc-vst-dragonfly-room/releases/download/v1.3.0/Room-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "needs GLIBC 2.34: listed as MPC OS 3.x only (MPC OS 2.x has about 2.32; build with arm32v7/gcc:11-bullseye to reach it)"
+          ],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            },
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-28"
+            }
+          ]
+        },
         {
           "version": "1.2.0",
           "size": 2057559,
@@ -3682,7 +3768,7 @@
           ]
         }
       ],
-      "latest": "1.2.0",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-room",
@@ -9096,38 +9182,38 @@
       }
     },
     {
-      "id": "mpc-dj-fx",
-      "name": "MPC DJ FX",
+      "id": "mpc-dj-fx-2",
+      "name": "MPC DJ FX 2",
       "author": "mitchoster",
-      "repo": "mitchoster/mpc-vst-djfx",
+      "repo": "mitchoster/mpc-vst-djfx2",
       "kind": "effect",
       "license": "MIT",
-      "summary": "One-slot live DJ effect: 3-band isolator, DJ filter, beat repeat, delay, reverb, through-zero flanger, limiter and one macro knob that moves them together.",
-      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-djfx/main/docs/img/panel.png",
+      "summary": "One-slot live DJ insert for MPC/Force: 3-band isolator, DJ filter, beat repeat, delay, reverb, through-zero flanger, grain delay, limiter, and eight performance macros measured from Lenny Kiser's DJ-FX rack.",
+      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-djfx2/0f20d92f/docs/ui-preview/page_1.png",
       "style": "multi-fx",
       "tags": [
         "dj",
-        "performance",
         "isolator",
-        "beat-repeat"
+        "filter",
+        "beat-repeat",
+        "delay",
+        "reverb",
+        "performance",
+        "macro"
       ],
       "source_available": false,
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.1",
-          "size": 1318600,
-          "sha256": "0f266dfff87b734bdd3975c21da9f2bbc40eb54873e088a8e29603038004731a",
+          "version": "3.1.2",
+          "size": 13853210,
+          "sha256": "a2186155f7ca0bfba09c37cd3a3f3c5271868511a1b8da2daade75c0d70d4b50",
           "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 7.4,
-            "max_pct": 8.3,
-            "verdict": "PASS"
-          },
+          "cpu": null,
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/mitchoster/mpc-vst-djfx/releases/download/v1.0.1/MPC-DJ-FX-1.0.1-mpc-armv7.zip",
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.1.2/MPC-DJ-FX-2-3.1.2-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -9136,15 +9222,19 @@
           "tested": []
         },
         {
-          "version": "1.0.0",
-          "size": 1310041,
-          "sha256": "59d490f176ddee82a662ded344aced64bd94b36cbc4f32423c2460ffc0f2cb7f",
+          "version": "3.1.1",
+          "size": 13825218,
+          "sha256": "bd99f88a6da79856a34f68ca6d5c7a9603efcdc0c522be43399810a2307496ce",
           "max_glibc": "2.27",
-          "cpu": null,
+          "cpu": {
+            "p99_pct": 12.7,
+            "max_pct": 14.4,
+            "verdict": "PASS"
+          },
           "os_compat": [
             "3.x"
           ],
-          "url": "https://github.com/mitchoster/mpc-vst-djfx/releases/download/v1.0.0/MPC-DJ-FX-1.0.0-mpc-armv7.zip",
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.1.1/MPC-DJ-FX-2-3.1.1-mpc-armv7.zip",
           "channel": "stable",
           "yanked": false,
           "warnings": [
@@ -9153,16 +9243,204 @@
           "tested": [
             {
               "device": "MPC Live II",
-              "firmware": "3.9.1.2",
-              "date": "2026-10-15"
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-28"
+            }
+          ]
+        },
+        {
+          "version": "3.1.0",
+          "size": 13825064,
+          "sha256": "ff8eede424e7427ef3ac3e202cecafa960c1f0f37c9998736d899de1c4eb5cca",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.1.0/MPC-DJ-FX-2-3.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "3.0.1",
+          "size": 713492,
+          "sha256": "2042879dd915337da3410dfe526ed1c477af2cced6c8abda2cbc31a1326f972f",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 12.7,
+            "max_pct": 14.4,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.0.1/MPC-DJ-FX-2-3.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "3.0.0",
+          "size": 712213,
+          "sha256": "966ff05164af7756d2e46a7197a1844937af9c59213257d8ed4d8f35ac0b5b9d",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 12.7,
+            "max_pct": 14.4,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.0.0/MPC-DJ-FX-2-3.0.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "2.3.0",
+          "size": 4910984,
+          "sha256": "065d79c08fc670d75423932034bcf16eb6004d3125e8c5be4bb86723ae195f5a",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 13.8,
+            "max_pct": 17.0,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.3.0/MPC-DJ-FX-2-2.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "2.2.1",
+          "size": 4912330,
+          "sha256": "f5772399f65aba8dfa21cfbabf2cf92dfe3ade9ff78ccc6a552d255054b417c6",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 11.4,
+            "max_pct": 14.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.2.1/MPC-DJ-FX-2-2.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "version": "2.2.0",
+          "size": 4907475,
+          "sha256": "8ddb8953fb182807da1f94026e4b1dabfba0eccce418e73e9053ca7556f6cf1f",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 11.4,
+            "max_pct": 14.8,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.2.0/MPC-DJ-FX-2-2.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "version": "2.1.1",
+          "size": 4546344,
+          "sha256": "f66ed0242ccb3bd937b47e1f0bb895edc55d738706124dcfa91a93ad6500e983",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 11.6,
+            "max_pct": 12.9,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.1.1/MPC-DJ-FX-2-2.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-27"
+            }
+          ]
+        },
+        {
+          "version": "2.1.0",
+          "size": 4546326,
+          "sha256": "5228d136c5d96e900d174ae6a844bed5f81374ed58b37ee98743b01f135912e4",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 11.8,
+            "max_pct": 14.5,
+            "verdict": "PASS"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.1.0/MPC-DJ-FX-2-2.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-26"
             }
           ]
         }
       ],
-      "latest": "1.0.1",
+      "latest": "3.1.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "mitchoster/mpc-vst-djfx",
+        "repository": "mitchoster/mpc-vst-djfx2",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -11998,130 +12276,6 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/PlateauXXL",
-        "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
-      }
-    },
-    {
-      "id": "plugin-manager",
-      "name": "Plugin Manager",
-      "author": "poloq",
-      "repo": "poloq-instruments/mpc-vst-manager",
-      "kind": "instrument",
-      "license": "MIT",
-      "summary": "Install, update and remove catalog plugins from the MPC screen, with one MPC restart per batch.",
-      "screenshot": "https://raw.githubusercontent.com/poloq-instruments/mpc-vst-manager/9ee0b5aa61acafc935481426beff23cd2db1aaef/docs/screenshot.png",
-      "style": "utility",
-      "tags": [
-        "manager",
-        "installer",
-        "catalog"
-      ],
-      "source_available": false,
-      "distribution": "release",
-      "versions": [
-        {
-          "version": "1.2.0",
-          "size": 3521000,
-          "sha256": "5c45ad48a82e7c8cdb3ceabbe79c58bbbcbb4b29743611cbb9f560b33727d22a",
-          "max_glibc": "2.15",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.2.0/Plugin-Manager-1.2.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it",
-            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC One",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-11"
-            }
-          ]
-        },
-        {
-          "version": "1.1.0",
-          "size": 374338,
-          "sha256": "f7e26f4f0aebea495baef7ccecdf702d69cc928b2aec4eb5e758fa1ee382d797",
-          "max_glibc": "2.15",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.1.0/Plugin-Manager-1.1.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it",
-            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.1",
-          "size": 356602,
-          "sha256": "055b4a26e691a97f76d7ebeaac17d0de436f4fd20eb63a6e2ac5b4692183f509",
-          "max_glibc": "2.15",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.0.1/Plugin-Manager-1.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it",
-            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 355591,
-          "sha256": "37f1cdd6af3793a7b282c4ff9abbff47e9a63d991d3fa9d9aea68daeaaadc026",
-          "max_glibc": "2.15",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/poloq-instruments/mpc-vst-manager/releases/download/v1.0.0/Plugin-Manager-1.0.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it",
-            "portable/poloq - VST - Plugin Manager/plugin_manager.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": [
-            {
-              "device": "Akai MPC One",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-01"
-            },
-            {
-              "device": "Akai MPC Key 37",
-              "firmware": "MPC OS 3.9.1",
-              "date": "2026-10-03"
-            }
-          ]
-        }
-      ],
-      "latest": "1.2.0",
-      "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "poloq-instruments/mpc-vst-manager",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
