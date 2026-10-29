@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-29T13:46:28.639Z",
+  "generated": "2026-10-29T15:22:52+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2507,7 +2507,7 @@
           "max_glibc": "2.29",
           "cpu": {
             "p99_pct": 25.6,
-            "max_pct": 29,
+            "max_pct": 29.0,
             "verdict": "WARN"
           },
           "os_compat": [
@@ -2553,7 +2553,7 @@
           "max_glibc": "2.29",
           "cpu": {
             "p99_pct": 25.4,
-            "max_pct": 29,
+            "max_pct": 29.0,
             "verdict": "WARN"
           },
           "os_compat": [
@@ -2582,11 +2582,9 @@
       "id": "clif-tape",
       "name": "Clif Tape",
       "author": "MagicStino",
-      "repo": "MagicStino/Clif-Tape",
-      "kind": "effect",
-      "license": "MIT",
       "summary": "Stereo tape colour and digital degradation, expressive Wow/Flutter, twelve tone profiles, crackle, stereo spread, independent noise textures and Silence Gate. Fifteen presets and touchscreen Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/main/catalog-thumbnail.png",
+      "license": "MIT",
+      "kind": "effect",
       "style": "effect",
       "tags": [
         "tape",
@@ -2594,30 +2592,26 @@
         "stereo",
         "effect"
       ],
-      "distribution": "release",
-      "source_available": true,
-      "latest": "0.2.0",
+      "repo": "MagicStino/Clif-Tape",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/main/catalog-thumbnail.png",
       "versions": [
         {
           "version": "0.2.0",
           "url": "https://github.com/MagicStino/Clif-Tape/releases/download/v0.2.0/Clif-Tape-0.2.0-mpc-armv7.zip",
-          "size": 1631661,
           "sha256": "c29f7865dedfd7fdc94af94f9da1db87f441d768b87b4b480b402bbb1923c5b3",
+          "size": 1631661,
           "channel": "stable",
           "yanked": false,
-          "arch": "armv7",
           "os_compat": [
             "3.x"
-          ],
-          "tested": [],
-          "warnings": []
+          ]
         }
       ],
       "provenance": {
         "source": "https://github.com/MagicStino/Clif-Tape/blob/main/openplugin.json",
         "repository": "MagicStino/Clif-Tape",
         "hardware_verified_by_openplugin": false,
-        "validation": "package-download-sha256-verified"
+        "validation": "metadata-validated"
       }
     },
     {
@@ -2995,7 +2989,7 @@
           "max_glibc": "2.29",
           "cpu": {
             "p99_pct": 7.7,
-            "max_pct": 9,
+            "max_pct": 9.0,
             "verdict": "PASS"
           },
           "os_compat": [
@@ -3025,7 +3019,7 @@
           "max_glibc": "2.29",
           "cpu": {
             "p99_pct": 7.7,
-            "max_pct": 9,
+            "max_pct": 9.0,
             "verdict": "PASS"
           },
           "os_compat": [
@@ -3048,7 +3042,7 @@
           "max_glibc": "2.29",
           "cpu": {
             "p99_pct": 7.7,
-            "max_pct": 9,
+            "max_pct": 9.0,
             "verdict": "PASS"
           },
           "os_compat": [
@@ -3364,7 +3358,7 @@
           "sha256": "394a94dcd1e5d92334d3d52bf3430454dbd8053fb15def2e1d97d42aa817a79d",
           "max_glibc": "2.29",
           "cpu": {
-            "p99_pct": 4,
+            "p99_pct": 4.0,
             "max_pct": 5.4,
             "verdict": "PASS"
           },
@@ -3394,7 +3388,7 @@
           "sha256": "c8af7386b2394fba0f4255c9769e41149c2f53981fa15d1a8cd01520055fd245",
           "max_glibc": "2.29",
           "cpu": {
-            "p99_pct": 4,
+            "p99_pct": 4.0,
             "max_pct": 5.4,
             "verdict": "PASS"
           },
@@ -4635,7 +4629,7 @@
           "sha256": "d838834712130bce234e656b6e635f922d38875cfcf16c6d108140ad63f178fe",
           "max_glibc": "2.30",
           "cpu": {
-            "p99_pct": 2,
+            "p99_pct": 2.0,
             "max_pct": 13.1,
             "verdict": "PASS"
           },
@@ -7736,7 +7730,7 @@
           "sha256": "d4a2a1b9d19d87d39e103ede87cb552df686720db59ae679f8e9ee19a2ddc899",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 10,
+            "p99_pct": 10.0,
             "max_pct": 10.8,
             "verdict": "PASS"
           },
@@ -7759,7 +7753,7 @@
           "sha256": "810556fe75ec377b0ec862243bac7cf90c865777c51f9563eed36c4c9b63ada7",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 10,
+            "p99_pct": 10.0,
             "max_pct": 10.8,
             "verdict": "PASS"
           },
@@ -7782,7 +7776,7 @@
           "sha256": "2bbf5cbc11326f509cb81e322be5a9f835ae4de106579f2a6dae33c28660e3a5",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 10,
+            "p99_pct": 10.0,
             "max_pct": 10.8,
             "verdict": "PASS"
           },
@@ -8938,7 +8932,7 @@
           "sha256": "e87194ce1cd6e7caf19c771bf5611298660d5a2bea8288fc9938a816bdacdc80",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 46,
+            "p99_pct": 46.0,
             "max_pct": 53.9,
             "verdict": "FAIL"
           },
@@ -9233,7 +9227,7 @@
           "max_glibc": "2.27",
           "cpu": {
             "p99_pct": 13.8,
-            "max_pct": 17,
+            "max_pct": 17.0,
             "verdict": "PASS"
           },
           "os_compat": [
@@ -12458,7 +12452,7 @@
           "sha256": "2e8f6be3c0b9e46df2e20e84b3fcfc058afd1209bf61301092182fd997698a3f",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 34,
+            "p99_pct": 34.0,
             "max_pct": 34.4,
             "verdict": "WARN"
           },
@@ -14764,7 +14758,7 @@
           "sha256": "295e2bd48552bc274abffc7f953c43ed0324ddd5c5b8ce11d1da92bf2381d408",
           "max_glibc": "2.27",
           "cpu": {
-            "p99_pct": 1,
+            "p99_pct": 1.0,
             "max_pct": 1.9,
             "verdict": "PASS"
           },
