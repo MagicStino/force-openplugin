@@ -4,11 +4,11 @@ Browse, install and update **community VST plugins on Akai Force 3.10.0 and MPC 
 
 Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
-**[OpenPlugin 0.8.2 RC4 build information and USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
+**[OpenPlugin 0.8.2 build information and USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Release status:** RC4 includes the refreshed catalog with Clif Loss and online thumbnail fallback for entries without bundled artwork. Existing larger paging controls are retained. Both image files pass container, filesystem and injected-file checks; hardware flash, online thumbnail appearance and audio-load testing remain pending. MPC Gen1 is hardware untested.
+**Release status:** OpenPlugin 0.8.2 includes the current catalog and bundled thumbnails for Clif Tape, TinyFreaky, PulyTek and Magic Tape Echo. Missing artwork loads online and is cached for offline use. Plugin binaries are installed separately through the manager. Container, filesystem, injected-file and thumbnail regression checks pass; full-image flash/boot and audio-load validation remain pending. MPC Gen1 is hardware untested.
 
 ![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
 
@@ -36,7 +36,7 @@ Their exact SHA256 checksums are recorded in [inputs.json](inputs.json).
 They are not stored in Git; use those supplied local files, or matching original
 copies. Other firmware versions are rejected; renaming them does not help.
 
-For this candidate, download and extract **OpenPlugin-0.8.2-rc4-source.zip** from the [RC4 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2-rc4). This attached archive contains the complete build changes; GitHub's automatic source archives do not. Place the original images in a `firmware/` folder inside the extracted source, then run the commands below there.
+For this release, download and extract **OpenPlugin-0.8.2-source.zip** from the [0.8.2 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2). This attached archive contains the complete build changes; GitHub's automatic source archives do not. Place the original images in a `firmware/` folder inside the extracted source, then run the commands below there.
 
 Build **Force only**; no MPC image is required:
 
@@ -61,11 +61,11 @@ Each command builds the native payload and runs the same validation checks;
 only the requested firmware image(s) are generated. The originals remain unchanged.
 An optional final argument supplies an owner's public SSH key.
 
-Outputs: `*-openplugin-v0.8.2-rc4-update.img`, checksums and validation manifests. Existing files
+Outputs: `*-openplugin-v0.8.2-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and selected images without mounting them. It does not flash.
 
-Development container version: **3.10.0-openplugin-v0.8.2-rc4**. The supplied 3.10.0 files
+Container version: **3.10.0-openplugin-v0.8.2**. The supplied 3.10.0 files
 contain application **3.10.0.49**; its binaries and numeric version fields stay
 unchanged. See [current build availability](docs/DOWNLOADS.md). Firmware images are distributed separately from Git source.
 
@@ -107,4 +107,4 @@ Mouse source: [no3z, Amit Talwar and bonsaipanda](https://github.com/bonsaipanda
 
 For catalog refreshes, use the [update-plugins skill/runbook](.agents/skills/update-plugins/SKILL.md): commands, validation and removal review, commit/push, and GitHub Pages verification.
 
-The RC4 catalog includes Magic Tape Echo 0.1.1 (three-head artwork), PulyTek 1.0.2 and TinyFreaky 0.4.1. The last 3.9.1 firmware remains available as [v0.8.1-rc2](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.1-rc2).
+The 0.8.2 catalog includes Magic Tape Echo 0.1.1 (three-head artwork), PulyTek 1.0.2 and TinyFreaky 0.4.1. The last 3.9.1 firmware remains available as [v0.8.1-rc2](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.1-rc2).
