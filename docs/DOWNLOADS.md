@@ -1,21 +1,21 @@
 # Download images
 
-## Current build: firmware 3.10.0 / OpenPlugin v0.8.2
+## Current build: firmware 3.10.0 / OpenPlugin v0.8.3
 
 The current Force and MPC Gen1 images are based on stock firmware **3.10.0** (application **3.10.0.49**). Both include OpenPlugin, SSH/SFTP support and the mouse/cursor integration.
 
-Download the **[OpenPlugin v0.8.2 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.2)** below. These images include the refreshed catalog with Clif Tape and online thumbnail fallback. The larger 64 × 64 paging targets and readable catalog text are retained.
+Download the **[OpenPlugin v0.8.3 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3)** below. These images include the refreshed catalog with Clif Tape and online thumbnail fallback. The larger 64 × 64 paging targets and readable catalog text are retained.
 
 | Device family | Current filename | SHA256 |
 |---|---|---|
-| Akai Force | [Force-3.10.0-openplugin-v0.8.2-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2/Force-3.10.0-openplugin-v0.8.2-update.img) | `a50a51c8804e10c3b3516e3aefd36fb7200ffed1f52feda3c19adee126cc76d2` |
-| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.2-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.2/MPC-3.10.0-Gen1-openplugin-v0.8.2-update.img) | `250373bd8236a3097771eedf0a6f67150775b5e5bbf17eefdd2b9b9a056ffae6` |
+| Akai Force | [Force-3.10.0-openplugin-v0.8.3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/Force-3.10.0-openplugin-v0.8.3-update.img) | `89c3d2b4fccaf70e883ee920266b9475f63b2507dc91cc13a38ebe72570050a7` |
+| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/MPC-3.10.0-Gen1-openplugin-v0.8.3-update.img) | `bd77f56b279d1b343d8e84f14eb1c3212886fdfe4bf6a4acceee4e9680a0bef8` |
 
 ## Validation status
 
 - Both images pass container, filesystem, injected-file and stock ARM image verification.
 - Offline thumbnail download/cache, corrupt-download recovery and bounded display-update tests pass.
-- Full 0.8.2 flash/boot, online thumbnail appearance and audio-load testing remain pending. MPC Gen1 is hardware untested.
+- Clif Tape's registered thumbnail was confirmed on Force. Full 0.8.3 flash/boot and audio-load testing remain pending. MPC Gen1 is hardware untested.
 
 ## Included artwork and catalog
 
@@ -23,7 +23,7 @@ Clif Tape, TinyFreaky, PulyTek and Magic Tape Echo have bundled artwork. The plu
 
 ## Catalog thumbnails
 
-Connect to the internet and select **CATALOG → Refresh catalog**. Bundled thumbnails appear immediately. Entries without bundled artwork download a compact 30 × 15 thumbnail, cached for offline use. Failed downloads keep a previously valid cached image. This manager update must be installed to enable the online fallback.
+Connect to the internet and select **CATALOG → Refresh catalog**. Bundled thumbnails appear immediately. Online artwork can download and cache, but displaying newly downloaded, unbundled images remains unresolved. Do not rely on that fallback yet.
 
 ## Installing from USB
 
@@ -52,4 +52,8 @@ SSH/SFTP is enabled at startup in these builds. The default login is **username 
 
 0.8.2 adds the approved three-head Magic Tape Echo thumbnail and final catalog versions: Magic Tape Echo 0.1.1, PulyTek 1.0.2 and TinyFreaky 0.4.1. Older versions of these three are removed from the current catalog.
 
-0.8.2 adds online fallback for future unbundled catalog artwork and includes the updated Clif Tape install entry.
+0.8.3 corrects the missing Clif Tape image registration and updates artwork generation to use the merged catalog.
+
+## Manager-only update
+
+Existing OpenPlugin 0.8.x users can download the [ready-built Plugin Manager 0.8.3](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/Plugin-Manager-0.8.3-mpc-armv7.zip). No compiling or firmware flash is needed. Follow the included INSTALL.md and choose a writable, executable Synths location. Save first: installation restarts the music application. The package includes an uninstaller.
