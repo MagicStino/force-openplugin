@@ -4,7 +4,8 @@
   "repositories": [
     "MagicStino/pulytek",
     "WorldLinkStudio/mpcsample",
-    "MagicStino/TinyFreaky"
+    "MagicStino/TinyFreaky",
+    "MagicStino/Clif-Loss"
   ],
   "search_queries": [
     "topic:mpc-plugin",
