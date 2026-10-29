@@ -122,7 +122,9 @@ static const char *const preview_ids[] = {
     "verglas",
     "vibe-fx",
     "warps",
-    "wurl"
+    "wurl",
+    "magic-tape-echo",
+    "clif-tape"
 };
 static int preview_frame(const char *id) {
     for (unsigned i=0;i<sizeof preview_ids/sizeof *preview_ids;i++)
