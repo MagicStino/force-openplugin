@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-28T22:40:38+00:00",
+  "generated": "2026-10-29T00:00:36+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2576,6 +2576,30 @@
         "repository": "sd88me/mpc-vst-clementineXT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "clif-loss",
+      "name": "Clif Loss",
+      "author": "MagicStino",
+      "summary": "Stereo tape character, pitch drift, failure textures and independent noise controls for Force/MPC. Requires your own firmware.",
+      "license": "MIT",
+      "kind": "effect",
+      "style": "effect",
+      "tags": [
+        "tape",
+        "lo-fi",
+        "stereo",
+        "firmware-derived"
+      ],
+      "repo": "MagicStino/Clif-Loss",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/main/catalog-thumbnail.png",
+      "versions": [],
+      "provenance": {
+        "source": "https://github.com/MagicStino/Clif-Loss/blob/main/openplugin.json",
+        "repository": "MagicStino/Clif-Loss",
+        "hardware_verified_by_openplugin": false,
+        "validation": "listed-only"
       }
     },
     {
