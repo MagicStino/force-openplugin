@@ -5,7 +5,7 @@
     "MagicStino/pulytek",
     "WorldLinkStudio/mpcsample",
     "MagicStino/TinyFreaky",
-    "MagicStino/Clif-Loss"
+    "MagicStino/Clif-Tape"
   ],
   "search_queries": [
     "topic:mpc-plugin",
@@ -15,7 +15,8 @@
   ],
   "reviewed_manifest_repositories": [
     "MagicStino/pulytek",
-    "MagicStino/TinyFreaky"
+    "MagicStino/TinyFreaky",
+    "MagicStino/Clif-Tape"
   ],
   "max_discovered_repositories": 60
 }
