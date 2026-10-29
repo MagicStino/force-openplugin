@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T05:57:11+00:00",
+  "date": "2026-10-29T13:15:21+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -4393,98 +4393,15 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.0.4",
-          "size": 3102529,
-          "sha256": "e53ad3f31e4fc6e8cc817bba5e50ebdde1660496c91c3000d34f0ff5a6f6c10b",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/EffectForce/releases/download/v0.0.4/EffectForce-0.0.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0.31",
-              "date": "2026-10-26"
-            }
-          ]
-        },
-        {
-          "version": "0.0.3",
-          "size": 3100911,
-          "sha256": "5cd76d209d3e94dcf984108a7d65695855514c360c4e883a51d9ca7e96be45e4",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/EffectForce/releases/download/v0.0.3/EffectForce-0.0.3-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.2",
-          "size": 3103474,
-          "sha256": "e4e7b25a4ffd91e3d5099ab53802a5b4e9c5a3dff49ff358da6a73476ee07bda",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/EffectForce/releases/download/v0.0.2/EffectForce-0.0.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.1",
-          "size": 3102908,
-          "sha256": "065f4d08ff8f04db3d21aec8dbdad665b9b4a2ec4486757edbeb3ca237d68676",
-          "max_glibc": "2.29",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/EffectForce/releases/download/v0.0.1/EffectForce-0.0.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
+      "versions": [],
       "latest": "0.0.4",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/EffectForce",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       },
-      "download": true
+      "download": false
     },
     {
       "id": "eucalypso",
@@ -11413,6 +11330,23 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.2",
+          "size": 19502000,
+          "sha256": "ee7968162c4a0b4fd2354b2a9dd3b2d5b2e475c6526688539116ca86956f3ad2",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.2/Plugin-Manager-G2-0.2.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.2.1",
           "size": 19501749,
           "sha256": "0f5bb0b30789b209d74109697523e45f353c39b8a999215a27bf63730e0be768",
@@ -11469,7 +11403,7 @@
           ]
         }
       ],
-      "latest": "0.2.1",
+      "latest": "0.2.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-plugins",
@@ -11590,6 +11524,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.7",
+          "size": 4538327,
+          "sha256": "3859936a2d8a2497e0869ea0e3a29d2cacaf4309390cd62516ebd28f1765df80",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.7/Osirus-0.2.7-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-10-29"
+            }
+          ]
+        },
+        {
           "version": "0.2.6",
           "size": 4537659,
           "sha256": "34a36481cbfc5b5e4b02063fd0894faebd891e54fabfd46f45d1d97c71f0e3c3",
@@ -11672,7 +11627,7 @@
           ]
         }
       ],
-      "latest": "0.2.6",
+      "latest": "0.2.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
@@ -12425,73 +12380,15 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.0.5",
-          "size": 6625130,
-          "sha256": "7afcd938febc577d953d518f8bd293b197daacbb348a0775db09c68fd3c43ce4",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/PolyForce/releases/download/v0.0.5/PolyForce-0.0.5-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.4",
-          "size": 6625118,
-          "sha256": "2975f80df6aca3407cf6f8f2e3475e68600139d837b9dcac081e4e7734f23ab4",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/PolyForce/releases/download/v0.0.4/PolyForce-0.0.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.3",
-          "size": 6625123,
-          "sha256": "dd4bf50af674ca87abe564a4b02982c37249ad38479ebba92510c9959b6ea8fc",
-          "max_glibc": "2.30",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/PolyForce/releases/download/v0.0.3/PolyForce-0.0.3-mpc-armv7.zip",
-          "channel": "beta",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
+      "versions": [],
       "latest": "0.0.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/PolyForce",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       },
-      "download": true
+      "download": false
     },
     {
       "id": "prloguexxl",
@@ -14413,211 +14310,15 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.0.9",
-          "size": 1084855,
-          "sha256": "730231a010c010ebc272669a6a74dfb5b2d1be690548cffede4f050ae859f229",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.9/SubForce-0.0.9-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0.31",
-              "date": "2026-10-25"
-            }
-          ]
-        },
-        {
-          "version": "0.0.8",
-          "size": 1084810,
-          "sha256": "2deac8c1e1e5722da0f50b1eb49eda27cd5623a3fb726b9027bd5c120fd5cb65",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.8/SubForce-0.0.8-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.7",
-          "size": 1082228,
-          "sha256": "fd3d77f14430ef89aa2c62b4df982af2045b8064d2051c2b69cd2ff1bc34dce5",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.7/SubForce-0.0.7-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.6",
-          "size": 1082317,
-          "sha256": "bae60bcc946aacb2a6b2e7bdeebbff260b250109e1307fd429e917d80d611ef7",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.6/SubForce-0.0.6-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.5",
-          "size": 1078097,
-          "sha256": "57fdb27f1be93cc3b30d760d27f61a2205df6aad4cfa0bd52151e261841329cf",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.5/SubForce-0.0.5-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0.31",
-              "date": "2026-10-07"
-            }
-          ]
-        },
-        {
-          "version": "0.0.4",
-          "size": 1075792,
-          "sha256": "1321e572618c0886542d7730b625a92e8a7f22bdf8cdd6d7c1652a37a1293e2d",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.4/SubForce-0.0.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.0.3",
-          "size": 935707,
-          "sha256": "02c489c8edf76e3680f1eb9c79e7712ca22eb3e821c6a47b0d61f45cd465c715",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.3/SubForce-0.0.3-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0.31",
-              "date": "2026-10-07"
-            }
-          ]
-        },
-        {
-          "version": "0.0.2",
-          "size": 765561,
-          "sha256": "2fa6bc73b1e678230230a6906cc04c53b555bbfd5de71bc9ac7ca8b089a1c3b6",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.2/SubForce-0.0.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": [
-            {
-              "device": "Akai Force",
-              "firmware": "3.9.0.31",
-              "date": "2026-10-05"
-            }
-          ]
-        },
-        {
-          "version": "0.0.1",
-          "size": 765513,
-          "sha256": "6d1a37265efce9d19c5369539b8e53a03ee2754589a4b8f3fd8c477e132adfe8",
-          "max_glibc": "2.27",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/Devko/SubForce/releases/download/v0.0.1/SubForce-0.0.1-mpc-armv7.zip",
-          "channel": "beta",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
-            "plugin_list.awk differs from this repo's current copy: review it"
-          ],
-          "tested": []
-        }
-      ],
+      "versions": [],
       "latest": "0.0.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "Devko/SubForce",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       },
-      "download": true
+      "download": false
     },
     {
       "id": "super-arp",
