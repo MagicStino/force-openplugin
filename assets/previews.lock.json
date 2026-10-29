@@ -986,6 +986,24 @@
       "license": "GPL-3.0-only",
       "screenshot": "https://raw.githubusercontent.com/saustin2010/mpc-vst-wurl/v1.0.0/screenshots/page_0.png",
       "sha256": "2773a7e3b0adcb77464eb632c9f4a5e2fb80cd9dbd12f644171b9aa37fffa4b3"
+    },
+    {
+      "id": "magic-tape-echo",
+      "name": "Magic Tape Echo",
+      "repo": "MagicStino/Magic-Tape-Echo",
+      "license": "Project artwork generated for Magic Tape Echo",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Magic-Tape-Echo/a616cc2fad6bd7eb920111627bb1fc81631ff09a/magic-tape-echo-three-heads.png",
+      "local_asset": "assets/artwork/magic-tape-echo-three-heads.png",
+      "sha256": "0966b4cc088e593a4576a2c2edf122fe0f5dc558b8ef1eb905a3f83e518e1b4b"
+    },
+    {
+      "id": "clif-tape",
+      "name": "Clif Tape",
+      "repo": "MagicStino/Clif-Tape",
+      "license": "Project artwork",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/b4756ece692c11170eff47094c7c8505422ebb43/catalog-thumbnail.png",
+      "local_asset": "assets/artwork/clif-tape.png",
+      "sha256": "bad7ed011a0d133cd3fdcdf5241db864ddb24a26a0e4dcc1cb73c0ada5ea3a8c"
     }
   ]
 }
