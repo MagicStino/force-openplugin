@@ -39,8 +39,11 @@ def main():
     args=p.parse_args();args.cache.mkdir(parents=True,exist_ok=True)
     lockpath=ROOT/'assets/previews.lock.json'
     if args.update_lock:
-        source=json.loads((ROOT/'website/assets/catalog.json').read_text())['plugins']
+        # The merged catalog includes community and OpenPlugin-owned entries.
+        source=json.loads((ROOT/'website/catalog.json').read_text())['plugins']
+        local_entries={e['id']:e for e in json.loads(lockpath.read_text())['entries'] if e.get('local_asset')} if lockpath.exists() else {}
         def capture(item):
+            if item['id'] in local_entries: return local_entries[item['id']]
             entry={k:item.get(k,'') for k in ('id','name','repo','license','screenshot')}
             entry['sha256']=None
             if entry['screenshot']:
@@ -63,7 +66,7 @@ def main():
         for i,entry in enumerate(entries,2):
             sha=entry['sha256'];thumb=fallback.copy()
             if sha:
-                file=args.cache/sha
+                file=(ROOT/entry['local_asset']) if entry.get('local_asset') else args.cache/sha
                 if not file.exists(): file.write_bytes(fetch(entry['screenshot']))
                 data=file.read_bytes()
                 if hashlib.sha256(data).hexdigest()!=sha: raise SystemExit('Screenshot hash changed: '+entry['id']+'; review and update the lock explicitly')
