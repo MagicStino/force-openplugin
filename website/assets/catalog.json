@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T13:43:16+00:00",
+  "date": "2026-10-29T13:43:46+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2605,47 +2605,6 @@
         "repository": "sd88me/mpc-vst-clementineXT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
-      },
-      "download": true
-    },
-    {
-      "id": "clif-loss",
-      "name": "Clif Loss",
-      "author": "MagicStino",
-      "repo": "MagicStino/Clif-Loss",
-      "kind": "effect",
-      "license": "See repository license",
-      "summary": "Stereo tape-character effect with Wow, Flutter, named models, crackle, stereo spread, independent noise controls and 15 presets.",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/catalog-thumbnail.png",
-      "style": "effect",
-      "tags": [
-        "tape",
-        "lo-fi",
-        "stereo"
-      ],
-      "distribution": "release",
-      "latest": "0.1.0",
-      "versions": [
-        {
-          "url": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/Clif-Loss-0.1.0-mpc-armv7.zip",
-          "sha256": "84963286185fa133f63c37ffd4ec7d80ab8ce09783986e894c6150bd6201346e",
-          "size": 2029637,
-          "version": "0.1.0",
-          "channel": "stable",
-          "yanked": false,
-          "arch": "armv7",
-          "os_compat": [
-            "3.x"
-          ],
-          "tested": [],
-          "warnings": []
-        }
-      ],
-      "provenance": {
-        "source": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/Clif-Loss-0.1.0-mpc-armv7.zip",
-        "repository": "MagicStino/Clif-Loss",
-        "hardware_verified_by_openplugin": false,
-        "validation": "package-download-sha256-verified"
       },
       "download": true
     },
