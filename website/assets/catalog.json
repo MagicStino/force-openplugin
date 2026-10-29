@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T15:58:59+00:00",
+  "date": "2026-10-29T15:59:36+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2623,7 +2623,7 @@
         "effect"
       ],
       "repo": "MagicStino/Clif-Tape",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/b4756ece692c11170eff47094c7c8505422ebb43/catalog-thumbnail.png",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/main/catalog-thumbnail.png",
       "versions": [
         {
           "version": "0.2.0",
