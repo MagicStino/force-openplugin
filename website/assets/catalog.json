@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-29T15:59:36+00:00",
+  "date": "2026-10-29T22:50:11+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2170,6 +2170,56 @@
       "download": true
     },
     {
+      "id": "cadenza",
+      "name": "Cadenza",
+      "author": "Shrey Sharma",
+      "repo": "Shrekage2024/cadenza-force",
+      "kind": "instrument",
+      "license": "PolyForm-Shield-1.0.0",
+      "summary": "Chord-driven generative MIDI sequencer: pick a key and scale, shape chords, bass and melody with a few knobs per page, and it generates and follows along as you play.",
+      "screenshot": "https://raw.githubusercontent.com/Shrekage2024/cadenza-force/main/docs/screenshot.png",
+      "style": "sequencer",
+      "tags": [
+        "chords",
+        "generative",
+        "midi",
+        "bassline"
+      ],
+      "source_available": true,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.25.0",
+          "size": 1157414,
+          "sha256": "d2de7b4695dfba391a3d0a89d523792b6bb366e4af4b458a6e5d79fc9d015003",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 39.9,
+            "max_pct": 55.5,
+            "verdict": "FAIL"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Shrekage2024/cadenza-force/releases/download/v0.25.0/Cadenza-0.25.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.25.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Shrekage2024/cadenza-force",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "chordism",
       "name": "Chordism",
       "author": "saustin2010",
@@ -2612,9 +2662,11 @@
       "id": "clif-tape",
       "name": "Clif Tape",
       "author": "MagicStino",
-      "summary": "Stereo tape colour and digital degradation, expressive Wow/Flutter, twelve tone profiles, crackle, stereo spread, independent noise textures and Silence Gate. Fifteen presets and touchscreen Q-Links.",
-      "license": "MIT",
+      "repo": "MagicStino/Clif-Tape",
       "kind": "effect",
+      "license": "MIT",
+      "summary": "Stereo tape colour and digital degradation, expressive Wow/Flutter, twelve tone profiles, crackle, stereo spread, independent noise textures and Silence Gate. Fifteen presets and touchscreen Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/v0.2.0/catalog-thumbnail.png",
       "style": "effect",
       "tags": [
         "tape",
@@ -2622,23 +2674,28 @@
         "stereo",
         "effect"
       ],
-      "repo": "MagicStino/Clif-Tape",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/main/catalog-thumbnail.png",
+      "source_available": false,
+      "distribution": "release",
       "versions": [
         {
           "version": "0.2.0",
-          "url": "https://github.com/MagicStino/Clif-Tape/releases/download/v0.2.0/Clif-Tape-0.2.0-mpc-armv7.zip",
-          "sha256": "c29f7865dedfd7fdc94af94f9da1db87f441d768b87b4b480b402bbb1923c5b3",
           "size": 1631661,
-          "channel": "stable",
-          "yanked": false,
+          "sha256": "c29f7865dedfd7fdc94af94f9da1db87f441d768b87b4b480b402bbb1923c5b3",
+          "max_glibc": "2.29",
+          "cpu": null,
           "os_compat": [
             "3.x"
-          ]
+          ],
+          "url": "https://github.com/MagicStino/Clif-Tape/releases/download/v0.2.0/Clif-Tape-0.2.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
         }
       ],
+      "latest": "0.2.0",
       "provenance": {
-        "source": "https://github.com/MagicStino/Clif-Tape/blob/main/openplugin.json",
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "MagicStino/Clif-Tape",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3512,6 +3569,38 @@
       "download": true
     },
     {
+      "id": "dinxxl",
+      "name": "DINXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/dinxxl",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "BlastBeats-style OPL3 FM groovebox: the published v7.1 firmware by Twisted Electrons runs unmodified on a software model of its board (YMF262 via ymfm). 6 drums, 4 four-op synths, 64-step sequencer with p-locks and songs, factory card inside. By L'Cronx; not made or endorsed by Twisted Electrons.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/dinxxl/v1.0.0/docs/img/keys.png",
+      "style": "drum-machine",
+      "tags": [
+        "blastbeats",
+        "opl3",
+        "fm",
+        "drum-machine",
+        "groovebox",
+        "step-sequencer",
+        "chiptune",
+        "adlib"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [],
+      "latest": "1.0.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/dinxxl",
+        "hardware_verified_by_openplugin": false,
+        "validation": "listed-only"
+      },
+      "download": false
+    },
+    {
       "id": "dragonfly-early-reflections",
       "name": "Dragonfly Early Reflections",
       "author": "gmorb",
@@ -4368,14 +4457,14 @@
       "download": true
     },
     {
-      "id": "effectforce",
-      "name": "EffectForce",
+      "id": "effectwerk",
+      "name": "EffectWerk",
       "author": "Devko",
-      "repo": "Devko/EffectForce",
+      "repo": "Devko/EffectWerk",
       "kind": "effect",
       "license": "MIT",
       "summary": "A live looper and performance mixer in one insert slot: record bars on MPC's grid, then roll, slow, reverse and layer them, and crossfade two scenes from 64 one-tap effects. Plus a ten-module effect rack with macros, LFOs and a mod matrix, 62 presets and a 14-page touchscreen skin with Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/Devko/EffectForce/v0.0.1/docs/img/looper.png",
+      "screenshot": "https://raw.githubusercontent.com/Devko/EffectWerk/v0.0.1/docs/img/looper.png",
       "style": "multi-fx",
       "tags": [
         "looper",
@@ -4389,15 +4478,35 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [],
-      "latest": "0.0.4",
+      "versions": [
+        {
+          "version": "0.0.5",
+          "size": 3096901,
+          "sha256": "4317f886585cc8f26fa6ca783eab6af61737260c2398a7aac60abcdfae590881",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/EffectWerk/releases/download/v0.0.5/EffectWerk-0.0.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.0.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "Devko/EffectForce",
+        "repository": "Devko/EffectWerk",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "metadata-validated"
       },
-      "download": false
+      "download": true
     },
     {
       "id": "eucalypso",
@@ -12358,14 +12467,14 @@
       "download": true
     },
     {
-      "id": "polyforce",
-      "name": "PolyForce",
+      "id": "polywerk",
+      "name": "PolyWerk",
       "author": "Devko",
-      "repo": "Devko/PolyForce",
+      "repo": "Devko/PolyWerk",
       "kind": "instrument",
       "license": "MIT",
       "summary": "Eight-voice wavetable synth: two wavetable oscillators with 8x unison and subs, 30 built-in tables plus your own Serum-format WAVs, two filters with comb and vowel, two LFOs, a 12-slot mod matrix, arpeggiator and sequencers, 205 presets and a seven-tab touchscreen skin with Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/Devko/PolyForce/main/docs/img/waves.png",
+      "screenshot": "https://raw.githubusercontent.com/Devko/PolyWerk/main/docs/img/waves.png",
       "style": "synth",
       "tags": [
         "wavetable",
@@ -12376,15 +12485,35 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [],
-      "latest": "0.0.5",
+      "versions": [
+        {
+          "version": "0.0.6",
+          "size": 6617168,
+          "sha256": "646d0ce4920236c494caa3c91d21c5afd41bcdd18616df0f6486d7020842701e",
+          "max_glibc": "2.30",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/PolyWerk/releases/download/v0.0.6/PolyWerk-0.0.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.0.6",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "Devko/PolyForce",
+        "repository": "Devko/PolyWerk",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "metadata-validated"
       },
-      "download": false
+      "download": true
     },
     {
       "id": "prloguexxl",
@@ -13188,6 +13317,24 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.3.0",
+          "size": 3472799,
+          "sha256": "9115d2fe29886d66ef65b59afdf5297410b8e00f81b5c3a2f9aaf1d4235f5b1f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/RMXXXL/releases/download/v1.3.0/RMXXXL-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "1.2.3",
           "size": 2538149,
           "sha256": "090a95a075ba1fce6a654d21d48359d683516118f8c2aeda0ae8976db56fd4da",
@@ -13300,7 +13447,7 @@
           ]
         }
       ],
-      "latest": "1.2.3",
+      "latest": "1.3.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/RMXXXL",
@@ -14288,14 +14435,14 @@
       "download": true
     },
     {
-      "id": "subforce",
-      "name": "SubForce",
+      "id": "subwerk",
+      "name": "SubWerk",
       "author": "Devko",
-      "repo": "Devko/SubForce",
+      "repo": "Devko/SubWerk",
       "kind": "instrument",
       "license": "MIT",
       "summary": "Analog-style monosynth in the spirit of a 37-key American paraphonic classic: two morphing oscillators with hard sync, sub and noise, a feedback mixer, a 4-pole ladder filter with Multidrive, two looping envelopes, glide and Duo. 57 presets and a six-tab touchscreen skin with Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/Devko/SubForce/main/docs/img/filter.png",
+      "screenshot": "https://raw.githubusercontent.com/Devko/SubWerk/main/docs/img/filter.png",
       "style": "synth",
       "tags": [
         "monosynth",
@@ -14306,15 +14453,35 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [],
-      "latest": "0.0.9",
+      "versions": [
+        {
+          "version": "0.0.10",
+          "size": 1084433,
+          "sha256": "064a257a2d851c02cd244f7c63ff056f99b22ca27341f01aad4c770e3492c86c",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Devko/SubWerk/releases/download/v0.0.10/SubWerk-0.0.10-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it",
+            "plugin_list.awk differs from this repo's current copy: review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.0.10",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
-        "repository": "Devko/SubForce",
+        "repository": "Devko/SubWerk",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "metadata-validated"
       },
-      "download": false
+      "download": true
     },
     {
       "id": "super-arp",

@@ -1,14 +1,7 @@
 {
-  "generated": "2026-10-29T15:59:36+00:00",
-  "indexed": 165,
+  "generated": "2026-10-29T22:50:11+00:00",
+  "indexed": 167,
   "candidates": [
-    {
-      "repo": "Devko/SubWerk",
-      "name": "SubWerk",
-      "summary": "Analog-style monosynth VST for MPC OS on the Akai Force: morphing oscillators, a nonlinear transistor ladder, feedback, Multidrive, Duo, 57 presets, touchscreen pages",
-      "url": "https://github.com/Devko/SubWerk",
-      "status": "discovered; not installable"
-    },
     {
       "repo": "WorldLinkStudio/mpcsample",
       "url": "https://github.com/WorldLinkStudio/mpcsample",
@@ -16,11 +9,6 @@
     }
   ],
   "errors": [
-    {
-      "stage": "manifest",
-      "repo": "Devko/SubWerk",
-      "error": "HTTP Error 404: Not Found"
-    },
     {
       "stage": "manifest",
       "repo": "WorldLinkStudio/mpcsample",
