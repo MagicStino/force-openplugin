@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-10-29T00:00:36+00:00",
+  "generated": "2026-10-29T00:09:42+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -2582,24 +2582,40 @@
       "id": "clif-loss",
       "name": "Clif Loss",
       "author": "MagicStino",
-      "summary": "Stereo tape character, pitch drift, failure textures and independent noise controls for Force/MPC. Requires your own firmware.",
-      "license": "MIT",
+      "repo": "MagicStino/Clif-Loss",
       "kind": "effect",
+      "license": "See repository license",
+      "summary": "Stereo tape-character effect with Wow, Flutter, named models, crackle, stereo spread, independent noise controls and 15 presets.",
+      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/catalog-thumbnail.png",
       "style": "effect",
       "tags": [
         "tape",
         "lo-fi",
-        "stereo",
-        "firmware-derived"
+        "stereo"
       ],
-      "repo": "MagicStino/Clif-Loss",
-      "screenshot": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/main/catalog-thumbnail.png",
-      "versions": [],
+      "distribution": "release",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "url": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/Clif-Loss-0.1.0-mpc-armv7.zip",
+          "sha256": "84963286185fa133f63c37ffd4ec7d80ab8ce09783986e894c6150bd6201346e",
+          "size": 2029637,
+          "version": "0.1.0",
+          "channel": "stable",
+          "yanked": false,
+          "arch": "armv7",
+          "os_compat": [
+            "3.x"
+          ],
+          "tested": [],
+          "warnings": []
+        }
+      ],
       "provenance": {
-        "source": "https://github.com/MagicStino/Clif-Loss/blob/main/openplugin.json",
+        "source": "https://raw.githubusercontent.com/MagicStino/Clif-Loss/aac817070c96a4c2ccd863df2b3034e73798f13c/Clif-Loss-0.1.0-mpc-armv7.zip",
         "repository": "MagicStino/Clif-Loss",
         "hardware_verified_by_openplugin": false,
-        "validation": "listed-only"
+        "validation": "package-download-sha256-verified"
       }
     },
     {
