@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T12:44:08+00:00",
+  "date": "2026-10-31T21:41:54+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -9430,27 +9430,6 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.0",
-          "size": 4381456,
-          "sha256": "883352f8ca51bff713e1bd186ceadba90751dd1c3086b98597dc6bd4193c5dc8",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.0/Monomodule-FX-1.0.0-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-31"
-            }
-          ]
-        },
-        {
           "version": "0.11.1",
           "size": 4249893,
           "sha256": "46071d4db223ccb4007d2d24b08dc2247a25026d5472055093ed4f7b651c1830",
@@ -9468,7 +9447,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "0.11.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9496,27 +9475,6 @@
       "distribution": "release",
       "versions": [
         {
-          "version": "1.0.0",
-          "size": 4391358,
-          "sha256": "671c0e415ee3e747df64de812dfceec6d38c93ef6e7291e1e9d617137ed9f38a",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.0/Monomodule-One-1.0.0-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-31"
-            }
-          ]
-        },
-        {
           "version": "0.11.1",
           "size": 4256764,
           "sha256": "ee0eccf01fa7abad845a293270e1834240c3dd75e8e58deb7280ee6233598a24",
@@ -9534,7 +9492,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "0.11.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -12267,6 +12225,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.8",
+          "size": 4539788,
+          "sha256": "6a1ab08ed795b84f186bc2c7abc8989538f7588fe7202d564d34b3bb3fa10ee2",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.8/Osirus-0.2.8-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.2.7",
           "size": 4538327,
           "sha256": "3859936a2d8a2497e0869ea0e3a29d2cacaf4309390cd62516ebd28f1765df80",
@@ -12370,7 +12343,7 @@
           ]
         }
       ],
-      "latest": "0.2.7",
+      "latest": "0.2.8",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
@@ -13970,7 +13943,13 @@
             "install.sh differs from this repo's current template (older release tool, or modified): review it",
             "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "3.9.1",
+              "date": "2026-10-31"
+            }
+          ]
         },
         {
           "version": "1.2.3",
