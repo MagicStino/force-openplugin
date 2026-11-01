@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-11-01T06:20:04+00:00",
+  "generated": "2026-11-01T17:58:00+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -7799,7 +7799,7 @@
         }
       ],
       "versions": [],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -7825,6 +7825,23 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.1",
+          "size": 8035500,
+          "sha256": "32639e7ed7f7da1dfbbb14986c4489f2d291a3b5adbb7455b000b21ed4013a46",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.1/Machinemodule-1.0.1-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
         {
           "version": "1.0.0",
           "size": 8029199,
@@ -7867,7 +7884,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -7893,6 +7910,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.1",
+          "size": 97420,
+          "sha256": "1170355ecb08154b55b2de8e0cc75d1b3b35522c4fd282550b533ac400d6b1c3",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.1/Machinemodule-Tap-1.0.1-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.0",
           "size": 96664,
@@ -7932,7 +7964,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -9436,6 +9468,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.2",
+          "size": 4381287,
+          "sha256": "c83c21c5fbed8323270df754d52ade849c8c2cb58d509f566715ed76a876c35c",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.2/Monomodule-FX-1.0.2-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.0.1",
           "size": 4381470,
           "sha256": "27538b12cfeb05e22f360c963b433953dc7156736cffe7560cc6d74dd901c146",
@@ -9474,7 +9521,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9500,6 +9547,21 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "1.0.2",
+          "size": 4392507,
+          "sha256": "3526823d6190ba33dc9e8380ff1671a5650ce6e4725f34078d5b71ea10af7c57",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.2/Monomodule-One-1.0.2-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
         {
           "version": "1.0.1",
           "size": 4391355,
@@ -9539,7 +9601,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9579,7 +9641,7 @@
         }
       ],
       "versions": [],
-      "latest": "1.0.1",
+      "latest": "1.0.2",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -12317,6 +12379,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.2.9",
+          "size": 4548177,
+          "sha256": "7f24011a9cb458194a4a119fd263f4484ed28f83bcb93ab340893a0235a78645",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.9/Osirus-0.2.9-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.2.8",
           "size": 4539788,
           "sha256": "6a1ab08ed795b84f186bc2c7abc8989538f7588fe7202d564d34b3bb3fa10ee2",
@@ -12435,7 +12512,7 @@
           ]
         }
       ],
-      "latest": "0.2.8",
+      "latest": "0.2.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
