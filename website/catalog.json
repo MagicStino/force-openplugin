@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-11-01T17:58:00+00:00",
+  "generated": "2026-11-01T22:09:12+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -6678,8 +6678,8 @@
       "repo": "sunskiefer/BUSTEDXXL",
       "kind": "instrument",
       "license": "GPL-3.0-or-later",
-      "summary": "Groovebox of Bastl-style modules patched with touch cables: Wave Bard on Bastl's open-source Kastle 2 DSP, plus imagined Kompas, Crust 2, Pizza, Alchemist, Basil and ABC across three panels. Tap a jack then another to patch, cables run between screens, and a tap on empty panel art zooms the top or bottom half of a screen to the full display.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/BUSTEDXXL/f191123fa6b5a5468157517c608a8ac528d2c147/docs/img/screen1.png",
+      "summary": "Groovebox of Bastl-style modules patched with touch cables across three screens: Wave Bard on Bastl's open-source Kastle 2 DSP plus Kompas, Crust 2, Pizza, Alchemist, Basil and ABC. Tap a module to open a window with just its jacks, big and named, and patch between modules.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/BUSTEDXXL/v0.2.1/docs/img/screen1.png",
       "style": "groovebox",
       "tags": [
         "bastl",
@@ -6694,6 +6694,24 @@
       "source_available": false,
       "distribution": "release",
       "versions": [
+        {
+          "version": "0.2.1",
+          "size": 89442171,
+          "sha256": "60be73cdaf68b225f60b9c1049fccbe401803b4f935c18017e3dc0414e896ac3",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/BUSTEDXXL/releases/download/v0.2.1/KutilXXL-0.2.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
         {
           "version": "0.1.1",
           "size": 107208402,
@@ -6731,7 +6749,7 @@
           "tested": []
         }
       ],
-      "latest": "0.1.1",
+      "latest": "0.2.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sunskiefer/BUSTEDXXL",
