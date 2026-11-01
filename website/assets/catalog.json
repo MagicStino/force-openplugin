@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-31T21:41:54+00:00",
+  "date": "2026-11-01T06:20:04+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -975,7 +975,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Ambience-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -983,7 +983,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1020,7 +1020,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Console-Strips-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1028,7 +1028,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1065,7 +1065,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Consoles-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1073,7 +1073,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1110,7 +1110,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Distortion-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1118,7 +1118,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1155,7 +1155,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Dynamics-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1163,7 +1163,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1200,7 +1200,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Effects-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1208,7 +1208,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1245,7 +1245,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Filter-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1253,7 +1253,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1290,7 +1290,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Reverb-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1298,7 +1298,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1335,7 +1335,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Saturation-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1343,7 +1343,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1380,7 +1380,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Tape-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1388,7 +1388,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -1425,7 +1425,7 @@
             "3.x"
           ],
           "url": "https://github.com/sd88me/mpc-vst-airwindows/releases/download/v0.1.0/AW-Utility-0.1.0-mpc-armv7.zip",
-          "channel": "beta",
+          "channel": "stable",
           "yanked": false,
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
@@ -1433,7 +1433,7 @@
           "tested": []
         }
       ],
-      "latest": null,
+      "latest": "0.1.0",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
@@ -2980,6 +2980,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.9.7",
+          "size": 2610508,
+          "sha256": "455c3b7a43cc14e9e6a191567c8b8f84e18824acf614d449f7e86df7201ad85b",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-clementineXT/releases/download/clementine-xt-v0.9.7/Clementine-XT-0.9.7-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        },
+        {
           "version": "0.9.6",
           "size": 2608980,
           "sha256": "e63c82607f69d2418bc7d95fceaaa2c204de7907fed72e558c1542ac949d4e98",
@@ -3150,7 +3171,7 @@
           "tested": []
         }
       ],
-      "latest": "0.9.6",
+      "latest": "0.9.7",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-clementineXT",
@@ -6731,6 +6752,75 @@
       "download": true
     },
     {
+      "id": "kutilxxl",
+      "name": "KutilXXL",
+      "author": "L'Cronx",
+      "repo": "sunskiefer/BUSTEDXXL",
+      "kind": "instrument",
+      "license": "GPL-3.0-or-later",
+      "summary": "Groovebox of Bastl-style modules patched with touch cables: Wave Bard on Bastl's open-source Kastle 2 DSP, plus imagined Kompas, Crust 2, Pizza, Alchemist, Basil and ABC across three panels. Tap a jack then another to patch, cables run between screens, and a tap on empty panel art zooms the top or bottom half of a screen to the full display.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/BUSTEDXXL/f191123fa6b5a5468157517c608a8ac528d2c147/docs/img/screen1.png",
+      "style": "groovebox",
+      "tags": [
+        "bastl",
+        "kastle",
+        "modular",
+        "patch-panel",
+        "touch-cables",
+        "sampler",
+        "fm",
+        "groovebox"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.1.1",
+          "size": 107208402,
+          "sha256": "2bea31c6b907c77cc3ade7d951b3a36f9779ee6e092f8410783716884c24045a",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/BUSTEDXXL/releases/download/v0.1.1/KutilXXL-0.1.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
+          "version": "0.1.0",
+          "size": 68058906,
+          "sha256": "7971b0bcf9672317a786a5bb53bcef7253fe39fa01b18ff5ad9467298789cf54",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sunskiefer/BUSTEDXXL/releases/download/v0.1.0/KutilXXL-0.1.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "0.1.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "sunskiefer/BUSTEDXXL",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
       "id": "liminal-amp",
       "name": "Liminal Amp",
       "author": "gmorb",
@@ -8936,6 +9026,28 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.9",
+          "size": 1832799,
+          "sha256": "610ae52152ae4c2eee36e8d1aade69518e410cfbe7aeb6e26732eb47ced1eae5",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.9/JV-880-1.0.9-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "Akai Force",
+              "firmware": "MPC OS 3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        },
+        {
           "version": "1.0.8",
           "size": 1831029,
           "sha256": "cf054f00f9921ae56c956c6ce6d46c878a96a2af2f045e3cea7eb6587ea769e4",
@@ -9058,7 +9170,7 @@
           "tested": []
         }
       ],
-      "latest": "1.0.8",
+      "latest": "1.0.9",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-jv880",
@@ -9430,6 +9542,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 4381470,
+          "sha256": "27538b12cfeb05e22f360c963b433953dc7156736cffe7560cc6d74dd901c146",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.1/Monomodule-FX-1.0.1-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-11-01"
+            }
+          ]
+        },
+        {
           "version": "0.11.1",
           "size": 4249893,
           "sha256": "46071d4db223ccb4007d2d24b08dc2247a25026d5472055093ed4f7b651c1830",
@@ -9447,7 +9580,7 @@
           "tested": []
         }
       ],
-      "latest": "0.11.1",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9475,6 +9608,27 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.0.1",
+          "size": 4391355,
+          "sha256": "0d4093a9a42e7c060f1e4315303aa1c0309db0e1e88957f9ed8a5da8c1a11611",
+          "max_glibc": "2.36",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.1/Monomodule-One-1.0.1-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "MPC OS 3.x",
+              "date": "2026-11-01"
+            }
+          ]
+        },
+        {
           "version": "0.11.1",
           "size": 4256764,
           "sha256": "ee0eccf01fa7abad845a293270e1834240c3dd75e8e58deb7280ee6233598a24",
@@ -9492,7 +9646,7 @@
           "tested": []
         }
       ],
-      "latest": "0.11.1",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9533,7 +9687,7 @@
         }
       ],
       "versions": [],
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
@@ -9884,7 +10038,13 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-31"
+            }
+          ]
         },
         {
           "version": "3.1.1",
@@ -10199,6 +10359,65 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "jacob-sabella/mpc-addin-filebrowser",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "mpc-multihead-echo",
+      "name": "MPC Multihead Echo",
+      "author": "mitchoster",
+      "repo": "mitchoster/mpc-vst-multihead-echo",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Three-head tape echo with three preamp characters, chorus, tape wear, tempo sync with drift, a spring reverb and a companion screen in the browser.",
+      "screenshot": "https://raw.githubusercontent.com/mitchoster/mpc-vst-multihead-echo/c31c3ef479ce87083ab87fbef14c2fe92a6bb83b/docs/companion-panel-echo.png",
+      "style": "delay",
+      "tags": [
+        "tape-echo",
+        "delay",
+        "saturation",
+        "spring-reverb",
+        "tempo-sync",
+        "companion-app"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "size": 1730027,
+          "sha256": "ab826cb9192b8b30d1dd7a9c400eec8375a8c1a6a7b8b93d7c3f1849b77add84",
+          "max_glibc": "2.29",
+          "cpu": {
+            "p99_pct": 24.4,
+            "max_pct": 26.2,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-multihead-echo/releases/download/v1.0.1/MPC-Multihead-Echo-1.0.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "portable/LarryDaimond - VST - MPC Multihead Echo/mpc_multihead_echo.so calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "3.9.1.2 (AZ0x 5.0.17)",
+              "date": "2026-10-31"
+            }
+          ]
+        }
+      ],
+      "latest": "1.0.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "mitchoster/mpc-vst-multihead-echo",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
@@ -10580,7 +10799,13 @@
           "warnings": [
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
           ],
-          "tested": []
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-10-31"
+            }
+          ]
         },
         {
           "version": "1.2.0",
@@ -13911,8 +14136,8 @@
       "repo": "sunskiefer/RMXXXL",
       "kind": "effect",
       "license": "GPL-3.0-or-later",
-      "summary": "RMX-1000-style remix effect: isolator, DJ filter, Build Up / Break Down scenes, synced echo, Release FX and a Release kill switch, Panic, Clouds, Dragonfly reverbs, sample pads with ADSR, 16 user presets and a brickwall limiter, with a big-button touchscreen skin and Q-Links.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/RMXXXL/v1.2.0/docs/img/remix.png",
+      "summary": "RMX-1000-style remix effect: isolator, DJ filter, Build Up / Break Down scenes, synced echo, Release FX and a Release kill switch, EQ Kill buttons, a clean Panic, Clouds, Dragonfly reverbs, sample pads with ADSR, 16 user presets and a brickwall limiter, with a big-button touchscreen skin and Q-Links.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/RMXXXL/0ef9fe195525cada860205f1370a4b9f6896bc60/docs/img/remix.png",
       "style": "multi-fx",
       "tags": [
         "remix",
@@ -15788,8 +16013,8 @@
       "repo": "sunskiefer/VADER",
       "kind": "instrument",
       "license": "MIT",
-      "summary": "An orbit-based vector synth: an orbiter travels a shape (15 built in, two in 3D, or your own SVG, OBJ, PNG or JPG) across four corners of overtone generators, blends and filters. Two timbres, arpeggiator, drive, chorus, delay, reverb. Its screen runs on your phone: tap the logo for the QR code and scan it, load shapes from the phone too.",
-      "screenshot": "https://raw.githubusercontent.com/sunskiefer/VADER/v0.6.1/docs/img/main_star.png",
+      "summary": "An orbit-based vector synth: an orbiter travels a shape (15 built in, 35 maths shapes, or your own SVG, OBJ, PNG or JPG) or one of 27 modes across four corners. Each corner plays overtone generators, one of 14 voices, or a WAV sample. Two timbres, arpeggiator, effects. Its screen runs on your phone: scan the QR code, load shapes from the phone too.",
+      "screenshot": "https://raw.githubusercontent.com/sunskiefer/VADER/v0.8.0/docs/img/main_star.png",
       "style": "synth",
       "tags": [
         "synth",
@@ -16304,6 +16529,21 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.1.1",
+          "size": 8765816,
+          "sha256": "53b520c8f716eafe4107fd451cec82e428e4ca50ee3421433899885402f21beb",
+          "max_glibc": "2.35",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/sd88me/mpc-vst-xenia/releases/download/v0.1.1/Xenia-0.1.1-mpc-aarch64.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "0.1.0",
           "size": 8764068,
           "sha256": "d85abfccc685bce6b3ec9cc60a0a3379f060ed21ae9a0801f0a4e6328d5cdb27",
@@ -16327,10 +16567,56 @@
           ]
         }
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-xenia",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      },
+      "download": true
+    },
+    {
+      "id": "piclidean-mpc",
+      "name": "πClideaN MPC",
+      "author": "Timo",
+      "repo": "timomacquis/piClideaN16-MPC",
+      "kind": "instrument",
+      "license": "MIT",
+      "summary": "Sixteen-lane hybrid MIDI sequencer with Euclidean patterns, per-step expression, scales, selective randomization and dual-LFO modulation.",
+      "screenshot": "https://raw.githubusercontent.com/timomacquis/piClideaN16-MPC/48c2560cb46bcec86b8f473844d38b3b37a21709/Cover.png",
+      "style": "sequencer",
+      "tags": [
+        "midi",
+        "sequencer",
+        "euclidean",
+        "generative"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "1.3.0",
+          "size": 5375766,
+          "sha256": "04805c0d3dcefff37e625b58ff17e69750d33d2b5323e8d3ca18e46f44b807c3",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/timomacquis/piClideaN16-MPC/releases/download/v1.3.0/ClideaN-MPC-1.3.0-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "Plugin Skins/mod_segment_atlas.png is 208896 px tall; keep skin images under 16384 px (fewer or smaller filmstrip frames)"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": "1.3.0",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "timomacquis/piClideaN16-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       },
