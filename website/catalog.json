@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-11-01T22:09:12+00:00",
+  "generated": "2026-11-02T06:21:32+00:00",
   "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
   "plugins": [
     {
@@ -3182,6 +3182,55 @@
       }
     },
     {
+      "id": "op1fx-cluster",
+      "name": "Cluster",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Eight self-feedback sine oscillators that drift apart over a note. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/cluster.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "feedback",
+        "drone"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 3642846,
+          "sha256": "5a39cd8c9ac7f37c384387094f85c674cad593249450ef20d5e48d317082cb79",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Cluster-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "crate-digger",
       "name": "Crate Digger",
       "author": "sd88me",
@@ -3641,6 +3690,55 @@
       }
     },
     {
+      "id": "op1fx-cwo",
+      "name": "Cwo",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Stereo delay with a frequency shifter in the feedback loop, plus a MIX knob. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/cwo.png",
+      "style": "delay",
+      "tags": [
+        "op1",
+        "delay",
+        "frequency-shifter",
+        "feedback"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 4444780,
+          "sha256": "9ad153d20f5915d2add0929e38e5920d7a06655da535b5093916479ad04e5b84",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Cwo-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "daemon",
       "name": "Daemon",
       "author": "sd88me",
@@ -3790,6 +3888,104 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-daemon",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-dbox",
+      "name": "DBox",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "A 24-key synthesized drum kit: two oscillators and noise per hit, 12 voices. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/dbox.png",
+      "style": "drum-machine",
+      "tags": [
+        "op1",
+        "drums",
+        "synth",
+        "kit"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 9036610,
+          "sha256": "1725522f472b90b41e0fa7beace23cc30704b30df2029fb29b6d318a7439f3a5",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/DBox-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-delay",
+      "name": "Delay",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Four-knob delay with a 12-preset bank. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/delay.png",
+      "style": "delay",
+      "tags": [
+        "op1",
+        "delay",
+        "echo",
+        "tape"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 4367140,
+          "sha256": "03b58f0ede1d678cd536757bb72437e984ef634371371dc129cba6a7d024564c",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Delay-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -4042,6 +4238,55 @@
       }
     },
     {
+      "id": "op1fx-digital",
+      "name": "Digital",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Feedback sine oscillator, a second sine with sync, and a bit-flipping XOR stage. Eight voices. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/digital.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "feedback",
+        "xor"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 6016310,
+          "sha256": "a997b1796fd3ec94ccc17c24190ab14e631e863974d54dea91c0091f16850c80",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Digital-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "dinxxl",
       "name": "DINXXL",
       "author": "L'Cronx",
@@ -4070,6 +4315,55 @@
         "repository": "sunskiefer/dinxxl",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
+      }
+    },
+    {
+      "id": "op1fx-dna",
+      "name": "DNA",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "A 128-bit genome played as a one-bit wave through an anti-aliased reader. Eight voices. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/dna.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "1-bit",
+        "wavetable"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 4926132,
+          "sha256": "ea7e275350b1bdc97ec8cb244fa075955142743cef3e2f1caca415ae42e64c6f",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/DNA-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
       }
     },
     {
@@ -4626,6 +4920,104 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-drum-map",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-drwave",
+      "name": "DrWave",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Wave, blend, motion and fold controls over eight voices. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/drwave.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "wavetable",
+        "fold"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 6987436,
+          "sha256": "cf7a70b987a4ad1a0fd8269e28f14d5b944484b6c0e5d17be61468b2dc3f9375",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/DrWave-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-dsynth",
+      "name": "DSynth",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Two oscillators with FM, a pitch drop for drum thump and an eight-mode filter. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/dsynth.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "fm",
+        "drums"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 5082320,
+          "sha256": "531a1c00cb4b04289badb3a72ddde69fd9136431ab0a928226313267b8f4500b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/DSynth-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -5454,6 +5846,55 @@
       }
     },
     {
+      "id": "op1fx-fm",
+      "name": "Fm",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Four-operator FM synth with eight voices and four screen knobs. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/fm.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "fm",
+        "operators"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 8725729,
+          "sha256": "1b6cf57db6515119bde78c5cf0c0c47cda69d1a2dbb8b83a0b9fe2ea4131952b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Fm-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "force-link-audio",
       "name": "Force Link Audio",
       "author": "Mac Digi / Rare Data",
@@ -5694,6 +6135,52 @@
       }
     },
     {
+      "id": "ghost",
+      "name": "GHOST",
+      "author": "MPC-EURO",
+      "repo": "carballocba/MPC-EURO-",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Live buffer manipulation, rhythmic stutter and generative glitch with independent and combined Random Repeat modes.",
+      "style": "glitch",
+      "tags": [
+        "buffer",
+        "stutter",
+        "reverse",
+        "generative",
+        "performance"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "2.4.2",
+          "size": 831820,
+          "sha256": "0920fde1c908e9a3dcdde5182dffeb206b63b8e706e16c7fb46839a9b0be0b7e",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/carballocba/MPC-EURO-/releases/download/v2.4.2-installer2-rc3/GHOST-2.4.2-installer2-rc3-mpc-armv7.zip",
+          "channel": "beta",
+          "yanked": false,
+          "warnings": [
+            "install.sh differs from this repo's current template (older release tool, or modified): review it",
+            "uninstall.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        }
+      ],
+      "latest": null,
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "carballocba/MPC-EURO-",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "glass-spheres",
       "name": "Glass Spheres",
       "author": "Padbangers",
@@ -5722,6 +6209,55 @@
         "repository": "FullPace/glass-spheres",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
+      }
+    },
+    {
+      "id": "op1fx-grid",
+      "name": "Grid",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "A 2D waveguide mesh you feed audio and read back. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/grid.png",
+      "style": "reverb",
+      "tags": [
+        "op1",
+        "reverb",
+        "waveguide",
+        "resonator"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 9953886,
+          "sha256": "6802018c6009a316f0449a6d6acd1667b414a3c715bf901854c0b05ad849b88d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Grid-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
       }
     },
     {
@@ -11575,6 +12111,55 @@
       }
     },
     {
+      "id": "op1fx-nitro",
+      "name": "Nitro",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Filter with a drive stage and a MIX knob, 12 presets. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/nitro.png",
+      "style": "filter",
+      "tags": [
+        "op1",
+        "filter",
+        "drive",
+        "dj"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 5132469,
+          "sha256": "e788d8615094539238e9552cc28c52af8f80aea4a5c78c338aede4218c514f9d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Nitro-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "noisemaker",
       "name": "Noisemaker",
       "author": "saustin2010",
@@ -12152,138 +12737,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.2.5",
-          "size": 19522724,
-          "sha256": "cf0eeb013534ee8c91a470dfb703dd1dc77a338d372e42d2b9b2b7e3b3213bcc",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.5/Plugin-Manager-G2-0.2.5-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.2.4",
-          "size": 19502523,
-          "sha256": "29fa734a33f30cde8cac7864898728688b4b5aa5955c68ef1a447d0539b4796d",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.4/Plugin-Manager-G2-0.2.4-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.2.3",
-          "size": 19502241,
-          "sha256": "23b64657332171bd98c0ef4fae204d8b144d73b9d1eaea38eff5969106265830",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.3/Plugin-Manager-G2-0.2.3-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.2.2",
-          "size": 19502000,
-          "sha256": "ee7968162c4a0b4fd2354b2a9dd3b2d5b2e475c6526688539116ca86956f3ad2",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.2/Plugin-Manager-G2-0.2.2-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "0.2.1",
-          "size": 19501749,
-          "sha256": "0f5bb0b30789b209d74109697523e45f353c39b8a999215a27bf63730e0be768",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.1/Plugin-Manager-G2-0.2.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.10.0.49",
-              "date": "2026-10-29"
-            },
-            {
-              "device": "Force (Gen1)",
-              "firmware": "3.9.1.2",
-              "date": "2026-10-29"
-            }
-          ]
-        },
-        {
-          "version": "0.2.0",
-          "size": 19501550,
-          "sha256": "6d252261e78b67632eb5e4aeaa945ce97971cf01ce9db99850e8f7ab8a5b8551",
-          "max_glibc": "2.17",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-plugins/releases/download/plugin-manager-g2-v0.2.0/Plugin-Manager-G2-0.2.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/OpenMPC - VST - Plugin Manager G2/openmpc_pm_g2.so calls runs programs (posix_spawnp); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": [
-            {
-              "device": "Force (Gen1)",
-              "firmware": "3.9.1.2",
-              "date": "2026-10-28"
-            },
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.10.0.49",
-              "date": "2026-10-29"
-            }
-          ]
-        }
-      ],
+      "versions": [],
       "latest": "0.2.5",
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "sd88me/mpc-vst-plugins",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -12915,6 +13375,103 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-phase",
+      "name": "Phase",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Eight-voice phase-distortion synth, designed from the OP-1 screen.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/phase.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "phase-distortion"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 7835228,
+          "sha256": "cfbadb5bda9744c55393a6616915d5a891bf83500443611585b00e0f7f19f161",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Phase-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-phone",
+      "name": "Phone",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Telephone-band squash with a 12-preset bank. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/phone.png",
+      "style": "filter",
+      "tags": [
+        "op1",
+        "telephone",
+        "band-limit",
+        "lo-fi"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 5394872,
+          "sha256": "7996b18b0c3c9b010fb9ba778e8003a7560e0b2230f8566f750ee61d71a5d119",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Phone-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -13769,6 +14326,55 @@
       }
     },
     {
+      "id": "op1fx-pulse",
+      "name": "Pulse",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Two PWM pulse oscillators per voice, eight voices. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/pulse.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "pwm",
+        "pulse"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 5377316,
+          "sha256": "0076a946fe549d6f0b44b3dc824f05989d5ddc7b4c0ea18d3ec5fce8b82b19f1",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Pulse-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "pulytek",
       "name": "PulyTek",
       "author": "MagicStino",
@@ -13813,6 +14419,55 @@
         "repository": "MagicStino/pulytek",
         "hardware_verified_by_openplugin": false,
         "validation": "package-download-sha256-verified"
+      }
+    },
+    {
+      "id": "op1fx-punch",
+      "name": "Punch",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Bit-crush style punch for drums and buses, 12 presets, with a Detroit boxer skin.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/punch.png",
+      "style": "distortion",
+      "tags": [
+        "op1",
+        "compressor",
+        "drive",
+        "drums"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 6270643,
+          "sha256": "951070d809f679105a855a1f6e0c39faa0cf275ac1662d95ae7880f8eaa66c3d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Punch-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
       }
     },
     {
@@ -14644,6 +15299,54 @@
       }
     },
     {
+      "id": "op1fx-spring",
+      "name": "Spring",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "effect",
+      "license": "GPL-3.0-only",
+      "summary": "Spring reverb with a 12-preset bank. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/spring.png",
+      "style": "reverb",
+      "tags": [
+        "op1",
+        "reverb",
+        "spring"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 3593805,
+          "sha256": "d0ea1860da366ec9fabf73f148baefd3617b83fe8a36746f999f2c7cea739a4d",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Spring-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
       "id": "steprunner-8",
       "name": "StepRunner-8",
       "author": "djokenzi",
@@ -15100,6 +15803,55 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "stampman3000-jpg/mpc-stream",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-string",
+      "name": "String",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Plucked string with eight voices and an amp envelope. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/string.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "pluck",
+        "string"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 3881219,
+          "sha256": "08ea5709f6fb9ba4a145386840f904b9e868a350902149eeae49730384fa0c62",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/String-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
@@ -16338,6 +17090,54 @@
       "provenance": {
         "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
+        "hardware_verified_by_openplugin": false,
+        "validation": "metadata-validated"
+      }
+    },
+    {
+      "id": "op1fx-voltage",
+      "name": "Voltage",
+      "author": "Bombest",
+      "repo": "Bombest-Audio/op1-fx",
+      "kind": "instrument",
+      "license": "GPL-3.0-only",
+      "summary": "Four-control synth with eight voices and an amp envelope. OP-1 inspired.",
+      "screenshot": "https://raw.githubusercontent.com/Bombest-Audio/op1-fx/34f1396d82a4ae72baa761a50f1d9bfe834c444f/screenshots/mpc/voltage.png",
+      "style": "synth",
+      "tags": [
+        "op1",
+        "synth",
+        "analog"
+      ],
+      "source_available": false,
+      "distribution": "release",
+      "versions": [
+        {
+          "version": "0.4.1",
+          "size": 4869161,
+          "sha256": "9fa911f40c810413c7ed5e14605c5fe8ee10700f0e0bac8315c491107778381b",
+          "max_glibc": "2.27",
+          "cpu": null,
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/Bombest-Audio/op1-fx/releases/download/v0.4.1/Voltage-0.4.1-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": [
+            {
+              "device": "MPC Live III (Gen2)",
+              "firmware": "3.9.1",
+              "date": "2026-11-01"
+            }
+          ]
+        }
+      ],
+      "latest": "0.4.1",
+      "provenance": {
+        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
       }
