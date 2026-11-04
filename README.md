@@ -8,9 +8,13 @@ Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Release status:** The current 4 November 2026 Open MPC build is available in the [downloads](docs/DOWNLOADS.md). On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
+**Release status:** The current Tracks16 build is available in the [downloads](docs/DOWNLOADS.md). Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
 
 ![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
+
+## Tracks16 release — 5 November 2026
+
+The current complete images include **16 audio + 16 plugin tracks**, alongside Plugin Manager and SSH. [Patch details and validation](docs/TRACKS16.md).
 
 ## What it does
 

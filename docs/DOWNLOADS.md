@@ -1,21 +1,23 @@
 # Download images
 
-## Current build: firmware 3.10.0 / OpenPlugin v0.8.3 — 4 November 2026
+## Current build: Tracks16 / firmware 3.10.0 / OpenPlugin v0.8.3 — 5 November 2026
+
+**16 audio + 16 plugin tracks**, with the overall limit unchanged. These are complete patched images; no manual patching is needed. See [Tracks16 details](TRACKS16.md).
 
 The current Force and MPC Gen1 images are based on stock firmware **3.10.0** (application **3.10.0.49**). Both include OpenPlugin, SSH/SFTP support and the mouse/cursor integration.
 
-Download the **[current Open MPC release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3-open-mpc-test.20261104)** below. These exact images include the Open MPC migration, a bundled snapshot of 200 plugins and 195 artwork images, and Gen1 download filtering. The larger 64 × 64 paging targets and readable catalog text are retained.
+Download the **[current Open MPC release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3-tracks16.20261105)** below. These exact images include the Open MPC migration, a bundled snapshot of 200 plugins and 195 artwork images, and Gen1 download filtering. The larger 64 × 64 paging targets and readable catalog text are retained.
 
 | Device family | Current filename | SHA256 |
 |---|---|---|
-| Akai Force | [Force-3.10.0-openplugin-v0.8.3-local-20261104-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-open-mpc-test.20261104/Force-3.10.0-openplugin-v0.8.3-local-20261104-update.img) | `b54a39689988bf6550e3e28a8a07231ba9f621da8f82859a94695e72f6725f84` |
-| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.3-local-20261104-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-open-mpc-test.20261104/MPC-3.10.0-Gen1-openplugin-v0.8.3-local-20261104-update.img) | `e6cd0c1491021090067917a9a924d528c8d5bd48616e52207900353e47b2df2c` |
+| Akai Force | [Force-3.10.0-openplugin-v0.8.3-tracks16-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-tracks16.20261105/Force-3.10.0-openplugin-v0.8.3-tracks16-update.img) | `21cfb6150ca77ae5cb79c7acf89ebd0a2c9faf4502c69957594e994977fac2df` |
+| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.3-tracks16-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-tracks16.20261105/MPC-3.10.0-Gen1-openplugin-v0.8.3-tracks16-update.img) | `3ca8d26b2e2288a134bbf11c092b46eb2563b7cae2627859bfd2bcf680e433f5` |
 
 ## Validation status
 
 - Both images pass container, filesystem, injected-file and stock ARM image verification.
 - Offline thumbnail download/cache, corrupt-download recovery and bounded display-update tests pass.
-- On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested.
+- Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested.
 
 ## Included artwork and catalog
 
@@ -46,7 +48,7 @@ If the Force cannot reach its settings, Akai documents holding **MATRIX + LOAD +
 
 SSH/SFTP is enabled at startup in these builds. The default login is **username `root`, password `mpc`**. Remote-access controls are in **Plugin Manager → REMOTE ACCESS**; see [SSH.md](SSH.md). Mouse/cursor support is included; see [MOUSE.md](MOUSE.md) for setup and limitations. Inclusion does not establish that every mouse feature has been tested on 3.10.
 
-The `local-20261104` filenames and original test-tag URL are retained so existing links and checksums remain valid. These are the current downloads. Older release assets remain available unchanged.
+The previous Open MPC release and its original filenames remain available unchanged. Tracks16 is the current download.
 
 ## Older release — firmware 3.9.1
 

@@ -1,3 +1,7 @@
+# Tracks16 — 5 November 2026
+
+See [Tracks16 validation](TRACKS16.md) for the current release. Both images pass integrity checks and 1,050 emulated allocation cases each. Force owner reports creating/saving/loading 15 of each type, playback and 17th-track rejection working. Recording and MPC hardware remain untested.
+
 # Validation scope
 
 ## Current Open MPC build — 4 November 2026

@@ -1,6 +1,8 @@
+> Tracks16 (5 November 2026) changes exactly two application bytes to raise the audio and plugin allocation limits to 16. All other filesystem bytes match the Open MPC base described below. See [TRACKS16.md](TRACKS16.md) for current validation scope.
+
 # Firmware integration
 
-OpenPlugin 0.8.3 targets the exact stock 3.10.0 inputs recorded in `inputs.json`. The AZ01 parser checks partition bounds, SHA-1 integrity records and exact end-of-file, rejecting unknown trailers rather than discarding them. The container label becomes `3.10.0-openplugin-v0.8.3`; stock application version **3.10.0.49**, board lists, application binaries, kernel and bootloader remain intact. Activation and signature checks are not patched.
+The base Open MPC build of OpenPlugin 0.8.3 targets the exact stock 3.10.0 inputs recorded in `inputs.json`. The AZ01 parser checks partition bounds, SHA-1 integrity records and exact end-of-file, rejecting unknown trailers rather than discarding them. The container label becomes `3.10.0-openplugin-v0.8.3`; stock application version **3.10.0.49**, board lists, application binaries, kernel and bootloader remain intact. Activation and signature checks are not patched.
 
 The builder injects the native manager, skin, helpers, services and notices through debugfs without mounting the filesystem. It sets deterministic metadata, verifies injected files and symlinks, checks the filesystem read-only, and recompresses it. Input images are preserved. A successful build does not prove flashing or boot safety.
 
@@ -12,4 +14,4 @@ Community mouse support is compiled from pinned source and loaded only inside th
 
 ## Validation limits
 
-Both current images pass structural, filesystem and stock ARM verifier checks. The manager loads against both stock runtimes under emulation. On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested. See [TESTING.md](TESTING.md) for revision-specific evidence.
+Both base images pass structural, filesystem and stock ARM verifier checks. The manager loads against both stock runtimes under emulation. On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested. See [TESTING.md](TESTING.md) for revision-specific evidence.
