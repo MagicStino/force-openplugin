@@ -87,7 +87,7 @@ typedef struct {
     pthread_mutex_t mu;
     pthread_cond_t cv;
     int preview_enabled, preview_pending;
-    unsigned preview_generation;
+    unsigned preview_generation, preview_revision;
     uint16_t preview_pixels[ROWS][PREVIEW_PIXELS];
     char preview_row_id[ROWS][48];
     int quit, job, busy, ready;   /* ready: a prepared apply.sh waits for the second APPLY press */
@@ -366,7 +366,7 @@ static const char *jobject(const char *p, member_fn f, void *ud) {
     }
 }
 
-typedef struct { char version[24], url[512], sha[72], channel[16], cpu[8], tested[48]; long long size; int yanked; } ver_t;
+typedef struct { char version[24], url[512], sha[72], channel[16], cpu[8], tested[48], arch[24]; long long size; int yanked; } ver_t;
 typedef struct { char s[48]; } str_t;
 
 static const char *verdict_member(const char *k, const char *v, void *ud) {
@@ -378,6 +378,7 @@ static const char *device_member(const char *k, const char *v, void *ud) {
 
 static const char *ver_member(const char *k, const char *v, void *ud) {
     ver_t *x = ud;
+    if (!strcmp(k, "arch") && *v == '"') return jstr(v, x->arch, sizeof x->arch);
     if (!strcmp(k, "channel") && *v == '"') return jstr(v, x->channel, sizeof x->channel);
     if (!strcmp(k, "size") && *v >= '0' && *v <= '9') { x->size = atoll(v); return NULL; }
     if (!strcmp(k, "cpu") && *v == '{') {   /* the bench verdict: PASS, WARN or FAIL */
@@ -463,7 +464,7 @@ static const char *pkg_member(const char *k, const char *v, void *ud) {
             ver_t ver = {0};
             p = jobject(p, ver_member, &ver);
             if (!p) return NULL;
-            if (!ver.yanked && !x->url[0] && ver.url[0] && (!x->latest[0] || !strcmp(ver.version, x->latest))) {
+            if (!ver.yanked && (!ver.arch[0] || !strcmp(ver.arch,"armv7")) && !strstr(strrchr(ver.url,'/') ? strrchr(ver.url,'/') : ver.url,"-mpc-aarch64.zip") && !x->url[0] && ver.url[0] && (!x->latest[0] || !strcmp(ver.version, x->latest))) {
                 snprintf(x->url, sizeof x->url, "%s", ver.url);
                 snprintf(x->sha, sizeof x->sha, "%s", ver.sha);
                 snprintf(x->channel, sizeof x->channel, "%s", ver.channel);
@@ -843,6 +844,7 @@ static void do_refresh(mgr_t *m) {
         memset(tmp,0,MAXPKG*sizeof *tmp);l.n=0;
         char *old=m->dev->base[0]?slurp(cache,16<<20):NULL;
         cached=catalog_parse(old,&l);free(old);
+        if(!cached){old=slurp("/usr/share/openplugin/catalog.json",16<<20);memset(tmp,0,MAXPKG*sizeof *tmp);l.n=0;cached=catalog_parse(old,&l);free(old);}
         if(!cached){memset(tmp,0,MAXPKG*sizeof *tmp);l.n=0;}
     }
     if(!parsed && !cached && m->loaded){free(tmp);free(s.buf);pthread_mutex_lock(&m->mu);m->online=0;say_locked(m,WARN,"Refresh failed. Keeping the last catalog; retry when online.");pthread_mutex_unlock(&m->mu);return;}
@@ -1166,7 +1168,8 @@ static void *mgr_create(const char *data_dir) {
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
     snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
-    m->preview_enabled = 1; /* Live filmstrip pixels use value changes, never cached file replacement. */
+    for(int r=0;r<ROWS;r++)for(int p=0;p<PREVIEW_PIXELS;p++)m->preview_pixels[r][p]=0x111;
+    m->preview_enabled = 1; /* Missing bundled artwork is fetched by the worker; bounded numeric updates bypass PNG caching. */
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;
@@ -1204,7 +1207,21 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     mgr_t *m = inst;
     if (!strncmp(key,"previewpx_",10)) return; /* display-only pixels are never restored as user controls */
     double v = atof(val);
+    /* Host automation echoes display values: only actual user controls mutate state. */
+    {
+        int special=!strcmp(key,"remote_enable")||!strcmp(key,"remote_disable")||!strcmp(key,"remote_show")||
+          !strcmp(key,"rom_check")||!strcmp(key,"rom_usb")||!strcmp(key,"rom_download")||
+          !strcmp(key,"source_scan")||!strcmp(key,"source_back")||!strcmp(key,"source_clear")||!strcmp(key,"source_cleartext")||!strcmp(key,"source_search")||!strncmp(key,"source_key_",11);
+        int row_action=key[0]=='r' && key[1]>='1' && key[1]<='3' && key[2]=='_' &&
+          (!strcmp(key+3,"act")||!strcmp(key+3,"more")||!strcmp(key+3,"reinstall")||!strcmp(key+3,"remove")||!strcmp(key+3,"rom_install"));
+        int card=!strncmp(key,"card",4)&&key[4]>='1'&&key[4]<='3'&&(!key[5]||!strcmp(key+5,"_1"));
+        int option=!strcmp(key,"tab")||!strcmp(key,"kind");
+        int action=!strcmp(key,"page_prev")||!strcmp(key,"page_next")||!strcmp(key,"refresh")||!strcmp(key,"update_all")||!strcmp(key,"apply");
+        if(!option&&!card&&!row_action&&!action&&!special)return;
+        if(!option&&v<.5)return;
+    }
     pthread_mutex_lock(&m->mu);
+    if((!strcmp(key,"tab")&&(int)(v+.5)==m->tab)||(!strcmp(key,"kind")&&(int)(v+.5)==m->kindf)){pthread_mutex_unlock(&m->mu);return;}
     if (!strncmp(key,"remote_",7)) {
         if(v>=0.5 && !m->busy && !m->job) {
             if(!strcmp(key,"remote_enable")) post(m,J_REMOTE_ENABLE);
@@ -1273,7 +1290,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
         m->menu = -1;
     } else if (!strncmp(key, "card", 4)) {   /* a tap anywhere on a card selects it (both toggle directions) */
         int r = key[4] - '1', k = m->page * ROWS + r;
-        if (k >= 0 && k < nv) { m->sel = idx[k]; if (m->menu != idx[k]) m->menu = -1; }
+        if (k >= 0 && k < nv) { if(m->sel==idx[k]){pthread_mutex_unlock(&m->mu);return;}m->sel = idx[k]; if (m->menu != idx[k]) m->menu = -1; }
     } else if (v < 0.5) {
         /* the other params are triggers: act on press only */
     } else if (!strcmp(key, "page_prev") && m->page > 0) { m->page--; m->menu = -1; }

@@ -1,5 +1,13 @@
 # Validation scope
 
+## Current Open MPC build — 4 November 2026
+
+On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested.
+
+Both exact images passed Akai ARM verification, read-only filesystem checks, injected-file checks, stock-file preservation and SHA256 checks. Native ARM parsing confirms 200 entries and 188 downloadable entries. Python validation: 24 pass, one skipped standalone-manager ZIP test. Host sanitizer and preview/cache/wrapper checks pass.
+
+[Current downloads and exact hashes](DOWNLOADS.md) · [Build and validation details](LOCAL-BUILD-2026-11-04.md). The records below describe older releases.
+
 ## OpenPlugin 0.8 RC1 — 10 October 2026
 
 Both published images passed filesystem, injected-file/symlink and container checks plus their original ARM `az01-image --verify`. The native manager loads with both stock ARM runtime trees under emulation. All 21 Python tests passed, including the offline preview codec/cache test. The filtered-polling regression exercises 80,000 idle reads with one catalog scan and no revision churn. Generated CATALOG geometry and sample text pass simulated rendering checks.

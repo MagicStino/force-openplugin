@@ -1,21 +1,21 @@
 # Download images
 
-## Current build: firmware 3.10.0 / OpenPlugin v0.8.3
+## Current build: firmware 3.10.0 / OpenPlugin v0.8.3 — 4 November 2026
 
 The current Force and MPC Gen1 images are based on stock firmware **3.10.0** (application **3.10.0.49**). Both include OpenPlugin, SSH/SFTP support and the mouse/cursor integration.
 
-Download the **[OpenPlugin v0.8.3 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3)** below. These images include the refreshed catalog with Clif Tape and online thumbnail fallback. The larger 64 × 64 paging targets and readable catalog text are retained.
+Download the **[current Open MPC release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3-open-mpc-test.20261104)** below. These exact images include the Open MPC migration, a bundled snapshot of 200 plugins and 195 artwork images, and Gen1 download filtering. The larger 64 × 64 paging targets and readable catalog text are retained.
 
 | Device family | Current filename | SHA256 |
 |---|---|---|
-| Akai Force | [Force-3.10.0-openplugin-v0.8.3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/Force-3.10.0-openplugin-v0.8.3-update.img) | `89c3d2b4fccaf70e883ee920266b9475f63b2507dc91cc13a38ebe72570050a7` |
-| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.3-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/MPC-3.10.0-Gen1-openplugin-v0.8.3-update.img) | `bd77f56b279d1b343d8e84f14eb1c3212886fdfe4bf6a4acceee4e9680a0bef8` |
+| Akai Force | [Force-3.10.0-openplugin-v0.8.3-local-20261104-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-open-mpc-test.20261104/Force-3.10.0-openplugin-v0.8.3-local-20261104-update.img) | `b54a39689988bf6550e3e28a8a07231ba9f621da8f82859a94695e72f6725f84` |
+| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.8.3-local-20261104-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3-open-mpc-test.20261104/MPC-3.10.0-Gen1-openplugin-v0.8.3-local-20261104-update.img) | `e6cd0c1491021090067917a9a924d528c8d5bd48616e52207900353e47b2df2c` |
 
 ## Validation status
 
 - Both images pass container, filesystem, injected-file and stock ARM image verification.
 - Offline thumbnail download/cache, corrupt-download recovery and bounded display-update tests pass.
-- Clif Tape's registered thumbnail was confirmed on Force. Full 0.8.3 flash/boot and audio-load testing remain pending. MPC Gen1 is hardware untested.
+- On 4 November 2026, the owner tested this exact Force image and reported that everything works. This is an owner-reported hardware acceptance, not a test of every plugin or peripheral. MPC Gen1 passes software validation but remains hardware untested.
 
 ## Included artwork and catalog
 
@@ -23,7 +23,7 @@ Clif Tape, TinyFreaky, PulyTek and Magic Tape Echo have bundled artwork. The plu
 
 ## Catalog thumbnails
 
-Connect to the internet and select **CATALOG → Refresh catalog**. Bundled thumbnails appear immediately. Online artwork can download and cache, but displaying newly downloaded, unbundled images remains unresolved. Do not rely on that fallback yet.
+Connect to the internet and select **CATALOG → Refresh catalog** for newer plugin releases. The image bundles 195 artwork images; five entries use fallback artwork. Online thumbnail cache and bounded update tests pass. The owner reports the Force build works; this does not establish every remote artwork case.
 
 ## Installing from USB
 
@@ -46,14 +46,18 @@ If the Force cannot reach its settings, Akai documents holding **MATRIX + LOAD +
 
 SSH/SFTP is enabled at startup in these builds. The default login is **username `root`, password `mpc`**. Remote-access controls are in **Plugin Manager → REMOTE ACCESS**; see [SSH.md](SSH.md). Mouse/cursor support is included; see [MOUSE.md](MOUSE.md) for setup and limitations. Inclusion does not establish that every mouse feature has been tested on 3.10.
 
+The `local-20261104` filenames and original test-tag URL are retained so existing links and checksums remain valid. These are the current downloads. Older release assets remain available unchanged.
+
 ## Older release — firmware 3.9.1
 
 [OpenPlugin v0.8.1-rc2 release assets](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.1-rc2) remain available for reference. They are based on **3.9.1**, not the current **3.10.0** build.
 
-0.8.2 adds the approved three-head Magic Tape Echo thumbnail and final catalog versions: Magic Tape Echo 0.1.1, PulyTek 1.0.2 and TinyFreaky 0.4.1. Older versions of these three are removed from the current catalog.
+0.8.2 adds the approved three-head Magic Tape Echo thumbnail and final catalog versions: Magic Tape Echo 0.1.1, PulyTek 1.0.2 and TinyFreaky 0.4.1. This historical snapshot is superseded by subsequent online catalog updates.
 
 0.8.3 corrects the missing Clif Tape image registration and updates artwork generation to use the merged catalog.
 
-## Manager-only update
+## Older manager-only update
+
+The following standalone ZIP predates the 4 November Open MPC firmware build and does not contain all of its migration changes. Use the current firmware image above for the tested build.
 
 Existing OpenPlugin 0.8.x users can download the [ready-built Plugin Manager 0.8.3](https://github.com/MagicStino/force-openplugin/releases/download/v0.8.3/Plugin-Manager-0.8.3-mpc-armv7.zip). No compiling or firmware flash is needed. Follow the included INSTALL.md and choose a writable, executable Synths location. Save first: installation restarts the music application. The package includes an uninstaller.

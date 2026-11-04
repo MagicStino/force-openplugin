@@ -16,7 +16,7 @@ $('#close-photo').addEventListener('click',()=>photoDialog.close());
 photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close();});
 photoDialog.addEventListener('close',()=>photoOpener?.focus());
 $('#device').addEventListener('change',event=>{
- const messages={force:'A candidate was built from the exact examined Force image. The owner reports successful Force boot, touch, plugin use and ROM download. Combined 3.9.1.7 setup and SSH login remain unverified.',mpc:'A candidate exists for the exact examined MPC Gen1 image. Target model, updater acceptance and device operation still require validation.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
+ const messages={force:'The current 3.10.0 / OpenPlugin 0.8.3 image was tested by the owner on Force on 4 November 2026, who reported that everything works. Software integrity checks pass. This does not validate every plugin or peripheral.',mpc:'The current MPC Gen1 3.10.0 image passes container, filesystem, ARM and SHA256 checks. Hardware installation and operation remain untested; use only the Gen1 image for a compatible device.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
  $('#device-result').textContent=messages[event.target.value];
 });
 for(const button of document.querySelectorAll('[data-copy]')) button.addEventListener('click',async()=>{

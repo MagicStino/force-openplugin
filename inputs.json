@@ -1,4 +1,40 @@
 {
-  "force": {"filename": "Force-3.9.1-update.img", "sha256": "f0cf2da8602e305c4c45b2ee1607ee995ab8d1e615016dea283460e6f6e8cf41", "app_version": "3.9.1.2"},
-  "mpc-gen1": {"filename": "MPC-3.9.1-Gen1-update.img", "sha256": "4c0f7797a006313fad206f9513eca8b3823e834c9e0941a6b5f088386cb835d6", "app_version": "3.9.1.2"}
+  "force": {
+    "filename": "Force-3.10.0-update.img",
+    "sha256": "d70f329ac830af725665a46cb529dc733dc49d56ed675d23c17f7c8d9b988d4b",
+    "app_version": "3.10.0.49",
+    "source_url": "https://cdn.inmusicbrands.com/Software/M310PCFIN26OCT/Force-3.10.0-update.img",
+    "boards": [
+      "inmusic,ada2"
+    ],
+    "devices": [
+      166215744
+    ]
+  },
+  "mpc-gen1": {
+    "filename": "MPC-3.10.0-Gen1-update.img",
+    "sha256": "d09b1e4c1c765d6bea0f0b93bb7ba661200fc14bd893422dcbf0e86e406a2a20",
+    "app_version": "3.10.0.49",
+    "source_url": "https://cdn.inmusicbrands.com/Software/M310PCFIN26OCT/MPC-3.10.0-Gen1-update.img",
+    "boards": [
+      "inmusic,acv5",
+      "inmusic,acv8",
+      "inmusic,acva",
+      "inmusic,acva2",
+      "inmusic,acvb",
+      "inmusic,acvm",
+      "inmusic,acvr",
+      "inmusic,acv5s"
+    ],
+    "devices": [
+      166215738,
+      166215739,
+      166215750,
+      166215751,
+      166215755,
+      166215762,
+      166215766,
+      166215767
+    ]
+  }
 }

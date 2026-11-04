@@ -28,6 +28,8 @@ def main():
     p.add_argument('--ssh-key', type=Path, help='Owner public key; private key must never be supplied')
     args = p.parse_args()
     deps, out = args.deps.resolve(), args.output.resolve()
+    # Upstream executable Python helpers must use this same build environment.
+    os.environ['PATH'] = str(Path(sys.executable).parent) + os.pathsep + os.environ['PATH']
     locks = json.loads((ROOT / 'dependencies.json').read_text())
     for name, lock in locks.items():
         actual = subprocess.check_output(['git', '-C', str(deps / name), 'rev-parse', 'HEAD'], text=True).strip()
@@ -54,12 +56,14 @@ def main():
     spec = local / 'vst/vst.json'
     config = json.loads(spec.read_text())
     config['defines']['PARAM_TEXT_MAX'] = 192
+    config['defines']['DISPLAY_REV_NO_UPDATE'] = 1
     spec.write_text(json.dumps(config, indent=2) + '\n')
     layout.write_text(layout.read_text().replace('[tab PLUGINS]','[tab CATALOG]').replace('qlinks "PLUGINS"','qlinks "CATALOG"').replace('sw=146 sh=44 key=kind','sw=100 sh=44 key=kind options="All,Instr.,Effects,Trackers,Samplers,Tools"').replace(
         'button cx=578 cy=178 label="" key=noop img=images/upd_badge.svg w=24 h=24 when=upd_badge:on',
         'art file=images/upd_badge.svg x=566 y=166 w=24 h=24 when=upd_badge:on'))
     images = local / 'vst/make_images.py'
     images.write_text(images.read_text().replace('"PLUGIN MANAGER", 24', '"OPENPLUGIN", 24')
+        .replace('x, y, FONT, size, weight', 'x, y, FONT, size + 1, weight')
         .replace('spacing=3)', 'spacing=3) + text(300, 39, "COMMUNITY INSTRUMENTS & PLUGINS", 16, MUTED, 600)')
         .replace('"APPLY",','"CONTINUE",').replace('"RESTART & APPLY",','"INSTALL & RESTART",'))
     run(sys.executable, images)
@@ -85,13 +89,27 @@ def main():
     tui.write_text(json.dumps(ui,indent=2)+'\n')
     from live_preview_skin import install
     install(local/'vst',tui)
+    # The bitmap replacement leaves upstream per-frame PNGs unused. Keep all
+    # referenced artwork and nested browser assets; avoid filling the stock rootfs.
+    skin_json = tui.read_text()
+    for asset in tui.parent.glob('sh_mode_*.png'):
+        if json.dumps(asset.name) not in skin_json:
+            asset.unlink()
     import ziglang
     zig = Path(ziglang.__file__).parent / 'zig'
     env = dict(os.environ, ZIG_GLOBAL_CACHE_DIR=str(out / 'zig-global'), ZIG_LOCAL_CACHE_DIR=str(out / 'zig-local'))
+    from patch_preview_wrapper import patch
+    params=json.loads((local/'vst/params.json').read_text())['params']
+    first=next(i for i,p in enumerate(params) if p['key'].startswith('previewpx_'))
+    count=sum(p['key'].startswith('previewpx_') for p in params)
+    assert count==5400 and all(p['key'].startswith('previewpx_') for p in params[first:first+count])
+    assert [p['key'] for p in params[-3:]]==['preview_live_1','preview_live_2','preview_live_3']
+    wrapper=out/'preview_wrapper.c'
+    wrapper.write_text(patch(mv/'wrapper/vst2_wrap.c',first,count))
     binary = out / 'plugin_manager.so'
     run(zig, 'cc', '-target', 'arm-linux-gnueabihf.2.31', '-mcpu=cortex_a17', '-O2', '-g0', '-s',
         '-fPIC', '-shared', '-fvisibility=hidden', '-std=gnu11', '-I' + str(local / 'vst/build'),
-        ROOT / 'native/manager.c', mv / 'wrapper/vst2_wrap.c', '-lpthread', '-ldl', '-lm',
+        ROOT / 'native/manager.c', wrapper, '-I'+str(mv/'wrapper'), '-lpthread', '-ldl', '-lm',
         '-Wl,--no-undefined', '-o', binary, env=env)
     mouse = out / 'libforce_cursor.so'
     run(zig, 'cc', '-target', 'arm-linux-gnueabihf.2.31', '-mcpu=cortex_a17', '-O2', '-g0', '-s',
@@ -105,9 +123,9 @@ def main():
     shutil.copytree(local / 'vst/build/skin/poloq - VST - Plugin Manager', folder)
     normalize_presets(folder)
     version_file = folder / 'version.xml'
-    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.1.0</version>'))
+    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.3.0</version>'))
     shutil.copyfile(binary, folder / 'plugin_manager.so')
-    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8.1"')
+    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8.3"')
     (folder / 'plugin-meta.xml').write_text(entry)
     helpers = payload / 'usr/share/openplugin'
     helpers.mkdir(parents=True)
@@ -121,8 +139,9 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('0.8.1\n')
+    (helpers / 'VERSION').write_text('0.8.3\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
+    shutil.copyfile(ROOT / 'website/catalog.json', helpers / 'catalog.json')
     bundled=helpers/'bundled-previews'
     bundled.mkdir()
     shutil.copyfile(local/'vst/images/previews/preview_1.png',bundled/'fallback.png')
@@ -130,6 +149,7 @@ def main():
     ImageOps.pad(Image.open(bundled/'fallback.png'),(180,90),color='#13161b').save(bundled/'fallback-row.png')
     for i,entry in enumerate(json.loads((ROOT/'assets/previews.lock.json').read_text())['entries']):
         shutil.copyfile(local/f'vst/images/previews/preview_{i+2}.png',bundled/(entry['id']+'.png'))
+    shutil.copyfile(ROOT/'assets/artwork/clif-tape.png',bundled/'clif-tape.png')
     for name in ['LICENSE','UPSTREAM.md']:
         shutil.copyfile(ROOT/'native/third_party/stb'/name,helpers/('STB-'+name))
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')

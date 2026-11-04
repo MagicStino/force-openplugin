@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-11-04T11:22:09+00:00",
+  "generated": "2026-11-04T12:15:25+00:00",
   "source": "https://open-mpc.github.io/catalog.json",
   "plugins": [
     {
@@ -8554,7 +8554,7 @@
         }
       ],
       "versions": [],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
@@ -8579,89 +8579,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.2",
-          "size": 8036042,
-          "sha256": "94f0b1f04e95e7317bac216352f926aa17cbff537529de93107e0c99adff40e3",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.2/Machinemodule-1.0.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.1",
-          "size": 8035500,
-          "sha256": "32639e7ed7f7da1dfbbb14986c4489f2d291a3b5adbb7455b000b21ed4013a46",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.1/Machinemodule-1.0.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 8029199,
-          "sha256": "45f7d2256ec880a65866bff2e675b1cee442fb35761029912eedaff084f557eb",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.0/Machinemodule-1.0.0-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-31"
-            }
-          ]
-        },
-        {
-          "version": "0.5.2",
-          "size": 5470933,
-          "sha256": "568eb17c25302f9c4e5034e9b9ae1efd674d3a368b798fc4d7ce06ee7522ce0a",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.2/Machinemodule-0.5.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it",
-            "portable/sd88me - VST - Machinemodule/machinedrum_one.so calls runs programs (posix_spawn); loads code at runtime (dlopen): flagged for manual review (the author can explain why)"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.2",
+      "versions": [],
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -8681,82 +8605,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.2",
-          "size": 97424,
-          "sha256": "ae7d5510a7500a87179e2f878c75943ad6eda6db4468f9b3a973c991a60b243d",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.2/Machinemodule-Tap-1.0.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.1",
-          "size": 97420,
-          "sha256": "1170355ecb08154b55b2de8e0cc75d1b3b35522c4fd282550b533ac400d6b1c3",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.1/Machinemodule-Tap-1.0.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.0",
-          "size": 96664,
-          "sha256": "57d00163937b4d3aa723be340d15fcc1c0f9573acb7944e2414658a448268ad4",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v1.0.0/Machinemodule-Tap-1.0.0-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-10-31"
-            }
-          ]
-        },
-        {
-          "version": "0.5.2",
-          "size": 96380,
-          "sha256": "0cbbd51a22080347a70e33ed658bd2df666a8d632b8268b9550ed242cbdf16f4",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-machinedrum/releases/download/v0.5.2/Machinemodule-Tap-0.5.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": []
-        }
-      ],
-      "latest": "1.0.2",
+      "versions": [],
+      "latest": "1.0.3",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -10253,82 +10108,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.3",
-          "size": 4381736,
-          "sha256": "af1ff913929224e5ab6dd5c6f2210de8893b1f48b2edc0980bebbe618f694c48",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.3/Monomodule-FX-1.0.3-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.2",
-          "size": 4381287,
-          "sha256": "c83c21c5fbed8323270df754d52ade849c8c2cb58d509f566715ed76a876c35c",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.2/Monomodule-FX-1.0.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.1",
-          "size": 4381470,
-          "sha256": "27538b12cfeb05e22f360c963b433953dc7156736cffe7560cc6d74dd901c146",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.1/Monomodule-FX-1.0.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "version": "0.11.1",
-          "size": 4249893,
-          "sha256": "46071d4db223ccb4007d2d24b08dc2247a25026d5472055093ed4f7b651c1830",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.1/Monomodule-FX-0.11.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": []
-        }
-      ],
+      "versions": [],
       "latest": "1.0.3",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -10348,82 +10134,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "1.0.3",
-          "size": 4392393,
-          "sha256": "8ac0002ef19e2dcf03d63294ab232ff09597a9d7fccffa593944c3d5538ae11e",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.3/Monomodule-One-1.0.3-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.2",
-          "size": 4392507,
-          "sha256": "3526823d6190ba33dc9e8380ff1671a5650ce6e4725f34078d5b71ea10af7c57",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.2/Monomodule-One-1.0.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "1.0.1",
-          "size": 4391355,
-          "sha256": "0d4093a9a42e7c060f1e4315303aa1c0309db0e1e88957f9ed8a5da8c1a11611",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v1.0.1/Monomodule-One-1.0.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "MPC OS 3.x",
-              "date": "2026-11-01"
-            }
-          ]
-        },
-        {
-          "version": "0.11.1",
-          "size": 4256764,
-          "sha256": "ee0eccf01fa7abad845a293270e1834240c3dd75e8e58deb7280ee6233598a24",
-          "max_glibc": "2.36",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-monomodule/releases/download/v0.11.1/Monomodule-One-0.11.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": []
-        }
-      ],
+      "versions": [],
       "latest": "1.0.3",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -10791,6 +10508,54 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "3.1.6",
+          "size": 5311779,
+          "sha256": "de4c6e25e8a2682e3a07d821889b8fe027afd19f3c1dfece07aad4a4fa6985db",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 30.3,
+            "max_pct": 67.0,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.1.6/MPC-DJ-FX-2-3.1.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/LarryDaimond - VST - MPC DJ FX 2/mpc_djfx2.so calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": [
+            {
+              "device": "MPC Live II",
+              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
+              "date": "2026-11-03"
+            }
+          ]
+        },
+        {
+          "version": "3.1.5",
+          "size": 5311645,
+          "sha256": "7adffb9aacd8b6266f6df2793a53f09ac0cb0836c2af2ba269a7fc6cf1cc2b29",
+          "max_glibc": "2.27",
+          "cpu": {
+            "p99_pct": 30.3,
+            "max_pct": 67.0,
+            "verdict": "WARN"
+          },
+          "os_compat": [
+            "3.x"
+          ],
+          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v3.1.5/MPC-DJ-FX-2-3.1.5-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "portable/LarryDaimond - VST - MPC DJ FX 2/mpc_djfx2.so calls network (accept, bind, listen, recv, send, socket): flagged for manual review (the author can explain why)"
+          ],
+          "tested": []
+        },
+        {
           "version": "3.1.4",
           "size": 18352759,
           "sha256": "47488f29e2669154e88206e031ff0f22672ad1fdf6a366e47d33c66538235d0a",
@@ -10967,63 +10732,9 @@
             "install.sh differs from this repo's current template (older release tool, or modified): review it"
           ],
           "tested": []
-        },
-        {
-          "version": "2.2.1",
-          "size": 4912330,
-          "sha256": "f5772399f65aba8dfa21cfbabf2cf92dfe3ade9ff78ccc6a552d255054b417c6",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 11.4,
-            "max_pct": 14.8,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.2.1/MPC-DJ-FX-2-2.2.1-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live II",
-              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
-              "date": "2026-10-27"
-            }
-          ]
-        },
-        {
-          "version": "2.2.0",
-          "size": 4907475,
-          "sha256": "8ddb8953fb182807da1f94026e4b1dabfba0eccce418e73e9053ca7556f6cf1f",
-          "max_glibc": "2.27",
-          "cpu": {
-            "p99_pct": 11.4,
-            "max_pct": 14.8,
-            "verdict": "PASS"
-          },
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/mitchoster/mpc-vst-djfx2/releases/download/v2.2.0/MPC-DJ-FX-2-2.2.0-mpc-armv7.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live II",
-              "firmware": "MPC OS 3.x (ACVS-MPC3 build)",
-              "date": "2026-10-27"
-            }
-          ]
         }
       ],
-      "latest": "3.1.4",
+      "latest": "3.1.6",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mitchoster/mpc-vst-djfx2",
@@ -11462,6 +11173,20 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "0.6.2",
+          "size": 29790,
+          "sha256": "476b5abadf047fed6b956b371701e67ccb9e53cbd5dae39b6ba522d982ea8616",
+          "max_glibc": "2.17",
+          "cpu": null,
+          "url": "https://github.com/sd88me/mpc-addin-skipback/releases/download/v0.6.2/MPC-Skipback-0.6.2-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [
+            "addin-lib.sh differs from this repo's current template (older release tool, or modified): review it"
+          ],
+          "tested": []
+        },
+        {
           "version": "0.6.0",
           "size": 28568,
           "sha256": "f19eb1ed9fd04c6cd8487e9cda7140aae1aee06e9074c375151bf61b6be781be",
@@ -11532,7 +11257,7 @@
           "tested": []
         }
       ],
-      "latest": "0.6.0",
+      "latest": "0.6.2",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-addin-skipback",
@@ -12841,6 +12566,22 @@
       "distribution": "release",
       "versions": [
         {
+          "version": "1.4.6",
+          "size": 18454461,
+          "sha256": "7f8ed9359bf89b5ee8fef66e2f46a83e9788ae30a57befb2f9e86d2aeb3a2f8b",
+          "max_glibc": "2.29",
+          "cpu": null,
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "url": "https://github.com/3dthc/Odin2-MPC/releases/download/odin2-v1.4.6/Odin-2-1.4.6-mpc-armv7.zip",
+          "channel": "stable",
+          "yanked": false,
+          "warnings": [],
+          "tested": []
+        },
+        {
           "version": "1.4.4",
           "size": 18460698,
           "sha256": "983ea5a97f79b96848d39cc4506bf95f8ed5d88aa41160a73df1965c6a86b0ca",
@@ -12902,7 +12643,7 @@
           "tested": []
         }
       ],
-      "latest": "1.4.4",
+      "latest": "1.4.6",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Odin2-MPC",
@@ -13223,162 +12964,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.2.10",
-          "size": 4553549,
-          "sha256": "b3692d992ed07840bab62e01beb023cbee0f187b4ec137f990b75d73639f4b3e",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.10/Osirus-0.2.10-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.2.9",
-          "size": 4548177,
-          "sha256": "7f24011a9cb458194a4a119fd263f4484ed28f83bcb93ab340893a0235a78645",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.9/Osirus-0.2.9-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.2.8",
-          "size": 4539788,
-          "sha256": "6a1ab08ed795b84f186bc2c7abc8989538f7588fe7202d564d34b3bb3fa10ee2",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.8/Osirus-0.2.8-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.2.7",
-          "size": 4538327,
-          "sha256": "3859936a2d8a2497e0869ea0e3a29d2cacaf4309390cd62516ebd28f1765df80",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.7/Osirus-0.2.7-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-29"
-            }
-          ]
-        },
-        {
-          "version": "0.2.6",
-          "size": 4537659,
-          "sha256": "34a36481cbfc5b5e4b02063fd0894faebd891e54fabfd46f45d1d97c71f0e3c3",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.6/Osirus-0.2.6-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-29"
-            }
-          ]
-        },
-        {
-          "version": "0.2.5",
-          "size": 4537706,
-          "sha256": "7977669ea43a86e3ed93faaed2370d4919a91783358939cc73d4ecfbaf716670",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.5/Osirus-0.2.5-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.2.4",
-          "size": 4537201,
-          "sha256": "46125a823e945043cad1ad96688dd4f41637283caddb140f7962353c36bdfefa",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.4/Osirus-0.2.4-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-25"
-            }
-          ]
-        },
-        {
-          "version": "0.2.3",
-          "size": 4523291,
-          "sha256": "23129c663414e7f407d477d94db1025dd45f3bc99f7d2b8c8e032768663396dd",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-osirus/releases/download/v0.2.3/Osirus-0.2.3-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-25"
-            }
-          ]
-        }
-      ],
+      "versions": [],
       "latest": "0.2.10",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
@@ -17797,67 +17389,13 @@
       ],
       "source_available": false,
       "distribution": "release",
-      "versions": [
-        {
-          "version": "0.1.2",
-          "size": 8767979,
-          "sha256": "e760c9a723c3b7bae458d7ae1ac3430dfd28847304a40a8062173c795304e4bb",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-xenia/releases/download/v0.1.2/Xenia-0.1.2-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.1.1",
-          "size": 8765816,
-          "sha256": "53b520c8f716eafe4107fd451cec82e428e4ca50ee3421433899885402f21beb",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-xenia/releases/download/v0.1.1/Xenia-0.1.1-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [],
-          "tested": []
-        },
-        {
-          "version": "0.1.0",
-          "size": 8764068,
-          "sha256": "d85abfccc685bce6b3ec9cc60a0a3379f060ed21ae9a0801f0a4e6328d5cdb27",
-          "max_glibc": "2.35",
-          "cpu": null,
-          "os_compat": [
-            "3.x"
-          ],
-          "url": "https://github.com/sd88me/mpc-vst-xenia/releases/download/v0.1.0/Xenia-0.1.0-mpc-aarch64.zip",
-          "channel": "stable",
-          "yanked": false,
-          "warnings": [
-            "install.sh differs from this repo's current template (older release tool, or modified): review it"
-          ],
-          "tested": [
-            {
-              "device": "MPC Live III (Gen2)",
-              "firmware": "3.9.1",
-              "date": "2026-10-27"
-            }
-          ]
-        }
-      ],
+      "versions": [],
       "latest": "0.1.2",
       "provenance": {
         "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-xenia",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "listed-only"
       }
     },
     {
