@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04T11:20:35+00:00",
+  "date": "2026-11-04T11:21:31+00:00",
   "source": "https://open-mpc.github.io/catalog.json",
   "plugins": [
     {
@@ -3322,9 +3322,26 @@
         "stereo",
         "effect"
       ],
-      "source_available": false,
+      "source_available": true,
       "distribution": "release",
       "versions": [
+        {
+          "url": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/7307765ffba9b8929508ea7b25ee212a106e4602/Clif-Tape-0.2.1-mpc-armv7.zip",
+          "sha256": "36af5de2cbae38cd8c667c7b8624d552e51806f594045e643c0ee2559ca05935",
+          "size": 1660844,
+          "version": "0.2.1",
+          "channel": "stable",
+          "yanked": false,
+          "arch": "armv7",
+          "max_glibc": "2.29",
+          "os_compat": [
+            "3.x"
+          ],
+          "tested": [],
+          "warnings": [
+            "Q-Link redraw fix; automated host and package tests passed. Physical Force/MPC validation pending."
+          ]
+        },
         {
           "version": "0.2.0",
           "size": 1631661,
@@ -3341,12 +3358,12 @@
           "tested": []
         }
       ],
-      "latest": "0.2.0",
+      "latest": "0.2.1",
       "provenance": {
-        "source": "https://open-mpc.github.io/catalog.json",
+        "source": "https://raw.githubusercontent.com/MagicStino/Clif-Tape/7307765ffba9b8929508ea7b25ee212a106e4602/Clif-Tape-0.2.1-mpc-armv7.zip",
         "repository": "MagicStino/Clif-Tape",
         "hardware_verified_by_openplugin": false,
-        "validation": "metadata-validated"
+        "validation": "package-download-sha256-verified"
       },
       "download": true
     },
