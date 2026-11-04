@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "upstream": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+  "upstream": "https://open-mpc.github.io/catalog.json",
   "repositories": [
     "MagicStino/pulytek",
     "WorldLinkStudio/mpcsample",
