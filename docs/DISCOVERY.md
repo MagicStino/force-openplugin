@@ -19,7 +19,7 @@ A normal GitHub project, a Windows VST or a README alone is not installable.
 ## Where the data comes from
 
 The scheduled [catalog bridge](../tools/catalog_bridge.py) starts with
-https://sd88me.github.io/mpc-vst-plugins/catalog.json. It validates identities,
+https://open-mpc.github.io/catalog.json. It validates identities,
 HTTPS release URLs and checksum fields while preserving existing package
 metadata. The app reads our resulting
 https://magicstino.github.io/force-openplugin/catalog.json.
