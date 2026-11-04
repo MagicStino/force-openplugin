@@ -11,7 +11,7 @@ Run from the repository root. This refreshes metadata, not installed device plug
 
 - Use an up-to-date, clean checkout of `main`; inspect `git status --short` and `git pull --ff-only` first. Keep unrelated work out of the update.
 - Python 3 with its standard library; no extra Python packages are required for the bridge.
-- Network access to `sd88me.github.io`, `api.github.com`, and `raw.githubusercontent.com`.
+- Network access to `open-mpc.github.io`, `api.github.com`, and `raw.githubusercontent.com`.
 - Set `GITHUB_TOKEN` securely in the environment for GitHub repository discovery and authenticated API limits. Without it, search is skipped; upstream and configured repositories are still fetched. Never print or commit the token. Git push needs separately configured repository write credentials.
 - Coordinate with the scheduled workflow (every six hours) to avoid racing its commits.
 
