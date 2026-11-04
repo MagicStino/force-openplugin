@@ -67,7 +67,12 @@ def main():
             sha=entry['sha256'];thumb=fallback.copy()
             if sha:
                 file=(ROOT/entry['local_asset']) if entry.get('local_asset') else args.cache/sha
-                if not file.exists(): file.write_bytes(fetch(entry['screenshot']))
+                if not file.exists():
+                    # Local artwork may be absent in a clean Actions checkout.
+                    # Retrieve only the pinned source and verify its locked hash below.
+                    data=fetch(entry['screenshot'])
+                    file.parent.mkdir(parents=True,exist_ok=True)
+                    file.write_bytes(data)
                 data=file.read_bytes()
                 if hashlib.sha256(data).hexdigest()!=sha: raise SystemExit('Screenshot hash changed: '+entry['id']+'; review and update the lock explicitly')
                 with Image.open(io.BytesIO(data)) as image:
