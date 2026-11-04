@@ -1,0 +1,55 @@
+name: Refresh OpenPlugin thumbnail cache
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/refresh-previews.yml']
+permissions:
+  contents: read
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image tooling
+        run: python -m pip install 'Pillow>=10,<12'
+      - name: Validate and refresh upstream catalog
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python -m unittest discover -s tests -p test_catalog_bridge.py
+          python tools/catalog_bridge.py
+      - name: Refresh locked artwork and thumbnail index
+        run: |
+          python tools/build_previews.py --update-lock --output /tmp/openplugin-previews
+          python tools/build_previews.py --output /tmp/openplugin-previews-check
+          diff -qr /tmp/openplugin-previews /tmp/openplugin-previews-check
+      - name: Validate cache completeness and catalog identities
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          catalog=json.loads(Path('website/catalog.json').read_text())
+          lock=json.loads(Path('assets/previews.lock.json').read_text())
+          ids=[p['id'] for p in catalog['plugins']]
+          locked=[p['id'] for p in lock['entries']]
+          assert len(ids)==len(set(ids)), 'Duplicate catalog IDs'
+          assert sorted(ids)==locked, 'Thumbnail index/catalog mismatch'
+          assert Path('native/preview_index.h').exists()
+          print(f'{len(ids)} catalog entries; {sum(bool(e.get("sha256")) for e in lock["entries"])} locked screenshots')
+          PY
+      - name: Stage cache output for review
+        run: |
+          mkdir -p /tmp/openplugin-cache-artifact
+          cp assets/previews.lock.json native/preview_index.h /tmp/openplugin-cache-artifact/
+          cp -r /tmp/openplugin-previews /tmp/openplugin-cache-artifact/thumbnails
+          cp website/catalog.json /tmp/openplugin-cache-artifact/catalog.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openplugin-refreshed-thumbnail-cache
+          path: /tmp/openplugin-cache-artifact
+          retention-days: 14
