@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04T09:20:15+00:00",
+  "date": "2026-11-04T11:18:10+00:00",
   "source": "https://open-mpc.github.io/catalog.json",
   "plugins": [
     {
@@ -14922,6 +14922,23 @@
       "distribution": "release",
       "versions": [
         {
+          "url": "https://raw.githubusercontent.com/MagicStino/pulytek/78c5ec634398b52c45ef0a3e4320694cf7f2d7a3/PulyTek-1.0.3-mpc-armv7.zip",
+          "sha256": "f6a9c4ed9dae94bb159b0ef1fec22cc20f4d42364d4aae291634cbc8def02ee2",
+          "size": 21456354,
+          "version": "1.0.3",
+          "channel": "stable",
+          "yanked": false,
+          "arch": "armv7",
+          "os_compat": [
+            "2.x",
+            "3.x"
+          ],
+          "tested": [],
+          "warnings": [
+            "Q-Link redraw fix; automated host and package tests passed. Physical Force/MPC validation pending."
+          ]
+        },
+        {
           "url": "https://raw.githubusercontent.com/MagicStino/pulytek/a35bc1e2fcd589fa3888e53f24e19ce60b62d862/PulyTek-1.0.2-mpc-armv7.zip",
           "sha256": "956dcf66aa1b2c9e7089d34a60384559c8d62346f92210efe62c8a0cacd02414",
           "size": 15631647,
@@ -14940,9 +14957,9 @@
           ]
         }
       ],
-      "latest": "1.0.2",
+      "latest": "1.0.3",
       "provenance": {
-        "source": "https://raw.githubusercontent.com/MagicStino/pulytek/a35bc1e2fcd589fa3888e53f24e19ce60b62d862/PulyTek-1.0.2-mpc-armv7.zip",
+        "source": "https://raw.githubusercontent.com/MagicStino/pulytek/78c5ec634398b52c45ef0a3e4320694cf7f2d7a3/PulyTek-1.0.3-mpc-armv7.zip",
         "repository": "MagicStino/pulytek",
         "hardware_verified_by_openplugin": false,
         "validation": "package-download-sha256-verified"
@@ -16853,6 +16870,22 @@
       "distribution": "release",
       "versions": [
         {
+          "url": "https://raw.githubusercontent.com/MagicStino/TinyFreaky/2c814f1070fb2423b917a5cf47c74cc4c07f0269/Tinyfreaky-0.4.2-mpc-armv7.zip",
+          "sha256": "01fe68dacb0956f5901d12974301c8ef4c6debb4596b914e1ccc6a7ade7bbdce",
+          "size": 5258173,
+          "version": "0.4.2",
+          "channel": "stable",
+          "yanked": false,
+          "arch": "armv7",
+          "os_compat": [
+            "3.x"
+          ],
+          "tested": [],
+          "warnings": [
+            "Q-Link redraw fix; automated host and package tests passed. Physical Force/MPC validation pending."
+          ]
+        },
+        {
           "url": "https://raw.githubusercontent.com/MagicStino/TinyFreaky/3ee3aee34d152ebcbd6cefd69f474693932e71a9/Tinyfreaky-0.4.1-mpc-armv7.zip",
           "sha256": "10521004c9a77414e1d309561b3e916c005f3c196a52fe3d1a1e9f90c434a1af",
           "size": 5256510,
@@ -16869,9 +16902,9 @@
           ]
         }
       ],
-      "latest": "0.4.1",
+      "latest": "0.4.2",
       "provenance": {
-        "source": "https://raw.githubusercontent.com/MagicStino/TinyFreaky/3ee3aee34d152ebcbd6cefd69f474693932e71a9/Tinyfreaky-0.4.1-mpc-armv7.zip",
+        "source": "https://raw.githubusercontent.com/MagicStino/TinyFreaky/2c814f1070fb2423b917a5cf47c74cc4c07f0269/Tinyfreaky-0.4.2-mpc-armv7.zip",
         "repository": "MagicStino/TinyFreaky",
         "hardware_verified_by_openplugin": false,
         "validation": "package-download-sha256-verified"
