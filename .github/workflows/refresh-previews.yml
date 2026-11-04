@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['.github/workflows/refresh-previews.yml']
+    paths: ['.github/workflows/refresh-previews.yml', 'tools/build_previews.py']
 permissions:
   contents: read
 jobs:
