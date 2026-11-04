@@ -13,7 +13,7 @@ def https(url,hosts=None):
  except (TypeError,ValueError):return False
 
 def read_json(url):
- if not https(url,{'api.github.com','raw.githubusercontent.com','sd88me.github.io'}):raise ValueError('Unapproved metadata host')
+ if not https(url,{'api.github.com','raw.githubusercontent.com','open-mpc.github.io'}):raise ValueError('Unapproved metadata host')
  headers={'User-Agent':'OpenPlugin-Research-catalog-bridge/1','Accept':'application/vnd.github+json'}
  token=os.environ.get('GITHUB_TOKEN')
  if token and urllib.parse.urlsplit(url).hostname=='api.github.com':headers['Authorization']='Bearer '+token
