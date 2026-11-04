@@ -34,7 +34,13 @@ jobs:
           git add website/catalog.json website/assets/catalog.json website/discovery.json
           if ! git diff --cached --quiet; then
             git commit -m 'Refresh validated community catalog and documentation cards'
-            git push origin HEAD:main
+            # Scheduled/push runs can overlap with newer commits. Retry without force-pushing.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then break; fi
+            if [ "$attempt" -eq 3 ]; then echo 'Concurrent update: retry exhausted'; exit 1; fi
+            git fetch origin main
+            git rebase origin/main
+          done
           fi
       # Publish one artifact, avoiding competing branch and Actions deployments.
       - name: Upload Pages artifact
