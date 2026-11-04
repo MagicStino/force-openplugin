@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "bridge_schema": "openplugin.catalog/1",
-  "generated": "2026-11-04T06:38:19+00:00",
-  "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+  "generated": "2026-11-04T09:20:15+00:00",
+  "source": "https://open-mpc.github.io/catalog.json",
   "plugins": [
     {
       "id": "tr-6w6",
@@ -164,7 +164,7 @@
       ],
       "latest": "1.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -330,7 +330,7 @@
       ],
       "latest": "1.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -496,7 +496,7 @@
       ],
       "latest": "1.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -745,7 +745,7 @@
       ],
       "latest": "2.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-acid",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -830,7 +830,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-acid303",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -888,7 +888,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -945,7 +945,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1002,7 +1002,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1060,7 +1060,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1104,7 +1104,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1148,7 +1148,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1192,7 +1192,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1236,7 +1236,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1280,7 +1280,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1324,7 +1324,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1368,7 +1368,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1412,7 +1412,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1456,7 +1456,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1500,7 +1500,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1544,7 +1544,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1602,7 +1602,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1660,7 +1660,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1718,7 +1718,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1775,7 +1775,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1832,7 +1832,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1890,7 +1890,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -1948,7 +1948,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2006,7 +2006,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2063,7 +2063,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2121,7 +2121,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2179,7 +2179,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2236,7 +2236,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2294,7 +2294,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2352,7 +2352,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2410,7 +2410,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2467,7 +2467,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2525,7 +2525,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2582,7 +2582,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-airwindows",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2667,7 +2667,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-aphex",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2746,7 +2746,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-boris",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2801,7 +2801,7 @@
       ],
       "latest": "0.25.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Shrekage2024/cadenza-force",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -2886,7 +2886,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-chordism",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3040,7 +3040,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-vst-chordsmith",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3258,7 +3258,7 @@
       ],
       "latest": "0.9.7",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-clementineXT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3301,7 +3301,7 @@
       ],
       "latest": "0.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "MagicStino/Clif-Tape",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3350,7 +3350,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3685,7 +3685,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-cratedigger",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3851,7 +3851,7 @@
       ],
       "latest": "1.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3900,7 +3900,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -3981,7 +3981,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-daemon",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4054,7 +4054,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-daemon",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4103,7 +4103,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4152,7 +4152,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4237,7 +4237,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-denis",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4399,7 +4399,7 @@
       ],
       "latest": "1.0.7",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-dx7",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4448,7 +4448,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4479,7 +4479,7 @@
       "versions": [],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/dinxxl",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -4528,7 +4528,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4583,7 +4583,7 @@
       ],
       "latest": "1.3.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-early-reflections",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4664,7 +4664,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-hall",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4745,7 +4745,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-plate",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4826,7 +4826,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-dragonfly-room",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4884,7 +4884,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "padbangers/drips",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -4952,7 +4952,7 @@
       ],
       "latest": "0.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/DrLogueXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5001,7 +5001,7 @@
       ],
       "latest": "0.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/DroneXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5086,7 +5086,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-drum-map",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5135,7 +5135,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5184,7 +5184,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5277,7 +5277,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-dual-slope",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5353,7 +5353,7 @@
       ],
       "latest": "2.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "no3z/mpc-dubsiren",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5471,7 +5471,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-dub-station",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5522,7 +5522,7 @@
       ],
       "latest": "0.0.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Devko/EffectWerk",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5588,7 +5588,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-eucalypso",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5829,7 +5829,7 @@
       ],
       "latest": "1.0.8",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-euclidier",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -5923,7 +5923,7 @@
       ],
       "latest": "0.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/Evil-Tuner-XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6007,7 +6007,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-fizzik",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6056,7 +6056,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6108,7 +6108,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "macdigi/force-link-audio",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6205,7 +6205,7 @@
       ],
       "latest": "0.8.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/fretty-mpc",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6312,7 +6312,7 @@
       ],
       "latest": "0.1.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/GAIAXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6358,7 +6358,7 @@
       ],
       "latest": null,
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "carballocba/MPC-EURO-",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6389,7 +6389,7 @@
       "versions": [],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "FullPace/glass-spheres",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -6438,7 +6438,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6542,7 +6542,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-groovebank",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6627,7 +6627,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-hank",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6675,7 +6675,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Lewinator56/mpc-vst-helm",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6804,7 +6804,7 @@
       ],
       "latest": "1.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-hera",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6866,7 +6866,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Eurikon/mpc-vst-plugins",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -6965,7 +6965,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-incipience",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7061,7 +7061,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-incipience",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7174,7 +7174,7 @@
       ],
       "latest": "0.1.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/InterzoneXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7255,7 +7255,7 @@
       ],
       "latest": "0.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-jn106",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7385,7 +7385,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-vst-keyscope",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7471,7 +7471,7 @@
       ],
       "latest": "0.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/BUSTEDXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7559,7 +7559,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-amp",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7703,7 +7703,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-liminal-hz",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7805,7 +7805,7 @@
       ],
       "latest": "0.1.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/Loop-SaboteurXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -7911,7 +7911,7 @@
       ],
       "latest": "0.9.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-luckydip",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8147,7 +8147,7 @@
       ],
       "latest": "0.6.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/LXR02XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8386,7 +8386,7 @@
       ],
       "latest": "0.2.10",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/LXRXXL-BAZZLINE",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8505,7 +8505,7 @@
       ],
       "latest": "0.2.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/LXRXXL-ZYNTH",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8539,7 +8539,7 @@
       "versions": [],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -8641,7 +8641,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8736,7 +8736,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-machinedrum",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8800,7 +8800,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-macro-osc",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -8889,7 +8889,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mmiroshnikov/mpc-maschine-group",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9140,7 +9140,7 @@
       ],
       "latest": "1.0.7",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9328,7 +9328,7 @@
       ],
       "latest": "1.0.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-maze",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9398,7 +9398,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mcardonaserrano/meowsynth-mpc",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9483,7 +9483,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-meta-mod",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9551,7 +9551,7 @@
       ],
       "latest": "0.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/Meta4MPCXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9618,7 +9618,7 @@
       ],
       "latest": "0.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/Meta4MPCXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9703,7 +9703,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-midiplayer",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9873,7 +9873,7 @@
       ],
       "latest": "1.0.9",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-jv880",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -9957,7 +9957,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-modal-voice",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10044,7 +10044,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-model72",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10128,7 +10128,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-monksynth",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10213,7 +10213,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-monovoice",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10308,7 +10308,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10403,7 +10403,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10443,7 +10443,7 @@
       "versions": [],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-monomodule",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -10505,7 +10505,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Eurikon/mpc-vst-plugins",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10608,7 +10608,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-morpho-PE",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -10744,7 +10744,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-addin-commander",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11008,7 +11008,7 @@
       ],
       "latest": "3.1.4",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mitchoster/mpc-vst-djfx2",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11102,7 +11102,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-addin-filebrowser",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11178,7 +11178,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mitchoster/mpc-vst-multihead-echo",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11264,7 +11264,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "poloq-instruments/mpc-vst-plaits",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11418,7 +11418,7 @@
       ],
       "latest": "1.0.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-addin-remote",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11517,7 +11517,7 @@
       ],
       "latest": "0.6.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-addin-skipback",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11691,7 +11691,7 @@
       ],
       "latest": "1.2.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "mitchoster/mpc-vst-tape-echo",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11853,7 +11853,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-addin-usb-audio",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -11937,7 +11937,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-mrdrums",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12041,7 +12041,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-mrhyde",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12133,7 +12133,7 @@
       ],
       "latest": "0.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/MS20XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12246,7 +12246,7 @@
       ],
       "latest": "0.9.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-mutable-vibe",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12414,7 +12414,7 @@
       ],
       "latest": "1.0.9",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-vst-nam",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12463,7 +12463,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12548,7 +12548,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-noisemaker",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12633,7 +12633,7 @@
       ],
       "latest": "1.0.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-nusaw",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12718,7 +12718,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-obxd",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12804,7 +12804,7 @@
       ],
       "latest": "0.4.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/OB-XD-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -12887,7 +12887,7 @@
       ],
       "latest": "1.4.4",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Odin2-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13062,7 +13062,7 @@
       ],
       "latest": "1.8.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "B0ss-M/MrHighMan",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13091,7 +13091,7 @@
       "versions": [],
       "latest": "0.2.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-plugins",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -13182,7 +13182,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-open303",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13358,7 +13358,7 @@
       ],
       "latest": "0.2.10",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-osirus",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13438,7 +13438,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-OTT",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13469,7 +13469,7 @@
       "versions": [],
       "latest": "1.0.6",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "FullPace/overcast",
         "hardware_verified_by_openplugin": false,
         "validation": "listed-only"
@@ -13643,7 +13643,7 @@
       ],
       "latest": "2.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13739,7 +13739,7 @@
       ],
       "latest": "2.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-percolator",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13787,7 +13787,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13836,7 +13836,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -13994,7 +13994,7 @@
       ],
       "latest": "0.1.6",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/PhyXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14079,7 +14079,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-pixelwalkers",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14173,7 +14173,7 @@
       ],
       "latest": "0.4.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/PlateauXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14221,7 +14221,7 @@
       ],
       "latest": "0.0.6",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Devko/PolyWerk",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14295,7 +14295,7 @@
       ],
       "latest": "0.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/PrLogueXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14440,7 +14440,7 @@
       ],
       "latest": "0.1.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-profit8",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14576,7 +14576,7 @@
       ],
       "latest": "0.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-profit5",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14685,7 +14685,7 @@
       ],
       "latest": "0.1.5",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/PS3100XXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14734,7 +14734,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14830,7 +14830,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -14921,7 +14921,7 @@
       ],
       "latest": "1.3.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-raffosynth",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15005,7 +15005,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-resonator",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15089,7 +15089,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-resonator-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15257,7 +15257,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/RMXXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15368,7 +15368,7 @@
       ],
       "latest": "0.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "SamplingHigh/mpc-vst-setbfree",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15473,7 +15473,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "gmorb/mpc-vst-sfizz",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15540,7 +15540,7 @@
       ],
       "latest": "1.0.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Shapey-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15607,7 +15607,7 @@
       ],
       "latest": "1.6.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Shapey-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15706,7 +15706,7 @@
       ],
       "latest": "0.3.12",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Sonix",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15754,7 +15754,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15895,7 +15895,7 @@
       ],
       "latest": "1.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "djokenzi/steprunner-8",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -15999,7 +15999,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16104,7 +16104,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-stevequencer16",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16162,7 +16162,7 @@
       ],
       "latest": null,
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-vst-stompbox",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16215,7 +16215,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "stampman3000-jpg/mpc-stream",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16264,7 +16264,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16369,7 +16369,7 @@
       ],
       "latest": "0.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-sturm",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16417,7 +16417,7 @@
       ],
       "latest": "0.0.10",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Devko/SubWerk",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16502,7 +16502,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-superarp",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16559,7 +16559,7 @@
       ],
       "latest": "0.2.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/SurgeXXL",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16643,7 +16643,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-tablor",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16815,7 +16815,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16910,7 +16910,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-TR-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -16982,7 +16982,7 @@
       ],
       "latest": "1.1.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "stampman3000-jpg/mpc-tributary",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17053,7 +17053,7 @@
       ],
       "latest": "0.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Tropix",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17109,7 +17109,7 @@
       ],
       "latest": null,
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "jacob-sabella/mpc-vst-tuner",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17176,7 +17176,7 @@
       ],
       "latest": "1.4.3",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "3dthc/Tuney-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17414,7 +17414,7 @@
       ],
       "latest": "0.6.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sunskiefer/VADER",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17518,7 +17518,7 @@
       ],
       "latest": "1.2.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-verglas",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17590,7 +17590,7 @@
       ],
       "latest": "1.0.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "nachtaktiv303/mpc-vst-vibe-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17638,7 +17638,7 @@
       ],
       "latest": "0.4.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "Bombest-Audio/op1-fx",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17723,7 +17723,7 @@
       ],
       "latest": "1.1.1",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "saustin2010/mpc-vst-wurl",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17804,7 +17804,7 @@
       ],
       "latest": "0.1.2",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "sd88me/mpc-vst-xenia",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
@@ -17849,7 +17849,7 @@
       ],
       "latest": "1.3.0",
       "provenance": {
-        "source": "https://sd88me.github.io/mpc-vst-plugins/catalog.json",
+        "source": "https://open-mpc.github.io/catalog.json",
         "repository": "timomacquis/piClideaN16-MPC",
         "hardware_verified_by_openplugin": false,
         "validation": "metadata-validated"
