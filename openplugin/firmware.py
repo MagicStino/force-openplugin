@@ -7,8 +7,8 @@ import subprocess
 import tempfile
 from .az01 import extract, pack, parse
 
-VERSION = '0.8.1-rc2'
-CONTAINER_VERSION = '3.9.1-openplugin-v0.8.1-rc2'
+VERSION = '0.8.3'
+CONTAINER_VERSION = '3.10.0-openplugin-v0.8.3'
 EPOCH = 1791417600  # 2026-10-08 00:00 UTC, metadata only
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -31,6 +31,8 @@ def build(image, device, payload, output):
         raise ValueError('Input does not match the pinned stock image for this device')
     info, rootfs = extract(source)
     info.pop('compressed')
+    if info['boards'] != locks[device]['boards'] or info['devices'] != locks[device]['devices']:
+        raise ValueError('Stock image device metadata mismatch')
     del source
     if not (payload / 'usr/share/openplugin/VERSION').is_file():
         raise ValueError('Native payload missing: run tools/build_native.py first')

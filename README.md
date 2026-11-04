@@ -2,7 +2,7 @@
 
 Browse, install and update **community VST plugins on Akai Force 3.10.0 and MPC Gen1**, directly from the touchscreen. OpenPlugin also brings combined JV-880 ROM/plugin setup, community USB mouse support and SSH/SFTP file transfers.
 
-Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
+Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/open-mpc/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
 **[OpenPlugin 0.8.3 build information and USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
 
@@ -26,6 +26,14 @@ Only compatible ARMv7 community packages can be installed. General web pages, de
 
 For existing 3.10.0 users, a same-version update prompt is expected: the original application remains **3.10.0.49**. See the [USB guide](docs/DOWNLOADS.md).
 
+## Local Open MPC migration candidates
+
+The local 4 November 2026 work restores the complete 3.10.0 build source,
+refreshes 200 catalog entries and 195 locked images, and blocks Gen2/AArch64
+packages in both the bridge and native manager. These candidates are distinct
+from the published 0.8.3 images and still require hardware acceptance.
+See [local build details](docs/LOCAL-BUILD-2026-11-04.md).
+
 ## Build from original firmware
 
 Linux prerequisites: Python 3.12+, git, gcc, e2fsprogs, binutils, OpenSSH tools,
@@ -36,7 +44,9 @@ Their exact SHA256 checksums are recorded in [inputs.json](inputs.json).
 They are not stored in Git; use those supplied local files, or matching original
 copies. Other firmware versions are rejected; renaming them does not help.
 
-For this release, download and extract **OpenPlugin-0.8.2-source.zip** from the [0.8.2 release](https://github.com/MagicStino/force-openplugin/releases/tag/v0.8.3). This attached archive contains the complete build changes; GitHub's automatic source archives do not. Place the original images in a `firmware/` folder inside the extracted source, then run the commands below there.
+This checkout includes the 3.10.0 build code restored from the checksum-verified
+0.8.3 release source, together with the current Open MPC catalog integration.
+Place the original images in `firmware/`, or pass their existing absolute paths.
 
 Build **Force only**; no MPC image is required:
 
@@ -95,7 +105,7 @@ Existing component licenses apply; see [NOTICE](native/NOTICE.md).
 
 Mouse source: [no3z, Amit Talwar and bonsaipanda](https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares). Image decoding: [stb](https://github.com/nothings/stb). Pinned sources and licenses are preserved in `native/`.
 
-**sd88me**: [MPC VST Plugins](https://github.com/sd88me/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
+**sd88me**: [MPC VST Plugins](https://github.com/open-mpc/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
 
 **poloq-instruments**: [Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager), the native manager foundation, including existing device-side installation. Our additions integrate it into the firmware, add illustrated cards/search improvements, a scheduled catalog bridge, saved-catalog fallback and combined JV setup.
 

@@ -103,6 +103,8 @@ def customize(vst):
         remote['params'].append(dict(key=key,name=key,type='readout',display='string'))
     for key in ['remote_enable','remote_disable','remote_show']:
         remote['params'].append(dict(key=key,name=key,type='trigger',momentary=True))
+    from live_preview_skin import add_ready_parameters
+    add_ready_parameters(remote)
     (vst/'params.json').write_text(json.dumps(remote,indent=2)+'\n')
     art('remote.svg',1280,628,'<rect width="1280" height="628" fill="#0c0c0d"/>'+text(32,70,'REMOTE ACCESS',38)+text(32,116,'SSH / SFTP',24)+text(32,160,'Connect using the IP below, port 22.',23)+text(32,205,'Login: root / mpc. Disable saves your choice across reboots.',23))
     lines=['\n[tab REMOTE ACCESS]','art file=images/remote.svg']
@@ -112,3 +114,12 @@ def customize(vst):
         button(key+'.svg',label,w,56,font=24)
         lines.append(f'button cx={x} cy=620 label="" key={key} img=images/{key}.svg w={w} h=56')
     with (vst/'layout.conf').open('a') as f:f.write('\n'.join(lines)+'\n')
+
+    # Larger touch targets and one-point text increase on the catalog/install view.
+    layout_path = vst/'layout.conf'
+    sections = layout_path.read_text().split('[tab FIND]', 1)
+    catalog = re.sub(r'tsize=(\d+)', lambda m: f'tsize={int(m[1])+1}', sections[0])
+    catalog = catalog.replace('cx=46 cy=678', 'cx=48 cy=676').replace('cx=166 cy=678', 'cx=176 cy=676')
+    catalog = catalog.replace('cx=106 cy=678', 'cx=112 cy=676')
+    catalog = '\n'.join(line.replace('w=44 h=44', 'w=64 h=64') if 'key=page_' in line else line for line in catalog.split('\n'))
+    layout_path.write_text(catalog + '[tab FIND]' + sections[1])

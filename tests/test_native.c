@@ -107,6 +107,7 @@ int main(void) {
     description_line("A short description",1,description,sizeof description);assert(!description[0]);
     description_line("",0,description,sizeof description);assert(strstr(description,"No description"));
     assert(preview_frame("unrecognized-new-package")==1);
+    assert(preview_frame("magic-tape-echo") > 1);
     for(unsigned i=0;i<sizeof preview_ids/sizeof *preview_ids;i++)assert(preview_frame(preview_ids[i])==(int)i+2);
     puts("native offline tests: PASS");
     return 0;

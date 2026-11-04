@@ -3,6 +3,27 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('bridge',Path(__file__).resolve().parents[1]/'tools/catalog_bridge.py');b=importlib.util.module_from_spec(spec);spec.loader.exec_module(b)
 class BridgeTests(unittest.TestCase):
  def setUp(self):self.m=json.loads((b.ROOT/'catalog/example.openplugin.json').read_text())
+ def test_open_mpc_migration_retains_plugin_identity_and_downloads(self):
+  from unittest.mock import patch, MagicMock
+  cfg=json.loads((b.ROOT/'catalog/sources.json').read_text())
+  self.assertEqual(cfg['upstream'],'https://open-mpc.github.io/catalog.json')
+  source={'schema':1,'plugins':[{'id':'jv-880','name':'Mini-JV','repo':'sd88me/mpc-vst-jv880','kind':'instrument','screenshot':'https://raw.githubusercontent.com/sd88me/mpc-vst-jv880/main/image.png','versions':[{'version':'1.0.9','url':'https://github.com/sd88me/mpc-vst-jv880/releases/download/v1.0.9/plugin.zip','sha256':'a'*64,'size':42}]}]}
+  response=MagicMock();response.__enter__.return_value.read.return_value=json.dumps(source).encode()
+  opener=MagicMock();opener.open.return_value=response
+  with patch.object(b.urllib.request,'build_opener',return_value=opener):
+   fetched=b.read_json(cfg['upstream'])
+  plugin=b.normalize_plugin(fetched['plugins'][0],cfg['upstream'])
+  self.assertEqual(plugin['id'],'jv-880')
+  self.assertEqual(plugin['repo'],'sd88me/mpc-vst-jv880')
+  self.assertEqual(plugin['versions'][0]['sha256'],'a'*64)
+  self.assertEqual(plugin['provenance']['source'],cfg['upstream'])
+ def test_gen2_downloads_are_not_offered_to_gen1(self):
+  base={'id':'gen2','name':'Gen2','repo':'owner/repo','kind':'instrument','versions':[{'version':'1','url':'https://github.com/owner/repo/releases/download/v1/Plugin-mpc-aarch64.zip','sha256':'a'*64}]}
+  self.assertEqual(b.normalize_plugin(base,'fixture')['versions'],[])
+  base['versions'][0].update(url='https://github.com/owner/repo/releases/download/v1/plugin.zip',arch='aarch64')
+  self.assertEqual(b.normalize_plugin(base,'fixture')['versions'],[])
+  base['versions'][0].update(url='https://github.com/owner/repo/releases/download/gen2-test/Plugin-mpc-armv7.zip',arch='armv7')
+  self.assertEqual(len(b.normalize_plugin(base,'fixture')['versions']),1)
  def test_example(self):self.assertEqual(b.validate_manifest(self.m,self.m['repo'])['id'],'example-sampler')
  def test_identity_collision(self):
   with self.assertRaises(ValueError):b.validate_manifest(self.m,'other/repo')

@@ -11,7 +11,7 @@ lock=json.loads((root/'assets/previews.lock.json').read_text())['entries'];catal
 if a.plugin:
  catalog=sorted([p for p in catalog if any(x['id']==p['id'] for x in lock)],key=lambda p:(p['id']!=a.plugin,p['id']))
  assert any(p['id']==a.plugin for p in catalog)
-values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
+values={p['key']:0 for p in params};values.update({f'preview_live_{r}':1 for r in range(1,4)});values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
 if a.jv:catalog=sorted(catalog,key=lambda p:(p['id'] not in ('jv-880','dexed-dx7','dub-force-siren'),p['id']))[:3]
 for row,plugin in enumerate(catalog[:3],1):
  wrapped=textwrap.wrap(plugin.get('summary') or 'No description supplied by the author.',78)
@@ -52,7 +52,7 @@ def render(nodes,ox=0,oy=0,key=None,depth=0):
     frame=int(values[current]);fh=asset.height//info['numFrames'];asset=asset.crop((0,frame*fh,asset.width,(frame+1)*fh))
    assert asset.size==(w,h),(str(path),asset.size,(w,h))
    image.alpha_composite(asset,(x,y))
-   if any(names.get(h.split('/',3)[-1],'').endswith('_preview') for h in bounds.get('additionalInvalidatingHandles',[])):previews+=1
+   if comp.get('name')=='Bitmap thumbnail':previews+=1
   elif typ=='Button':
    asset=info['offImage'];image.alpha_composite(Image.open(skin/asset).convert('RGBA'),(x,y))
   elif typ=='Label':
@@ -71,4 +71,4 @@ assert Image.open(vst/'images/previews/preview_0.png').getbbox() is None
 assert len(list((vst/'images/previews').glob('*.png')))==len(lock)+2
 a.output.parent.mkdir(parents=True,exist_ok=True);image.convert('RGB').save(a.output)
 assert sum(p['key'].startswith('previewpx_') for p in params)==5400
-print('CATALOG: three live RGB444 thumbnails, indexed fallbacks, bounds and sample text PASS; simulated rendering only')
+print('CATALOG: three bitmap thumbnails, indexed fallbacks, bounds and sample text PASS; simulated rendering only')

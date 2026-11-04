@@ -92,6 +92,11 @@ static int preview_save(const char *path,const unsigned char *rgba) {
 }
 static void preview_request_locked(mgr_t *m) {
     if(!m->preview_enabled)return;
+    /* Clear only rows whose identity changes; same-tab echoes never reach here. */
+    int idx[MAXPKG],n=visible(m,idx),changed=0;
+    for(int row=0;row<ROWS;row++){int k=m->page*ROWS+row;const char*id=k<n?m->pkg[idx[k]].id:"";
+        if(strcmp(id,m->preview_row_id[row])){m->preview_row_id[row][0]=0;for(int p=0;p<PREVIEW_PIXELS;p++)m->preview_pixels[row][p]=0x111;changed=1;}}
+    if(changed)m->preview_revision++;
     m->preview_generation++;m->preview_pending=1;
     if(!m->busy && !m->job){m->job=J_PREVIEW;m->preview_pending=0;pthread_cond_signal(&m->cv);}
 }
@@ -122,9 +127,16 @@ static void preview_publish(mgr_t *m,unsigned generation,int row,const char *id,
        (strcmp(m->preview_row_id[row],id) || memcmp(m->preview_pixels[row],pixels,sizeof pixels))) {
         memcpy(m->preview_pixels[row],pixels,sizeof pixels);
         snprintf(m->preview_row_id[row],sizeof m->preview_row_id[row],"%s",id);
-        m->rev++;
+        m->preview_revision++;
     }
     pthread_mutex_unlock(&m->mu);
+}
+/* One bounded nonblocking copy replaces thousands of string/mutex reads. */
+int openplugin_preview_snapshot(void*inst,unsigned*revision,uint16_t*pixels,int count,char ids[ROWS][48]){
+    mgr_t*m=inst;if(count!=ROWS*PREVIEW_PIXELS||pthread_mutex_trylock(&m->mu))return 0;
+    if(*revision==m->preview_revision){pthread_mutex_unlock(&m->mu);return 0;}
+    memcpy(pixels,m->preview_pixels,sizeof m->preview_pixels);memcpy(ids,m->preview_row_id,sizeof m->preview_row_id);*revision=m->preview_revision;
+    pthread_mutex_unlock(&m->mu);return 1;
 }
 static void preview_refresh(mgr_t *m) {
     pkg_t rows[ROWS];memset(rows,0,sizeof rows);int online;unsigned generation;
@@ -139,17 +151,16 @@ static void preview_refresh(mgr_t *m) {
     for(int r=0;r<ROWS;r++) {
         if(!preview_current(m,generation))return;
         char file[768];unsigned char *rgba=NULL;pkg_t *p=&rows[r];
-        if(preview_id_ok(p->id)) {
+        if(preview_id_ok(p->id) && preview_frame(p->id)==1) {
             snprintf(file,sizeof file,PREVIEW_DIR "/%s.png",p->id);rgba=preview_read(file);
             if(!rgba){snprintf(file,sizeof file,BUNDLED_PREVIEW_DIR "/%s.png",p->id);rgba=preview_read(file);}
         }
-        if(!rgba)rgba=preview_read(BUNDLED_PREVIEW_DIR "/fallback.png");
-        preview_publish(m,generation,r,p->id,rgba);free(rgba);
+        preview_publish(m,generation,r,rgba?p->id:"",rgba);free(rgba);
     }
     for(int r=0;r<ROWS;r++) {
         pkg_t *p=&rows[r];
         if(!preview_current(m,generation))return;
-        if(!online || !preview_id_ok(p->id) || !p->screenshot[0] || p->preview_checked)continue;
+        if(preview_frame(p->id)>1 || !online || !preview_id_ok(p->id) || !p->screenshot[0] || p->preview_checked)continue;
         sink_t s={0};unsigned char *rgba=NULL;
         if(preview_fetch(m,p->screenshot,&s))rgba=preview_decode((unsigned char*)s.buf,s.len);
         free(s.buf);

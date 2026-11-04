@@ -4,7 +4,7 @@ OpenPlugin 0.8 RC1 targets the exact stock 3.9.1 inputs recorded in `inputs.json
 
 The builder injects the native manager, skin, helpers, services and notices through debugfs without mounting the filesystem. It sets deterministic metadata, verifies injected files and symlinks, checks the filesystem read-only, and recompresses it. Input images are preserved. A successful build does not prove flashing or boot safety.
 
-The manager extends [poloq’s native Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) using [sd88me’s wrapper and tooling](https://github.com/sd88me/mpc-vst-plugins). Additions include FIND search, saved catalogs, source scanning, combined JV setup and the background preview cache. Installation uses detached systemd jobs; systemd-run is required. Component licenses and font notices ship in the payload.
+The manager extends [poloq’s native Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) using [sd88me’s wrapper and tooling](https://github.com/open-mpc/mpc-vst-plugins). Additions include FIND search, saved catalogs, source scanning, combined JV setup and the background preview cache. Installation uses detached systemd jobs; systemd-run is required. Component licenses and font notices ship in the payload.
 
 The registration service runs before the application, requires an existing user profile, refuses to edit while MPC runs, and invokes the pinned settings-backup/validation tool. Remote access uses device-generated SSH host keys; the default build offers the REMOTE ACCESS controls, while an optional owner public-key build has a separate SSH service. No private owner key or shared host key is shipped. See [SSH.md](SSH.md).
 
