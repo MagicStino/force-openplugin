@@ -10,11 +10,17 @@ Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst
 
 **Release status:** The current Tracks16 build is available in the [downloads](docs/DOWNLOADS.md). Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
 
-![OpenPlugin Manager on the owner’s Force](website/assets/manager-0.9/catalog.png)
+[![Browse community VST plugins and install in a breeze — OpenPlugin Manager with sorting and filter controls](website/assets/repo-banner-0.9.png)](https://magicstino.github.io/force-openplugin/)
+
+### Find your next plugin
+
+Search by name or keyword, filter the catalog, and sort by A–Z, Newest, Oldest or Popular.
+
+![FIND screen on the owner’s Force, showing the search field and Filter catalog button](website/assets/manager-0.9/find.png)
 
 ## OpenPlugin Manager 0.9.0 — 6 November 2026
 
-The new Force candidate includes fast PNG browsing, sorting, managed drive moves, skin repair and an ABOUT page. The manager has been exercised on the owner’s Force; the newly built full image still requires flash/boot acceptance. [What changed](docs/RELEASE-0.9.0.md).
+The new Force candidate includes fast PNG browsing, sorting, managed drive moves, skin repair and an ABOUT page. The manager has been exercised on the owner’s Force; the 0.9.0 image has now flashed and booted successfully, with ABOUT confirmed on the device. Storage across reboot, audio and track-limit checks on this image remain pending. [What changed](docs/RELEASE-0.9.0.md).
 
 ## Tracks16 release — 5 November 2026
 
@@ -29,7 +35,7 @@ The current complete images include **16 audio + 16 plugin tracks**, alongside P
 - Sort A–Z, Z–A, Newest, Oldest or Popular; jump and refine by alphabet with matching paginator pages.
 - Move eligible managed plugins from Internal to SSD/USB/SD and back, verify before cleanup, and keep missing-drive recovery guidance visible.
 - Repair skin registrations automatically after installs or manually in STORAGE.
-- Read the version and GitHub manual links in ABOUT.
+- Read the version, repository link and community credits in ABOUT.
 - Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
 - Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
 - Transfer samples and files using **REMOTE ACCESS** SSH/SFTP controls. See the [connection guide](docs/SSH.md) for setup and test limits.

@@ -13,7 +13,7 @@ Discover and install community plugins directly on your Akai Force touchscreen w
 - Keep remote access enabled or disabled across restarts, with connection details on screen.
 - Find the version, manual, source and community credits in ABOUT.
 
-The new Force image retains 16 audio + 16 plugin tracks (Tracks16) and adds permanent startup support for moved plugins. This is a build preview: the complete image still needs flash, boot and reboot acceptance before it is presented as hardware-tested.
+The new Force image retains 16 audio + 16 plugin tracks (Tracks16) and adds permanent startup support for moved plugins. The 0.9.0 image has flashed and booted on the owner’s Force, and the manager’s ABOUT screen is confirmed. Storage across reboot, audio and track-limit acceptance on this exact image remain pending.
 
 Original VST-method credit: NoQuestion and dustyslices, documented in the MPC-Forums proof-of-concept discussion in September 2026.
 

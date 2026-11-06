@@ -24,7 +24,7 @@ footer{{position:absolute;left:50px;right:50px;bottom:35px;border-top:1px solid 
 </style><div class="canvas"><div class="brand">MagicStino / OPENPLUGIN 0.9</div><div class="compat">OPENPLUGIN MANAGER · AKAI FORCE</div>
 <div class="copy"><h1>Browse community<br>VST plugins and install<br>in a breeze</h1><p class="lead">16 audio tracks + 16 plugin tracks.</p>
 <div class="features">A–Z · Newest · Oldest · Popular<br>Move eligible plugins: Internal ↔ SSD<br>Repair plugin skins · SSH / SFTP<br>Fast PNG browsing</div></div>
-<figure class="photo"><img src="{photo}" alt="OpenPlugin running on a real Force"><figcaption>Actual screen on the owner’s Force.<br>Full-image hardware acceptance pending.</figcaption></figure>
+<figure class="photo"><img src="{photo}" alt="OpenPlugin running on a real Force"><figcaption>Actual screen on the owner’s Force.<br>0.9.0 boot confirmed; further testing ongoing.</figcaption></figure>
 <footer><span>magicstino.github.io/force-openplugin</span><span>Independent community firmware</span></footer></div></html>'''
 
 

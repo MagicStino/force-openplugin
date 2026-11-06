@@ -6,7 +6,9 @@
     "install": "openplugin-manager-install-activated-2026-11-06.png",
     "find": "openplugin-manager-filter-screen-2026-11-06.png",
     "remote": "openplugin-manager-ssh-screen-2026-11-06.png",
-    "storage": "openplugin-manager-storage-pending-before-2026-11-06.png"
+    "storage": "openplugin-manager-storage-pending-before-2026-11-06.png",
+    "about": "about-force-after-flash.png"
   },
-  "storage_note": "Captured before final pending-operation explanation; illustrates the Storage drive rows and move/repair controls."
+  "storage_note": "Captured before final pending-operation explanation; illustrates the Storage drive rows and move/repair controls.",
+  "about_note": "Real Force capture after successful 0.9.0 flash and boot."
 }

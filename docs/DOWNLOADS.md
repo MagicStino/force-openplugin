@@ -2,7 +2,7 @@
 
 ## OpenPlugin 0.9.0 — new Force candidate
 
-The new Force-only candidate is `Force-3.10.0-openplugin-v0.9.0-update.img`. It includes Manager 0.9.0, managed SSD/removable storage, skin repair, About/manual links, SSH/SFTP and Tracks16. The complete new image requires flash/boot acceptance; do not assume older image testing covers these new bytes.
+The new Force-only candidate is `Force-3.10.0-openplugin-v0.9.0-update.img`. It includes Manager 0.9.0, managed SSD/removable storage, skin repair, About/manual links, SSH/SFTP and Tracks16. The new image has flashed and booted on the owner’s Force, with Manager 0.9.0 and its ABOUT skin confirmed. Storage across reboot, audio and track-limit acceptance on this exact image remain pending.
 
 [0.9.0 release notes](RELEASE-0.9.0.md) · [User manual](GUIDE.md). The previously published images below remain available while the candidate is validated. No new MPC Gen1 image was built for this release.
 

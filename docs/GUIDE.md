@@ -6,7 +6,7 @@ OpenPlugin Manager **0.9.0** for Akai Force, built on firmware 3.10.0.
 
 ## Open the manager
 
-Create a plugin track and choose **PLUGINS → VST → OpenPlugin Manager**. Its leading space keeps it near the top of the list. The ABOUT tab shows the version and manual links.
+Create a plugin track and choose **PLUGINS → VST → OpenPlugin Manager**. Its leading space keeps it near the top of the list. The ABOUT tab shows the version, repository link and community credits. The repository links to this manual.
 
 ## Find the right plugin
 
@@ -60,6 +60,8 @@ Choose **Repair plugin skins** in Storage if a plugin opens without its intended
 REMOTE ACCESS shows the IP address, port and login hint. The shared-password build uses username **root**, password **mpc**, port **22**. Choose SFTP in a file-transfer app. Enable/disable is stored across restarts. Use a trusted network. The full-image persistence path remains part of release acceptance testing.
 
 ## About, support and credits
+
+![ABOUT on the Force after flashing 0.9.0](../website/assets/manager-0.9/about.png)
 
 **NoQuestion & dustyslices**: first documented the VST method in the MPC-Forums thread [“Proof of Concept: Custom Standalone Plugins”](https://www.mpc-forums.com/viewtopic.php?f=41&t=220981) (September 2026), as credited by [Open MPC](https://github.com/open-mpc/mpc-vst-plugins#credits).
 
