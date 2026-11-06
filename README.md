@@ -8,7 +8,7 @@ Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
-**Release status:** The current Tracks16 build is available in the [downloads](docs/DOWNLOADS.md). Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
+**Release status:** The current OpenPlugin 0.9.0 images with Tracks16 are available in the [downloads](docs/DOWNLOADS.md). Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
 
 [![Browse community VST plugins and install in a breeze — OpenPlugin Manager with sorting and filter controls](website/assets/repo-banner-0.9.png)](https://magicstino.github.io/force-openplugin/)
 
@@ -20,7 +20,7 @@ Search by name or keyword, filter the catalog, and sort by A–Z, Newest, Oldest
 
 ## OpenPlugin Manager 0.9.0 — 6 November 2026
 
-The new Force candidate includes fast PNG browsing, sorting, managed drive moves, skin repair and an ABOUT page. The manager has been exercised on the owner’s Force; the 0.9.0 image has now flashed and booted successfully, with ABOUT confirmed on the device. Storage across reboot, audio and track-limit checks on this image remain pending. [What changed](docs/RELEASE-0.9.0.md).
+The Force and MPC Gen1 0.9.0 images include fast PNG browsing, sorting, managed drive moves, skin repair and an ABOUT page. The manager has been exercised on the owner’s Force; the 0.9.0 image has now flashed and booted successfully, with ABOUT confirmed on the device. Storage across reboot, audio and track-limit checks on this image remain pending. [What changed](docs/RELEASE-0.9.0.md).
 
 ## Tracks16 release — 5 November 2026
 

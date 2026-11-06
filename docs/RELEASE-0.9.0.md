@@ -15,7 +15,7 @@ A major manager update for Akai Force: quicker browsing, clearer controls and ma
 
 ## Release scope
 
-The new image targets **Force 3.10.0**. This release does not produce a new MPC Gen1 image. Keep the previously published MPC Gen1 download and its hardware-test limits separate.
+Complete **Force 3.10.0** and **MPC Gen1 3.10.0** images are included. The MPC Gen1 image passes software validation but has not been flashed or tested on MPC hardware. It is not for MPC Gen2.
 
 Owner testing confirmed the manager's fast startup, date sorting, restored skin/header and Internal ↔ SSD moves. Screenshots are genuine Force captures. The 0.9.0 image has now flashed and booted successfully on the owner’s Force; SSH reports version 0.9.0 and the real ABOUT screen confirms the manager and skin. Storage across reboot, audio and track-limit checks on this exact image remain pending. See the accompanying validation report and [manual](GUIDE.md).
 

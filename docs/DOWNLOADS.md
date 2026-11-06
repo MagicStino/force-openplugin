@@ -1,12 +1,21 @@
 # Download images
 
-## OpenPlugin 0.9.0 — new Force candidate
+## OpenPlugin 0.9.0 — Force and MPC Gen1
 
-The new Force-only candidate is `Force-3.10.0-openplugin-v0.9.0-update.img`. It includes Manager 0.9.0, managed SSD/removable storage, skin repair, About/manual links, SSH/SFTP and Tracks16. The new image has flashed and booted on the owner’s Force, with Manager 0.9.0 and its ABOUT skin confirmed. Storage across reboot, audio and track-limit acceptance on this exact image remain pending.
+[Download release v0.9.0](https://github.com/MagicStino/force-openplugin/releases/tag/v0.9.0). Both complete images include OpenPlugin Manager 0.9.0, managed-drive startup support, skin repair, SSH/SFTP, ABOUT and Tracks16 (16 audio + 16 plugin tracks).
 
-[0.9.0 release notes](RELEASE-0.9.0.md) · [User manual](GUIDE.md). The previously published images below remain available while the candidate is validated. No new MPC Gen1 image was built for this release.
+| Device | Image | SHA256 |
+|---|---|---|
+| Akai Force | [Force-3.10.0-openplugin-v0.9.0-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.9.0/Force-3.10.0-openplugin-v0.9.0-update.img) | `183100e011395430ba4c52e8fa55295b67ba7526f7da6fde6b1875bb876c7d1d` |
+| MPC Gen1 | [MPC-3.10.0-Gen1-openplugin-v0.9.0-update.img](https://github.com/MagicStino/force-openplugin/releases/download/v0.9.0/MPC-3.10.0-Gen1-openplugin-v0.9.0-update.img) | `5dd5daaf5b3862248d23c80108e45e81951ed71b6c8c7299cb54b3d28dab2ccb` |
 
-## Current build: Tracks16 / firmware 3.10.0 / OpenPlugin v0.8.3 — 5 November 2026
+**Force:** this exact image flashed and booted on the owner’s device; Manager 0.9.0 and ABOUT were confirmed. Storage across reboot, audio and track-limit acceptance on this exact image remain pending.
+
+**MPC Gen1:** software-validated only; not flashed or tested on MPC hardware. This is not an image for MPC Gen2.
+
+Both images pass filesystem, container, injected-file, stock ARM verifier and plugin-load checks. Validation reports and SHA256SUMS are included in the release. [Release notes](RELEASE-0.9.0.md) · [User manual](GUIDE.md).
+
+## Previous release: Tracks16 / firmware 3.10.0 / OpenPlugin v0.8.3 — 5 November 2026
 
 **16 audio + 16 plugin tracks**, with the overall limit unchanged. These are complete patched images; no manual patching is needed. See [Tracks16 details](TRACKS16.md).
 
@@ -54,7 +63,7 @@ If the Force cannot reach its settings, Akai documents holding **MATRIX + LOAD +
 
 SSH/SFTP is enabled at startup in these builds. The default login is **username `root`, password `mpc`**. Remote-access controls are in **Plugin Manager → REMOTE ACCESS**; see [SSH.md](SSH.md). Mouse/cursor support is included; see [MOUSE.md](MOUSE.md) for setup and limitations. Inclusion does not establish that every mouse feature has been tested on 3.10.
 
-The previous Open MPC release and its original filenames remain available unchanged. Tracks16 is the current download.
+The previous Open MPC release and its original filenames remain available unchanged. Version 0.9.0 above is the current download.
 
 ## Older release — firmware 3.9.1
 
