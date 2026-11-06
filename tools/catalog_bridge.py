@@ -52,9 +52,9 @@ def validate_manifest(m,repo):
 def normalize_plugin(p,source):
  if not isinstance(p,dict) or not ID.fullmatch(p.get('id','')) or not REPO.fullmatch(p.get('repo','')):raise ValueError('Invalid catalog identity')
  if not isinstance(p.get('name'),str) or not p['name'] or p.get('kind') not in ('instrument','effect','addin'):raise ValueError('Invalid catalog entry')
- p={k:v for k,v in p.items() if k in ('id','name','author','repo','kind','license','summary','screenshot','style','tags','source_available','distribution','versions','latest','components')};p['tags']=[t for t in p.get('tags',[]) if isinstance(t,str)][:32]
+ p={k:v for k,v in p.items() if k in ('id','name','author','repo','kind','license','summary','screenshot','style','tags','source_available','distribution','versions','latest','components','downloads','download_count','updated_at','updated')};p['tags']=[t for t in p.get('tags',[]) if isinstance(t,str)][:32]
  p['versions']=[v for v in p.get('versions',[]) if isinstance(v,dict) and not v.get('yanked') and v.get('arch') in (None,'armv7') and not urllib.parse.urlsplit(v.get('url','')).path.endswith('-mpc-aarch64.zip') and https(v.get('url'),{'github.com'}) and urllib.parse.urlsplit(v['url']).path.startswith('/'+p['repo']+'/releases/download/') and SHA.fullmatch(v.get('sha256',''))]
- p['versions']=[{k:value for k,value in v.items() if k in ('version','size','sha256','url','channel','yanked','cpu','tested','warnings','arch','max_glibc','os_compat')} for v in p['versions']]
+ p['versions']=[{k:value for k,value in v.items() if k in ('version','size','sha256','url','channel','yanked','cpu','tested','warnings','arch','max_glibc','os_compat','published_at','date','downloads')} for v in p['versions']]
  p['provenance']={'source':source,'repository':p['repo'],'hardware_verified_by_openplugin':False,'validation':'metadata-validated' if p['versions'] else 'listed-only'}
  return p
 
