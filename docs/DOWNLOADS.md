@@ -1,5 +1,11 @@
 # Download images
 
+## OpenPlugin 0.9.0 — new Force candidate
+
+The new Force-only candidate is `Force-3.10.0-openplugin-v0.9.0-update.img`. It includes Manager 0.9.0, managed SSD/removable storage, skin repair, About/manual links, SSH/SFTP and Tracks16. The complete new image requires flash/boot acceptance; do not assume older image testing covers these new bytes.
+
+[0.9.0 release notes](RELEASE-0.9.0.md) · [User manual](GUIDE.md). The previously published images below remain available while the candidate is validated. No new MPC Gen1 image was built for this release.
+
 ## Current build: Tracks16 / firmware 3.10.0 / OpenPlugin v0.8.3 — 5 November 2026
 
 **16 audio + 16 plugin tracks**, with the overall limit unchanged. These are complete patched images; no manual patching is needed. See [Tracks16 details](TRACKS16.md).

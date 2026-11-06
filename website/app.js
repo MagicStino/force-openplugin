@@ -15,7 +15,7 @@ for (const button of document.querySelectorAll('[data-photo]')) button.addEventL
 $('#close-photo').addEventListener('click',()=>photoDialog.close());
 photoDialog.addEventListener('click',event=>{if(event.target===photoDialog)photoDialog.close();});
 photoDialog.addEventListener('close',()=>photoOpener?.focus());
-$('#device').addEventListener('change',event=>{
+$('#device')?.addEventListener('change',event=>{
  const messages={force:'Tracks16: 16 audio + 16 plugin tracks. Force owner reports creating, saving and loading 15 of each, playback and 17th-track rejection working. Recording remains untested. Software integrity checks pass.',mpc:'The current MPC Gen1 3.10.0 image passes container, filesystem, ARM and SHA256 checks. Hardware installation and operation remain untested; use only the Gen1 image for a compatible device.',other:'No validated adapter is established for this device. A similar model name does not establish image compatibility.','':'Select a device for its research status. This is not installation advice.'};
  $('#device-result').textContent=messages[event.target.value];
 });

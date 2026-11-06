@@ -1,0 +1,58 @@
+#include "../native/manager.c"
+#include <assert.h>
+int main(void) {
+    mgr_t *m=calloc(1,sizeof *m);assert(m);pthread_mutex_init(&m->mu,NULL);pthread_cond_init(&m->cv,NULL);
+    char first[96];mgr_get_param(m,"storage_warning",first,sizeof first);assert(m->job==J_NONE);
+    m->busy=J_REFRESH;mgr_set_param(m,"storage_open","1");assert(m->storage_pending&&m->job==J_NONE);
+    mgr_get_param(m,"storage_warning",first,sizeof first);assert(!strcmp(first,"Checking drives..."));
+    m->busy=J_NONE;m->storage_pending=0;m->storage_requested=0;
+    mgr_set_param(m,"storage_open","1");assert(m->job==J_LOC_SCAN);
+    m->job=J_NONE;mgr_set_param(m,"storage_open","1");assert(m->job==J_NONE);
+    m->locations_repair_available=1;m->locations_n=2;strcpy(m->locations_roots[0],"/sdcard/Synths");strcpy(m->locations_roots[1],"/media/SSD/Synths");
+    mgr_set_param(m,"locations_confirm","1");assert(m->job==J_NONE);
+    mgr_set_param(m,"locations_ready","1");assert(!m->locations_ready);
+    mgr_set_param(m,"locations_repair","1");assert(!m->locations_ready&&m->job==J_LOC_REPAIR_CHECK);m->job=J_NONE;m->locations_ready=2;
+    mgr_set_param(m,"locations_cancel","1");assert(!m->locations_ready&&m->job==J_NONE);
+    m->locations_ready=2;mgr_set_param(m,"locations_confirm","1");assert(m->job==J_LOC_REPAIR&&!m->locations_ready);
+    m->job=J_NONE;m->locations_ready=1;mgr_set_param(m,"locations_next","1");assert(m->locations_selected==1&&!m->locations_ready);
+    m->npkg=1;m->pkg[0].queued=Q_INSTALL;mgr_set_param(m,"locations_plan","1");assert(m->job==J_NONE);
+    mgr_get_param(m,"storage_warning",first,sizeof first);assert(strstr(first,"pending plugin changes"));
+    mgr_get_param(m,"storage_tip",first,sizeof first);assert(strstr(first,"Catalog"));
+    strcpy(m->storage_warning,"Insert missing SSD");mgr_get_param(m,"storage_warning",first,sizeof first);assert(!strcmp(first,"Insert missing SSD"));m->storage_warning[0]=0;
+    m->storage_viable[1]=1;mgr_get_param(m,"storage_row2_move",first,sizeof first);assert(!strcmp(first,"2"));
+    mgr_set_param(m,"storage_move_2","1");assert(m->job==J_NONE);
+    m->pkg[0].queued=Q_REMOVE;mgr_get_param(m,"storage_warning",first,sizeof first);assert(strstr(first,"pending plugin changes"));
+    m->pkg[0].queued=0;mgr_get_param(m,"storage_warning",first,sizeof first);assert(!strstr(first,"pending plugin changes"));
+    mgr_set_param(m,"locations_plan","1");assert(m->job==J_LOC_PLAN);
+    m->job=J_NONE;m->locations_n=0;
+    mgr_set_param(m,"locations_plan","1");assert(m->job==J_NONE);
+    m->locations_repair_available=0;mgr_set_param(m,"locations_repair","1");assert(m->job==J_LOC_REPAIR_CHECK);m->job=J_NONE;
+    char value[64];mgr_get_param(m,"locations_can_move",value,sizeof value);assert(!strcmp(value,"0"));
+    mgr_get_param(m,"locations_can_repair",value,sizeof value);assert(!strcmp(value,"1"));
+    m->locations_n=2;m->storage_viable[1]=1;mgr_set_param(m,"storage_move_1","1");assert(m->job==J_NONE);
+    mgr_set_param(m,"storage_move_2","1");assert(m->job==J_LOC_PLAN&&m->locations_selected==1);
+    mgr_get_param(m,"storage_row2_busy",value,sizeof value);assert(!strcmp(value,"1"));
+    mgr_get_param(m,"storage_row2_move",value,sizeof value);assert(!strcmp(value,"0"));
+    mgr_get_param(m,"storage_warning",value,sizeof value);assert(strstr(value,"Calculating"));
+    strcpy(m->locations_progress,"Checking plugin files: JV880 | 15 sec");
+    strcpy(m->locations_progress_detail,"Plugin 18/52 | 430 files | ROMs/bank.bin");
+    mgr_get_param(m,"storage_warning",value,sizeof value);assert(strstr(value,"JV880"));
+    mgr_get_param(m,"storage_tip",value,sizeof value);assert(strstr(value,"ROMs/bank.bin"));
+    m->locations_progress[0]=m->locations_progress_detail[0]=0;
+    m->busy=J_LOC_PLAN;m->job=J_NONE;
+    mgr_get_param(m,"storage_row2_busy",value,sizeof value);assert(!strcmp(value,"1"));
+    mgr_set_param(m,"storage_move_1","1");assert(m->locations_selected==1&&m->job==J_NONE);
+    m->busy=J_NONE;m->locations_ready=1;
+    mgr_get_param(m,"storage_row2_busy",value,sizeof value);assert(!strcmp(value,"0"));
+    mgr_set_param(m,"locations_cancel","1");
+    mgr_get_param(m,"storage_row2_move",value,sizeof value);assert(!strcmp(value,"1"));
+    mgr_get_param(m,"storage_warning",value,sizeof value);assert(!strstr(value,"Calculating"));
+    m->locations_ready=2;mgr_get_param(m,"locations_ready",value,sizeof value);assert(!strcmp(value,"2"));
+    m->locations_ready=3;m->job=J_NONE;mgr_set_param(m,"locations_confirm","1");assert(m->job==J_NONE);
+    m->locations_log_count=2;m->locations_log_page=1;mgr_set_param(m,"locations_log_prev","1");assert(m->locations_log_page==0);
+    mgr_set_param(m,"locations_cancel","1");assert(!m->locations_ready);
+    m->locations_return_available=1;mgr_get_param(m,"locations_can_return",value,sizeof value);assert(!strcmp(value,"1"));
+    mgr_set_param(m,"locations_return","1");assert(m->job==J_LOC_RETURN_CHECK);
+    m->job=J_NONE;m->locations_ready=4;mgr_set_param(m,"locations_confirm","1");assert(m->job==J_LOC_RETURN);
+    pthread_cond_destroy(&m->cv);pthread_mutex_destroy(&m->mu);free(m);return 0;
+}

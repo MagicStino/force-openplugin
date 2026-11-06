@@ -1,0 +1,39 @@
+{
+  "captured_on": "2026-11-06",
+  "product": "OpenPlugin Plugin Manager",
+  "device": "Akai Force",
+  "build": "0.8.4-storage-dev",
+  "source_commit": "cb4c64b",
+  "images": [
+    {
+      "file": "catalog-208.png",
+      "description": "Actual Force capture; full catalog: 208 indexed, 193 with downloads, 15 source only.",
+      "sha256": "78b665063c84add4e98513caed291178327c4b9bbc84cbcacc9b9355f8113ffd"
+    },
+    {
+      "file": "catalog-filtered.png",
+      "description": "Actual Force capture; filtered catalog with four results.",
+      "sha256": "bfb3e88b4cd15f93d80ed9a994a967561342ab550e859f96b45c8ae159d6bb73"
+    },
+    {
+      "file": "storage-original.png",
+      "description": "Actual Force capture; connected USB label MUSIC.",
+      "sha256": "ab7ad3af80bc2818fb1fe03819926494ca1fc8d14b5425221d2a94c4adbc69f9"
+    },
+    {
+      "file": "storage-marketing-usb-drive.png",
+      "description": "AI-edited marketing derivative: MUSIC replaced with USB DRIVE. Preserve original separately; do not describe this as an unmodified screen capture.",
+      "sha256": "c1638229580321b08659b5c1c9e0fb0ff0b7ae1876a15d8534289c65225246eb"
+    },
+    {
+      "file": "remote-access.png",
+      "description": "Actual Force capture; shows device-local IP addresses and the displayed login hint.",
+      "sha256": "b2012645c519347b20239dd30586009b6c77dcdc3405c1d6c9071419c00d816c"
+    },
+    {
+      "file": "catalog-install-queued.png",
+      "description": "Actual Force capture with an installation queued and Continue available; no installation started for this capture.",
+      "sha256": "5ff23a18159374da531b734d293640c742a43553f11257018213fc0eb5e2f389"
+    }
+  ]
+}

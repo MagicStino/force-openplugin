@@ -17,6 +17,11 @@ class BridgeTests(unittest.TestCase):
   self.assertEqual(plugin['repo'],'sd88me/mpc-vst-jv880')
   self.assertEqual(plugin['versions'][0]['sha256'],'a'*64)
   self.assertEqual(plugin['provenance']['source'],cfg['upstream'])
+ def test_preserves_upstream_popularity_and_dates(self):
+  raw={'id':'example','name':'Example','repo':'owner/repo','kind':'instrument','downloads':123,'updated':'2026-11-06','versions':[{'version':'1','url':'https://github.com/owner/repo/releases/download/v1/example.zip','sha256':'a'*64,'date':'2026-11-05','downloads':42}]}
+  item=b.normalize_plugin(raw,'fixture')
+  self.assertEqual(item['downloads'],123);self.assertEqual(item['updated'],'2026-11-06')
+  self.assertEqual(item['versions'][0]['date'],'2026-11-05');self.assertEqual(item['versions'][0]['downloads'],42)
  def test_gen2_downloads_are_not_offered_to_gen1(self):
   base={'id':'gen2','name':'Gen2','repo':'owner/repo','kind':'instrument','versions':[{'version':'1','url':'https://github.com/owner/repo/releases/download/v1/Plugin-mpc-aarch64.zip','sha256':'a'*64}]}
   self.assertEqual(b.normalize_plugin(base,'fixture')['versions'],[])

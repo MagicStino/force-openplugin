@@ -4,7 +4,8 @@ import argparse,json,subprocess,tempfile
 from pathlib import Path
 from patch_preview_wrapper import patch
 p=argparse.ArgumentParser();p.add_argument('native',type=Path);a=p.parse_args();native=a.native.resolve();build=native/'source/vst/build';up=native/'dependencies/mpc-vst-plugins/wrapper'
-params=json.loads((native/'source/vst/params.json').read_text())['params'];first=next(i for i,p in enumerate(params) if p['key'].startswith('previewpx_'));count=sum(p['key'].startswith('previewpx_') for p in params)
+params=json.loads((native/'source/vst/params.json').read_text())['params']
+assert len(params)<256 and not any(p['key'].startswith(('previewpx_', 'preview_live_')) for p in params)
 code=r'''
 #include "wrapper.c"
 #include <assert.h>
@@ -36,21 +37,15 @@ int main(void){AEffect*e=VSTPluginMain(host);assert(e);float l[128],r[128],*out[
   gets=pixel_callbacks=0;unsigned long long t=nanos();e->processReplacing(e,NULL,out,128);t=nanos()-t;
   if(t>worst_ns)worst_ns=t;if(pixel_callbacks>max_pixels)max_pixels=pixel_callbacks;if(gets>max_gets)max_gets=gets;total_pixels+=pixel_callbacks;total_gets+=gets;
  }
-#ifdef PREVIEW_COUNT
- assert(pixel_gets==0);assert(max_pixels<=12);assert(max_gets<1000);
- assert(total_pixels>0); /* Unknown IDs receive the bounded online fallback. */
- assert(e->getParameter(e,NPARAMS-3)==1.f);
-#else
- assert(pixel_gets>0&&max_pixels>5000);
-#endif
+ assert(pixel_gets==0 && total_pixels==0);assert(NPARAMS<256);assert(max_gets<1000);
  printf("{\"max_pixel_callbacks_per_block\":%u,\"pixel_string_gets\":%u,\"max_engine_gets_per_block\":%u,\"total_engine_gets\":%u,\"total_pixel_callbacks\":%u,\"host_display_updates\":%u,\"worst_wall_us\":%.3f}\n",max_pixels,pixel_gets,max_gets,total_gets,total_pixels,updates,worst_ns/1000.);
  e->dispatcher(e,effClose,0,0,NULL,0);return 0;}
 '''
 results={}
 with tempfile.TemporaryDirectory(prefix='openplugin-wrapper-cpu-') as d:
  d=Path(d)
- for name,source in [('baseline',(up/'vst2_wrap.c').read_text()),('bounded',patch(up/'vst2_wrap.c',first,count))]:
+ for name,source in [('static-thumbnails',patch(up/'vst2_wrap.c'))]:
   (d/'wrapper.c').write_text(source);(d/'test.c').write_text(code)
-  binary=d/'test';subprocess.run(['cc','-w','-O2','-std=gnu11','-DDISPLAY_REV_NO_UPDATE=1',f'-DTEST_FIRST={first}',f'-DTEST_COUNT={count}','-I'+str(build),'-I'+str(up),str(d/'test.c'),'-lpthread','-ldl','-lm','-o',str(binary)],check=True)
+  binary=d/'test';subprocess.run(['cc','-w','-O2','-std=gnu11','-DDISPLAY_REV_NO_UPDATE=1','-DTEST_FIRST=9999','-DTEST_COUNT=0','-I'+str(build),'-I'+str(up),str(d/'test.c'),'-lpthread','-ldl','-lm','-o',str(binary)],check=True)
   results[name]=json.loads(subprocess.check_output([binary],text=True))
 print(json.dumps(results,indent=2))

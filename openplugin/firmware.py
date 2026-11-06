@@ -4,11 +4,12 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import struct
 import tempfile
 from .az01 import extract, pack, parse
 
-VERSION = '0.8.3'
-CONTAINER_VERSION = '3.10.0-openplugin-v0.8.3'
+VERSION = '0.9.0'
+CONTAINER_VERSION = '3.10.0-openplugin-v0.9.0'
 EPOCH = 1791417600  # 2026-10-08 00:00 UTC, metadata only
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -20,7 +21,7 @@ def quote(value):
     return '"' + value + '"'
 
 
-def build(image, device, payload, output):
+def build(image, device, payload, output, tracks16=False):
     image, payload, output = Path(image).resolve(), Path(payload).resolve(), Path(output).resolve()
     if output == image or image in output.parents:
         raise ValueError('Output must not overwrite input')
@@ -36,7 +37,7 @@ def build(image, device, payload, output):
     del source
     if not (payload / 'usr/share/openplugin/VERSION').is_file():
         raise ValueError('Native payload missing: run tools/build_native.py first')
-    native = payload / 'usr/share/Akai/Content/Synths/poloq - VST - Plugin Manager/plugin_manager.so'
+    native = payload / 'usr/share/Akai/Content/Synths/OPENPLUGIN - VST - OpenPlugin Manager/plugin_manager.so'
     header = native.read_bytes()[:20]
     if header[:5] != b'\x7fELF\x01' or header[18:20] != b'\x28\0':
         raise ValueError('Native manager must be a 32-bit ARM ELF')
@@ -48,6 +49,24 @@ def build(image, device, payload, output):
         fs = temp / 'rootfs.ext4'
         fs.write_bytes(rootfs)
         del rootfs
+        track_report = None
+        if tracks16:
+            from .track_limits import patch_app, locate_sites, sha
+            app = temp / 'MPC'
+            subprocess.run(['debugfs', '-R', f'dump /usr/bin/MPC {quote(app)}', str(fs)], capture_output=True, check=True)
+            original = app.read_bytes(); patched = patch_app(original, device)
+            sites = locate_sites(original); raw = bytearray(fs.read_bytes())
+            blocksize = 1024 << struct.unpack_from('<I', raw, 1048)[0]
+            for kind in ('plugin', 'audio'):
+                off = sites[kind]; logical, within = divmod(off, blocksize)
+                result = subprocess.check_output(['debugfs', '-R', f'bmap /usr/bin/MPC {logical}', str(fs)], stderr=subprocess.DEVNULL, text=True)
+                pos = int(result.strip()) * blocksize + within
+                if raw[pos:pos+4] != original[off:off+4]: raise ValueError('Track patch block mapping mismatch')
+                raw[pos:pos+4] = patched[off:off+4]
+            fs.write_bytes(raw); del raw
+            subprocess.run(['debugfs', '-R', f'dump /usr/bin/MPC {quote(app)}', str(fs)], capture_output=True, check=True)
+            if app.read_bytes() != patched: raise ValueError('Track patch verification failed')
+            track_report = {'audio': 16, 'plugin': 16, 'original_app_sha256': sha(original), 'app_sha256': sha(patched)}
         shadow_override = None
         if (payload / 'usr/share/openplugin/authorized_keys').is_file() or (payload / 'usr/share/openplugin/remote-sshd_config').is_file():
             shadow_override = temp / 'shadow'
@@ -77,7 +96,7 @@ def build(image, device, payload, output):
                 commands.append(f'mkdir {quote(target)}')
             else:
                 commands.append(f'write {quote(path)} {quote(target)}')
-                mode = '0100755' if path.suffix == '.sh' or path.suffix == '.so' else '0100644'
+                mode = '0100755' if path.suffix in ('.sh', '.so') or path.name in ('skin-locations', 'locations-tool', 'locations-display') else '0100644'
                 commands.append(f'set_inode_field {quote(target)} mode {mode}')
                 manifest[target] = {'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
             commands += [f'set_inode_field {quote(target)} uid 0', f'set_inode_field {quote(target)} gid 0']
@@ -124,7 +143,7 @@ def build(image, device, payload, output):
                       validation={'container_sha1': 'pass', 'ext_filesystem': 'pass',
                                   'injected_files': 'pass', 'vendor_verifier': 'pending external check',
                                   'hardware_flash_boot_runtime': 'NOT TESTED'},
-                      signature_status=info['signatures'], metadata_epoch=EPOCH)
+                      signature_status=info['signatures'], metadata_epoch=EPOCH, tracks16=track_report)
         output.write_bytes(final)
         output.with_suffix('.json').write_text(json.dumps(report, sort_keys=True, indent=2) + '\n')
         output.with_suffix('.sha256').write_text(report['output_sha256'] + '  ' + output.name + '\n')

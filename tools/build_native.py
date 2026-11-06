@@ -55,6 +55,10 @@ def main():
     layout = local / 'vst/layout.conf'
     spec = local / 'vst/vst.json'
     config = json.loads(spec.read_text())
+    config['name'] = 'OpenPlugin Manager'
+    config['vendor'] = 'OPENPLUGIN'
+    config['version'] = 900
+    assert config['uid'] == 'PlMg'  # Preserve saved-project and upgrade identity.
     config['defines']['PARAM_TEXT_MAX'] = 192
     config['defines']['DISPLAY_REV_NO_UPDATE'] = 1
     spec.write_text(json.dumps(config, indent=2) + '\n')
@@ -76,7 +80,7 @@ def main():
     run(sys.executable, ROOT / 'tools/generate_skin.py', mv, local / 'vst/vst.json')
     # The generator groups artwork before controls; move preview overlays after
     # row backgrounds so opaque card art cannot hide the plugin screenshots.
-    tui=local/'vst/build/skin/poloq - VST - Plugin Manager/Plugin Skins/TUI.json'
+    tui=local/'vst/build/skin/OPENPLUGIN - VST - OpenPlugin Manager/Plugin Skins/TUI.json'
     ui=json.loads(tui.read_text())
     preview_params={f'Parameter {i}':p['key'][1] for i,p in enumerate(json.loads((local/'vst/params.json').read_text())['params']) if p['key'].endswith('_preview')}
     for definition in ui['pageData']['componentDefinitions']['localComponentDefinitions']:
@@ -100,13 +104,25 @@ def main():
     env = dict(os.environ, ZIG_GLOBAL_CACHE_DIR=str(out / 'zig-global'), ZIG_LOCAL_CACHE_DIR=str(out / 'zig-local'))
     from patch_preview_wrapper import patch
     params=json.loads((local/'vst/params.json').read_text())['params']
-    first=next(i for i,p in enumerate(params) if p['key'].startswith('previewpx_'))
-    count=sum(p['key'].startswith('previewpx_') for p in params)
-    assert count==5400 and all(p['key'].startswith('previewpx_') for p in params[first:first+count])
-    assert [p['key'] for p in params[-3:]]==['preview_live_1','preview_live_2','preview_live_3']
+    assert len(params)<=256
+    assert not any(p['key'].startswith(('previewpx_', 'preview_live_')) for p in params)
     wrapper=out/'preview_wrapper.c'
-    wrapper.write_text(patch(mv/'wrapper/vst2_wrap.c',first,count))
+    wrapper.write_text(patch(mv/'wrapper/vst2_wrap.c'))
     binary = out / 'plugin_manager.so'
+    skin_locations = out / 'skin-locations'
+    run(zig, 'c++', '-target', 'arm-linux-musleabihf', '-mcpu=cortex_a17',
+        '-O2', '-g0', '-s', '-std=c++11', '-static',
+        ROOT / 'native/skin_locations.cpp', ROOT / 'native/third_party/tinyxml2/tinyxml2.cpp',
+        '-o', skin_locations, env=env)
+    from build_progress_font import build as build_progress_font
+    build_progress_font(mv/'tools/html_art/fonts/TitilliumWeb-Regular.ttf',out/'progress_font.h')
+    run(zig, 'c++', '-target', 'arm-linux-musleabihf', '-mcpu=cortex_a17',
+        '-O2', '-g0', '-s', '-std=c++17', '-static', '-I'+str(out),
+        ROOT/'native/locations_display.cpp', '-o', out/'locations-display', env=env)
+    locations_tool = out / 'locations-tool'
+    run(zig, 'c++', '-target', 'arm-linux-musleabihf', '-mcpu=cortex_a17',
+        '-O2', '-g0', '-s', '-std=c++17', '-static', ROOT / 'native/locations_tool.cpp',
+        ROOT / 'native/third_party/tinyxml2/tinyxml2.cpp', '-o', locations_tool, env=env)
     run(zig, 'cc', '-target', 'arm-linux-gnueabihf.2.31', '-mcpu=cortex_a17', '-O2', '-g0', '-s',
         '-fPIC', '-shared', '-fvisibility=hidden', '-std=gnu11', '-I' + str(local / 'vst/build'),
         ROOT / 'native/manager.c', wrapper, '-I'+str(mv/'wrapper'), '-lpthread', '-ldl', '-lm',
@@ -119,13 +135,20 @@ def main():
     if payload.exists():
         shutil.rmtree(payload)
     synths = payload / 'usr/share/Akai/Content/Synths'
-    folder = synths / 'poloq - VST - Plugin Manager'
-    shutil.copytree(local / 'vst/build/skin/poloq - VST - Plugin Manager', folder)
+    folder = synths / 'OPENPLUGIN - VST - OpenPlugin Manager'
+    shutil.copytree(local / 'vst/build/skin/OPENPLUGIN - VST - OpenPlugin Manager', folder)
     normalize_presets(folder)
     version_file = folder / 'version.xml'
-    version_file.write_text(version_file.read_text().replace('<version>1.0.0.0</version>', '<version>0.8.3.0</version>'))
+    version_file.write_text(re.sub(r'<version>[^<]+</version>', '<version>0.9.0.0</version>', version_file.read_text()))
     shutil.copyfile(binary, folder / 'plugin_manager.so')
-    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.8.3"')
+    shutil.copy2(skin_locations, folder / 'skin-locations')
+    shutil.copy2(locations_tool, folder / 'locations-tool')
+    shutil.copy2(out/'locations-display', folder/'locations-display')
+    shutil.copyfile(mv/'tools/html_art/fonts/OFL.txt',folder/'TitilliumWeb-OFL.txt')
+    shutil.copyfile(ROOT / 'native/third_party/picojson/picojson.h', folder / 'PicoJSON-LICENSE-and-source.h')
+    shutil.copyfile(ROOT / 'native/third_party/tinyxml2/LICENSE.txt', folder / 'TinyXML2-LICENSE.txt')
+    entry = (local / 'vst/build/pluginlist-entry.xml').read_text().replace('/sdcard/Synths', '%payload-path%').replace('version="1.0"', 'version="0.9.0"')
+    entry=entry.replace('name="OpenPlugin Manager"','name=" OpenPlugin Manager"').replace('descriptiveName="OpenPlugin Manager"','descriptiveName=" OpenPlugin Manager"')
     (folder / 'plugin-meta.xml').write_text(entry)
     helpers = payload / 'usr/share/openplugin'
     helpers.mkdir(parents=True)
@@ -139,19 +162,9 @@ def main():
     enabled = payload / 'etc/systemd/system/multi-user.target.wants'
     enabled.mkdir(parents=True)
     (enabled / 'openplugin-register.service').symlink_to('/usr/lib/systemd/system/openplugin-register.service')
-    (helpers / 'VERSION').write_text('0.8.3\n')
+    (helpers / 'VERSION').write_text('0.9.0\n')
     shutil.copyfile(ROOT / 'assets/previews.lock.json', helpers / 'previews.lock.json')
     shutil.copyfile(ROOT / 'website/catalog.json', helpers / 'catalog.json')
-    bundled=helpers/'bundled-previews'
-    bundled.mkdir()
-    shutil.copyfile(local/'vst/images/previews/preview_1.png',bundled/'fallback.png')
-    from PIL import Image,ImageOps
-    ImageOps.pad(Image.open(bundled/'fallback.png'),(180,90),color='#13161b').save(bundled/'fallback-row.png')
-    for i,entry in enumerate(json.loads((ROOT/'assets/previews.lock.json').read_text())['entries']):
-        shutil.copyfile(local/f'vst/images/previews/preview_{i+2}.png',bundled/(entry['id']+'.png'))
-    shutil.copyfile(ROOT/'assets/artwork/clif-tape.png',bundled/'clif-tape.png')
-    for name in ['LICENSE','UPSTREAM.md']:
-        shutil.copyfile(ROOT/'native/third_party/stb'/name,helpers/('STB-'+name))
     (helpers / 'dependencies.json').write_text(json.dumps(locks, indent=2) + '\n')
     for src, dest in [(ROOT / 'native/LICENSE', 'MANAGER-LICENSE'), (mv / 'LICENSE', 'WRAPPER-LICENSE'),
                       (mv / 'tools/html_art/fonts/OFL.txt', 'FONT-OFL'), (ROOT / 'native/NOTICE.md', 'NOTICE.md')]:
@@ -177,6 +190,7 @@ def main():
     mouse_override = payload / 'etc/systemd/system/acvs.service.d'
     mouse_override.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ROOT / 'runtime/openplugin-mouse.conf', mouse_override / '20-openplugin-mouse.conf')
+    shutil.copyfile(ROOT / 'runtime/25-openplugin-volumes.conf', mouse_override / '25-openplugin-volumes.conf')
     shutil.copyfile(ROOT / 'runtime/force_cursor.conf', payload / 'etc/force_cursor.conf')
     for name in ['LICENSE', 'UPSTREAM.md']:
         shutil.copyfile(ROOT / 'native/mouse' / name, helpers / ('MOUSE-' + name))

@@ -1,32 +1,42 @@
 #!/usr/bin/env python3
 """Render actual generated CATALOG assets with sample metadata; not a hardware capture."""
-import argparse,json,textwrap
+import argparse,json,textwrap,math
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont,ImageOps
 p=argparse.ArgumentParser(description=__doc__);p.add_argument('native',type=Path);p.add_argument('output',type=Path);p.add_argument('--jv',action='store_true');p.add_argument('--plugin',help='Show a specified catalog entry first');a=p.parse_args()
-root=Path(__file__).resolve().parents[1];vst=a.native/'source/vst';skin=vst/'build/skin/poloq - VST - Plugin Manager/Plugin Skins'
+root=Path(__file__).resolve().parents[1];vst=a.native/'source/vst';skin=vst/'build/skin/OPENPLUGIN - VST - OpenPlugin Manager/Plugin Skins'
 data=json.loads((skin/'TUI.json').read_text())['pageData'];defs={x['key']:x['value'] for x in data['componentDefinitions']['localComponentDefinitions']}
 params=json.loads((vst/'params.json').read_text())['params'];names={f'Parameter {i}':p['key'] for i,p in enumerate(params)}
 lock=json.loads((root/'assets/previews.lock.json').read_text())['entries'];catalog=json.loads((root/'website/assets/catalog.json').read_text())['plugins']
 if a.plugin:
- catalog=sorted([p for p in catalog if any(x['id']==p['id'] for x in lock)],key=lambda p:(p['id']!=a.plugin,p['id']))
+ catalog=sorted(catalog,key=lambda p:(p['id']!=a.plugin,p['id']))
  assert any(p['id']==a.plugin for p in catalog)
-values={p['key']:0 for p in params};values.update({f'preview_live_{r}':1 for r in range(1,4)});values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
+values={p['key']:0 for p in params};values.update(net=0,loaded=1,disk_txt='Sample metadata',status='Rendered interface preview',page_txt='1 / 24')
+for group,label in enumerate(['#','A-D','E-H','I-L','M-P','Q-T','U-Z']):
+ values[f'catalog_jump_available_{group}']=1;values[f'catalog_jump_label_{group}']=group+2 if group else 1
+values['catalog_dates_available']=1;values['catalog_downloads_available']=1
 if a.jv:catalog=sorted(catalog,key=lambda p:(p['id'] not in ('jv-880','dexed-dx7','dub-force-siren'),p['id']))[:3]
+description_font=ImageFont.truetype(str(a.native/'dependencies/mpc-vst-plugins/tools/html_art/fonts/TitilliumWeb-SemiBold.ttf'),22)
+def description_lines(text):
+ result=[]
+ for row in range(2):
+  text=text.lstrip();take=word=width=0
+  for c in text:
+   advance=math.ceil(description_font.getlength(c))+1 if ord(c)<127 else 24
+   if width+advance>548:break
+   if c.isspace():word=take
+   width+=advance;take+=1
+  if take<len(text) and word>take/2:take=word
+  result.append(text[:take]+('...' if row==1 and take<len(text) else ''))
+  text=text[take:]
+ return result
 for row,plugin in enumerate(catalog[:3],1):
- wrapped=textwrap.wrap(plugin.get('summary') or 'No description supplied by the author.',78)
- values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_state':1,f'r{row}_preview':next(i+2 for i,x in enumerate(lock) if x['id']==plugin['id']),f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
+ wrapped=description_lines(plugin.get('summary') or 'No description supplied by the author.')
+ values.update({f'card{row}_1':plugin['name'],f'r{row}_vis':1,f'r{row}_state':1,f'r{row}_preview':next((i+2 for i,x in enumerate(lock) if x['id']==plugin['id']),1),f'r{row}_desc1':wrapped[0],f'r{row}_desc2':wrapped[1] if len(wrapped)>1 else '',f'r{row}_meta':f"by {plugin['author'][:32]} | {plugin.get('license','See source')[:28]}",f'r{row}_ver':'',f'r{row}_size':'',f'r{row}_sha':'',f'r{row}_from':''})
 if a.jv:
  for row,plugin in enumerate(catalog[:3],1):
   if plugin['id']=='jv-880':
    values.update({f'r{row}_rom':1,f'r{row}_desc1':'Save first: installs ROMs + plugin, then restarts the app.',f'r{row}_desc2':'Required files checked before installation.'})
-# Model the live RGB444 values from the worker's 60x30 thumbnail, not host screenshots.
-for row,plugin in enumerate(catalog[:3],1):
- path=a.native/'payload/usr/share/openplugin/bundled-previews'/(plugin['id']+'.png')
- if not path.exists():path=path.parent/'fallback.png'
- thumb=ImageOps.pad(Image.open(path).convert('RGB'),(180,90),color='#13161b').resize((60,30),Image.Resampling.BOX)
- for pixel,(rr,gg,bb) in enumerate(thumb.getdata()):
-  values[f'previewpx_{row}_{pixel}']=((rr+8)//17<<8)|((gg+8)//17<<4)|((bb+8)//17)
 image=Image.new('RGBA' ,(1280,628),'#0c0c0d');previews=0
 
 def render(nodes,ox=0,oy=0,key=None,depth=0):
@@ -70,5 +80,5 @@ for row in range(1,4):
 assert Image.open(vst/'images/previews/preview_0.png').getbbox() is None
 assert len(list((vst/'images/previews').glob('*.png')))==len(lock)+2
 a.output.parent.mkdir(parents=True,exist_ok=True);image.convert('RGB').save(a.output)
-assert sum(p['key'].startswith('previewpx_') for p in params)==5400
+assert len(params)<256 and not any(p['key'].startswith(('previewpx_', 'preview_live_')) for p in params)
 print('CATALOG: three bitmap thumbnails, indexed fallbacks, bounds and sample text PASS; simulated rendering only')

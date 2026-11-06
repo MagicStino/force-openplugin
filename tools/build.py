@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-PROJECT_VERSION = "0.8.3"
+PROJECT_VERSION = "0.9.0"
 
 def inspect_image(path):
     digest = hashlib.sha256()
@@ -45,6 +45,7 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--device", choices=["force", "mpc-gen1"])
     parser.add_argument("--native", type=Path)
+    parser.add_argument('--tracks16', action='store_true')
     args = parser.parse_args()
     if args.output and args.output.resolve() == args.image.resolve():
         parser.error("Output must not overwrite the input image")
@@ -55,7 +56,7 @@ def main():
     if args.command == "build" and args.native and args.device and args.output:
         from openplugin.firmware import build
         try:
-            result = build(args.image, args.device, args.native, args.output)
+            result = build(args.image, args.device, args.native, args.output, tracks16=args.tracks16)
         except (OSError, ValueError) as error:
             parser.exit(2, f"Build failed: {error}\n")
         print(json.dumps(result, sort_keys=True, indent=2))

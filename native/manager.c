@@ -17,6 +17,7 @@
  * the addin.manifest in each folder; a removal runs the uninstall.sh the folder carries. MPC.settings is not touched. */
 #define _GNU_SOURCE   /* dladdr */
 #include <dirent.h>
+#include <mntent.h>
 #include <dlfcn.h>
 #include <errno.h>
 #include <stdint.h>
@@ -33,6 +34,7 @@
 #include <sys/utsname.h>
 #include <sys/wait.h>
 #include <time.h>
+#include <ctype.h>
 #include <unistd.h>
 
 /* mpc-vst-plugins wrapper/engine.h, positional */
@@ -54,9 +56,6 @@ typedef struct {
 #endif
 #define MAXPKG 512
 #define ROWS 3      /* plugin cards per page */
-#define PREVIEW_COLS 60
-#define PREVIEW_LINES 30
-#define PREVIEW_PIXELS (PREVIEW_COLS * PREVIEW_LINES)
 #ifndef ADDINS_DIR
 #define ADDINS_DIR "/data/mpc-addins"   /* one folder per addin id, as mpc-vst-plugins' addin installer lays them out */
 #endif
@@ -69,30 +68,27 @@ typedef struct {
     char style[32], tags[512], channel[16], cpu[8], tested[48];   /* complete tag index, bounded */
     char summary[1024], license[96], repo[160], screenshot[1024];
     long long size;
+    long long downloads, updated; int downloads_known;
     char installed[24];   /* "" not installed, "?" installed (version unknown), else the version */
     char synths[200];     /* the Synths folder it is installed in; an addin: its own folder under ADDINS_DIR */
     char uids[4][16];     /* build-yourself components' VST uids (catalog "components") */
-    int preview_checked; /* one image attempt per catalog refresh, including failures */
     int legacy;           /* registered, but not from a plugin folder (old /sdcard/vst layout); an addin folder
                            * without uninstall.sh (made by hand): either is updated in place, not removed */
     int queued;           /* 0, Q_INSTALL, Q_REMOVE */
     char dir[256];        /* unpacked package (install.sh / uninstall.sh), set while preparing */
 } pkg_t;
 enum { Q_INSTALL = 1, Q_REMOVE = 2 };
-enum { J_NONE, J_PREVIEW, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL, J_REMOTE_ENABLE, J_REMOTE_DISABLE };
+enum { J_NONE, J_REFRESH, J_PREPARE, J_LAUNCH, J_SCAN, J_ROM_CHECK, J_ROM_USB, J_ROM_DOWNLOAD, J_JV_INSTALL, J_REMOTE_ENABLE, J_REMOTE_DISABLE, J_LOC_SCAN, J_LOC_PLAN, J_LOC_MOVE, J_LOC_REPAIR, J_LOC_REPAIR_CHECK, J_LOC_LOG, J_LOC_RETURN_CHECK, J_LOC_RETURN };
 
 typedef struct device device_t;
 typedef struct {
     pthread_t th;
     pthread_mutex_t mu;
     pthread_cond_t cv;
-    int preview_enabled, preview_pending;
-    unsigned preview_generation, preview_revision;
-    uint16_t preview_pixels[ROWS][PREVIEW_PIXELS];
-    char preview_row_id[ROWS][48];
     int quit, job, busy, ready;   /* ready: a prepared apply.sh waits for the second APPLY press */
     pkg_t pkg[MAXPKG];
     int npkg, page, sel, menu;    /* sel, menu: pkg indexes (-1 none); menu = the card showing Reinstall/Remove */
+    int sort_mode,jump_group; unsigned jump_mask,letter_mask; int has_downloads,has_dates;
     int tab, kindf;               /* 0 discover, 1 installed, 2 updates; 0 all, 1 instruments, 2 effects, 3 addins */
     int online, loaded, failed;   /* catalog reachable; ever loaded; the last APPLY failed (offer RETRY) */
     int sticky, status_kind;      /* status set by the worker or an action (else the queue summary); 0 ok, 1 warn, 2 error */
@@ -110,6 +106,16 @@ typedef struct {
     char rom_status[160], rom_files[5][96];
     int rom_confirm;
     int remote_show;
+    int locations_log_count, locations_log_page;
+    char locations_log_lines[48][192];
+    int locations_n, locations_selected, locations_ready, locations_running, locations_repair_available, locations_return_available;
+    char locations_roots[24][256], locations_info[24][160];
+    char storage_labels[24][64],storage_space[24][64],storage_warning[192],storage_tip[192];
+    int storage_viable[24],storage_main[24],storage_page,locations_skin_check;
+    int storage_requested,storage_pending,storage_checked;
+    char locations_status[192], locations_summary[192];
+    char locations_progress[192], locations_progress_detail[192];
+    char storage_internal[64], storage_preferred[64];
     device_t *dev;   /* probed by the worker on each refresh */
 } mgr_t;
 
@@ -366,7 +372,7 @@ static const char *jobject(const char *p, member_fn f, void *ud) {
     }
 }
 
-typedef struct { char version[24], url[512], sha[72], channel[16], cpu[8], tested[48], arch[24]; long long size; int yanked; } ver_t;
+typedef struct { char version[24], url[512], sha[72], channel[16], cpu[8], tested[48], arch[24]; long long size,updated; int yanked; } ver_t;
 typedef struct { char s[48]; } str_t;
 
 static const char *verdict_member(const char *k, const char *v, void *ud) {
@@ -376,8 +382,16 @@ static const char *device_member(const char *k, const char *v, void *ud) {
     return *v == '"' && !strcmp(k, "device") ? jstr(v, ((str_t *)ud)->s, sizeof ((str_t *)ud)->s) : NULL;
 }
 
+static long long catalog_date(const char *date) {
+    int y,m,d;char tail;
+    if(sscanf(date,"%4d-%2d-%2d%c",&y,&m,&d,&tail)<3||y<1970||y>9999||m<1||m>12||d<1)return 0;
+    const int days[]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int limit=days[m-1]+(m==2&&y%4==0&&(y%100!=0||y%400==0));
+    return d<=limit?(long long)y*10000+m*100+d:0;
+}
 static const char *ver_member(const char *k, const char *v, void *ud) {
     ver_t *x = ud;
+    if((!strcmp(k,"published_at")||!strcmp(k,"date"))&&*v=='"'){char date[64];const char *end=jstr(v,date,sizeof date);x->updated=catalog_date(date);return end;}
     if (!strcmp(k, "arch") && *v == '"') return jstr(v, x->arch, sizeof x->arch);
     if (!strcmp(k, "channel") && *v == '"') return jstr(v, x->channel, sizeof x->channel);
     if (!strcmp(k, "size") && *v >= '0' && *v <= '9') { x->size = atoll(v); return NULL; }
@@ -421,6 +435,12 @@ static void uid_hex(const char *u, char *out) {
 
 static const char *pkg_member(const char *k, const char *v, void *ud) {
     pkg_t *x = ud;
+    if((!strcmp(k,"updated_at")||!strcmp(k,"updated"))&&*v=='"'){char date[64];const char *end=jstr(v,date,sizeof date);long long parsed=catalog_date(date);if(parsed)x->updated=parsed;return end;}
+    if(!strcmp(k,"downloads")||!strcmp(k,"download_count")) {
+        char *end;errno=0;long long count=strtoll(v,&end,10);
+        if(*v>='0'&&*v<='9'&&!errno&&(*end==','||*end=='}'||isspace((unsigned char)*end))){x->downloads=count;x->downloads_known=1;}
+        return NULL;
+    }
     if (*v == '"') {
         if (!strcmp(k, "id")) return jstr(v, x->id, sizeof x->id);
         if (!strcmp(k, "name")) return jstr(v, x->name, sizeof x->name);
@@ -471,6 +491,7 @@ static const char *pkg_member(const char *k, const char *v, void *ud) {
                 snprintf(x->cpu, sizeof x->cpu, "%s", ver.cpu);
                 snprintf(x->tested, sizeof x->tested, "%s", ver.tested);
                 x->size = ver.size;
+                if(!x->updated)x->updated=ver.updated;
                 if (!x->latest[0]) snprintf(x->latest, sizeof x->latest, "%s", ver.version);
             }
             p = ws(p);
@@ -512,8 +533,9 @@ static const char *top_member(const char *k, const char *v, void *ud) {
 typedef struct { char name[64], uid[16], file[256]; } entry_t;
 typedef struct { char id[48], version[24], folder[256]; int removable; } addin_t;   /* an installed addin folder */
 struct device {
-    char settings[200], base[200], state[220], arch[32], target[200], problem[24], keys[160], via[48];
+    char settings[200], base[200], state[220], arch[32], target[200], problem[64], keys[160], via[48];
     char loc[8][200];
+    char preferred[200];
     char addins[64];   /* ADDINS_DIR when its parent is a writable folder, else "" (no addin can be installed) */
     int nloc, nent, naddin, systemd_run, cgroup2;
     entry_t ent[128];
@@ -553,21 +575,23 @@ static void attr(const char *tag, const char *end, const char *name, char *out, 
 
 /* the filesystem a path is on, from /proc/mounts (longest matching mount point); why it can't hold a plugin, or NULL */
 static const char *bad_fs(const char *path, char *why, size_t n) {
-    FILE *f = fopen("/proc/mounts", "r");
-    char dev[128], mnt[256], type[32], opts[512];
+    FILE *f = setmntent("/proc/mounts", "r");
     size_t best = 0;
     int ok = 0;
     snprintf(why, n, "not on a mounted filesystem");
-    while (f && fscanf(f, "%127s %255s %31s %511s %*d %*d", dev, mnt, type, opts) == 4) {
+    struct mntent *entry;
+    while (f && (entry = getmntent(f))) {
+        const char *mnt=entry->mnt_dir, *type=entry->mnt_type;
         size_t l = strlen(mnt);
         if (strncmp(path, mnt, l) || (path[l] && path[l] != '/' && l > 1) || l < best) continue;
         best = l;
-        int rw = !strncmp(opts, "rw", 2), exec = !strstr(opts, "noexec");
-        int fs = FS_ANY || !strcmp(type, "ext4") || !strcmp(type, "ext3") || !strcmp(type, "f2fs") || !strcmp(type, "btrfs");
+        int rw = hasmntopt(entry,"rw") != NULL, exec = hasmntopt(entry,"noexec") == NULL;
+        int scoped = !strncmp(mnt,"/run/openplugin-volumes/",23) && !strcmp(path + strlen(path) - (strlen(path)>=7?7:0),"/Synths");
+        int fs = (scoped && (!strcmp(type,"exfat") || !strcmp(type,"vfat"))) || FS_ANY || !strcmp(type, "ext4") || !strcmp(type, "ext3") || !strcmp(type, "f2fs") || !strcmp(type, "btrfs");
         ok = rw && exec && fs;
         snprintf(why, n, "%s is %s%s%s", mnt, type, rw ? "" : ", read-only", exec ? "" : ", noexec");
     }
-    if (f) fclose(f);
+    if (f) endmntent(f);
     return ok ? NULL : why;
 }
 
@@ -611,14 +635,25 @@ static void probe_device(device_t *d) {
     snprintf(d->arch, sizeof d->arch, "%s", uname(&u) == 0 ? u.machine : "?");
     DIR *sd = opendir("/media/az01-internal/Settings");   /* the same glob as install.sh */
     struct dirent *e;
-    while (sd && (e = readdir(sd)) && !d->settings[0]) {
+    int settings_count = 0;
+    while (sd && (e = readdir(sd))) {
         char p[300];
         snprintf(p, sizeof p, "/media/az01-internal/Settings/%s/MPC.settings", e->d_name);
-        if (e->d_name[0] != '.' && is_file(p)) snprintf(d->settings, sizeof d->settings, "%s", p);
+        if (e->d_name[0] != '.' && is_file(p)) {
+            settings_count++;
+            if (!d->settings[0]) snprintf(d->settings, sizeof d->settings, "%s", p);
+        }
     }
     if (sd) closedir(sd);
+    char chosen_target[200]={0};
     char *x = d->settings[0] ? slurp(d->settings, 4 << 20) : NULL;
     if (x) {
+        const char *choice=strstr(x,"<VALUE name=\"OpenPlugin.InstallTarget\"");
+        const char *choice_end=choice?strchr(choice,'>'):NULL;
+        if(choice_end)attr(choice,choice_end,"val",chosen_target,sizeof chosen_target);
+        const char *pref = strstr(x, "<VALUE name=\"Content.Manager.Directory\"");
+        const char *end = pref ? strchr(pref, '>') : NULL;
+        if (end) attr(pref, end, "val", d->preferred, sizeof d->preferred);
         char *a = strstr(x, "<SynthContentLocations>"), *b = a ? strstr(a, "</SynthContentLocations>") : NULL;
         for (char *p = a; b && d->nloc < 8 && (p = strstr(p, "<Location>")) && p < b; ) {
             p += 10;
@@ -645,12 +680,27 @@ static void probe_device(device_t *d) {
     }
     /* internal storage first (One: /media/az01-internal, Force: /sdcard = /media/az01-internal-sd): a plugin on a USB
      * stick or card disappears with it; any other good location only as a last resort */
+    if(chosen_target[0]){snprintf(d->target,sizeof d->target,"%s",chosen_target);snprintf(d->via,sizeof d->via,"STORAGE selection");}
+    char preferred_synths[256];
+    snprintf(preferred_synths, sizeof preferred_synths, "%s/Synths", d->preferred);
+    /* Reuse only an active executable view of the selected physical drive. */
+    struct stat preferred_stat, view_stat;
+    if(d->preferred[0] && !stat(d->preferred,&preferred_stat))
+        for(int i=0;i<d->nloc&&!d->target[0];i++)
+            if(!strncmp(d->loc[i],"/run/openplugin-volumes/",23) && good_target(d->loc[i]) &&
+               !stat(d->loc[i],&view_stat) && preferred_stat.st_dev==view_stat.st_dev) {
+                snprintf(d->target,sizeof d->target,"%s",d->loc[i]);snprintf(d->via,sizeof d->via,"Activations drive (plugin folder)");
+            }
+    if (!d->target[0] && d->preferred[0] && strlen(preferred_synths) < sizeof d->target && good_target(preferred_synths)) {
+        snprintf(d->target, sizeof d->target, "%s", preferred_synths);
+        snprintf(d->via, sizeof d->via, "Activations preference");
+    }
     for (int pass = 0; pass < 2; pass++)
         for (int i = 0; i < d->nloc && !d->target[0]; i++) {
             int internal = !strncmp(d->loc[i], "/media/az01-internal", 20) || !strncmp(d->loc[i], "/sdcard/", 8);
             if ((pass || internal) && good_target(d->loc[i])) snprintf(d->target, sizeof d->target, "%s", d->loc[i]);
         }
-    if (d->target[0]) snprintf(d->via, sizeof d->via, "SynthContentLocations");
+    if (d->target[0] && !d->via[0]) snprintf(d->via, sizeof d->via, "SynthContentLocations");
     /* none listed is usable (a trailing "/", only card or factory locations, ...): the folder this plugin was installed
      * in, then where other plugin folders are, then the internal drive's default */
     char cand[200];
@@ -712,6 +762,8 @@ static void probe_device(device_t *d) {
     }
     if (ad) closedir(ad);
     const char *pb = !d->settings[0] ? "No MPC.settings"
+                   : settings_count > 1 ? "Multiple settings profiles"
+                   : chosen_target[0]&&!good_target(chosen_target) ? "Reconnect selected plugin drive"
                    : !d->target[0] ? "No install location"
                    : !on_path("systemctl") ? "No systemctl"
                    : !d->systemd_run ? "No systemd-run"
@@ -812,7 +864,7 @@ static void scan_installed(const device_t *d, pkg_t *pkg, int n) {
 #include "rom_setup.inc"
 #include "remote_access.inc"
 
-#include "catalog_previews.inc"
+
 
 static int catalog_parse(const char *text,list_t *l) {
     const char *end=text?jobject(text,top_member,l):NULL;
@@ -829,14 +881,22 @@ static void catalog_save(const char *path,const char *text) {
     int ok=off==n && !fsync(fd);if(close(fd))ok=0;
     if(ok)rename(temp,path);else unlink(temp);
 }
+static void locations_scan(mgr_t *m);
+static void storage_text(const char *,const char *,char *,size_t);
+#include "startup_trace.inc"
 static void do_refresh(mgr_t *m) {
+    double started = startup_clock();
+    startup_trace(m, started, "catalog request begin");
     say(m, OK, "Loading the plugin catalog\xe2\x80\xa6");
     sink_t s = {0};
     int got = fetch(m, CATALOG_URL, &s) == 0;
+    startup_trace(m, started, got ? "catalog request complete" : "catalog request failed");
     pkg_t *tmp = calloc(MAXPKG, sizeof *tmp);
     list_t l = {tmp, 0};
     int parsed = got && tmp && catalog_parse(s.buf,&l);
+    startup_trace(m, started, "catalog parse complete");
     probe_device(m->dev);
+    startup_trace(m, started, "first device probe complete");
     char cache[768];snprintf(cache,sizeof cache,"%s/.pluginmgr-catalog.json",m->dev->base);
     int cached=0;
     if(parsed && m->dev->base[0])catalog_save(cache,s.buf);
@@ -849,6 +909,7 @@ static void do_refresh(mgr_t *m) {
     }
     if(!parsed && !cached && m->loaded){free(tmp);free(s.buf);pthread_mutex_lock(&m->mu);m->online=0;say_locked(m,WARN,"Refresh failed. Keeping the last catalog; retry when online.");pthread_mutex_unlock(&m->mu);return;}
     if (tmp) source_merge(tmp, &l.n);
+    startup_trace(m, started, "cache and sources complete");
     if (!tmp || (!parsed && !l.n)) {
         free(s.buf);
         free(tmp);
@@ -860,8 +921,14 @@ static void do_refresh(mgr_t *m) {
     }
     free(s.buf);
     probe_device(m->dev);
+    startup_trace(m, started, "second device probe complete");
+    char internal_space[64],preferred_space[64];
+    storage_text(is_dir("/sdcard")?"/sdcard":"/media/az01-internal","Internal",internal_space,sizeof internal_space);
+    const char *drive_label=strrchr(m->dev->preferred,'/');
+    storage_text(m->dev->preferred,drive_label&&drive_label[1]?drive_label+1:"Preferred drive",preferred_space,sizeof preferred_space);
     write_report(m->dev);
     scan_installed(m->dev, tmp, l.n);
+    startup_trace(m, started, "installed plugin scan complete");
     struct statvfs sv;   /* the header's storage readout: the drive plugins go to */
     const char *disk = m->dev->target[0] ? m->dev->target : "/media/az01-internal";
     float used = 0;
@@ -883,14 +950,20 @@ static void do_refresh(mgr_t *m) {
     m->sel = m->menu = -1;
     for (int i = 0; i < l.n; i++) if (!strcmp(tmp[i].id, sel)) m->sel = i;
     m->online = parsed; m->loaded = 1;
+    snprintf(m->storage_internal,sizeof m->storage_internal,"%s",internal_space);
+    snprintf(m->storage_preferred,sizeof m->storage_preferred,"%s",preferred_space);
     m->disk_used = used;
     snprintf(m->disk_free, sizeof m->disk_free, "%s", freebuf);
     if (m->dev->problem[0]) say_locked(m, ERR, "Installing is turned off on this MPC (%s)", m->dev->problem);
     else { say_locked(m,parsed?OK:WARN,parsed?"Catalog refreshed from server. Plugin versions checked.":"Offline: showing saved catalog. Tap Refresh catalog when connected."); }
     pthread_mutex_unlock(&m->mu);
     free(tmp);
-    pthread_mutex_lock(&m->mu);preview_request_locked(m);pthread_mutex_unlock(&m->mu);
+    startup_trace(m, started, "catalog published");
 }
+
+#include "skin_registration.inc"
+static void do_launch(mgr_t *m);
+#include "locations.inc"
 
 /* Download, check and unpack every queued package, then write apply.sh. Nothing on the device changes yet. */
 static void prepare(mgr_t *m, pkg_t *q) {
@@ -903,6 +976,15 @@ static void prepare(mgr_t *m, pkg_t *q) {
     pthread_mutex_unlock(&m->mu);
     char path[512], cmd[1400];
     const char *err = NULL;
+    char skin_helper[1024] = "", storage_helper[1024] = "", storage_error[180] = "";
+    int drive_installs=0, link_fallbacks=0;
+    for (int k = 0; k < nq; k++) {
+        if (!is_addin(&q[k]) && q[k].queued == Q_INSTALL && !locations_helper(storage_helper,sizeof storage_helper))
+            err = "storage helper missing; reinstall the complete manager package";
+        if (!is_addin(&q[k]) && q[k].queued == Q_INSTALL && !skin_helper_path(skin_helper, sizeof skin_helper))
+            err = "skin registration helper missing; reinstall the complete manager package";
+    }
+    if (!safe(m->dev->settings)) err = "unsupported settings path";
     int i;
     for (i = 0; i < nq && !err; i++) {
         pkg_t *p = &q[i];
@@ -924,16 +1006,24 @@ static void prepare(mgr_t *m, pkg_t *q) {
         }
         if (d) closedir(d);
         if (!p->dir[0]) err = "is not a valid package";
+        if (!err && !is_addin(p)) {
+            snprintf(path, sizeof path, "%s/%s", p->dir, p->queued == Q_INSTALL ? "install.sh" : "uninstall.sh");
+            char *script = slurp(path, 1 << 20);
+            if (!script || !strstr(script, "-n)")) err = "requires a newer package with batch installation support";
+            free(script);
+        }
     }
     FILE *f = err ? NULL : fopen(WORK "/apply.sh", "w");
     if (!err && !f) err = "apply.sh could not be written";
     if (f) {
         fprintf(f, "#!/bin/sh\n# written by the Plugin Manager; runs as a transient systemd unit, outside MPC\n"
                    "exec >>" WORK "/apply.log 2>&1\necho \"== apply $(date)\"\nSTATE='%s'\n"
-                   "set -e\ntrap 'systemctl start acvs' EXIT\nsystemctl stop acvs\ni=0; while pidof MPC >/dev/null && [ $i -lt 30 ]; do sleep 1; i=$((i + 1)); done\nif pidof MPC >/dev/null; then echo 'MPC failed to stop'; exit 1; fi\n"
+                   "set -e\n"
                    "setstate() { if [ -f \"$STATE\" ]; then grep -v \"^$1 \" \"$STATE\" > \"$STATE.new\" || [ $? -eq 1 ]; else : > \"$STATE.new\"; fi; [ -n \"$2\" ] && echo \"$1 $2\" >> \"$STATE.new\"; mv \"$STATE.new\" \"$STATE\"; }\n"
                    "batch() { grep -q -- '-n)' \"$1\" && printf '%%s' -n; }   # older installers lack -n and restart MPC themselves\n",
                 m->dev->state);
+        skin_write_guard(f, skin_helper, m->dev->settings);
+        fputs("systemctl stop acvs\ni=0; while pidof MPC >/dev/null && [ $i -lt 30 ]; do sleep 1; i=$((i + 1)); done\nif pidof MPC >/dev/null; then echo 'MPC failed to stop'; exit 1; fi\n", f);
         for (i = 0; i < nq && !err; i++) {
             pkg_t *p = &q[i];
             /* a remove goes where it is; an update stays where it is if that folder can hold a plugin, else it (and a new
@@ -945,6 +1035,19 @@ static void prepare(mgr_t *m, pkg_t *q) {
             else if (is_addin(p)) snprintf(target, sizeof target, "%s/%s", m->dev->addins, p->id);
             else snprintf(target, sizeof target, "%s", p->queued == Q_REMOVE ? p->synths
                           : p->synths[0] && good_target(p->synths) ? p->synths : m->dev->target);
+            char requested[280];snprintf(requested,sizeof requested,"%s",target);
+            if(!is_addin(p) && p->queued==Q_INSTALL) {
+                if(!safe(target)||!safe(p->dir)){err="unsafe package location";break;}
+                char resolve[2600];snprintf(resolve,sizeof resolve,"'%s' install-target '%s' '%s' '%s' '%s' > '" WORK "/package-target' 2> '" WORK "/package-target-error'",storage_helper,m->dev->settings,m->dev->state,target,p->dir);
+                if(sh(resolve)){char *detail=slurp(WORK "/package-target-error",170);snprintf(storage_error,sizeof storage_error,"%s",detail?detail:"could not check package storage");free(detail);err=storage_error;break;}
+                char *resolved=slurp(WORK "/package-target",300);
+                if(resolved)resolved[strcspn(resolved,"\r\n")]=0;
+                if(!resolved||resolved[0]!='/'||strlen(resolved)>=sizeof target||!safe(resolved)){free(resolved);err="invalid package storage result";break;}
+                if(strncmp(requested,"/run/openplugin-volumes/",23)==0&&strncmp(resolved,"/run/openplugin-volumes/",23))link_fallbacks++;
+                if(!strncmp(resolved,"/run/openplugin-volumes/",23))drive_installs++;
+                snprintf(target,sizeof target,"%s",resolved);free(resolved);
+                fprintf(f,"checked=$('%s' install-target '%s' '%s' '%s' '%s')\n[ \"$checked\" = '%s' ] || { echo 'Install destination changed; stopped before installation'; exit 1; }\n",storage_helper,m->dev->settings,m->dev->state,requested,p->dir,target);
+            }
             const char *synths = target;
             if (!synths[0] || !safe(synths) || (is_addin(p) && !m->dev->addins[0])) { err = "has no install location"; break; }
             if (is_addin(p) && p->queued == Q_INSTALL)
@@ -953,14 +1056,14 @@ static void prepare(mgr_t *m, pkg_t *q) {
             else if (is_addin(p))
                 fprintf(f, "echo '-- remove %s'\nsh '%s/uninstall.sh' -y -n -t '%s'\n", p->id, synths, synths);
             else if (p->queued == Q_INSTALL)
-                fprintf(f, "echo '-- install %s %s'\nsh '%s/install.sh' -y $(batch '%s/install.sh') -t '%s' && setstate '%s' '%s' && rm -rf '" WORK "/%s' '" WORK "/%s.zip' || exit 1\n",
-                        p->id, p->latest, p->dir, p->dir, synths, p->id, p->latest, p->id, p->id);
+                fprintf(f, "echo '-- install %s %s'\nsh '%s/install.sh' -y -n -t '%s' && printf '%%s\\n' '%s' >> \"$SKIN_ROOTS\" && setstate '%s' '%s' && rm -rf '" WORK "/%s' '" WORK "/%s.zip' || exit 1\n",
+                        p->id, p->latest, p->dir, synths, synths, p->id, p->latest, p->id, p->id);
             else
                 fprintf(f, "echo '-- remove %s'\nsh '%s/uninstall.sh' -y $(batch '%s/uninstall.sh') -t '%s' && setstate '%s' '' && rm -rf '" WORK "/%s' '" WORK "/%s.zip' || exit 1\n",
                         p->id, p->dir, p->dir, synths, p->id, p->id, p->id);
             if (p->queued == Q_INSTALL && !strcmp(p->id,"jv-880")) rom_write_apply(f,synths);
         }
-        fprintf(f, "systemctl start acvs\ntrap - EXIT\nrm -f \"$0\"\necho \"== done $(date)\"\n");
+        fprintf(f, "finish\nrm -f \"$0\"\necho \"== done $(date)\"\n");
         fclose(f);
     }
     pthread_mutex_lock(&m->mu);
@@ -970,7 +1073,8 @@ static void prepare(mgr_t *m, pkg_t *q) {
         say_locked(m, ERR, "%s: %s. Nothing on the MPC was changed.", i < nq ? q[i].name : "APPLY", err);
     } else {
         m->ready = 1;
-        say_locked(m, WARN, "Ready. Save your project: APPLY restarts MPC.");
+        if(drive_installs||link_fallbacks)say_locked(m,WARN,"Ready: %d on selected drive; %d stay Internal (need links). Save project: APPLY restarts MPC.",drive_installs,link_fallbacks);
+        else say_locked(m, WARN, "Ready. Save your project: APPLY restarts MPC.");
     }
     pthread_mutex_unlock(&m->mu);
 }
@@ -1011,9 +1115,9 @@ static void *worker(void *ud) {
         m->busy = job;
         m->rev++;
         pthread_mutex_unlock(&m->mu);
-        if (job == J_REMOTE_ENABLE || job == J_REMOTE_DISABLE) do_remote(m,job);
+        if (job >= J_LOC_SCAN && job <= J_LOC_RETURN) locations_job(m, job);
+        else if (job == J_REMOTE_ENABLE || job == J_REMOTE_DISABLE) do_remote(m,job);
         else if (job == J_REFRESH) do_refresh(m);
-        else if (job == J_PREVIEW) preview_refresh(m);
         else if (job == J_PREPARE) do_prepare(m);
         else if (job == J_LAUNCH) do_launch(m);
         else if (job == J_JV_INSTALL) { do_prepare(m); pthread_mutex_lock(&m->mu); int ready=m->ready; m->ready=0; pthread_mutex_unlock(&m->mu); if(ready) do_launch(m); }
@@ -1022,7 +1126,7 @@ static void *worker(void *ud) {
         pthread_mutex_lock(&m->mu);
         m->busy = 0;
         m->rev++;
-        if(m->preview_pending && !m->job){m->job=J_PREVIEW;m->preview_pending=0;}
+        if(m->storage_pending&&!m->job){m->job=J_LOC_SCAN;m->storage_pending=0;}
     }
     pthread_mutex_unlock(&m->mu);
     return NULL;
@@ -1035,6 +1139,31 @@ static int has_update(const pkg_t *p) {   /* a known older version, or an old-la
     return p->url[0] && installed(p) && (p->legacy || (strcmp(p->installed, "?") && strcmp(p->installed, p->latest)));
 }
 
+/* Keep package indexes stable: sort only the filtered view, never the queue. */
+static const char *catalog_name(const pkg_t *p) {
+    const char *name=p->name;
+    if(*name=='['){const char *end=strchr(name,']');if(end&&end[1])name=end+1;}
+    while(isspace((unsigned char)*name))name++;
+    return name;
+}
+static int catalog_group(const pkg_t *p) {
+    unsigned c=toupper((unsigned char)*catalog_name(p));
+    return c>='A'&&c<='Z'?1+((c-'A')/4>5?5:(c-'A')/4):0;
+}
+static int catalog_compare(const void *a,const void *b,void *ctx) {
+    const mgr_t *m=ctx;const pkg_t *x=&m->pkg[*(const int*)a],*y=&m->pkg[*(const int*)b];
+    if(m->sort_mode==2){
+        if(x->downloads_known!=y->downloads_known)return y->downloads_known-x->downloads_known;
+        if(x->downloads!=y->downloads)return x->downloads>y->downloads?-1:1;
+    }
+    if((m->sort_mode==3||m->sort_mode==4)&&x->updated!=y->updated){
+        if(!x->updated||!y->updated)return x->updated?-1:1;
+        return (x->updated>y->updated?-1:1)*(m->sort_mode==4?-1:1);
+    }
+    int order=strcasecmp(catalog_name(x),catalog_name(y));
+    if(!order)order=strcmp(x->id,y->id);
+    return m->sort_mode==1?-order:order;
+}
 /* Every indexed catalog entry is browseable, including source-only packages. */
 static int visible(const mgr_t *m, int *idx) {
     int n = 0;
@@ -1054,6 +1183,7 @@ static int visible(const mgr_t *m, int *idx) {
         if (m->tab == 2 && !has_update(p)) continue;
         idx[n++] = i;
     }
+    qsort_r(idx,n,sizeof *idx,catalog_compare,(void*)m);
     return n;
 }
 
@@ -1107,18 +1237,32 @@ static void spaced(const char *in, char *out, int n) {   /* catalog slugs ("fm-s
     out[k] = 0;
 }
 
+#include "catalog_title.inc"
+
 /* Bound descriptions to two readable lines. Metadata remains plain text. */
 static void description_line(const char *text, int line, char *out, int n) {
+    if(n<=0)return;
     const char *p=*text?text:"No description supplied by the author.";
-    for (int row=0;row<=line;row++) {
-        while (*p && (unsigned char)*p<=32) p++;
-        size_t len=strlen(p), take=len<78?len:78;
-        while (take && ((unsigned char)p[take]&0xc0)==0x80) take--;
-        if (len>take) {size_t word=take;while(word && (unsigned char)p[word]>32)word--;if(word>30)take=word;}
-        if(row==line){size_t count=take<(size_t)n-1?take:(size_t)n-1;memcpy(out,p,count);out[count]=0;
-            for(size_t j=0;j<count;j++)if((unsigned char)out[j]<32)out[j]=' ';
-            if(line==1 && len>take && count>=3)memcpy(out+count-3,"...",3);
-            return;}
+    for(int row=0;row<=line;row++) {
+        while(*p && (unsigned char)*p<=32)p++;
+        size_t take=0,word=0;int width=0;
+        while(p[take]) {
+            unsigned char c=p[take];size_t bytes=1;int advance=24;
+            if(c<128)advance=c>=32?description_widths[c-32]:description_widths[0];
+            else {if((c&0xe0)==0xc0)bytes=2;else if((c&0xf0)==0xe0)bytes=3;else if((c&0xf8)==0xf0)bytes=4;}
+            int valid=1;for(size_t j=1;j<bytes;j++)if(!p[take+j]||((unsigned char)p[take+j]&0xc0)!=0x80){valid=0;break;}
+            if(!valid || width+advance>548)break;
+            if(c<=32)word=take;
+            width+=advance;take+=bytes;
+        }
+        if(p[take] && word>take/2)take=word;
+        if(row==line){
+            size_t count=take<(size_t)n-1?take:(size_t)n-1;
+            while(count && ((unsigned char)p[count]&0xc0)==0x80)count--;
+            memcpy(out,p,count);for(size_t j=0;j<count;j++)if((unsigned char)out[j]<32)out[j]=' ';
+            if(line==1 && p[take] && count+3<(size_t)n){memcpy(out+count,"...",3);count+=3;}
+            out[count]=0;return;
+        }
         p+=take;
     }
 }
@@ -1168,8 +1312,6 @@ static void *mgr_create(const char *data_dir) {
     snprintf(m->source_url, sizeof m->source_url, "https://github.com/");
     m->searching = 1;
     snprintf(m->source_status, sizeof m->source_status, "Examples: acid, reverb, Airwindows. Browse everything in CATALOG; no search needed.");
-    for(int r=0;r<ROWS;r++)for(int p=0;p<PREVIEW_PIXELS;p++)m->preview_pixels[r][p]=0x111;
-    m->preview_enabled = 1; /* Missing bundled artwork is fetched by the worker; bounded numeric updates bypass PNG caching. */
     m->online = 1;
     snprintf(m->status, sizeof m->status, "Starting\xe2\x80\xa6");
     m->sticky = 1;
@@ -1209,7 +1351,7 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
     double v = atof(val);
     /* Host automation echoes display values: only actual user controls mutate state. */
     {
-        int special=!strcmp(key,"remote_enable")||!strcmp(key,"remote_disable")||!strcmp(key,"remote_show")||
+        int special=!strcmp(key,"catalog_sort_az")||!strcmp(key,"catalog_sort_za")||!strcmp(key,"catalog_sort_downloads")||!strcmp(key,"catalog_sort_updated")||!strcmp(key,"catalog_sort_oldest")||(!strncmp(key,"catalog_jump_",13)&&key[13]>='0'&&key[13]<='6'&&!key[14])||!strcmp(key,"storage_open")||!strncmp(key,"storage_move_",13)||!strcmp(key,"storage_next")||!strcmp(key,"storage_prev")||!strcmp(key,"locations_return")||!strcmp(key,"locations_log")||!strcmp(key,"locations_log_next")||!strcmp(key,"locations_log_prev")||!strcmp(key,"locations_scan")||!strcmp(key,"locations_prev")||!strcmp(key,"locations_next")||!strcmp(key,"locations_plan")||!strcmp(key,"locations_confirm")||!strcmp(key,"locations_cancel")||!strcmp(key,"locations_repair")||!strcmp(key,"remote_enable")||!strcmp(key,"remote_disable")||!strcmp(key,"remote_show")||
           !strcmp(key,"rom_check")||!strcmp(key,"rom_usb")||!strcmp(key,"rom_download")||
           !strcmp(key,"source_scan")||!strcmp(key,"source_back")||!strcmp(key,"source_clear")||!strcmp(key,"source_cleartext")||!strcmp(key,"source_search")||!strncmp(key,"source_key_",11);
         int row_action=key[0]=='r' && key[1]>='1' && key[1]<='3' && key[2]=='_' &&
@@ -1221,7 +1363,17 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
         if(!option&&v<.5)return;
     }
     pthread_mutex_lock(&m->mu);
+    if(m->locations_running){pthread_mutex_unlock(&m->mu);return;}
+    if(!strcmp(key,"storage_open")){
+        if(!m->storage_requested){m->storage_requested=1;m->storage_pending=1;
+            if(!m->busy&&!m->job){m->storage_pending=0;post(m,J_LOC_SCAN);}m->rev++;}
+        pthread_mutex_unlock(&m->mu);return;
+    }
     if((!strcmp(key,"tab")&&(int)(v+.5)==m->tab)||(!strcmp(key,"kind")&&(int)(v+.5)==m->kindf)){pthread_mutex_unlock(&m->mu);return;}
+    if (!strncmp(key,"locations_",10)||!strncmp(key,"storage_move_",13)||!strcmp(key,"storage_next")||!strcmp(key,"storage_prev")) {
+        locations_action(m,key);
+        m->rev++;pthread_mutex_unlock(&m->mu);return;
+    }
     if (!strncmp(key,"remote_",7)) {
         if(v>=0.5 && !m->busy && !m->job) {
             if(!strcmp(key,"remote_enable")) post(m,J_REMOTE_ENABLE);
@@ -1275,7 +1427,6 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
                 }
             }
             m->page=0;
-            if(!strcmp(key,"source_scan") || !strcmp(key,"source_clear"))preview_request_locked(m);
             m->rev++;
         }
         pthread_mutex_unlock(&m->mu); return;
@@ -1283,7 +1434,30 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
 
     int idx[MAXPKG], nv = visible(m, idx), pages = nv ? (nv + ROWS - 1) / ROWS : 1;
     int busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
-    if (!strcmp(key, "tab") || !strcmp(key, "kind")) {   /* option params: the index as a number */
+    if(!strncmp(key,"catalog_sort_",13)) {
+        int mode=!strcmp(key+13,"za")?1:!strcmp(key+13,"downloads")?2:!strcmp(key+13,"updated")?3:!strcmp(key+13,"oldest")?4:0;
+        int available=0;for(int k=0;k<m->npkg;k++)available|=mode>=3?m->pkg[k].updated!=0:m->pkg[k].downloads_known;
+        if(mode<2||available){m->sort_mode=mode;m->jump_group=0;m->page=0;m->menu=-1;}
+    } else if(!strncmp(key,"catalog_jump_",13)) {
+        int slot=atoi(key+13);
+        if(m->sort_mode<2&&slot>=0&&slot<7){
+            if(!m->jump_group&&slot>0){
+                m->jump_group=slot;m->sort_mode=0;nv=visible(m,idx);
+                for(int k=0;k<nv;k++)if(catalog_group(&m->pkg[idx[k]])==slot){m->page=k/ROWS;m->menu=-1;break;}
+            }
+            else if(m->jump_group&&slot==0)m->jump_group=0;
+            else {
+                int letter=m->jump_group?'A'+(m->jump_group-1)*4+slot-1:0;
+                if(letter<='Z'&&(!m->jump_group||slot<=(m->jump_group==6?6:4))){
+                    m->sort_mode=0;nv=visible(m,idx);
+                    for(int k=0;k<nv;k++){
+                        int first=toupper((unsigned char)*catalog_name(&m->pkg[idx[k]]));
+                        if(letter?first==letter:catalog_group(&m->pkg[idx[k]])==0){m->page=k/ROWS;m->menu=-1;break;}
+                    }
+                }
+            }
+        }
+    } else if (!strcmp(key, "tab") || !strcmp(key, "kind")) {   /* option params: the index as a number */
         int o = (int)(v + 0.5);
         if (key[0] == 't') m->tab = o; else m->kindf = o;
         m->page = 0;
@@ -1332,7 +1506,6 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
             }
         }
     }
-    if(!strcmp(key,"tab") || !strcmp(key,"kind") || (v>=0.5 && (!strcmp(key,"page_prev") || !strcmp(key,"page_next"))))preview_request_locked(m);
     m->rev++;
     pthread_mutex_unlock(&m->mu);
 }
@@ -1340,6 +1513,9 @@ static void mgr_set_param(void *inst, const char *key, const char *val) {
 static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     mgr_t *m = inst;
     pthread_mutex_lock(&m->mu);
+    if (!strncmp(key,"locations_",10) || !strncmp(key,"storage_",8)) {
+        locations_field(m,key,b,n);pthread_mutex_unlock(&m->mu);return 1;
+    }
     if (!strncmp(key,"remote_",7)) {
         remote_field(m,key,b,n);
         pthread_mutex_unlock(&m->mu);return 1;
@@ -1365,25 +1541,36 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     }
     if (!m->view_valid || m->view_rev != m->rev) {
         m->view_n = visible(m, m->view_idx);
+        m->jump_mask=0;m->letter_mask=0;m->has_downloads=0;m->has_dates=0;
+        for(int k=0;k<m->view_n;k++){pkg_t *p=&m->pkg[m->view_idx[k]];m->jump_mask|=1u<<catalog_group(p);m->has_downloads|=p->downloads_known;m->has_dates|=p->updated!=0;unsigned letter=toupper((unsigned char)*catalog_name(p));if(letter>='A'&&letter<='Z')m->letter_mask|=1u<<(letter-'A');}
         m->view_updates = count_updates(m);
         m->view_queued = count_queued(m);
         m->view_rev = m->rev;
         m->view_valid = 1;
     }
-    if (!strncmp(key,"previewpx_",10)) {
-        int row=-1,pixel=-1;char tail;
-        if (sscanf(key+10,"%d_%d%c",&row,&pixel,&tail)==2 && row>=1 && row<=ROWS && pixel>=0 && pixel<PREVIEW_PIXELS) {
-            int k=m->page*ROWS+row-1;
-            int valid=k<m->view_n && !strcmp(m->preview_row_id[row-1],m->pkg[m->view_idx[k]].id);
-            snprintf(b,n,"%u",valid?m->preview_pixels[row-1][pixel]:0x111);
-        } else snprintf(b,n,"0");
-        pthread_mutex_unlock(&m->mu);return 1;
-    }
     const int *idx = m->view_idx;
     int nv = m->view_n, pages = nv ? (nv + ROWS - 1) / ROWS : 1, ok = 1;
     if (m->page >= pages) m->page = pages - 1;
     int upd = m->view_updates, q = m->view_queued, busy = m->busy == J_PREPARE || m->busy == J_LAUNCH || m->busy == J_JV_INSTALL;
-    if (!strcmp(key, "tab")) snprintf(b, n, "%d", m->tab);
+    if(!strcmp(key,"catalog_sort_mode"))snprintf(b,n,"%d",m->sort_mode);
+    else if(!strcmp(key,"catalog_downloads_available"))snprintf(b,n,"%d",m->has_downloads);
+    else if(!strcmp(key,"catalog_dates_available"))snprintf(b,n,"%d",m->has_dates);
+    else if(!strncmp(key,"catalog_jump_available_",23)){
+        int slot=atoi(key+23),letter=(m->jump_group-1)*4+slot-1;
+        int available=m->sort_mode<2&&slot>=0&&slot<7&&(m->jump_group?(slot==0||(slot<=(m->jump_group==6?6:4)&&letter>=0&&letter<26&&(m->letter_mask&(1u<<letter)))):(m->jump_mask&(1u<<slot)));
+        snprintf(b,n,"%d",available!=0);
+    }
+    else if(!strncmp(key,"catalog_jump_label_",19)){
+        int slot=atoi(key+19),code=0;
+        if(m->sort_mode<2&&slot>=0&&slot<7){
+            if(!m->jump_group){if(m->jump_mask&(1u<<slot))code=slot?slot+2:1;}
+            else if(!slot)code=2;
+            else {int letter=(m->jump_group-1)*4+slot-1;
+                if(slot<=(m->jump_group==6?6:4)&&letter<26&&(m->letter_mask&(1u<<letter)))code=9+letter;}
+        }
+        snprintf(b,n,"%d",code);
+    }
+    else if (!strcmp(key, "tab")) snprintf(b, n, "%d", m->tab);
     else if (!strcmp(key, "kind")) snprintf(b, n, "%d", m->kindf);
     else if (!strcmp(key, "net")) snprintf(b, n, "%d", !m->online);
     else if (!strcmp(key, "disk")) snprintf(b, n, "%d", (int)(m->disk_used * 10 + 0.5));   /* bar steps 0..10 */
@@ -1415,7 +1602,7 @@ static int mgr_get_param(void *inst, const char *key, char *b, int n) {
     else if (!strncmp(key, "card", 4) && key[4] >= '1' && key[4] <= '3') {   /* card<r>_1: the name, and its selection */
         int k = m->page * ROWS + key[4] - '1', i = k < nv ? idx[k] : -1;
         if (strstr(key, "_on")) snprintf(b, n, "%d", i >= 0 && i == m->sel);
-        else snprintf(b, n, "%s", i >= 0 ? m->pkg[i].name : " ");
+        else catalog_title(i >= 0 ? m->pkg[i].name : " ", b, n);
     } else if (key[0] == 'r' && key[1] >= '1' && key[1] <= '3' && key[2] == '_') {
         int k = m->page * ROWS + key[1] - '1';
         card_field(m, k < nv ? idx[k] : -1, key + 3, b, n);

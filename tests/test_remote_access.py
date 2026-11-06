@@ -34,3 +34,17 @@ class RemoteAccessTest(unittest.TestCase):
             self.assertEqual(shadow.read_text(),original)
             self.assertEqual(run('enable').returncode,0)
             self.assertFalse((d/'disabled').exists())
+
+            # Simulate subsequent service starts, including after a reboot.
+            for _ in range(3):
+                self.assertEqual(run('prepare').returncode,0)
+                self.assertFalse((d/'disabled').exists())
+            self.assertEqual(run('disable').returncode,0)
+            for _ in range(3):
+                self.assertNotEqual(run('prepare').returncode,0)
+                self.assertTrue((d/'disabled').exists())
+
+    def test_boot_service_respects_persistent_choice(self):
+        service=(ROOT/'runtime/openplugin-remote.service').read_text()
+        self.assertIn('ConditionPathExists=!/data/openplugin/ssh/disabled',service)
+        self.assertIn('WantedBy=multi-user.target',service)

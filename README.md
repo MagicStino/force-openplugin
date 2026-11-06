@@ -4,13 +4,17 @@ Browse, install and update **community VST plugins on Akai Force 3.10.0 and MPC 
 
 Built on [poloq’s Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager) and [sd88me’s MPC VST Plugins](https://github.com/open-mpc/mpc-vst-plugins). Original authors retain their credits and licenses. This independent, non-commercial project is AI-assisted and unaffiliated with Akai or inMusic.
 
-**[OpenPlugin 0.8.3 build information and USB guide](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → Plugin Manager** on a plugin track.
+**[OpenPlugin 0.9.0 release notes](docs/RELEASE-0.9.0.md) · [User manual](docs/GUIDE.md) · [Downloads](docs/DOWNLOADS.md).** After the initial update, load **PLUGINS → VST → OpenPlugin Manager** on a plugin track.
 
 [Browse plugins](https://magicstino.github.io/force-openplugin/#catalog) · [Find or publish a plugin](docs/DISCOVERY.md) · [Test status](docs/TESTING.md)
 
 **Release status:** The current Tracks16 build is available in the [downloads](docs/DOWNLOADS.md). Force owner testing confirms creation, saving and loading of 15 audio plus 15 plugin tracks, playback and rejection of a 17th track. Recording remains untested. MPC Gen1 passes software validation but remains hardware untested. Both images pass Akai ARM verification, filesystem, injected-file and SHA256 checks. The catalog snapshot contains 200 entries and 195 images; incompatible Gen2 downloads are blocked.
 
-![Generated native interface preview — not a hardware capture](website/assets/catalog-native.png)
+![OpenPlugin Manager on the owner’s Force](website/assets/manager-0.9/catalog.png)
+
+## OpenPlugin Manager 0.9.0 — 6 November 2026
+
+The new Force candidate includes fast PNG browsing, sorting, managed drive moves, skin repair and an ABOUT page. The manager has been exercised on the owner’s Force; the newly built full image still requires flash/boot acceptance. [What changed](docs/RELEASE-0.9.0.md).
 
 ## Tracks16 release — 5 November 2026
 
@@ -21,7 +25,11 @@ The current complete images include **16 audio + 16 plugin tracks**, alongside P
 - Discover community instruments, effects, samplers, trackers and tools; filter by name, author or tag.
 - Download compatible native packages, queue installs and updates, or remove managed plugins.
 - Load the online index when the manager opens or **Refresh catalog** is pressed; keep a saved index offline.
-- Display bundled artwork immediately; download and cache compact online thumbnails for unbundled entries. Refresh catalog to retry missing artwork; cached thumbnails remain available offline.
+- Load bundled PNG artwork quickly, with a gradient for missing images. Refresh updates catalog metadata; artwork updates ship with the manager.
+- Sort A–Z, Z–A, Newest, Oldest or Popular; jump and refine by alphabet with matching paginator pages.
+- Move eligible managed plugins from Internal to SSD/USB/SD and back, verify before cleanup, and keep missing-drive recovery guidance visible.
+- Repair skin registrations automatically after installs or manually in STORAGE.
+- Read the version and GitHub manual links in ABOUT.
 - Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
 - Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
 - Transfer samples and files using **REMOTE ACCESS** SSH/SFTP controls. See the [connection guide](docs/SSH.md) for setup and test limits.
@@ -76,11 +84,11 @@ Each command builds the native payload and runs the same validation checks;
 only the requested firmware image(s) are generated. The originals remain unchanged.
 An optional final argument supplies an owner's public SSH key.
 
-Outputs: `*-openplugin-v0.8.3-update.img`, checksums and validation manifests. Existing files
+Outputs: `*-openplugin-v0.9.0-update.img`, checksums and validation manifests. Existing files
 are not overwritten. The script fetches pinned dependencies and builds the
 native code, artwork and selected images without mounting them. It does not flash.
 
-Container version: **3.10.0-openplugin-v0.8.3**. The supplied 3.10.0 files
+Container version: **3.10.0-openplugin-v0.9.0**. The supplied 3.10.0 files
 contain application **3.10.0.49**; its binaries and numeric version fields stay
 unchanged. See [current build availability](docs/DOWNLOADS.md). Firmware images are distributed separately from Git source.
 
@@ -108,9 +116,13 @@ Existing component licenses apply; see [NOTICE](native/NOTICE.md).
 
 ## Community credits
 
+**NoQuestion & dustyslices**: first documented the VST method in the MPC-Forums thread [“Proof of Concept: Custom Standalone Plugins”](https://www.mpc-forums.com/viewtopic.php?f=41&t=220981) (September 2026), as credited by [Open MPC](https://github.com/open-mpc/mpc-vst-plugins#credits).
+
+**MockbaTheBorg / MockbaMod**: [SSH, screen and mouse information and community code](https://github.com/MockbaTheBorg/MockbaMod) that informed our remote-access and testing work. The bundled mouse code is separately credited to [no3z, Amit Talwar and bonsaipanda](https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares); its original license and source attribution are preserved.
+
 Mouse source: [no3z, Amit Talwar and bonsaipanda](https://github.com/bonsaipanda/MPC-Force-SSH-Firmwares). Image decoding: [stb](https://github.com/nothings/stb). Pinned sources and licenses are preserved in `native/`.
 
-**sd88me**: [MPC VST Plugins](https://github.com/open-mpc/mpc-vst-plugins), the upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
+**sd88me**: [MPC VST Plugins](https://github.com/open-mpc/mpc-vst-plugins), the catalog setup, upstream catalog JSON and collection, and the native wrapper/skin/build tooling used here. Individual plugin authors and their upstream engines, ports, screenshots and artwork retain their credits and licenses.
 
 **poloq-instruments**: [Plugin Manager](https://github.com/poloq-instruments/mpc-vst-manager), the native manager foundation, including existing device-side installation. Our additions integrate it into the firmware, add illustrated cards/search improvements, a scheduled catalog bridge, saved-catalog fallback and combined JV setup.
 

@@ -61,7 +61,12 @@ def main():
     if args.output:
         args.output.mkdir(parents=True,exist_ok=True)
         Image.new('RGBA',(176,86)).save(args.output/'preview_0.png')
-        fallback=Image.new('RGB',(176,86),'#20252c');d=ImageDraw.Draw(fallback);d.rectangle((12,12,164,74),outline='#69717a');d.text((88,43),'NO PREVIEW',fill='#c4c9cf',anchor='mm')
+        fallback=Image.new('RGB',(176,86))
+        # Quiet reusable gradient; plugin identity stays in the readable title field.
+        for y in range(86):
+            for x in range(176):
+                t=(x/175+y/85)/2
+                fallback.putpixel((x,y),tuple(round(a+(b-a)*t) for a,b in zip((31,44,65),(63,83,101))))
         fallback.save(args.output/'preview_1.png')
         for i,entry in enumerate(entries,2):
             sha=entry['sha256'];thumb=fallback.copy()

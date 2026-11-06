@@ -14,8 +14,12 @@ static void do_remote(mgr_t *m,int job) {
 }
 static void remote_field(mgr_t *m,const char *key,char *b,int n) {
     snprintf(b,n,"0");
-    if(!strcmp(key,"remote_status")) {
-        snprintf(b,n,"%s",access("/usr/share/openplugin/remote-sshd_config",R_OK)?"Not available in this image":remote_running()?"Running - SSH / SFTP port 22":access("/data/openplugin/ssh/disabled",F_OK)==0?"Disabled (saved across reboots)":"Stopped - tap Enable SSH to retry");
+    if(!strcmp(key,"remote_can_enable") || !strcmp(key,"remote_can_disable")) {
+        int available=access("/usr/share/openplugin/remote-sshd_config",R_OK)==0;
+        int running=available && remote_running();
+        snprintf(b,n,"%d",available && !m->busy && (!strcmp(key,"remote_can_enable")?!running:running));
+    } else if(!strcmp(key,"remote_status")) {
+        snprintf(b,n,"%s",access("/usr/share/openplugin/remote-sshd_config",R_OK)?"Not available in this image":remote_running()?"Running - SSH / SFTP port 22":access("/data/openplugin/ssh/disabled",F_OK)==0?"Disabled (saved across reboots)":"Stopped - enable remote access to retry");
     } else if(!strcmp(key,"remote_password")) {
         snprintf(b,n,"Username: root    Password: mpc    Port: 22");
     } else if(!strcmp(key,"remote_ip")) {

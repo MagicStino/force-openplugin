@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-06",
+  "source": "Actual owner Force framebuffer captures; no screen content edited.",
+  "screenshots": {
+    "catalog": "openplugin-manager-main-2026-11-06.png",
+    "install": "openplugin-manager-install-activated-2026-11-06.png",
+    "find": "openplugin-manager-filter-screen-2026-11-06.png",
+    "remote": "openplugin-manager-ssh-screen-2026-11-06.png",
+    "storage": "openplugin-manager-storage-pending-before-2026-11-06.png"
+  },
+  "storage_note": "Captured before final pending-operation explanation; illustrates the Storage drive rows and move/repair controls."
+}

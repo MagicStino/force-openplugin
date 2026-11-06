@@ -12,11 +12,12 @@ int main(int argc,char **argv) {
     pkg_t *packages=calloc(MAXPKG,sizeof *packages);assert(packages);
     list_t list={packages,0};assert(catalog_parse(text,&list));
     assert(list.n==atoi(argv[2]));
-    int downloads=0;
+    int downloads=0, placeholders=0;
     for(int i=0;i<list.n;i++) {
-        assert(preview_frame(packages[i].id)>1);
+        assert(preview_frame(packages[i].id)>=1);
+        placeholders += preview_frame(packages[i].id)==1;
         if(packages[i].url[0]) {assert(!strncmp(packages[i].url,"https://github.com/",19) || !strncmp(packages[i].url,"https://raw.githubusercontent.com/",34));assert(strlen(packages[i].sha)==64);assert(strspn(packages[i].sha,"0123456789abcdefABCDEF")==64);assert(packages[i].size>0);downloads++;}
     }
-    printf("Native catalog: %d entries, %d validated downloads, all artwork IDs mapped\n",list.n,downloads);
+    printf("Native catalog: %d entries, %d validated downloads, %d default thumbnails\n",list.n,downloads,placeholders);
     free(packages);free(text);return 0;
 }

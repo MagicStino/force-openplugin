@@ -1,39 +1,11 @@
-# Plugin Manager updates
+# OpenPlugin Manager 0.9.0 updates
 
-For the current **OpenPlugin 0.8 RC1**, use the correct device firmware image from [DOWNLOADS.md](DOWNLOADS.md). No standalone 0.8 manager ZIP has been published. A single PNG or library cannot update the full interface, cache initialization and mouse service configuration.
+[Read the manual](GUIDE.md) · [Release notes](RELEASE-0.9.0.md)
 
-## Older standalone 0.7.1-rc1 package (historical)
+The complete Force image includes OpenPlugin Manager 0.9.0, permanent managed-drive startup support, SSH/SFTP and Tracks16. The standalone package updates the manager and matching skin; existing firmware services are still required.
 
-The instructions below apply only to that older published package. It has bundled screenshots and does not provide the 0.8 background cache or mouse integration.
+For a controlled standalone upgrade, save your project and extract the full `OpenPlugin-Manager-0.9.0` package. Verify its checksum and transfer the entire directory. From an external SSH shell, run `sh install.sh -y -t /sdcard/Synths`. The installer stops/restarts the application, backs up settings and replaces the PlMg registration. Do not update the running manager from inside itself. Keep binary and skin together.
 
-## Install over SSH
+To remove this portable test/standalone installation, use `sh uninstall.sh -y -t /sdcard/Synths` from that same extracted package. This does not remove the firmware's built-in manager or other plugins. Boot registration restores the firmware manager after reboot. Do not blindly restore old settings over later plugin changes.
 
-1. Save your project and verify the downloaded ZIP against its `.sha256` file on your computer. Extract the ZIP; transfer the entire `Plugin-Manager-0.7.1-rc1` folder to device storage with SFTP.
-2. Ensure your writable Synths installation location supports executable files and is in the device's SynthContentLocations. The portable installer defaults to `/sdcard/Synths`. Choose a known working Synths location with `-t` when necessary; it rejects noexec mounts. Do not place the plugin on a noexec SSD mount.
-3. Connect over SSH using your existing OpenPlugin access. Run as root from the transferred folder:
-
-   ```sh
-   sh install.sh
-   ```
-
-   For a different working Synths location: `sh install.sh -t /absolute/path/Synths`. The installer verifies package checksums, backs up MPC.settings, stops MPC, installs the manager folder and replaces the existing `PlMg` plugin-list UID exactly once, then restarts MPC. The built-in firmware files, registration and remote-access services remain unchanged. Existing valid portable registration is retained by the boot synchronizer.
-4. Load Plugin Manager again and tap **Refresh catalog**. The old skin includes a bundled PulyTek thumbnail. Current plugin versions come from the online index. The picture is part of the manager's skin; installing PulyTek alone does not update the catalog thumbnail.
-
-Do not update the manager from inside its own running plugin. Use the external SSH shell so the installer survives stopping MPC. Copying a single PNG or just the `.so` is insufficient; binary frame mappings and skin assets must match.
-
-## Roll back
-
-Save first. From the same extracted folder run `sh uninstall.sh` (use the same `-t` path if one was chosen). This removes the portable manager entry, not the original built-in firmware manager. Reboot so the existing OpenPlugin registration service registers the original manager again. Keep the installer-created settings backup. Do not overwrite MPC.settings blindly, as later plugin installations may have changed it.
-
-## Validation and reproduce
-
-Host tests verify the PulyTek frame and existing mappings. The portable installer is tested against isolated settings containing the built-in manager, including repeated installation, checksum integrity and boot synchronizer preservation. ARM load/export checks and generated skin bounds are checked; none establish physical touchscreen/CPU compatibility.
-
-With pinned dependencies under `.deps`, install `requirements-build.txt` and Playwright Chromium as for the native build, then run:
-
-```sh
-python3 tools/build_native.py --output build/manager-preview
-python3 tools/package_manager.py
-```
-
-The ZIP includes complete manager/tooling sources and pinned upstream dependency sources with notices. No firmware image is produced or flashed.
+A stock drive mounted noexec is not a general standalone installation target. The manager's Storage feature creates a restricted executable view for eligible managed packages and retains its own startup hook in the 0.9.0 image.

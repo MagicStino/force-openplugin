@@ -1,63 +1,19 @@
-/* Live display regression: deterministic HTTPS responses, no device paths/network. */
-#define PREVIEW_DIR "cache"
-#define BUNDLED_PREVIEW_DIR "baked"
-static int fake_fetch(const char *,void *,void *);
-#define PREVIEW_FETCH_TEST(m,url,s) fake_fetch(url,m,s)
+/* Bundled artwork selection and title bounds; no runtime image fetch. */
 #include "../native/manager.c"
 #include <assert.h>
-static int requests,fetch_mode;
-static unsigned char *response;
-static int response_len;
-static int fake_fetch(const char *url,void *inst,void *ud) {
-    mgr_t *m=inst;sink_t *s=ud;requests++;
-    assert(!strncmp(url,"https://",8));
-    if(fetch_mode==0)return 0;
-    if(fetch_mode==2)m->preview_generation++; /* obsolete page while downloading */
-    if(fetch_mode==3)return preview_on_data("bad",1,3,s)==3;
-    return preview_on_data((char*)response,1,response_len,s)==(size_t)response_len;
-}
-static void solid(unsigned char *rgba,int r,int g,int b) {
-    for(int i=0;i<PREVIEW_W*PREVIEW_H;i++){rgba[i*4]=r;rgba[i*4+1]=g;rgba[i*4+2]=b;rgba[i*4+3]=255;}
-}
 int main(void) {
-    assert(preview_id_ok("fixture-online-plugin"));assert(!preview_id_ok("../bad"));
-    assert(!preview_decode((const unsigned char*)"bad",3));
-    sink_t limit={0};limit.len=4u*1024*1024;assert(!preview_on_data("x",1,1,&limit));
-    assert(!preview_on_data("x",SIZE_MAX,2,&limit));
-    unsigned char rgba[PREVIEW_W*PREVIEW_H*4];solid(rgba,255,255,255);
-    mkdir(PREVIEW_DIR,0700);mkdir(BUNDLED_PREVIEW_DIR,0700);
-    assert(preview_save(BUNDLED_PREVIEW_DIR "/fallback.png",rgba));
-    mgr_t *m=calloc(1,sizeof *m);assert(m);pthread_mutex_init(&m->mu,NULL);pthread_cond_init(&m->cv,NULL);
-    m->preview_enabled=1;m->npkg=4;m->loaded=1;
-    strcpy(m->pkg[0].id,"fixture-online-plugin");strcpy(m->pkg[0].screenshot,"https://example.org/tiny.png");
-    strcpy(m->pkg[3].id,"new-plugin");strcpy(m->pkg[3].screenshot,"https://example.org/new.png");
-    preview_refresh(m);char b[32];mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0x111); /* No live overlay before an unbundled image arrives. */
-    unsigned rev=m->rev;preview_refresh(m);assert(m->rev==rev); /* no churn for identical pixels */
-    /* New online pixels are displayed and persisted, even for an ID not in the build snapshot. */
-    solid(rgba,255,136,51);response=stbi_write_png_to_mem(rgba,PREVIEW_W*4,PREVIEW_W,PREVIEW_H,4,&response_len);
-    assert(response);m->online=1;fetch_mode=1;preview_refresh(m);assert(requests==1);
-    mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0xf83);
-    unsigned char *read=preview_read(PREVIEW_DIR "/fixture-online-plugin.png");assert(read && !memcmp(read,rgba,sizeof rgba));free(read);
-    preview_refresh(m);assert(requests==1); /* page revisits don't redownload this refresh */
-    /* A catalog refresh revalidates even an unchanged URL; corrupt images retain last good cache. */
-    fetch_mode=3;m->pkg[0].preview_checked=0;preview_refresh(m);assert(requests==2);
-    mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0xf83);
-    /* Paging never exposes the previous plugin's pixels, even before the worker runs. */
-    mgr_set_param(m,"page_next","1");mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0x111);
-    m->job=0;fetch_mode=1;preview_refresh(m);mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0xf83);
-    /* Old transfers cannot publish on the new page. */
-    strcpy(m->preview_row_id[0],"");m->pkg[3].preview_checked=0;fetch_mode=2;
-    unsigned gen=m->preview_generation;preview_refresh(m);assert(m->preview_generation==gen+1);
-    /* Offline restart reads the persisted thumbnail without making requests. */
-    m->online=0;m->page=0;m->rev++;memset(m->preview_pixels,0,sizeof m->preview_pixels);int before=requests;
-    preview_refresh(m);mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0xf83 && requests==before);
-    /* Preview parameters are display-only and cannot alter the page or pixel buffer. */
-    mgr_set_param(m,"previewpx_1_0","0");mgr_get_param(m,"previewpx_1_0",b,sizeof b);assert(atoi(b)==0xf83);
-    /* Bundled artwork uses its native filmstrip without online overlay downloads. */
-    m->online=1;strcpy(m->pkg[0].id,"tinyfreaky");m->pkg[0].preview_checked=0;
-    before=requests;assert(preview_frame("tinyfreaky")>1);preview_refresh(m);assert(requests==before);
-    free(response);pthread_cond_destroy(&m->cv);pthread_mutex_destroy(&m->mu);free(m);
-    unlink(PREVIEW_DIR "/fixture-online-plugin.png");unlink(PREVIEW_DIR "/new-plugin.png");unlink(BUNDLED_PREVIEW_DIR "/fallback.png");
-    rmdir(PREVIEW_DIR);rmdir(BUNDLED_PREVIEW_DIR);
-    puts("PASS live online pixels, new IDs, corrupt downloads, page identity, offline cache and bounded transfer");return 0;
+ assert(preview_frame("unlisted-plugin-id")==1);
+ for(unsigned i=0;i<sizeof preview_ids/sizeof *preview_ids;i++)assert(preview_frame(preview_ids[i])==(int)i+2);
+ char out[192];catalog_title("JV-880",out,sizeof out);assert(!strcmp(out,"JV-880"));
+ catalog_title("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW",out,sizeof out);
+ assert(strstr(out,"..."));assert(strlen(out)<48);
+ catalog_title("音音音音音音音音音音音音音音音音音音音音音音音音音音音音",out,sizeof out);
+ assert(strstr(out,"..."));assert((strlen(out)-3)%3==0);
+ char small[5];catalog_title("Long title",small,sizeof small);assert(small[4]==0);
+ description_line("Short description.",0,out,sizeof out);assert(!strcmp(out,"Short description."));
+ char long_text[400];memset(long_text,'W',sizeof long_text-1);long_text[399]=0;
+ description_line(long_text,1,out,sizeof out);assert(strstr(out,"..."));assert(strlen(out)<40);
+ description_line("音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音音",1,out,sizeof out);
+ assert(strstr(out,"..."));assert((strlen(out)-3)%3==0);
+ puts("Bundled thumbnail fallback and bounded UTF-8 titles passed");return 0;
 }
