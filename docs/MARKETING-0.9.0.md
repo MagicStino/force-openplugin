@@ -1,6 +1,6 @@
 # MagicStino OpenPlugin 0.9.0 — preview announcement
 
-**Browse and install in a breeze.**
+**Browse community VST plugins and install in a breeze**
 
 Discover and install community plugins directly on your Akai Force touchscreen with OpenPlugin Manager 0.9.0. Browse the catalog, choose a plugin, and let the manager handle the installation.
 

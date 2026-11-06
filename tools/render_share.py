@@ -17,12 +17,12 @@ def share(assets):
 *{{box-sizing:border-box}}body{{margin:0;background:#101317;color:#f3f4ef;font-family:Arial,sans-serif}}
 .canvas{{width:1200px;height:630px;position:relative;overflow:hidden;padding:46px 50px}}
 .brand{{font-size:21px;font-weight:700;letter-spacing:-.5px}}.compat{{position:absolute;right:50px;top:49px;font-size:16px;letter-spacing:1px;color:#a4e5d3}}
-h1{{font-size:54px;line-height:1.02;letter-spacing:-2px;margin:44px 0 20px}}.copy{{width:540px}}
-.lead{{font-size:23px;color:#a4e5d3;margin:0 0 30px}}.features{{font-size:20px;line-height:1.8;color:#e2e5e5}}
+h1{{font-size:44px;line-height:1.08;letter-spacing:-1.5px;margin:30px 0 18px}}.copy{{width:540px}}
+.lead{{font-size:23px;color:#a4e5d3;margin:0 0 20px}}.features{{font-size:20px;line-height:1.8;color:#e2e5e5}}
 .photo{{position:absolute;right:50px;top:148px;width:485px;margin:0}}.photo img{{display:block;width:100%;border:1px solid #566269;border-radius:10px}}figcaption{{font-size:13px;line-height:1.5;color:#abb6bd;margin-top:12px}}
 footer{{position:absolute;left:50px;right:50px;bottom:35px;border-top:1px solid #455159;padding-top:20px;display:flex;justify-content:space-between;font-size:16px;color:#abb6bd}}
 </style><div class="canvas"><div class="brand">MagicStino / OPENPLUGIN 0.9</div><div class="compat">OPENPLUGIN MANAGER · AKAI FORCE</div>
-<div class="copy"><h1>Browse and install<br>in a breeze.</h1><p class="lead">16 audio tracks + 16 plugin tracks.</p>
+<div class="copy"><h1>Browse community<br>VST plugins and install<br>in a breeze</h1><p class="lead">16 audio tracks + 16 plugin tracks.</p>
 <div class="features">A–Z · Newest · Oldest · Popular<br>Move eligible plugins: Internal ↔ SSD<br>Repair plugin skins · SSH / SFTP<br>Fast PNG browsing</div></div>
 <figure class="photo"><img src="{photo}" alt="OpenPlugin running on a real Force"><figcaption>Actual screen on the owner’s Force.<br>Full-image hardware acceptance pending.</figcaption></figure>
 <footer><span>magicstino.github.io/force-openplugin</span><span>Independent community firmware</span></footer></div></html>'''
