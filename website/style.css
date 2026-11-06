@@ -21,3 +21,6 @@
 
 /* Manager 0.9 guide: readable screen captures, restrained presentation. */
 .release-guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem}.release-guide img{display:block;width:100%;height:auto;border:1px solid #38434b;border-radius:10px}.release-guide p{line-height:1.65}.hero-art img{width:100%;height:auto}#about a{overflow-wrap:anywhere}@media(max-width:760px){.release-guide{grid-template-columns:1fr}}
+
+/* Four main benefits, with Tracks16 leading the overview. */
+.usp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.usp-highlight a{color:#a4e5d3}.usp-highlight p+p{margin-top:12px}@media(max-width:480px){.usp-grid{grid-template-columns:1fr}}

@@ -22,8 +22,8 @@ h1{{font-size:60px;line-height:1.02;letter-spacing:-3px;margin:44px 0 20px}}.cop
 .photo{{position:absolute;right:50px;top:148px;width:485px;margin:0}}.photo img{{display:block;width:100%;border:1px solid #566269;border-radius:10px}}figcaption{{font-size:13px;line-height:1.5;color:#abb6bd;margin-top:12px}}
 footer{{position:absolute;left:50px;right:50px;bottom:35px;border-top:1px solid #455159;padding-top:20px;display:flex;justify-content:space-between;font-size:16px;color:#abb6bd}}
 </style><div class="canvas"><div class="brand">MagicStino / OPENPLUGIN 0.9</div><div class="compat">OPENPLUGIN MANAGER · AKAI FORCE</div>
-<div class="copy"><h1>Find faster.<br>Make room.</h1><p class="lead">Your plugins. Your order. Your drive.</p>
-<div class="features">A–Z · Newest · Oldest · Popular<br>Move eligible plugins: Internal ↔ SSD<br>Repair plugin skins · SSH / SFTP<br>Fast PNG browsing · Tracks16 retained</div></div>
+<div class="copy"><h1>Find faster.<br>Make room.</h1><p class="lead">16 audio tracks + 16 plugin tracks.</p>
+<div class="features">A–Z · Newest · Oldest · Popular<br>Move eligible plugins: Internal ↔ SSD<br>Repair plugin skins · SSH / SFTP<br>Fast PNG browsing</div></div>
 <figure class="photo"><img src="{photo}" alt="OpenPlugin running on a real Force"><figcaption>Actual screen on the owner’s Force.<br>Full-image hardware acceptance pending.</figcaption></figure>
 <footer><span>magicstino.github.io/force-openplugin</span><span>Independent community firmware</span></footer></div></html>'''
 
