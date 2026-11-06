@@ -7,8 +7,10 @@
     "find": "openplugin-manager-filter-screen-2026-11-06.png",
     "remote": "openplugin-manager-ssh-screen-2026-11-06.png",
     "storage": "openplugin-manager-storage-pending-before-2026-11-06.png",
-    "about": "about-force-after-flash.png"
+    "about": "about-force-after-flash.png",
+    "moving": "storage-moving-force.png"
   },
   "storage_note": "Captured before final pending-operation explanation; illustrates the Storage drive rows and move/repair controls.",
-  "about_note": "Real Force capture after successful 0.9.0 flash and boot."
+  "about_note": "Real Force capture after successful 0.9.0 flash and boot.",
+  "moving_note": "Actual Force 0.9.0 move in progress: plugin 33 of 52, 180.8 of 411.7 MB copied; unedited framebuffer capture. This frame does not confirm completion."
 }

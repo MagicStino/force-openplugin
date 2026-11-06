@@ -34,7 +34,7 @@ The current complete images include **16 audio + 16 plugin tracks**, alongside P
 - Load bundled PNG artwork quickly, with a gradient for missing images. Refresh updates catalog metadata; artwork updates ship with the manager.
 - Sort A–Z, Z–A, Newest, Oldest or Popular; jump and refine by alphabet with matching paginator pages.
 - Move eligible managed plugins from Internal to SSD/USB/SD and back, verify before cleanup, and keep missing-drive recovery guidance visible.
-- Repair skin registrations automatically after installs or manually in STORAGE.
+- Missing plugin controls? Use **Repair plugin skins** in STORAGE to repair skin registrations; successful installs also maintain them automatically. If skin files are missing, reinstall the affected plugin.
 - Read the version, repository link and community credits in ABOUT.
 - Prepare **JV-880 ROMs + plugin** in one action. Save first: installation restarts the application.
 - Add a community USB mouse pointer with click/drag and wheel support, subject to the display compatibility guard.
@@ -43,6 +43,12 @@ The current complete images include **16 audio + 16 plugin tracks**, alongside P
 Only compatible ARMv7 community packages can be installed. General web pages, desktop VST bundles and source repositories alone are not installable packages. Refreshing the index does not install software automatically.
 
 For existing 3.10.0 users, a same-version update prompt is expected: the original application remains **3.10.0.49**. See the [USB guide](docs/DOWNLOADS.md).
+
+### Move plugins to SSD or an external drive
+
+Free internal space by moving eligible manager-installed plugins to a supported SSD, USB drive or SD card—and return them to Internal when needed. Follow the progress on screen; copies are verified before source cleanup.
+
+![Actual Force plugin move progress](website/assets/manager-0.9/moving.png)
 
 ## Current Open MPC build — 4 November 2026
 
