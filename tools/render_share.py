@@ -1,22 +1,54 @@
 #!/usr/bin/env python3
-"""Create labelled share/device renders from the actual native catalog preview.
-Requires Playwright and its Chromium browser. No hardware capture is implied.
+"""Render the Tracks16 social card using an owner-supplied Force photograph.
+
+Requires Playwright and Chromium for PNG output. --html-only writes the card
+HTML for preview or rendering with another browser installation.
 """
-import argparse,base64
+import argparse
+import base64
 from pathlib import Path
-from playwright.sync_api import sync_playwright
-p=argparse.ArgumentParser(description=__doc__);p.add_argument('--assets',type=Path,default=Path(__file__).resolve().parents[1]/'website/assets');a=p.parse_args()
-a.assets.mkdir(parents=True,exist_ok=True)
-screen='data:image/png;base64,'+base64.b64encode((a.assets/'catalog-native.png').read_bytes()).decode()
-base='''*{box-sizing:border-box}body{margin:0;background:#101317;color:#ecf0f2;font-family:Arial,sans-serif} .tag{font-size:16px;letter-spacing:2px;color:#80dfc7} .muted{color:#a9b4bd} img{display:block;width:100%}'''
-def share():
- return f'''<style>{base}.canvas{{width:1200px;height:630px;padding:55px;background:radial-gradient(ellipse at 100% 0,#263b43,transparent 70%),#101317;position:relative;overflow:hidden}}h1{{font-size:65px;letter-spacing:-3px;line-height:1.05;margin:30px 0 22px}}.copy{{width:410px;position:relative;z-index:1}}p{{font-size:25px;line-height:1.45}}.device{{position:absolute;width:780px;left:465px;top:165px;background:#26292d;padding:16px;border:2px solid #58616b;border-radius:18px;transform:rotate(-5deg);box-shadow:0 30px 60px #0008}}.device img{{border:6px solid #090b0d;border-radius:9px}}footer{{position:absolute;bottom:33px;left:55px;font-size:17px;color:#a9b4bd}}.badge{{font-size:17px;display:inline-block;border:1px solid #6b9c90;border-radius:9px;padding:13px;color:#80dfc7}}</style><div class="canvas"><div class="tag">FORCE &amp; MPC GEN1</div><div class="copy"><h1>OpenPlugin<br>Research</h1><p>Community instruments<br>and plugins, on screen.</p><div class="badge">Catalog · Downloads · Setup guides</div></div><div class="device"><img src="{screen}" alt="Rendered plugin catalog"></div><footer>Independent · Non-commercial · AI-assisted · Rendered interface preview</footer></div>'''
-def device(kind):
- cols=8 if kind=='Force' else 4
- pads=''.join('<i></i>' for _ in range(cols*cols))
- return f'''<style>{base}.canvas{{width:1200px;height:840px;padding:30px;background:radial-gradient(ellipse at 20% 10%,#23323a,transparent 65%),#101317}}h1{{font-size:31px;margin:0 0 24px;letter-spacing:-1px}}.body{{height:690px;border-radius:22px;background:linear-gradient(120deg,#292d31,#17191c);border:2px solid #535b63;padding:25px;box-shadow:0 25px 45px #0008;display:grid;grid-template-columns:270px 1fr;gap:25px}}.left{{display:flex;flex-direction:column;justify-content:center}}.pads{{display:grid;grid-template-columns:repeat({cols},1fr);gap:6px}}i{{aspect-ratio:1;border-radius:4px;background:linear-gradient(140deg,#6b3235,#291e24);border:1px solid #af666b;box-shadow:inset 0 0 9px #0008}}i:nth-child(5n){{background:#2d5557;border-color:#72b7b2}}.right{{display:flex;flex-direction:column;justify-content:center}}.screen{{background:#050607;border:12px solid #090a0c;border-radius:13px;overflow:hidden}}.top{{font-size:12px;letter-spacing:2px;color:#a9b4bd;padding:12px;background:#111317}}.knobs{{display:flex;justify-content:space-around;margin-top:28px}}.knobs b{{width:35px;height:35px;border-radius:50%;background:linear-gradient(90deg,#101114,#353a40);border:2px solid #626972}}.caption{{font-size:15px;line-height:1.4;margin-top:22px;color:#a9b4bd}}.brand{{font-size:16px;letter-spacing:2px;margin:0 0 20px}}</style><div class="canvas"><h1>{kind} · OpenPlugin interface preview</h1><div class="body"><div class="left"><div class="brand">OPENPLUGIN RESEARCH</div><div class="pads">{pads}</div><p class="caption">Stylised layout illustration.<br>Not a hardware photograph.</p></div><div class="right"><div class="screen"><div class="top">COMMUNITY INSTRUMENTS &amp; PLUGINS · RENDERED PREVIEW</div><img src="{screen}" alt="Actual generated native catalog assets"></div><div class="knobs"><b></b><b></b><b></b><b></b></div><p class="caption">Generated from the manager assets with sample metadata.<br>{'Owner reports successful Force use; this is not a device capture.' if kind=='Force' else 'MPC Gen1 operation remains hardware unverified.'}</p></div></div></div>'''
-with sync_playwright() as pw:
- browser=pw.chromium.launch(headless=True,args=['--no-sandbox'])
- for name,html,size in [('share-card.png',share(),(1200,630)),('force-preview.png',device('Force'),(1200,840)),('mpc-preview.png',device('MPC Gen1'),(1200,840))]:
-  page=browser.new_page(viewport={'width':size[0],'height':size[1]},device_scale_factor=1);page.set_content(html);page.locator('img').evaluate_all('(xs)=>Promise.all(xs.map(x=>x.decode()))');page.screenshot(path=str(a.assets/name));page.close();print(name)
- browser.close()
+
+
+def share(assets):
+    photo = 'data:image/jpeg;base64,' + base64.b64encode(
+        (assets / 'force-photos/catalog.jpg').read_bytes()).decode()
+    return f'''<!doctype html><html lang="en"><meta charset="utf-8">
+<title>OpenPlugin Tracks16 social card</title><style>
+*{{box-sizing:border-box}}body{{margin:0;background:#101317;color:#f3f4ef;font-family:Arial,sans-serif}}
+.canvas{{width:1200px;height:630px;position:relative;overflow:hidden;padding:46px 50px}}
+.brand{{font-size:21px;font-weight:700;letter-spacing:-.5px}}.compat{{position:absolute;right:50px;top:49px;font-size:16px;letter-spacing:1px;color:#a4e5d3}}
+h1{{font-size:60px;line-height:1.02;letter-spacing:-3px;margin:44px 0 20px}}.copy{{width:540px}}
+.lead{{font-size:23px;color:#a4e5d3;margin:0 0 30px}}.features{{font-size:20px;line-height:1.8;color:#e2e5e5}}
+.photo{{position:absolute;right:50px;top:148px;width:485px;margin:0}}.photo img{{display:block;width:100%;border:1px solid #566269;border-radius:10px}}figcaption{{font-size:13px;line-height:1.5;color:#abb6bd;margin-top:12px}}
+footer{{position:absolute;left:50px;right:50px;bottom:35px;border-top:1px solid #455159;padding-top:20px;display:flex;justify-content:space-between;font-size:16px;color:#abb6bd}}
+</style><div class="canvas"><div class="brand">openplugin / TRACKS16</div><div class="compat">FORCE + MPC GEN1 COMPATIBLE</div>
+<div class="copy"><h1>16 audio tracks.<br>16 plugin tracks.</h1><p class="lead">Double the tracks. More room to create.</p>
+<div class="features">200+ synths &amp; effects · VST Plugin Manager<br>Open MPC GitHub catalog<br>SSH root access · password: mpc<br>Original firmware 3.10 · Easy USB update</div></div>
+<figure class="photo"><img src="{photo}" alt="OpenPlugin running on a real Force"><figcaption>Real app on the owner’s Force.<br>Photo shows an earlier catalog snapshot.</figcaption></figure>
+<footer><span>magicstino.github.io/force-openplugin</span><span>Independent community firmware</span></footer></div></html>'''
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--assets', type=Path, default=Path(__file__).resolve().parents[1] / 'website/assets')
+    parser.add_argument('--html-only', type=Path, help='Write preview HTML instead of rendering PNGs')
+    args = parser.parse_args()
+    html = share(args.assets)
+    if args.html_only:
+        args.html_only.write_text(html)
+        return
+    from playwright.sync_api import sync_playwright
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True, args=['--no-sandbox'])
+        page = browser.new_page(viewport={'width': 1200, 'height': 630}, device_scale_factor=1)
+        page.set_content(html)
+        page.locator('img').evaluate_all('(xs)=>Promise.all(xs.map(x=>x.decode()))')
+        # Update the legacy path too, while metadata uses a fresh cache-safe URL.
+        for name in ('share-card-tracks16.png', 'share-card.png'):
+            page.screenshot(path=str(args.assets / name))
+            print(name)
+        browser.close()
+
+
+if __name__ == '__main__':
+    main()
