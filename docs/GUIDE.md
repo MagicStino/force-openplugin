@@ -4,6 +4,16 @@ OpenPlugin Manager **0.9.0** for Akai Force, built on firmware 3.10.0.
 
 [GitHub source and updates](https://github.com/MagicStino/force-openplugin) · [Online guide](https://magicstino.github.io/force-openplugin/#guide)
 
+## USB firmware updates and recovery
+
+Before a USB update, save your project and restart the Force. Disconnect unnecessary USB devices, keep the update USB drive connected, temporarily disable Wi-Fi and unplug Ethernet. These precautions may help with intermittent delays; the cause is not confirmed and faster updates are not guaranteed.
+
+An update may display a static graphic without a progress bar. Keep power and the update drive connected; do not interrupt an active update because the screen looks inactive.
+
+If the Force cannot boot normally or reach Settings, start with it powered off. Hold **MATRIX + LOAD + SAVE** while powering on to enter **Update Mode**, then connect directly to a Mac or Windows computer and use the official Force updater. This is computer-assisted recovery, not automatic installation of our USB `.img`. Do not invoke recovery during an ongoing update.
+
+[Full USB update and recovery instructions](DOWNLOADS.md#installing-from-usb) · [Akai's official Force procedure](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough)
+
 ## Open the manager
 
 Create a plugin track and choose **PLUGINS → VST → OpenPlugin Manager**. Its leading space keeps it near the top of the list. The ABOUT tab shows the version, repository link and community credits. The repository links to this manual.

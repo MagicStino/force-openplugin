@@ -44,6 +44,16 @@ Connect to the internet and select **CATALOG → Refresh catalog** for newer plu
 
 ## Installing from USB
 
+### Before starting the update
+
+Save your project and restart the Force. Disconnect unnecessary USB devices, leaving the USB drive containing the update connected. Temporarily disable Wi-Fi and unplug Ethernet. Do this **before starting**, not during an update. Reconnect your devices and network after the update finishes.
+
+These precautions may help avoid intermittent delays; they are not a guaranteed speed fix. Reported update times vary: around 1 minute on some attempts and around 30 minutes on others. The cause is still being investigated.
+
+### If the update screen appears inactive
+
+The update graphic may remain static without animation or a progress bar. Keep reliable power connected and do not unplug the update drive or interrupt the update simply because the screen is not moving. Note the start time, screen message and connected devices if reporting a delay. Do not use the recovery button combination to interrupt an ongoing update.
+
 1. Back up projects and connect the device to reliable power.
 2. Use the image for your device family. Verify its SHA256 against the table above.
 3. Copy the actual `.img` file outside any folders on a FAT32/exFAT USB drive with at least 1 GB of space. Do not extract the image or write it as a bootable USB disk.
@@ -55,9 +65,17 @@ Both filenames include the OpenPlugin version and end in `-update.img`. If an im
 
 USB update steps follow Akai's [Force guide](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough) and [MPC guide](https://support.akaipro.com/en/support/solutions/articles/69000816160-akai-pro-mpc-firmware-update-walkthrough). These guides describe stock updates, not endorsement of this custom firmware.
 
-## Force boot-time update mode
+## Force recovery: cannot reach Settings
 
-If the Force cannot reach its settings, Akai documents holding **MATRIX + LOAD + SAVE** while powering it on to enter Update Mode. Connect directly to a Mac or Windows computer and use the official Force updater for recovery. Do not interrupt an active firmware write.
+Use this when the Force cannot boot normally or cannot reach Settings—not as a shortcut during an ongoing firmware update.
+
+1. With the Force powered off, hold **MATRIX + LOAD + SAVE**.
+2. Keep those buttons held while powering on to enter **Update Mode**.
+3. Connect the Force directly to a Mac or Windows computer over USB and follow Akai's official Force updater instructions.
+
+This is the documented computer-assisted recovery route. It does not mean the Force automatically installs our `.img` from a USB stick. Use Force-specific firmware; this button combination is not an MPC recovery instruction.
+
+Source: [Akai Force firmware update walkthrough](https://support.akaipro.com/en/support/solutions/articles/69000828125-akai-pro-force-firmware-update-walkthrough).
 
 ## SSH and mouse
 
