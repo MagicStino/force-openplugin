@@ -1,6 +1,6 @@
 {
-  "generated": "2026-11-17T08:03:55+00:00",
-  "indexed": 271,
+  "generated": "2026-11-17T21:01:59+00:00",
+  "indexed": 272,
   "candidates": [
     {
       "repo": "yoanbernabeu/DubStemMix",
@@ -10,12 +10,24 @@
       "status": "discovered; not installable"
     },
     {
+      "repo": "ForcezZ/FORCE-Remote-Browser",
+      "name": "FORCE-Remote-Browser",
+      "summary": "FORCE Remote Browser: file manager for the Akai Force. Cut, copy, paste, rename and delete files on the Force's own drives (internal, SD, USB) from your PC. Unofficial.",
+      "url": "https://github.com/ForcezZ/FORCE-Remote-Browser",
+      "status": "discovered; not installable"
+    },
+    {
       "repo": "WorldLinkStudio/mpcsample",
       "url": "https://github.com/WorldLinkStudio/mpcsample",
       "status": "needs compatible manifest; not installable"
     }
   ],
   "errors": [
+    {
+      "stage": "manifest",
+      "repo": "ForcezZ/FORCE-Remote-Browser",
+      "error": "HTTP Error 404: Not Found"
+    },
     {
       "stage": "manifest",
       "repo": "WorldLinkStudio/mpcsample",
