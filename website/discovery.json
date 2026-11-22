@@ -1,12 +1,19 @@
 {
-  "generated": "2026-11-21T19:25:17+00:00",
-  "indexed": 310,
+  "generated": "2026-11-22T07:01:43+00:00",
+  "indexed": 315,
   "candidates": [
     {
       "repo": "yoanbernabeu/DubStemMix",
       "name": "DubStemMix",
       "summary": "Dub mixing console for the Akai MIDImix — mix stems live with sends, dub throws, tape delay and spring reverb. A macOS app, or a plugin for the Akai MPC.",
       "url": "https://github.com/yoanbernabeu/DubStemMix",
+      "status": "discovered; not installable"
+    },
+    {
+      "repo": "smarbos/forceKitMaker",
+      "name": "forceKitMaker",
+      "summary": "Build Akai Force drum kits and synth keygroups programs from your sample library, in the browser",
+      "url": "https://github.com/smarbos/forceKitMaker",
       "status": "discovered; not installable"
     },
     {
@@ -31,6 +38,11 @@
     {
       "stage": "manifest",
       "repo": "WorldLinkStudio/mpcsample",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "manifest",
+      "repo": "smarbos/forceKitMaker",
       "error": "HTTP Error 404: Not Found"
     },
     {
