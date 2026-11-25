@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T08:46:24+00:00",
+  "generated": "2026-11-25T21:48:31+00:00",
   "indexed": 326,
   "candidates": [
     {
@@ -17,17 +17,17 @@
       "status": "discovered; not installable"
     },
     {
+      "repo": "ForcezZ/FORCE-Remote-Browser",
+      "name": "FORCE-Remote-Browser",
+      "summary": "Browser file manager for the Akai Force. Cut, copy, paste, rename and delete files on the Force's own drives (internal, SD, USB) from your PC. Unofficial.",
+      "url": "https://github.com/ForcezZ/FORCE-Remote-Browser",
+      "status": "discovered; not installable"
+    },
+    {
       "repo": "smarbos/forceKitMaker",
       "name": "forceKitMaker",
       "summary": "Build Akai Force drum kits and synth keygroups programs from your sample library, in the browser",
       "url": "https://github.com/smarbos/forceKitMaker",
-      "status": "discovered; not installable"
-    },
-    {
-      "repo": "ForcezZ/FORCE-Remote-Browser",
-      "name": "FORCE-Remote-Browser",
-      "summary": "FORCE Remote Browser: file manager for the Akai Force. Cut, copy, paste, rename and delete files on the Force's own drives (internal, SD, USB) from your PC. Unofficial.",
-      "url": "https://github.com/ForcezZ/FORCE-Remote-Browser",
       "status": "discovered; not installable"
     },
     {
