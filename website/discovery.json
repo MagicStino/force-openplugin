@@ -1,7 +1,14 @@
 {
-  "generated": "2026-11-24T22:33:40+00:00",
-  "indexed": 323,
+  "generated": "2026-11-25T08:46:24+00:00",
+  "indexed": 326,
   "candidates": [
+    {
+      "repo": "gonziWeb/beat-and-dungeon",
+      "name": "beat-and-dungeon",
+      "summary": "Beat & Dungeon: a role-playing game for beatmakers on the Akai MPC. A D20 gives every track a rule to compose by.",
+      "url": "https://github.com/gonziWeb/beat-and-dungeon",
+      "status": "discovered; not installable"
+    },
     {
       "repo": "yoanbernabeu/DubStemMix",
       "name": "DubStemMix",
@@ -38,6 +45,11 @@
     {
       "stage": "manifest",
       "repo": "WorldLinkStudio/mpcsample",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "manifest",
+      "repo": "gonziWeb/beat-and-dungeon",
       "error": "HTTP Error 404: Not Found"
     },
     {
