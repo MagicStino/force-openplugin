@@ -1,7 +1,14 @@
 {
-  "generated": "2026-11-27T08:45:52+00:00",
-  "indexed": 360,
+  "generated": "2026-11-27T21:25:58+00:00",
+  "indexed": 359,
   "candidates": [
+    {
+      "repo": "stampman3000-jpg/mpc-clip-bridge",
+      "name": "mpc-clip-bridge",
+      "summary": "Opt-in LD_PRELOAD addin that gives MPC plugins a socket API to the MPC app's clips",
+      "url": "https://github.com/stampman3000-jpg/mpc-clip-bridge",
+      "status": "discovered; not installable"
+    },
     {
       "repo": "yoanbernabeu/DubStemMix",
       "name": "DubStemMix",
@@ -43,6 +50,11 @@
     {
       "stage": "manifest",
       "repo": "smarbos/forceKitMaker",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "manifest",
+      "repo": "stampman3000-jpg/mpc-clip-bridge",
       "error": "HTTP Error 404: Not Found"
     },
     {
